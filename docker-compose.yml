@@ -1,0 +1,71 @@
+version: '2.1'
+
+volumes:
+
+    plex_config:
+    nzbget_config:
+    sonarr_config:
+    radarr_config:
+    duplicati_config:
+
+services:
+
+    # https://hub.docker.com/r/lsioarmhf/plex
+    plex:
+        image: lsioarmhf/plex
+        entrypoint:
+            - '/bin/bash'
+            - '-c'
+            - 'mkdir /downloads || true; mount -L DOWNLOADS /downloads; /init'
+        volumes:
+            - 'plex_config:/config'
+            - '/tmp:/transcode'
+        network_mode: host
+
+    # https://hub.docker.com/r/lsioarmhf/nzbget
+    nzbget:
+        image: lsioarmhf/nzbget
+        entrypoint:
+            - '/bin/bash'
+            - '-c'
+            - 'mkdir /downloads || true; mount -L DOWNLOADS /downloads; /init'
+        ports:
+            - '6789:6789/tcp'
+        volumes:
+            - 'nzbget_config:/config'
+
+    # https://hub.docker.com/r/lsioarmhf/sonarr
+    sonarr:
+        image: lsioarmhf/sonarr
+        entrypoint:
+            - '/bin/bash'
+            - '-c'
+            - 'mkdir /downloads || true; mount -L DOWNLOADS /downloads; /init'
+        ports:
+            - '8989:8989/tcp'
+        volumes:
+            - 'sonarr_config:/config'
+
+    # https://hub.docker.com/r/lsioarmhf/radarr
+    radarr:
+        image: lsioarmhf/radarr
+        entrypoint:
+            - '/bin/bash'
+            - '-c'
+            - 'mkdir /downloads || true; mount -L DOWNLOADS /downloads; /init'
+        ports:
+            - '7878:7878/tcp'
+        volumes:
+            - 'radarr_config:/config'
+
+    # https://hub.docker.com/r/lsioarmhf/duplicati
+    duplicati:
+        image: lsioarmhf/duplicati
+        ports:
+            - '8200:8200/tcp'
+        volumes:
+            - 'duplicati_config:/config'
+            - 'plex_config:/source/plex_config:ro'
+            - 'nzbget_config:/source/nzbget_config:ro'
+            - 'sonarr_config:/source/sonarr_config:ro'
+            - 'radarr_config:/source/radarr_config:ro'
