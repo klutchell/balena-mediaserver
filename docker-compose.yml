@@ -15,7 +15,7 @@ services:
         entrypoint:
             - '/bin/bash'
             - '-c'
-            - 'mkdir /downloads; mount -L DOWNLOADS /downloads; /init'
+            - 'mkdir /downloads; mount -L DOWNLOADS -o nonempty /downloads; /init'
         volumes:
             - 'plex_config:/config'
         network_mode: host
@@ -27,7 +27,7 @@ services:
         entrypoint:
             - '/bin/bash'
             - '-c'
-            - 'mkdir /downloads; mount -L DOWNLOADS /downloads; /init'
+            - 'mkdir /downloads; mount -L DOWNLOADS -o nonempty /downloads; /init'
         ports:
             - '6789:6789/tcp'
         volumes:
@@ -40,7 +40,7 @@ services:
         entrypoint:
             - '/bin/bash'
             - '-c'
-            - 'mkdir /downloads; mount -L DOWNLOADS /downloads; /init'
+            - 'mkdir /downloads; mount -L DOWNLOADS -o nonempty /downloads; /init'
         ports:
             - '8989:8989/tcp'
         volumes:
@@ -53,7 +53,7 @@ services:
         entrypoint:
             - '/bin/bash'
             - '-c'
-            - 'mkdir /downloads; mount -L DOWNLOADS /downloads; /init'
+            - 'mkdir /downloads; mount -L DOWNLOADS -o nonempty /downloads; /init'
         ports:
             - '7878:7878/tcp'
         volumes:
