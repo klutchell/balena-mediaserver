@@ -26,12 +26,7 @@ https://www.balena.io/docs/learn/getting-started
 
 ## Usage
 
-Connect to `Host OS` terminal in the Balena dashboard
-and create an empty partition called DOWNLOADS
-
-```bash
-mkfs.ext4 /dev/sda1 -L DOWNLOADS
-```
+_TODO_
 
 ## Author
 

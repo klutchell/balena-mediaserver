@@ -6,56 +6,41 @@ volumes:
     nzbget_config:
     sonarr_config:
     radarr_config:
+    downloads:
 
 services:
 
     # https://hub.docker.com/r/lsioarmhf/plex
     plex:
         image: lsioarmhf/plex
-        entrypoint:
-            - '/bin/bash'
-            - '-c'
-            - 'mkdir /downloads; mount -L DOWNLOADS -o nonempty /downloads; /init'
+        network_mode: host
         volumes:
             - 'plex_config:/config'
-        network_mode: host
-        privileged: true
+            - 'downloads:/downloads'
 
     # https://hub.docker.com/r/lsioarmhf/nzbget
     nzbget:
         image: lsioarmhf/nzbget
-        entrypoint:
-            - '/bin/bash'
-            - '-c'
-            - 'mkdir /downloads; mount -L DOWNLOADS -o nonempty /downloads; /init'
         ports:
             - '6789:6789/tcp'
         volumes:
             - 'nzbget_config:/config'
-        privileged: true
+            - 'downloads:/downloads'
 
     # https://hub.docker.com/r/lsioarmhf/sonarr
     sonarr:
         image: lsioarmhf/sonarr
-        entrypoint:
-            - '/bin/bash'
-            - '-c'
-            - 'mkdir /downloads; mount -L DOWNLOADS -o nonempty /downloads; /init'
         ports:
             - '8989:8989/tcp'
         volumes:
             - 'sonarr_config:/config'
-        privileged: true
+            - 'downloads:/downloads'
 
     # https://hub.docker.com/r/lsioarmhf/radarr
     radarr:
         image: lsioarmhf/radarr
-        entrypoint:
-            - '/bin/bash'
-            - '-c'
-            - 'mkdir /downloads; mount -L DOWNLOADS -o nonempty /downloads; /init'
         ports:
             - '7878:7878/tcp'
         volumes:
             - 'radarr_config:/config'
-        privileged: true
+            - 'downloads:/downloads'
