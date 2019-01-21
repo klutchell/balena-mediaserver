@@ -10,9 +10,9 @@ volumes:
 
 services:
 
-    # https://hub.docker.com/r/lsioarmhf/plex
+    # https://hub.docker.com/r/linuxserver/plex
     plex:
-        image: lsioarmhf/plex
+        image: linuxserver/plex
         entrypoint:
             - '/bin/bash'
             - '-c'
@@ -21,9 +21,9 @@ services:
             - 'plex_config:/config'
         network_mode: host
 
-    # https://hub.docker.com/r/lsioarmhf/nzbget
+    # https://hub.docker.com/r/linuxserver/nzbget
     nzbget:
-        image: lsioarmhf/nzbget
+        image: linuxserver/nzbget
         entrypoint:
             - '/bin/bash'
             - '-c'
@@ -33,9 +33,9 @@ services:
         volumes:
             - 'nzbget_config:/config'
 
-    # https://hub.docker.com/r/lsioarmhf/sonarr
+    # https://hub.docker.com/r/linuxserver/sonarr
     sonarr:
-        image: lsioarmhf/sonarr
+        image: linuxserver/sonarr
         entrypoint:
             - '/bin/bash'
             - '-c'
@@ -45,9 +45,9 @@ services:
         volumes:
             - 'sonarr_config:/config'
 
-    # https://hub.docker.com/r/lsioarmhf/radarr
+    # https://hub.docker.com/r/linuxserver/radarr
     radarr:
-        image: lsioarmhf/radarr
+        image: linuxserver/radarr
         entrypoint:
             - '/bin/bash'
             - '-c'
@@ -57,9 +57,9 @@ services:
         volumes:
             - 'radarr_config:/config'
 
-    # https://hub.docker.com/r/lsioarmhf/duplicati
+    # https://hub.docker.com/r/linuxserver/duplicati
     duplicati:
-        image: lsioarmhf/duplicati
+        image: linuxserver/duplicati
         ports:
             - '8200:8200/tcp'
         volumes:
