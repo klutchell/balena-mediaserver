@@ -19,8 +19,7 @@ services:
         volumes:
             - 'plex_config:/config'
         network_mode: host
-        devices:
-            - '/dev/sda1:/dev/sda1'
+        privileged: true
 
     # https://hub.docker.com/r/lsioarmhf/nzbget
     nzbget:
@@ -33,8 +32,7 @@ services:
             - '6789:6789/tcp'
         volumes:
             - 'nzbget_config:/config'
-        devices:
-            - '/dev/sda1:/dev/sda1'
+        privileged: true
 
     # https://hub.docker.com/r/lsioarmhf/sonarr
     sonarr:
@@ -47,8 +45,7 @@ services:
             - '8989:8989/tcp'
         volumes:
             - 'sonarr_config:/config'
-        devices:
-            - '/dev/sda1:/dev/sda1'
+        privileged: true
 
     # https://hub.docker.com/r/lsioarmhf/radarr
     radarr:
@@ -61,5 +58,4 @@ services:
             - '7878:7878/tcp'
         volumes:
             - 'radarr_config:/config'
-        devices:
-            - '/dev/sda1:/dev/sda1'
+        privileged: true
