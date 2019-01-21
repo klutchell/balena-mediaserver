@@ -16,10 +16,9 @@ services:
         entrypoint:
             - '/bin/bash'
             - '-c'
-            - 'mkdir /downloads || true; mount -L DOWNLOADS /downloads; /init'
+            - 'mkdir /downloads; mount -L DOWNLOADS /downloads; /init'
         volumes:
             - 'plex_config:/config'
-            - '/tmp:/transcode'
         network_mode: host
 
     # https://hub.docker.com/r/lsioarmhf/nzbget
@@ -28,7 +27,7 @@ services:
         entrypoint:
             - '/bin/bash'
             - '-c'
-            - 'mkdir /downloads || true; mount -L DOWNLOADS /downloads; /init'
+            - 'mkdir /downloads; mount -L DOWNLOADS /downloads; /init'
         ports:
             - '6789:6789/tcp'
         volumes:
@@ -40,7 +39,7 @@ services:
         entrypoint:
             - '/bin/bash'
             - '-c'
-            - 'mkdir /downloads || true; mount -L DOWNLOADS /downloads; /init'
+            - 'mkdir /downloads; mount -L DOWNLOADS /downloads; /init'
         ports:
             - '8989:8989/tcp'
         volumes:
@@ -52,7 +51,7 @@ services:
         entrypoint:
             - '/bin/bash'
             - '-c'
-            - 'mkdir /downloads || true; mount -L DOWNLOADS /downloads; /init'
+            - 'mkdir /downloads; mount -L DOWNLOADS /downloads; /init'
         ports:
             - '7878:7878/tcp'
         volumes:
