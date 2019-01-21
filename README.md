@@ -5,7 +5,6 @@ armv7hf [balena.io](https://www.balena.io/) stack with the following services:
 * [nzbget](https://hub.docker.com/r/lsioarmhf/nzbget)
 * [sonarr](https://hub.docker.com/r/lsioarmhf/sonarr)
 * [radarr](https://hub.docker.com/r/lsioarmhf/radarr)
-* [duplicati](https://hub.docker.com/r/lsioarmhf/duplicati)
 
 ## Getting Started
 
