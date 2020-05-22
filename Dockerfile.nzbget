@@ -1,0 +1,10 @@
+FROM linuxserver/nzbget:arm64v8-latest
+
+COPY mount.sh /
+
+RUN apk add --no-cache cifs-utils nfs-utils samba-client \
+    && chmod a+x /mount.sh
+
+ENTRYPOINT [ "/bin/sh" ]
+
+CMD [ "-c", "/mount.sh && /init" ]

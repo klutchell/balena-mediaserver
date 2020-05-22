@@ -1,0 +1,9 @@
+
+FROM balenalib/raspberrypi4-64:run
+
+COPY samba.sh /
+
+RUN install_packages samba-client samba \
+    && chmod a+x /samba.sh
+
+CMD [ "/samba.sh" ]

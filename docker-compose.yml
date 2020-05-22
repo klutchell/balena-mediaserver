@@ -1,46 +1,122 @@
-version: '2.1'
+version: "2.1"
 
 volumes:
-
-    plex_config:
-    nzbget_config:
-    sonarr_config:
-    radarr_config:
-    downloads:
+  plex:
+  nzbget:
+  sonarr:
+  radarr:
+  nzbhydra:
+  duplicati:
 
 services:
+  # https://hub.docker.com/r/linuxserver/plex
+  plex:
+    build:
+      context: .
+      dockerfile: Dockerfile.plex
+    privileged: true
+    ports:
+      - 32400:32400/tcp
+    volumes:
+      - plex:/config
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+    depends_on:
+      - samba
 
-    # https://hub.docker.com/r/lsioarmhf/plex
-    plex:
-        image: lsioarmhf/plex
-        network_mode: host
-        volumes:
-            - 'plex_config:/config'
-            - 'downloads:/downloads'
+  # https://hub.docker.com/r/linuxserver/nzbget
+  nzbget:
+    build:
+      context: .
+      dockerfile: Dockerfile.nzbget
+    privileged: true
+    ports:
+      - 6789:6789/tcp
+    volumes:
+      - nzbget:/config
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+    depends_on:
+      - samba
 
-    # https://hub.docker.com/r/lsioarmhf/nzbget
-    nzbget:
-        image: lsioarmhf/nzbget
-        ports:
-            - '6789:6789/tcp'
-        volumes:
-            - 'nzbget_config:/config'
-            - 'downloads:/downloads'
+  # https://hub.docker.com/r/linuxserver/sonarr
+  sonarr:
+    build:
+      context: .
+      dockerfile: Dockerfile.sonarr
+    privileged: true
+    ports:
+      - 8989:8989/tcp
+    volumes:
+      - sonarr:/config
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+    depends_on:
+      - samba
+      - nzbhydra
+      - nzbget
 
-    # https://hub.docker.com/r/lsioarmhf/sonarr
-    sonarr:
-        image: lsioarmhf/sonarr
-        ports:
-            - '8989:8989/tcp'
-        volumes:
-            - 'sonarr_config:/config'
-            - 'downloads:/downloads'
+  # https://hub.docker.com/r/linuxserver/radarr
+  radarr:
+    build:
+      context: .
+      dockerfile: Dockerfile.radarr
+    privileged: true
+    ports:
+      - 7878:7878/tcp
+    volumes:
+      - radarr:/config
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+    depends_on:
+      - samba
+      - nzbhydra
+      - nzbget
 
-    # https://hub.docker.com/r/lsioarmhf/radarr
-    radarr:
-        image: lsioarmhf/radarr
-        ports:
-            - '7878:7878/tcp'
-        volumes:
-            - 'radarr_config:/config'
-            - 'downloads:/downloads'
+  # https://hub.docker.com/r/linuxserver/nzbhydra2
+  nzbhydra:
+    build:
+      context: .
+      dockerfile: Dockerfile.nzbhydra
+    privileged: true
+    ports:
+      - 5076:5076/tcp
+    volumes:
+      - nzbhydra:/config
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+    depends_on:
+      - samba
+
+  # https://hub.docker.com/r/linuxserver/duplicati
+  duplicati:
+    image: linuxserver/duplicati
+    environment:
+      PUID: "0"
+      PGID: "0"
+      CLI_ARGS: --webservice-interface=any
+    ports:
+      - 8200:8200/tcp
+    volumes:
+      - duplicati:/config
+      - plex:/source/plex:ro
+      - nzbget:/source/nzbget:ro
+      - sonarr:/source/sonarr:ro
+      - radarr:/source/radarr:ro
+      - nzbhydra:/source/nzbhydra:ro
+
+  samba:
+    build:
+        context: .
+        dockerfile: Dockerfile.samba
+    privileged: true
+    # ports:
+    #     - "445:445"
+    environment:
+        PUID: "1000"
+        PGID: "1000"
