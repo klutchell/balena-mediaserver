@@ -1,11 +1,16 @@
 #!/bin/bash
 
+PUID=${PUID:-911}
+PGID=${PGID:-911}
+
+groupmod -o -g "${PGID}" abc
+usermod -o -u "${PUID}" abc
+
 cat > /etc/samba/smb.conf << EOF
 [global]
+    null passwords = yes
     map to guest = Bad User
-    workgroup = WORKGROUP
-    security = share
-    guest account = nobody
+    guest account = abc
 
 EOF
 
@@ -17,9 +22,8 @@ do
     cat >> /etc/samba/smb.conf << EOF
 [${uuid}]
     path = /media/${uuid}
+    read only = no
     guest ok = yes
-    writeable = yes
-    create mask = 0755
 
 EOF
 done
