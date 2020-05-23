@@ -1,7 +1,10 @@
-#!/bin/bash
+#!/bin/sh
 
-while read -r share
+for uuid in $(blkid -sUUID -ovalue /dev/sd??)
 do
-    mkdir -v -p /media/"${share}" 2>/dev/null
-    mount -v //samba/"${share}" /media/"${share}" -o "guest,uid=${PUID},gid=${PGID}"
-done < <(smbclient -g --no-pass -L samba 2>/dev/null | grep '^Disk' | awk -F '|' '{print $2;}')
+    mkdir -v /media/"${uuid}" 2>/dev/null
+    mount -v UUID="${uuid}" /media/"${uuid}"
+    chown -v "${PUID}:${PGID}" /media/"${uuid}"
+done
+
+exit 0

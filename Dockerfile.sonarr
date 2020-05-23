@@ -1,14 +1,8 @@
 FROM linuxserver/sonarr:arm64v8-latest
 
-ENV DEBIAN_FRONTEND noninteractive
-
 COPY mount.sh /
 
-RUN apt-get update \
-    && apt-get install -y --no-install-recommends smbclient cifs-utils \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/* \
-    && chmod a+x /mount.sh
+RUN chmod a+x /mount.sh
 
 ENTRYPOINT [ "/bin/sh" ]
 

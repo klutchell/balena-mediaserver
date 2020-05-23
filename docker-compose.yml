@@ -22,8 +22,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-    depends_on:
-      - samba
 
   # https://hub.docker.com/r/linuxserver/nzbget
   nzbget:
@@ -38,8 +36,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-    depends_on:
-      - samba
 
   # https://hub.docker.com/r/linuxserver/sonarr
   sonarr:
@@ -55,7 +51,6 @@ services:
       PUID: "1000"
       PGID: "1000"
     depends_on:
-      - samba
       - nzbhydra
       - nzbget
 
@@ -73,7 +68,6 @@ services:
       PUID: "1000"
       PGID: "1000"
     depends_on:
-      - samba
       - nzbhydra
       - nzbget
 
@@ -90,8 +84,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-    depends_on:
-      - samba
 
   # https://hub.docker.com/r/linuxserver/duplicati
   duplicati:
@@ -109,14 +101,3 @@ services:
       - sonarr:/source/sonarr:ro
       - radarr:/source/radarr:ro
       - nzbhydra:/source/nzbhydra:ro
-
-  samba:
-    build:
-        context: .
-        dockerfile: Dockerfile.samba
-    privileged: true
-    # ports:
-    #     - "445:445"
-    environment:
-        PUID: "1000"
-        PGID: "1000"

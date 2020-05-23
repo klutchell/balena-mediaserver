@@ -5,8 +5,7 @@ mediaserver stack for balenaCloud
 ## Requirements
 
 - Raspberry Pi 4 or a similar x64 device supported by BalenaCloud
-- (optional) USB storage device
-- (optional) Network storage share
+- USB storage drive
 
 ## Getting Started
 
@@ -45,9 +44,7 @@ printf "g\nn\np\n1\n\n\nw\n" | fdisk /dev/sda
 mkfs.ext4 /dev/sda1
 ```
 
-Restart the `nfs` service and any supported partitions will be mounted at `/media/{UUID}`.
-
-The same partitions will also be shared at `smb://samba/{UUID}` for the other services to automount.
+Restart the services and any supported partitions will be mounted at `/media/{UUID}`.
 
 ### enable duplicati
 
