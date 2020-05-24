@@ -46,9 +46,48 @@ mkfs.ext4 /dev/sda1
 
 Restart the services and any supported partitions will be mounted at `/media/{UUID}`.
 
-### enable duplicati
+### nzbhydra
 
-Connect to `http://<device-ip>:8200` and configure a new backup using any online service you prefer as the Destination and `/source` as Source Data.
+* access the dashboard via `http://<device-ip>:5076`
+* make note of your API key under Config->Main->Security
+* add your nzb indexers under Config->Indexers
+* optionally enable authentication under Config->Authorization
+
+### nzbget
+
+* access the dashboard via `http://<device-ip>:6789`
+* default credentials are `nzbget:tegbzn6789`
+* add your usenet servers under Settings->News-Servers
+* optionally change or remove authentication under Settings->Security
+* change Settings->Paths->MainDir to `/media/{UUID}/downloads`
+
+### sonarr
+
+* access the dashboard via `http://<device-ip>:8989`
+* add `http://nzbhydra:5076` under Settings->Indexers->Newznab
+* add `http://nzbget:6789` under Settings->Download Client
+* optionally enable authentication under Settings->General->Security
+* when adding your first series set the base path to `/media/{UUID}/tv`
+
+### radarr
+
+* access the dashboard via `http://<device-ip>:7878`
+* add `http://nzbhydra:5076` under Settings->Indexers->Newznab
+* add `http://nzbget:6789` under Settings->Download Client
+* optionally enable authentication under Settings->General->Security
+* when adding your first movie set the base path to `/media/{UUID}/movies`
+
+### plex
+
+* set the `PLEX_CLAIM` token and restart the service
+* access the dashboard via `http://<device-ip>:32400`
+* create a new Movies library pointing to `/media/{UUID}/movies`
+* create a new TV Shows library pointing to `/media/{UUID}/tv`
+
+### duplicati
+
+* access the dashboard via `http://<device-ip>:8200`
+* configure a new backup using `/source` for Source Data
 
 ## Contributing
 

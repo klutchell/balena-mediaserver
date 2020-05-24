@@ -16,8 +16,6 @@ services:
       dockerfile: Dockerfile.plex
     privileged: true
     network_mode: host
-    # ports:
-      # - 32400:32400/tcp
     volumes:
       - plex:/config
     environment:
