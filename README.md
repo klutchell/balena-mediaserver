@@ -56,14 +56,14 @@ Restart the services and any supported partitions will be mounted at `/media/{UU
 
 ### nzbhydra
 
-- access the dashboard via `http://<device-ip>:5076`
+- access the dashboard via `http://{HOST}:5076`
 - make note of your API key under _Config->Main->Security_
 - add your nzb indexers under _Config->Indexers_
 - optionally enable authentication under _Config->Authorization_
 
 ### nzbget
 
-- access the dashboard via `http://<device-ip>:6789`
+- access the dashboard via `http://{HOST}:6789`
 - default credentials are `nzbget:tegbzn6789`
 - add your usenet servers under _Settings->News-Servers_
 - optionally change or remove authentication under _Settings->Security_
@@ -71,7 +71,7 @@ Restart the services and any supported partitions will be mounted at `/media/{UU
 
 ### sonarr
 
-- access the dashboard via `http://<device-ip>:8989`
+- access the dashboard via `http://{HOST}:8989`
 - add `http://nzbhydra:5076` under _Settings->Indexers->Newznab_
 - add `http://nzbget:6789` under _Settings->Download Client_
 - optionally enable authentication under _Settings->General->Security_
@@ -79,7 +79,7 @@ Restart the services and any supported partitions will be mounted at `/media/{UU
 
 ### radarr
 
-- access the dashboard via `http://<device-ip>:7878`
+- access the dashboard via `http://{HOST}:7878`
 - add `http://nzbhydra:5076` under _Settings->Indexers->Newznab_
 - add `http://nzbget:6789` under _Settings->Download Client_
 - optionally enable authentication under _Settings->General->Security_
@@ -88,13 +88,13 @@ Restart the services and any supported partitions will be mounted at `/media/{UU
 ### plex
 
 - set the `PLEX_CLAIM` token and restart the service
-- access the dashboard via `http://<device-ip>:32400`
+- access the dashboard via `http://{HOST}:32400`
 - create a new Movies library pointing to `/media/{UUID}/movies`
 - create a new TV Shows library pointing to `/media/{UUID}/tv`
 
 ### duplicati
 
-- access the dashboard via `http://<device-ip>:8200`
+- access the dashboard via `http://{HOST}:8200`
 - configure a new backup using `/source` for Source Data
 
 ## Contributing
