@@ -2,6 +2,14 @@
 
 mediaserver stack for balenaCloud
 
+## Features
+
+- [Plex](https://plex.tv/) organizes video, music and photos from personal media libraries and streams them to smart TVs, streaming boxes and mobile devices.
+- [NZBGet](https://nzbget.net/) is a usenet downloader, written in C++ and designed with performance in mind to achieve maximum download speed by using very little system resources.
+- [Sonarr](https://sonarr.tv/) is a PVR for usenet and bittorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
+- [Radarr](https://radarr.video/) is a fork of Sonarr to work with movies à la Couchpotato.
+- [NZBHydra2](https://github.com/theotherp/nzbhydra2) is a meta search application for NZB indexers, the "spiritual successor" to NZBmegasearcH, and an evolution of the original application NZBHydra.
+
 ## Requirements
 
 - Raspberry Pi 4 or a similar x64 device supported by BalenaCloud
@@ -23,7 +31,7 @@ Application envionment variables apply to all services within the application, a
 
 |Name|Example|Purpose|
 |---|---|---|
-|`PLEX_CLAIM`||(optional) obtain a claim token from <https://plex.tv/claim> and input here (claim tokens expire within 4 minutes)|
+|`PLEX_CLAIM`||obtain a claim token from <https://plex.tv/claim> and input here (claim tokens expire within 4 minutes)|
 |`TZ`|`America/Toronto`|(optional) inform services of the [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in your location|
 
 ## Usage
@@ -49,32 +57,32 @@ Restart the services and any supported partitions will be mounted at `/media/{UU
 ### nzbhydra
 
 * access the dashboard via `http://<device-ip>:5076`
-* make note of your API key under Config->Main->Security
-* add your nzb indexers under Config->Indexers
-* optionally enable authentication under Config->Authorization
+* make note of your API key under *Config->Main->Security*
+* add your nzb indexers under *Config->Indexers*
+* optionally enable authentication under *Config->Authorization*
 
 ### nzbget
 
 * access the dashboard via `http://<device-ip>:6789`
 * default credentials are `nzbget:tegbzn6789`
-* add your usenet servers under Settings->News-Servers
-* optionally change or remove authentication under Settings->Security
-* change Settings->Paths->MainDir to `/media/{UUID}/downloads`
+* add your usenet servers under *Settings->News-Servers*
+* optionally change or remove authentication under *Settings->Security*
+* change *Settings->Paths->MainDir* to `/media/{UUID}/downloads`
 
 ### sonarr
 
 * access the dashboard via `http://<device-ip>:8989`
-* add `http://nzbhydra:5076` under Settings->Indexers->Newznab
-* add `http://nzbget:6789` under Settings->Download Client
-* optionally enable authentication under Settings->General->Security
+* add `http://nzbhydra:5076` under *Settings->Indexers->Newznab*
+* add `http://nzbget:6789` under *Settings->Download Client*
+* optionally enable authentication under *Settings->General->Security*
 * when adding your first series set the base path to `/media/{UUID}/tv`
 
 ### radarr
 
 * access the dashboard via `http://<device-ip>:7878`
-* add `http://nzbhydra:5076` under Settings->Indexers->Newznab
-* add `http://nzbget:6789` under Settings->Download Client
-* optionally enable authentication under Settings->General->Security
+* add `http://nzbhydra:5076` under *Settings->Indexers->Newznab*
+* add `http://nzbget:6789` under *Settings->Download Client*
+* optionally enable authentication under *Settings->General->Security*
 * when adding your first movie set the base path to `/media/{UUID}/movies`
 
 ### plex
