@@ -29,10 +29,10 @@ Once your account is set up, deployment is carried out by downloading the projec
 
 Application envionment variables apply to all services within the application, and can be applied fleet-wide to apply to multiple devices.
 
-|Name|Example|Purpose|
-|---|---|---|
-|`PLEX_CLAIM`||obtain a claim token from <https://plex.tv/claim> and input here (claim tokens expire within 4 minutes)|
-|`TZ`|`America/Toronto`|(optional) inform services of the [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in your location|
+| Name         | Example           | Purpose                                                                                                                     |
+| ------------ | ----------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `PLEX_CLAIM` |                   | obtain a claim token from <https://plex.tv/claim> (expires in 4 minutes)                                                    |
+| `TZ`         | `America/Toronto` | (optional) inform services of the [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in your location |
 
 ## Usage
 
@@ -56,46 +56,46 @@ Restart the services and any supported partitions will be mounted at `/media/{UU
 
 ### nzbhydra
 
-* access the dashboard via `http://<device-ip>:5076`
-* make note of your API key under *Config->Main->Security*
-* add your nzb indexers under *Config->Indexers*
-* optionally enable authentication under *Config->Authorization*
+- access the dashboard via `http://<device-ip>:5076`
+- make note of your API key under _Config->Main->Security_
+- add your nzb indexers under _Config->Indexers_
+- optionally enable authentication under _Config->Authorization_
 
 ### nzbget
 
-* access the dashboard via `http://<device-ip>:6789`
-* default credentials are `nzbget:tegbzn6789`
-* add your usenet servers under *Settings->News-Servers*
-* optionally change or remove authentication under *Settings->Security*
-* change *Settings->Paths->MainDir* to `/media/{UUID}/downloads`
+- access the dashboard via `http://<device-ip>:6789`
+- default credentials are `nzbget:tegbzn6789`
+- add your usenet servers under _Settings->News-Servers_
+- optionally change or remove authentication under _Settings->Security_
+- change _Settings->Paths->MainDir_ to `/media/{UUID}/downloads`
 
 ### sonarr
 
-* access the dashboard via `http://<device-ip>:8989`
-* add `http://nzbhydra:5076` under *Settings->Indexers->Newznab*
-* add `http://nzbget:6789` under *Settings->Download Client*
-* optionally enable authentication under *Settings->General->Security*
-* when adding your first series set the base path to `/media/{UUID}/tv`
+- access the dashboard via `http://<device-ip>:8989`
+- add `http://nzbhydra:5076` under _Settings->Indexers->Newznab_
+- add `http://nzbget:6789` under _Settings->Download Client_
+- optionally enable authentication under _Settings->General->Security_
+- when adding your first series set the base path to `/media/{UUID}/tv`
 
 ### radarr
 
-* access the dashboard via `http://<device-ip>:7878`
-* add `http://nzbhydra:5076` under *Settings->Indexers->Newznab*
-* add `http://nzbget:6789` under *Settings->Download Client*
-* optionally enable authentication under *Settings->General->Security*
-* when adding your first movie set the base path to `/media/{UUID}/movies`
+- access the dashboard via `http://<device-ip>:7878`
+- add `http://nzbhydra:5076` under _Settings->Indexers->Newznab_
+- add `http://nzbget:6789` under _Settings->Download Client_
+- optionally enable authentication under _Settings->General->Security_
+- when adding your first movie set the base path to `/media/{UUID}/movies`
 
 ### plex
 
-* set the `PLEX_CLAIM` token and restart the service
-* access the dashboard via `http://<device-ip>:32400`
-* create a new Movies library pointing to `/media/{UUID}/movies`
-* create a new TV Shows library pointing to `/media/{UUID}/tv`
+- set the `PLEX_CLAIM` token and restart the service
+- access the dashboard via `http://<device-ip>:32400`
+- create a new Movies library pointing to `/media/{UUID}/movies`
+- create a new TV Shows library pointing to `/media/{UUID}/tv`
 
 ### duplicati
 
-* access the dashboard via `http://<device-ip>:8200`
-* configure a new backup using `/source` for Source Data
+- access the dashboard via `http://<device-ip>:8200`
+- configure a new backup using `/source` for Source Data
 
 ## Contributing
 
