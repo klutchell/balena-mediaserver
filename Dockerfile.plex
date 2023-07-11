@@ -1,9 +1,0 @@
-FROM linuxserver/plex:arm64v8-latest
-
-COPY mount.sh /
-
-RUN chmod a+x /mount.sh
-
-ENTRYPOINT [ "/bin/sh" ]
-
-CMD [ "-c", "/mount.sh && /init" ]
