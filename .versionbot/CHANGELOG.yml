@@ -1,0 +1,13 @@
+- commits:
+    - subject: Remove custom mount steps and add several new services
+      hash: d39dd89f18d1322c9e1a164b5a64f00153cfb0b9
+      body: ""
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+  version: 1.0.0
+  title: ""
+  date: 2023-07-12T19:04:39.519Z
