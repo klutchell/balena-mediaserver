@@ -1,102 +1,262 @@
 version: "2.1"
 
 volumes:
-  plex:
-  nzbget:
-  sonarr:
-  radarr:
-  nzbhydra:
-  duplicati:
+  plex: {}
+  nzbget: {}
+  sonarr: {}
+  radarr: {}
+  nzbhydra: {}
+  duplicati: {}
+  jellyfin: {}
+  prowlarr: {}
+  ombi: {}
+  overseerr: {}
+  tailscale: {}
+  syncthing: {}
+  netdatalib: {}
+  netdatacache: {}
+  downloads: {}
+  proxy: {}
+  letsencrypt: {}
 
 services:
-  # https://hub.docker.com/r/linuxserver/plex
+  # https://docs.linuxserver.io/images/docker-plex
   plex:
-    build:
-      context: .
-      dockerfile: Dockerfile.plex
-    privileged: true
-    network_mode: host
+    image: linuxserver/plex:1.32.1
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+    ports:
+      - 32400:32400/tcp
+    tmpfs:
+      - /tmp
     volumes:
       - plex:/config
+      - downloads:/downloads
+
+  # https://docs.linuxserver.io/images/docker-jellyfin
+  jellyfin:
+    image: linuxserver/jellyfin:10.8.10
     environment:
       PUID: "1000"
       PGID: "1000"
-
-  # https://hub.docker.com/r/linuxserver/nzbget
-  nzbget:
-    build:
-      context: .
-      dockerfile: Dockerfile.nzbget
-    privileged: true
     ports:
-      - 6789:6789/tcp
+      - 8096:8096/tcp
+      - 7359:7359/udp
+    tmpfs:
+      - /tmp
+    volumes:
+      - jellyfin:/config
+      - downloads:/downloads
+
+  # https://docs.linuxserver.io/images/docker-nzbget
+  nzbget:
+    image: linuxserver/nzbget:21.1.20230119
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+    ports:
+      - 127.0.0.1:6789:6789/tcp
+    tmpfs:
+      - /tmp
     volumes:
       - nzbget:/config
+      - downloads:/downloads
+
+  # https://docs.linuxserver.io/images/docker-sonarr
+  sonarr:
+    image: linuxserver/sonarr:3.0.10
+    depends_on:
+      - nzbhydra
+      - nzbget
+      - prowlarr
     environment:
       PUID: "1000"
       PGID: "1000"
-
-  # https://hub.docker.com/r/linuxserver/sonarr
-  sonarr:
-    build:
-      context: .
-      dockerfile: Dockerfile.sonarr
-    privileged: true
     ports:
-      - 8989:8989/tcp
+      - 127.0.0.1:8989:8989/tcp
+    tmpfs:
+      - /tmp
     volumes:
       - sonarr:/config
-    environment:
-      PUID: "1000"
-      PGID: "1000"
+      - downloads:/downloads
+
+  # https://docs.linuxserver.io/images/docker-radarr
+  radarr:
+    image: linuxserver/radarr:4.4.4
     depends_on:
       - nzbhydra
       - nzbget
-
-  # https://hub.docker.com/r/linuxserver/radarr
-  radarr:
-    build:
-      context: .
-      dockerfile: Dockerfile.radarr
-    privileged: true
+      - prowlarr
+    environment:
+      PUID: "1000"
+      PGID: "1000"
     ports:
-      - 7878:7878/tcp
+      - 127.0.0.1:7878:7878/tcp
+    tmpfs:
+      - /tmp
     volumes:
       - radarr:/config
+      - downloads:/downloads
+
+  # https://docs.linuxserver.io/images/docker-prowlarr
+  prowlarr:
+    image: linuxserver/prowlarr:1.5.0-develop
     environment:
       PUID: "1000"
       PGID: "1000"
-    depends_on:
-      - nzbhydra
-      - nzbget
-
-  # https://hub.docker.com/r/linuxserver/nzbhydra2
-  nzbhydra:
-    build:
-      context: .
-      dockerfile: Dockerfile.nzbhydra
-    privileged: true
     ports:
-      - 5076:5076/tcp
+      - 127.0.0.1:9696:9696/tcp
+    tmpfs:
+      - /tmp
+    volumes:
+      - prowlarr:/config
+
+  # https://docs.linuxserver.io/images/docker-nzbhydra
+  nzbhydra:
+    image: linuxserver/nzbhydra2:4.7.6
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+    ports:
+      - 127.0.0.1:5076:5076/tcp
+    tmpfs:
+      - /tmp
     volumes:
       - nzbhydra:/config
+      - downloads:/downloads
+
+  # https://docs.linuxserver.io/images/docker-ombi
+  ombi:
+    image: linuxserver/ombi:4.39.1
     environment:
       PUID: "1000"
       PGID: "1000"
+    ports:
+      - 127.0.0.1:3579:3579/tcp
+    tmpfs:
+      - /tmp
+    volumes:
+      - ombi:/config
 
-  # https://hub.docker.com/r/linuxserver/duplicati
+  # https://docs.linuxserver.io/images/docker-overseerr
+  overseerr:
+    image: lscr.io/linuxserver/overseerr:1.32.5
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+    ports:
+      - 127.0.0.1:5055:5055/tcp
+    tmpfs:
+      - /tmp
+    volumes:
+      - overseerr:/config
+
+  # https://github.com/klutchell/balena-tailscale
+  tailscale:
+    image: bh.cr/klutchell_blocks/tailscale-amd64/1.44.0
+    network_mode: host
+    restart: on-failure
+    cap_add:
+      - net_admin
+      - net_raw
+      - sys_module
+    labels:
+      - io.balena.features.kernel-modules=1
+    tmpfs:
+      - /tmp
+      - /var/run/
+    volumes:
+      - tailscale:/var/lib/tailscale
+
+    # https://hub.docker.com/r/netdata/netdata
+  netdata:
+    image: netdata/netdata:v1.40.1
+    privileged: true
+    cap_add:
+      - SYS_PTRACE
+    environment:
+      DOCKER_HOST: "/var/run/balena.sock"
+      PGID: "990" # ls -nd /var/run/balena.sock | awk '{print $4}'
+    labels:
+      io.balena.features.balena-socket: 1
+      io.balena.features.procfs: 1
+      io.balena.features.supervisor-api: 1
+      io.balena.features.sysfs: 1
+    ports:
+      - 127.0.0.1:19999:19999/tcp
+    security_opt:
+      - apparmor:unconfined
+    tmpfs:
+      - /tmp
+    volumes:
+      - netdatalib:/var/lib/netdata
+      - netdatacache:/var/cache/netdata
+
+  # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
-    image: linuxserver/duplicati
+    image: lscr.io/linuxserver/duplicati:v2.0.6.3-2.0.6.3_beta_2021-06-17-ls160
     environment:
       PUID: "0"
       PGID: "0"
-      CLI_ARGS: --webservice-interface=any
     ports:
-      - 8200:8200/tcp
+      - 127.0.0.1:8200:8200/tcp
+    tmpfs:
+      - /tmp
     volumes:
       - duplicati:/config
-      - plex:/source/plex:ro
-      - nzbget:/source/nzbget:ro
-      - sonarr:/source/sonarr:ro
-      - radarr:/source/radarr:ro
-      - nzbhydra:/source/nzbhydra:ro
+      # any volumes that might be worth backing up
+      - syncthing:/volumes/syncthing
+      - plex:/volumes/plex
+      - nzbget:/volumes/nzbget
+      - sonarr:/volumes/sonarr
+      - radarr:/volumes/radarr
+      - nzbhydra:/volumes/nzbhydra
+      - jellyfin:/volumes/jellyfin
+      - prowlarr:/volumes/prowlarr∂
+      - ombi:/volumes/ombi
+      - overseerr:/volumes/overseerr
+      - tailscale:/volumes/tailscale
+      - downloads:/volumes/downloads
+      - proxy:/volumes/proxy
+
+  # https://docs.linuxserver.io/images/docker-syncthing
+  syncthing:
+    image: lscr.io/linuxserver/syncthing:1.23.6
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+    ports:
+      - 127.0.0.1:8384:8384/tcp
+      - 22000:22000/tcp
+      - 22000:22000/udp
+      - 21027:21027/udp
+    tmpfs:
+      - /tmp
+    volumes:
+      - syncthing:/config
+      # any volumes that might be worth syncronizing between machines
+      - plex:/volumes/plex
+      - nzbget:/volumes/nzbget
+      - sonarr:/volumes/sonarr
+      - radarr:/volumes/radarr
+      - nzbhydra:/volumes/nzbhydra
+      - jellyfin:/volumes/jellyfin
+      - prowlarr:/volumes/prowlarr
+      - ombi:/volumes/ombi
+      - overseerr:/volumes/overseerr
+      - tailscale:/volumes/tailscale
+      - downloads:/volumes/downloads
+
+  # https://hub.docker.com/r/jc21/nginx-proxy-manager
+  proxy:
+    image: jc21/nginx-proxy-manager:2.10.3
+    ports:
+      - 80:80/tcp
+      - 81:81/tcp
+      - 443:443/tcp
+    tmpfs:
+      - /tmp
+    volumes:
+      - proxy:/data
+      - letsencrypt:/etc/letsencrypt
