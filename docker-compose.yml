@@ -36,7 +36,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
-    image: linuxserver/jellyfin:10.8.10
+    image: linuxserver/jellyfin:10.8.10@sha256:167fb73634860ef5506b1760838dcdb2870fdb24e3a27b5b53104c54a14e5991
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -51,7 +51,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-nzbget
   nzbget:
-    image: linuxserver/nzbget:21.1.20230119
+    image: linuxserver/nzbget:21.1.20230119@sha256:ed58a6471591126adee01e704d35264979640bede1fca7ffa13a21d6643c5a18
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -65,7 +65,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
-    image: linuxserver/sonarr:3.0.10
+    image: linuxserver/sonarr:3.0.10@sha256:46509bcc8c90dd7ba8196e8d7f9cf9f17ee1e816af1931f7b3910d8e4c34f7ff
     depends_on:
       - nzbhydra
       - nzbget
@@ -128,7 +128,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
-    image: linuxserver/ombi:4.39.1
+    image: linuxserver/ombi:4.39.1@sha256:691e110450cec250bc7ace3b8075b81221b2668722745abd339498b8a45cb6fe
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -171,7 +171,7 @@ services:
 
     # https://hub.docker.com/r/netdata/netdata
   netdata:
-    image: netdata/netdata:v1.40.1
+    image: netdata/netdata:v1.40.1@sha256:1ea7e10a6f11846105bc4576e125c27809b40d940e0bc8a014fc173943928ad5
     privileged: true
     cap_add:
       - SYS_PTRACE
@@ -195,7 +195,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
-    image: lscr.io/linuxserver/duplicati:v2.0.6.3-2.0.6.3_beta_2021-06-17-ls160
+    image: lscr.io/linuxserver/duplicati:v2.0.6.3-2.0.6.3_beta_2021-06-17-ls160@sha256:9cf7c7a14bf1474d44aa29d329552bf32af58090f4cfa5e61e35a88b2cd4677e
     environment:
       PUID: "0"
       PGID: "0"
@@ -222,7 +222,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
-    image: lscr.io/linuxserver/syncthing:1.23.6
+    image: lscr.io/linuxserver/syncthing:1.23.6@sha256:4437694f86cef4dce5e78a1c2f609b9fbca8d6b19e1e69b93a17a238d7406fa7
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -250,7 +250,7 @@ services:
 
   # https://hub.docker.com/r/jc21/nginx-proxy-manager
   proxy:
-    image: jc21/nginx-proxy-manager:2.10.3
+    image: jc21/nginx-proxy-manager:2.10.3@sha256:e5407dfe0577301171f403ec6b8a01b87eca5420416a907f9c42775428e22fee
     ports:
       - 80:80/tcp
       - 81:81/tcp
