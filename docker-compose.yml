@@ -83,7 +83,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
-    image: linuxserver/radarr:4.4.4
+    image: linuxserver/radarr:4.6.4@sha256:73145b77b1771b030e85f80e848b65671bc6429fe277a2ff162e5518ea43a415
     depends_on:
       - nzbhydra
       - nzbget
