@@ -1,4 +1,17 @@
 - commits:
+    - subject: Extend automergePatch and automergeDigest presets
+      hash: 49d30923ec10fe1ec82cf810dde87310f2ab1b36
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+  version: 1.0.3
+  title: ""
+  date: 2023-07-13T17:01:24.054Z
+- commits:
     - subject: Update product-os/flowzone action to v5.3.3
       hash: fd25e835288647f407084a667eb22f5328a92565
       body: ""
