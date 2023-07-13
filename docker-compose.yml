@@ -114,7 +114,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
-    image: linuxserver/nzbhydra2:4.7.6
+    image: linuxserver/nzbhydra2:5.1.9@sha256:eb53b8c410157f78745b609fc94b0e4b71c9195a529418e6474a4009418d8758
     environment:
       PUID: "1000"
       PGID: "1000"
