@@ -4,5 +4,5 @@
     "config:best-practices",
     ":automergeStableNonMajor"
   ],
-  "commitBody": "Change-type: patch",
+  "commitBody": "Change-type: patch"
 }
