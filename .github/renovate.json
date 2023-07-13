@@ -6,5 +6,8 @@
     ":automergePatch",
     ":automergeDigest"
   ],
-  "commitBody": "Change-type: patch"
+  "commitBody": "Change-type: patch",
+  "minor": {
+    "automerge": true
+  }
 }
