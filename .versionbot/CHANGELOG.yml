@@ -1,4 +1,17 @@
 - commits:
+    - subject: Add renovate config
+      hash: 8d729f5a6f43f3eade62951d8644a3a84bcfad0c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+  version: 1.0.1
+  title: ""
+  date: 2023-07-13T13:40:59.116Z
+- commits:
     - subject: Remove custom mount steps and add several new services
       hash: d39dd89f18d1322c9e1a164b5a64f00153cfb0b9
       body: ""
