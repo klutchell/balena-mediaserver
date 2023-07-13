@@ -9,5 +9,8 @@
   "commitBody": "Change-type: patch",
   "minor": {
     "automerge": true
+  },
+  "pinDigest": {
+    "automerge": true
   }
 }
