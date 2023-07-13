@@ -51,7 +51,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-nzbget
   nzbget:
-    image: linuxserver/nzbget:21.1.20230119
+    image: linuxserver/nzbget:2021.11.25@sha256:2f12cb315ad9c87429c1416cbe9e06ac5c207f9a69cec2bb6e654c5359ae05d2
     environment:
       PUID: "1000"
       PGID: "1000"
