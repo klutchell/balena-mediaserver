@@ -1,4 +1,17 @@
 - commits:
+    - subject: Enable automerge for pinDigest
+      hash: c7e45e6843cc4a8011905a67d40b62a87d05cba3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+  version: 1.0.11
+  title: ""
+  date: 2023-07-13T22:42:27.253Z
+- commits:
     - subject: Update lscr.io/linuxserver/overseerr Docker tag to v1.33.0
       hash: 5b4d795f3f59b1b1786f9a67f9f0708bd284ba07
       body: ""
