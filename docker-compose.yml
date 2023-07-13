@@ -141,7 +141,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
-    image: lscr.io/linuxserver/overseerr:1.32.5
+    image: lscr.io/linuxserver/overseerr:1.33.0@sha256:7a3cf9a5519b087b9b97e0d235d3686568a038040829c3f129a9cdebb91bc704
     environment:
       PUID: "1000"
       PGID: "1000"
