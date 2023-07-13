@@ -22,7 +22,7 @@ volumes:
 services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
-    image: linuxserver/plex:1.32.1
+    image: linuxserver/plex:1.32.4@sha256:0542f64cc5ecc05c0c4e79a09d716e683e901b1a6db99dc2727e3f761a94d3c0
     environment:
       PUID: "1000"
       PGID: "1000"
