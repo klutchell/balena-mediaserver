@@ -101,7 +101,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
-    image: linuxserver/prowlarr:1.5.2-develop@sha256:fc56901aa65fa00cb73d667d2db743fb445e5b5c123ff2bdb0c6e0976db3d9bc
+    image: linuxserver/prowlarr:1.7.1-develop@sha256:44fdb7d6008930f29df4f6a6eee1d06aaaa7e3fa0adce6c1d7decc0a2c53c081
     environment:
       PUID: "1000"
       PGID: "1000"
