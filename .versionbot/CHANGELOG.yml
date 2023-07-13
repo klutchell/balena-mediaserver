@@ -1,4 +1,18 @@
 - commits:
+    - subject: Automerge minor upgrades
+      hash: 1cdcd4f98fbae29438358d02ffbd5e45dfde79ac
+      body: |
+        The automergeStableNonMajor is not supported by docker versioning.
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+  version: 1.0.7
+  title: ""
+  date: 2023-07-13T18:39:10.267Z
+- commits:
     - subject: Update linuxserver/nzbhydra2 Docker tag to v5
       hash: f505a934ef831baeadcc777c01949ad680e66606
       body: ""
