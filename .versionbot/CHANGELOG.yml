@@ -1,4 +1,15 @@
 - commits:
+    - subject: Update linuxserver/radarr Docker tag to v4.6.4
+      hash: d2cddb43ff0031ddb5352efec6f6bddc2785b296
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 1.0.9
+  title: ""
+  date: 2023-07-13T20:33:54.102Z
+- commits:
     - subject: Update linuxserver/prowlarr Docker tag to v1.7.1
       hash: c9133651fa8bba2f433c7a4942d583e3f2e8cbe4
       body: ""
