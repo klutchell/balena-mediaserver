@@ -1,4 +1,15 @@
 - commits:
+    - subject: Pin dependencies
+      hash: b1a4b375b20cfd1488904ea0d8945140600bcdb7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 1.0.12
+  title: ""
+  date: 2023-07-13T23:34:55.354Z
+- commits:
     - subject: Enable automerge for pinDigest
       hash: c7e45e6843cc4a8011905a67d40b62a87d05cba3
       body: ""
