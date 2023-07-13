@@ -2,7 +2,9 @@
   "extends": [
     "config:recommended",
     "config:best-practices",
-    ":automergeStableNonMajor"
+    ":automergeStableNonMajor",
+    ":automergePatch",
+    ":automergeDigest"
   ],
   "commitBody": "Change-type: patch"
 }
