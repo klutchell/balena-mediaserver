@@ -1,4 +1,15 @@
 - commits:
+    - subject: Update linuxserver/prowlarr Docker tag to v1.5.2
+      hash: 85b8c48f00f827c5324a38270668097b8b4d7eda
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 1.0.4
+  title: ""
+  date: 2023-07-13T17:08:24.915Z
+- commits:
     - subject: Extend automergePatch and automergeDigest presets
       hash: 49d30923ec10fe1ec82cf810dde87310f2ab1b36
       body: ""
