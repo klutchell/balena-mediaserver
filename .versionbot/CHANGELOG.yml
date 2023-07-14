@@ -1,4 +1,15 @@
 - commits:
+    - subject: Update product-os/flowzone action to v5.3.4
+      hash: 592a71e45e74cfbeebd0cef0a78ed5b818ebb4ad
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 1.0.13
+  title: ""
+  date: 2023-07-14T07:08:53.066Z
+- commits:
     - subject: Pin dependencies
       hash: b1a4b375b20cfd1488904ea0d8945140600bcdb7
       body: ""
