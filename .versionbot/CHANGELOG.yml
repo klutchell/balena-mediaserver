@@ -1,4 +1,17 @@
 - commits:
+    - subject: Change balena.yml type from block to appplication
+      hash: b589c8eaa27e354e0204dfb628a02bc0df9a25eb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+  version: 1.0.14
+  title: ""
+  date: 2023-07-14T17:11:41.211Z
+- commits:
     - subject: Update product-os/flowzone action to v5.3.4
       hash: 592a71e45e74cfbeebd0cef0a78ed5b818ebb4ad
       body: ""
