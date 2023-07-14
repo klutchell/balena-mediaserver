@@ -23,6 +23,8 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     image: linuxserver/plex:1.32.4@sha256:0542f64cc5ecc05c0c4e79a09d716e683e901b1a6db99dc2727e3f761a94d3c0
+    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
+    restart: on-failure
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -37,6 +39,8 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     image: linuxserver/jellyfin:10.8.10@sha256:167fb73634860ef5506b1760838dcdb2870fdb24e3a27b5b53104c54a14e5991
+    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
+    restart: on-failure
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -52,6 +56,8 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbget
   nzbget:
     image: linuxserver/nzbget:21.1.20230119@sha256:ed58a6471591126adee01e704d35264979640bede1fca7ffa13a21d6643c5a18
+    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
+    restart: on-failure
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -66,6 +72,8 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     image: linuxserver/sonarr:3.0.10@sha256:46509bcc8c90dd7ba8196e8d7f9cf9f17ee1e816af1931f7b3910d8e4c34f7ff
+    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
+    restart: on-failure
     depends_on:
       - nzbhydra
       - nzbget
@@ -84,6 +92,8 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     image: linuxserver/radarr:4.6.4@sha256:73145b77b1771b030e85f80e848b65671bc6429fe277a2ff162e5518ea43a415
+    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
+    restart: on-failure
     depends_on:
       - nzbhydra
       - nzbget
@@ -102,6 +112,8 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     image: linuxserver/prowlarr:1.7.1-develop@sha256:44fdb7d6008930f29df4f6a6eee1d06aaaa7e3fa0adce6c1d7decc0a2c53c081
+    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
+    restart: on-failure
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -115,6 +127,8 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     image: linuxserver/nzbhydra2:5.1.9@sha256:eb53b8c410157f78745b609fc94b0e4b71c9195a529418e6474a4009418d8758
+    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
+    restart: on-failure
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -129,6 +143,8 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     image: linuxserver/ombi:4.39.1@sha256:691e110450cec250bc7ace3b8075b81221b2668722745abd339498b8a45cb6fe
+    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
+    restart: on-failure
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -142,6 +158,8 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     image: lscr.io/linuxserver/overseerr:1.33.0@sha256:7a3cf9a5519b087b9b97e0d235d3686568a038040829c3f129a9cdebb91bc704
+    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
+    restart: on-failure
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -196,6 +214,8 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     image: lscr.io/linuxserver/duplicati:v2.0.6.3-2.0.6.3_beta_2021-06-17-ls160@sha256:9cf7c7a14bf1474d44aa29d329552bf32af58090f4cfa5e61e35a88b2cd4677e
+    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
+    restart: on-failure
     environment:
       PUID: "0"
       PGID: "0"
@@ -223,6 +243,8 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     image: lscr.io/linuxserver/syncthing:1.23.6@sha256:4437694f86cef4dce5e78a1c2f609b9fbca8d6b19e1e69b93a17a238d7406fa7
+    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
+    restart: on-failure
     environment:
       PUID: "1000"
       PGID: "1000"
