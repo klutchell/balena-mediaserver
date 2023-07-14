@@ -1,4 +1,18 @@
 - commits:
+    - subject: Conditionally disable services with an env var
+      hash: 1782e2717d9302f3e23b29232ac0fe9b6093649f
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 1.1.0
+  title: ""
+  date: 2023-07-14T20:21:47.969Z
+- commits:
     - subject: Update product-os/flowzone action to v5.3.5
       hash: 68c49c6a254452e61b7a1c31450e66e912a79c5b
       body: ""
