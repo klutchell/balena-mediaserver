@@ -1,4 +1,15 @@
 - commits:
+    - subject: Update product-os/flowzone action to v5.3.5
+      hash: 68c49c6a254452e61b7a1c31450e66e912a79c5b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+  version: 1.0.15
+  title: ""
+  date: 2023-07-14T18:38:28.049Z
+- commits:
     - subject: Change balena.yml type from block to appplication
       hash: b589c8eaa27e354e0204dfb628a02bc0df9a25eb
       body: ""
