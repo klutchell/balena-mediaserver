@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/sonarr:3.0.10 Docker digest to cdddb99
+      hash: 7574b369387fa5a246d7a3d50ed5bc6dcacddcb3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.1.1
+  title: ""
+  date: 2023-07-15T00:11:57.268Z
+- commits:
     - subject: Conditionally disable services with an env var
       hash: 1782e2717d9302f3e23b29232ac0fe9b6093649f
       body: ""
