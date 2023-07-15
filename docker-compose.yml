@@ -71,7 +71,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
-    image: linuxserver/sonarr:3.0.10@sha256:46509bcc8c90dd7ba8196e8d7f9cf9f17ee1e816af1931f7b3910d8e4c34f7ff
+    image: linuxserver/sonarr:3.0.10@sha256:cdddb991ebdc97a6f6344fc46de8249c03a22f3f0ab17fcac652df20b587d1ee
     entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
     restart: on-failure
     depends_on:
