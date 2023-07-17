@@ -25,6 +25,8 @@ services:
     image: linuxserver/plex:1.32.4@sha256:0542f64cc5ecc05c0c4e79a09d716e683e901b1a6db99dc2727e3f761a94d3c0
     entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
     restart: on-failure
+    devices:
+      - /dev/dri:/dev/dri
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -41,6 +43,8 @@ services:
     image: linuxserver/jellyfin:10.8.10@sha256:167fb73634860ef5506b1760838dcdb2870fdb24e3a27b5b53104c54a14e5991
     entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
     restart: on-failure
+    devices:
+      - /dev/dri:/dev/dri
     environment:
       PUID: "1000"
       PGID: "1000"
