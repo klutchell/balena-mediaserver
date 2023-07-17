@@ -1,4 +1,18 @@
 - commits:
+    - subject: Expose /dev/dri for intel quicksync support in plex and jellyfin
+      hash: b49bd50e0adf3be92f7e1184cfc1a77c05eddfd4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 1.1.4
+  title: ""
+  date: 2023-07-17T16:19:37.209Z
+- commits:
     - subject: Update linuxserver/radarr:4.6.4 Docker digest to c96d598
       hash: 0fddfdeb07aaf084005e518df5881e41f969cbec
       body: ""
