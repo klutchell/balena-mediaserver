@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v5.3.6
+      hash: eeded62bfc7670f70f6c6572cf0f1843bb4b5b30
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.1.5
+  title: ""
+  date: 2023-07-18T16:41:42.788Z
+- commits:
     - subject: Expose /dev/dri for intel quicksync support in plex and jellyfin
       hash: b49bd50e0adf3be92f7e1184cfc1a77c05eddfd4
       body: ""
