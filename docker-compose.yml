@@ -279,7 +279,7 @@ services:
     image: jc21/nginx-proxy-manager:2.10.3@sha256:e5407dfe0577301171f403ec6b8a01b87eca5420416a907f9c42775428e22fee
     ports:
       - 80:80/tcp
-      - 81:81/tcp
+      - 127.0.0.1:81:81/tcp
       - 443:443/tcp
     tmpfs:
       - /tmp
