@@ -1,4 +1,18 @@
 - commits:
+    - subject: Do not expose proxy dashboard to the public
+      hash: e9cc0d5a612439cc58dfb5cd6931f9db46417b2f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 1.1.11
+  title: ""
+  date: 2023-07-21T23:42:30.749Z
+- commits:
     - subject: Update linuxserver/plex Docker tag to v1.32.5
       hash: a6cfe540e0466cad000b232b91dd7b4aede5b1b2
       body: ""
