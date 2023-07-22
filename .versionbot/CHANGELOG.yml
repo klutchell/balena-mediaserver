@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/nzbhydra2 Docker tag to v5.1.10
+      hash: ca3c8cb10deeaf1ed75d289aaa66c5e795420e30
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.1.14
+  title: ""
+  date: 2023-07-22T13:09:44.178Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing:1.23.6 Docker digest to 58d5516
       hash: e1ca62c4f744a979ea257f43e731ca61e5552c09
       body: ""
