@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/sonarr:3.0.10 Docker digest to 02ec9b3
+      hash: 4fcd742c0cffaa883bcaa8d76cdd7a397a679c7b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.1.12
+  title: ""
+  date: 2023-07-22T00:11:55.169Z
+- commits:
     - subject: Do not expose proxy dashboard to the public
       hash: e9cc0d5a612439cc58dfb5cd6931f9db46417b2f
       body: ""
