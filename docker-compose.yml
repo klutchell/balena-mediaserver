@@ -246,7 +246,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
-    image: lscr.io/linuxserver/syncthing:1.23.6@sha256:4437694f86cef4dce5e78a1c2f609b9fbca8d6b19e1e69b93a17a238d7406fa7
+    image: lscr.io/linuxserver/syncthing:1.23.6@sha256:58d5516868a30119e07c8f898b1ea51c85fe7cde4cfbab7c2b31becf4defbcdb
     entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
     restart: on-failure
     environment:
