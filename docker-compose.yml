@@ -237,7 +237,7 @@ services:
       - radarr:/volumes/radarr
       - nzbhydra:/volumes/nzbhydra
       - jellyfin:/volumes/jellyfin
-      - prowlarr:/volumes/prowlarr∂
+      - prowlarr:/volumes/prowlarr
       - ombi:/volumes/ombi
       - overseerr:/volumes/overseerr
       - tailscale:/volumes/tailscale
