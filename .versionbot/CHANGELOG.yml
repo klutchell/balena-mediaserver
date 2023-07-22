@@ -1,4 +1,16 @@
 - commits:
+    - subject: Fix typo in docker-compose.yml
+      hash: c7fd4e5f16ffe81502ea2c97ff671fc12a86360d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested: []
+  version: 1.1.15
+  title: ""
+  date: 2023-07-22T17:32:07.810Z
+- commits:
     - subject: Update linuxserver/nzbhydra2 Docker tag to v5.1.10
       hash: ca3c8cb10deeaf1ed75d289aaa66c5e795420e30
       body: ""
