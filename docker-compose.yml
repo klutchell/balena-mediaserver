@@ -95,7 +95,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
-    image: linuxserver/radarr:4.6.4@sha256:c96d598ad21f5f1c2fb7b4718261af2899cb48206317402145cce4281d607830
+    image: linuxserver/radarr:4.6.4@sha256:499a88df24de0bedd248366033fe14b6745fde49ef84345ccd759f49d5a3549d
     entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
     restart: on-failure
     depends_on:
