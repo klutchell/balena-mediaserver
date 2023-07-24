@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/overseerr Docker tag to v1.33.1
+      hash: 497624b20d222ffad400634652fad990cdad73d7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.1.18
+  title: ""
+  date: 2023-07-24T08:08:31.336Z
+- commits:
     - subject: Update linuxserver/prowlarr Docker tag to v1.7.3
       hash: 999a8b1e6e6044e05a4dc33675f6b767317e5778
       body: ""
