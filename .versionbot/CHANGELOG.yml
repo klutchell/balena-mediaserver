@@ -1,4 +1,16 @@
 - commits:
+    - subject: Pin tailscale/tailscale Docker tag to a1a18e1
+      hash: aa71150ed49d2eabaa13c6468639f6368bb9ba1f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.2.1
+  title: ""
+  date: 2023-07-24T17:36:47.771Z
+- commits:
     - subject: Use tailscale to serve ports for each service
       hash: 4367d312d74b780315339e92dd71adc19c66313c
       body: ""
