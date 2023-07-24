@@ -1,4 +1,18 @@
 - commits:
+    - subject: Use tailscale to serve ports for each service
+      hash: 4367d312d74b780315339e92dd71adc19c66313c
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 1.2.0
+  title: ""
+  date: 2023-07-24T17:26:57.905Z
+- commits:
     - subject: Update lscr.io/linuxserver/overseerr Docker tag to v1.33.1
       hash: 497624b20d222ffad400634652fad990cdad73d7
       body: ""
