@@ -1,24 +1,25 @@
 version: "2.1"
 
 volumes:
-  plex: {}
-  nzbget: {}
-  sonarr: {}
-  radarr: {}
-  nzbhydra: {}
+  downloads: {}
   duplicati: {}
   jellyfin: {}
-  prowlarr: {}
-  ombi: {}
-  overseerr: {}
-  tailscale: {}
-  sabnzbd: {}
-  syncthing: {}
+  letsencrypt: {}
   netdatalib: {}
   netdatacache: {}
-  downloads: {}
+  nzbget: {}
+  nzbhydra: {}
+  ombi: {}
+  overseerr: {}
+  plex: {}
+  prowlarr: {}
   proxy: {}
-  letsencrypt: {}
+  radarr: {}
+  sabnzbd: {}
+  sonarr: {}
+  syncthing: {}
+  tailscale: {}
+  tautulli: {}
 
 services:
   # https://docs.linuxserver.io/images/docker-plex
@@ -192,6 +193,21 @@ services:
       - sabnzbd:/config
       - downloads:/downloads
 
+  # https://docs.linuxserver.io/images/docker-tautulli
+  tautulli:
+    image: linuxserver/tautulli:2.12.5
+    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
+    restart: on-failure
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+    ports:
+      - 127.0.0.1:8181:8181/tcp
+    tmpfs:
+      - /tmp
+    volumes:
+      - tautulli:/config
+
     # https://hub.docker.com/r/netdata/netdata
   netdata:
     image: netdata/netdata:v1.41.0@sha256:2801d57b2050bc9071be8279d6f70a3ffe71a7881c84b524104080375ae0cb46
@@ -245,6 +261,7 @@ services:
       - tailscale:/volumes/tailscale
       - downloads:/volumes/downloads
       - proxy:/volumes/proxy
+      - tautulli:/volumes/tautulli
 
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
@@ -277,6 +294,7 @@ services:
       - tailscale:/volumes/tailscale
       - downloads:/volumes/downloads
       - proxy:/volumes/proxy
+      - tautulli:/volumes/tautulli
 
   # https://hub.docker.com/r/jc21/nginx-proxy-manager
   proxy:
@@ -350,6 +368,7 @@ services:
         tailscale serve tls-terminated-tcp:7878 tcp://127.0.0.1:7878
         tailscale serve tls-terminated-tcp:8989 tcp://127.0.0.1:8989
         tailscale serve tls-terminated-tcp:8080 tcp://127.0.0.1:8080
+        tailscale serve tls-terminated-tcp:8181 tcp://127.0.0.1:8181
         tailscale serve tls-terminated-tcp:8384 tcp://127.0.0.1:8384
 
         tailscale serve status

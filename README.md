@@ -24,6 +24,7 @@ Manage your media server on balena.io
   - [Sabnzbd](#sabnzbd)
   - [Sonarr](#sonarr)
   - [Syncthing](#syncthing)
+  - [Tautulli](#tautulli)
 - [Contributing](#contributing)
 
 ## What You'll Need
@@ -225,6 +226,8 @@ opening an SSH tunnel to add credentials or add URLs to the `host_whitelist`.
 ssh -p 22222 -L 8080:localhost:8080 <balena_username>@<server-public-ip>
 ```
 
+The temporary download folder should be `/downloads/sabnzbd/incomplete` and `/downloads/sabnzbd/complete` for completed.
+
 This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
 
 Read more at <https://docs.linuxserver.io/images/docker-sabnzbd>.
@@ -248,6 +251,16 @@ Configure a new sync by adding sources from `/volumes/`.
 This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
 
 Read more at <https://docs.linuxserver.io/images/docker-syncthing>.
+
+### Tautulli
+
+Available via `http://tautulli:8181` internally or port `8181` on your Tailnet.
+
+The Plex IP Address or Hostname can just be `plex` and port `32400` for direct access.
+
+This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+
+Read more at <https://docs.linuxserver.io/images/docker-tautulli>.
 
 ## Contributing
 
