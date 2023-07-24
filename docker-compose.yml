@@ -161,7 +161,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
-    image: lscr.io/linuxserver/overseerr:1.33.0@sha256:607543d41495edc84727cdabce19efce334afde488b0618ae94ff6ecd7e3b880
+    image: lscr.io/linuxserver/overseerr:1.33.1@sha256:121a77066d8e306be37e9a7c6b5f3905281813e78811d0352e215e0d8c88b12c
     entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
     restart: on-failure
     environment:
