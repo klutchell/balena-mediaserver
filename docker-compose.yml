@@ -12,6 +12,7 @@ volumes:
   ombi: {}
   overseerr: {}
   tailscale: {}
+  sabnzbd: {}
   syncthing: {}
   netdatalib: {}
   netdatacache: {}
@@ -127,6 +128,7 @@ services:
       - /tmp
     volumes:
       - prowlarr:/config
+      - downloads:/downloads
 
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
@@ -173,6 +175,22 @@ services:
       - /tmp
     volumes:
       - overseerr:/config
+
+  # https://docs.linuxserver.io/images/docker-sabnzbd
+  sabnzbd:
+    image: linuxserver/sabnzbd:4.0.3
+    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
+    restart: on-failure
+    environment:
+      PUID: "1000"
+      PGID: "1000"
+    ports:
+      - 127.0.0.1:8080:8080/tcp
+    tmpfs:
+      - /tmp
+    volumes:
+      - sabnzbd:/config
+      - downloads:/downloads
 
     # https://hub.docker.com/r/netdata/netdata
   netdata:
@@ -223,6 +241,7 @@ services:
       - prowlarr:/volumes/prowlarr
       - ombi:/volumes/ombi
       - overseerr:/volumes/overseerr
+      - sabnzbd:/volumes/sabnzbd
       - tailscale:/volumes/tailscale
       - downloads:/volumes/downloads
       - proxy:/volumes/proxy
@@ -254,8 +273,10 @@ services:
       - prowlarr:/volumes/prowlarr
       - ombi:/volumes/ombi
       - overseerr:/volumes/overseerr
+      - sabnzbd:/volumes/sabnzbd
       - tailscale:/volumes/tailscale
       - downloads:/volumes/downloads
+      - proxy:/volumes/proxy
 
   # https://hub.docker.com/r/jc21/nginx-proxy-manager
   proxy:
@@ -328,6 +349,7 @@ services:
         tailscale serve tls-terminated-tcp:81 tcp://127.0.0.1:81
         tailscale serve tls-terminated-tcp:7878 tcp://127.0.0.1:7878
         tailscale serve tls-terminated-tcp:8989 tcp://127.0.0.1:8989
+        tailscale serve tls-terminated-tcp:8080 tcp://127.0.0.1:8080
         tailscale serve tls-terminated-tcp:8384 tcp://127.0.0.1:8384
 
         tailscale serve status

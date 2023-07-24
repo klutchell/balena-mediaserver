@@ -20,8 +20,9 @@ Manage your media server on balena.io
   - [Overseerr](#overseerr)
   - [Plex](#plex)
   - [Prowlarr](#prowlarr)
-  - [Sonarr](#sonarr)
   - [Radarr](#radarr)
+  - [Sabnzbd](#sabnzbd)
+  - [Sonarr](#sonarr)
   - [Syncthing](#syncthing)
 - [Contributing](#contributing)
 
@@ -203,16 +204,6 @@ This service can be disabled by setting the `DISABLE` service variable to any no
 
 Read more at <https://docs.linuxserver.io/images/docker-prowlarr>.
 
-### Sonarr
-
-Available via `http://sonarr:8989` internally or port `8989` on your Tailnet.
-
-The base path should be set to `/downloads/tv`.
-
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
-
-Read more at <https://docs.linuxserver.io/images/docker-sonarr>.
-
 ### Radarr
 
 Available via `http://radarr:7878` internally or port `7878` on your Tailnet.
@@ -222,6 +213,31 @@ The base path should be set to `/downloads/movies`.
 This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
 
 Read more at <https://docs.linuxserver.io/images/docker-radarr>.
+
+### Sabnzbd
+
+Available via `http://sabnzbd:8080` internally or port `8080` on your Tailnet.
+
+You can temporarily bypass the [hostname verification](https://sabnzbd.org/wiki/extra/hostname-check.html) by
+opening an SSH tunnel to add credentials or add URLs to the `host_whitelist`.
+
+```text
+ssh -p 22222 -L 8080:localhost:8080 <balena_username>@<server-public-ip>
+```
+
+This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+
+Read more at <https://docs.linuxserver.io/images/docker-sabnzbd>.
+
+### Sonarr
+
+Available via `http://sonarr:8989` internally or port `8989` on your Tailnet.
+
+The base path should be set to `/downloads/tv`.
+
+This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+
+Read more at <https://docs.linuxserver.io/images/docker-sonarr>.
 
 ### Syncthing
 
