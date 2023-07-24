@@ -174,23 +174,6 @@ services:
     volumes:
       - overseerr:/config
 
-  # https://github.com/klutchell/balena-tailscale
-  tailscale:
-    image: bh.cr/klutchell_blocks/tailscale-amd64/1.44.0
-    network_mode: host
-    restart: on-failure
-    cap_add:
-      - net_admin
-      - net_raw
-      - sys_module
-    labels:
-      - io.balena.features.kernel-modules=1
-    tmpfs:
-      - /tmp
-      - /var/run/
-    volumes:
-      - tailscale:/var/lib/tailscale
-
     # https://hub.docker.com/r/netdata/netdata
   netdata:
     image: netdata/netdata:v1.41.0@sha256:2801d57b2050bc9071be8279d6f70a3ffe71a7881c84b524104080375ae0cb46
@@ -286,3 +269,67 @@ services:
     volumes:
       - proxy:/data
       - letsencrypt:/etc/letsencrypt
+
+  # https://hub.docker.com/r/tailscale/tailscale
+  tailscale:
+    image: tailscale/tailscale:v1.44.0
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      - io.balena.features.kernel-modules=1
+    tmpfs:
+      - /tmp
+      - /var/run/
+    volumes:
+      - tailscale:/var/lib/tailscale
+    environment:
+      TS_STATE_DIR: "/var/lib/tailscale"
+      TS_SOCKET: "/var/run/tailscale/tailscaled.sock"
+      TS_EXTRA_ARGS: "--reset --accept-routes"
+      TS_AUTH_ONCE: "true"
+      # TS_USERSPACE: "true"
+      # TS_ROUTES: 172.18.0.0/16
+      TS_HOSTNAME: mediaserver
+      # TS_DEST_IP: 127.0.0.1
+    entrypoint:
+      - /bin/sh
+      - -c
+    command:
+      - |
+        # load the kernel module if it exists
+        if modprobe wireguard 2>/dev/null
+        then
+          modinfo wireguard || true
+          export TS_USERSPACE="${TS_USERSPACE:-false}"
+        fi
+
+        mkdir -p /dev/net
+        [ ! -c /dev/net/tun ] && mknod /dev/net/tun c 10 200
+        
+        /usr/local/bin/containerboot &
+        pid=$!
+
+        sleep 5
+
+        tailscale serve reset
+        
+        tailscale serve tls-terminated-tcp:8200 tcp://127.0.0.1:8200
+        # tailscale serve tls-terminated-tcp:8096 tcp://127.0.0.1:8096
+        tailscale serve tls-terminated-tcp:19999 tcp://127.0.0.1:19999
+        tailscale serve tls-terminated-tcp:6789 tcp://127.0.0.1:6789
+        tailscale serve tls-terminated-tcp:5076 tcp://127.0.0.1:5076
+        tailscale serve tls-terminated-tcp:3579 tcp://127.0.0.1:3579
+        tailscale serve tls-terminated-tcp:5055 tcp://127.0.0.1:5055
+        # tailscale serve tls-terminated-tcp:32400 tcp://127.0.0.1:32400
+        tailscale serve tls-terminated-tcp:9696 tcp://127.0.0.1:9696
+        tailscale serve tls-terminated-tcp:81 tcp://127.0.0.1:81
+        tailscale serve tls-terminated-tcp:7878 tcp://127.0.0.1:7878
+        tailscale serve tls-terminated-tcp:8989 tcp://127.0.0.1:8989
+        tailscale serve tls-terminated-tcp:8384 tcp://127.0.0.1:8384
+
+        tailscale serve status
+
+        wait $pid
