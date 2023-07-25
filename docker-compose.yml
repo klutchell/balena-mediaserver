@@ -24,7 +24,7 @@ volumes:
 services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
-    image: linuxserver/plex:1.32.5@sha256:59f2095f1bc4ebd4bc5bf07c28ef55082039d42dd5f34806901c24efa893ee1b
+    image: linuxserver/plex:1.32.5@sha256:f22ae4e8ff5a3ea8cbf0d4ed50074a27219b86b613bc9621c7770f60eb60f4c0
     entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
     restart: on-failure
     devices:
