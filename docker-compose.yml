@@ -117,7 +117,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
-    image: linuxserver/prowlarr:1.8.0-develop@sha256:b790c0eb45f32d53556c89de1bd21ae75fffcb9c432c1fa23b22f2d854080b17
+    image: linuxserver/prowlarr:1.8.0-develop@sha256:5c8ce5afc50dffe2495d6bf55b0ba89a3a4a4aa0b15634c5209490b389633b27
     entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
     restart: on-failure
     environment:
