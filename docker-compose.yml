@@ -195,7 +195,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
-    image: linuxserver/tautulli:2.12.5@sha256:70230375706467d54bf453b5d775fe412ab034a88aba60b94e009fa0d13ebf4f
+    image: linuxserver/tautulli:2.12.5@sha256:3edb5d074ec29c12f56a09b9e0bdbe58cbbc209f90e82b20e03a58c59c660c9c
     entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
     restart: on-failure
     environment:
