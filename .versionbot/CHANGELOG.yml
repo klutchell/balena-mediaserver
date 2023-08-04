@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/tautulli:2.12.5 Docker digest to 3edb5d0
+      hash: 243266a812f4a88485fca5690a413f4247f1e454
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.3.28
+  title: ""
+  date: 2023-08-04T00:15:42.122Z
+- commits:
     - subject: Update linuxserver/sabnzbd:4.0.3 Docker digest to c8aa89c
       hash: 28e2f691c7c9ec332b8a150de31c76e7a702dd8b
       body: ""
