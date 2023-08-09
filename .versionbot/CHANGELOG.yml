@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v1.42.0
+      hash: 2e3775780f8e7aea48b6a676c9ab9a4b159e1343
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.3.41
+  title: ""
+  date: 2023-08-09T17:37:23.314Z
+- commits:
     - subject: Update product-os/flowzone action to v5.4.3
       hash: 4fad252a012a0e310d2b4426a96b5de095693fed
       body: ""
