@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/overseerr:1.33.2 Docker digest to 6c0e3ef
+      hash: cb5d368fd79ae4d16c1fe232f92760cacff25f2f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.3.42
+  title: ""
+  date: 2023-08-09T19:09:20.683Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v1.42.0
       hash: 2e3775780f8e7aea48b6a676c9ab9a4b159e1343
       body: ""
