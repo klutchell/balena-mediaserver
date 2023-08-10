@@ -179,7 +179,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
-    image: linuxserver/sabnzbd:4.0.3@sha256:c8aa89c07b296ef0a10b1b1966757fc90f67b7b6284ec9f68627464fd7a40ef7
+    image: linuxserver/sabnzbd:4.0.3@sha256:5164abe0858ce75f22b5f8c0103006baeb522f33169b86e32c783c412e59645b
     entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
     restart: on-failure
     environment:
