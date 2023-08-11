@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/tautulli:2.12.5 Docker digest to 4bf16db
+      hash: 04102324dfff13b2e0c83fa276b1bba8a574fdd3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 1.3.46
+  title: ""
+  date: 2023-08-11T00:10:42.633Z
+- commits:
     - subject: Update tailscale/tailscale Docker tag to v1.46.1
       hash: b414f94418f9179c2fcc5fbd9174e6114d06db1b
       body: ""
