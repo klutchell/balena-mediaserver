@@ -133,7 +133,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
-    image: linuxserver/nzbhydra2:5.1.10@sha256:8d15a1630eae8157b79a005e2aa0a65a16167efd7a5b5d961b261bf69caecd0b
+    image: linuxserver/nzbhydra2:5.1.10@sha256:689a53faa6e3c3f6684133893d74622dabfc43a3523ee466db89ba388d15cdfd
     entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
     restart: on-failure
     environment:
