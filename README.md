@@ -14,7 +14,6 @@ Manage your media server on balena.io
   - [Jellyfin](#jellyfin)
   - [Netdata](#netdata)
   - [Nginx Proxy Manager](#nginx-proxy-manager)
-  - [Nzbget](#nzbget)
   - [Nzbhydra](#nzbhydra)
   - [Ombi](#ombi)
   - [Overseerr](#overseerr)
@@ -143,23 +142,6 @@ Tailscale can be used in addition to, or instead of, a public-facing URL, on a p
 For example, you might want Plex to be public at `https://plex.mydomain.tld` but Duplicati to only be available on your Tailnet.
 
 Read more at <https://nginxproxymanager.com/>.
-
-### Nzbget
-
-Available via `http://nzbget:6789` internally or port `6789` on your Tailnet.
-
-The default credentials are below and can be changed under _Settings->Security_.
-
-```text
-Username: nzbget
-Password: tegbzn6789
-```
-
-The root download path should be `/downloads/nzbget` and categories can be created below that.
-
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
-
-Read more at <https://docs.linuxserver.io/images/docker-nzbget>.
 
 ### Nzbhydra
 
