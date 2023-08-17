@@ -20,18 +20,20 @@ volumes:
   syncthing: {}
   tailscale: {}
   tautulli: {}
+  custominit: {}
 
 services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     image: linuxserver/plex:1.32.5@sha256:4f79fb474e01c629301c90bd3f39d47cc83678e6aceda15effa3e6320f8e296b
-    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
-    restart: on-failure
+    restart: unless-stopped
     devices:
       - /dev/dri:/dev/dri
     environment:
       PUID: "1000"
       PGID: "1000"
+    labels:
+      io.balena.features.supervisor-api: 1
     ports:
       - 32400:32400/tcp
     tmpfs:
@@ -39,17 +41,19 @@ services:
     volumes:
       - plex:/config
       - downloads:/downloads
+      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     image: linuxserver/jellyfin:10.8.10@sha256:256102cfaa0995cca107e472f0bb45c9430b27dee3eec5406575b134f0c04c13
-    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
-    restart: on-failure
+    restart: unless-stopped
     devices:
       - /dev/dri:/dev/dri
     environment:
       PUID: "1000"
       PGID: "1000"
+    labels:
+      io.balena.features.supervisor-api: 1
     ports:
       - 8096:8096/tcp
       - 7359:7359/udp
@@ -58,15 +62,17 @@ services:
     volumes:
       - jellyfin:/config
       - downloads:/downloads
+      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-nzbget
   nzbget:
     image: linuxserver/nzbget:21.1.20230119@sha256:ed58a6471591126adee01e704d35264979640bede1fca7ffa13a21d6643c5a18
-    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
-    restart: on-failure
+    restart: unless-stopped
     environment:
       PUID: "1000"
       PGID: "1000"
+    labels:
+      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:6789:6789/tcp
     tmpfs:
@@ -74,19 +80,17 @@ services:
     volumes:
       - nzbget:/config
       - downloads:/downloads
+      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     image: linuxserver/sonarr:3.0.10@sha256:3776ba2231121dda29198f219f4de2cc6a19b80261915dbf538d426283d620cc
-    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
-    restart: on-failure
-    depends_on:
-      - nzbhydra
-      - nzbget
-      - prowlarr
+    restart: unless-stopped
     environment:
       PUID: "1000"
       PGID: "1000"
+    labels:
+      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:8989:8989/tcp
     tmpfs:
@@ -94,19 +98,17 @@ services:
     volumes:
       - sonarr:/config
       - downloads:/downloads
+      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     image: linuxserver/radarr:4.7.5@sha256:64e6ecdc613c0c91bcae67cad88ce6555a33cb6f71c9214209095b76de07cfb7
-    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
-    restart: on-failure
-    depends_on:
-      - nzbhydra
-      - nzbget
-      - prowlarr
+    restart: unless-stopped
     environment:
       PUID: "1000"
       PGID: "1000"
+    labels:
+      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:7878:7878/tcp
     tmpfs:
@@ -114,15 +116,17 @@ services:
     volumes:
       - radarr:/config
       - downloads:/downloads
+      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     image: linuxserver/prowlarr:1.8.2-develop@sha256:f232ad096651bfde350f90e97d7f79840b0bcb9294758316432623262e77e544
-    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
-    restart: on-failure
+    restart: unless-stopped
     environment:
       PUID: "1000"
       PGID: "1000"
+    labels:
+      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:9696:9696/tcp
     tmpfs:
@@ -130,15 +134,17 @@ services:
     volumes:
       - prowlarr:/config
       - downloads:/downloads
+      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     image: linuxserver/nzbhydra2:5.1.10@sha256:689a53faa6e3c3f6684133893d74622dabfc43a3523ee466db89ba388d15cdfd
-    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
-    restart: on-failure
+    restart: unless-stopped
     environment:
       PUID: "1000"
       PGID: "1000"
+    labels:
+      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:5076:5076/tcp
     tmpfs:
@@ -146,45 +152,51 @@ services:
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
+      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     image: linuxserver/ombi:4.39.1@sha256:a830cb7f92c92b869a8202df7b1b6b0c15c796abac8ecc53ba6660d72e2485d1
-    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
-    restart: on-failure
+    restart: unless-stopped
     environment:
       PUID: "1000"
       PGID: "1000"
+    labels:
+      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:3579:3579/tcp
     tmpfs:
       - /tmp
     volumes:
       - ombi:/config
+      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     image: lscr.io/linuxserver/overseerr:1.33.2@sha256:7a9c8e6a4ac9edfe6f1ef786e013efb5f5cf5a1095b9a94fb354765eca7ecef6
-    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
-    restart: on-failure
+    restart: unless-stopped
     environment:
       PUID: "1000"
       PGID: "1000"
+    labels:
+      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:5055:5055/tcp
     tmpfs:
       - /tmp
     volumes:
       - overseerr:/config
+      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     image: linuxserver/sabnzbd:4.0.3@sha256:8a719b74a114e7fd08f2f2e8f2ac8287029bf35d60ca8f035ed12bb798aed828
-    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
-    restart: on-failure
+    restart: unless-stopped
     environment:
       PUID: "1000"
       PGID: "1000"
+    labels:
+      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:8080:8080/tcp
     tmpfs:
@@ -192,21 +204,24 @@ services:
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
+      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     image: linuxserver/tautulli:2.12.5@sha256:4bf16db026fd0aa81f4afa02cb92827f1e072b7de5a7cb71e767e960f8620f1a
-    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
-    restart: on-failure
+    restart: unless-stopped
     environment:
       PUID: "1000"
       PGID: "1000"
+    labels:
+      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:8181:8181/tcp
     tmpfs:
       - /tmp
     volumes:
       - tautulli:/config
+      - custominit:/custom-cont-init.d:ro
 
     # https://hub.docker.com/r/netdata/netdata
   netdata:
@@ -220,7 +235,6 @@ services:
     labels:
       io.balena.features.balena-socket: 1
       io.balena.features.procfs: 1
-      io.balena.features.supervisor-api: 1
       io.balena.features.sysfs: 1
     ports:
       - 127.0.0.1:19999:19999/tcp
@@ -235,17 +249,19 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     image: lscr.io/linuxserver/duplicati:v2.0.6.3-2.0.6.3_beta_2021-06-17-ls160@sha256:9cf7c7a14bf1474d44aa29d329552bf32af58090f4cfa5e61e35a88b2cd4677e
-    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
-    restart: on-failure
+    restart: unless-stopped
     environment:
       PUID: "0"
       PGID: "0"
+    labels:
+      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:8200:8200/tcp
     tmpfs:
       - /tmp
     volumes:
       - duplicati:/config
+      - custominit:/custom-cont-init.d:ro
       # any volumes that might be worth backing up
       - syncthing:/volumes/syncthing
       - plex:/volumes/plex
@@ -266,11 +282,12 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     image: lscr.io/linuxserver/syncthing:1.23.7@sha256:c1ee17d0f7e1f3aec022312e8bf984c8089d0fff622a3fad8c6079abf0283710
-    entrypoint: /bin/sh -c "[ -n \"${DISABLE}\" ] || exec /init"
-    restart: on-failure
+    restart: unless-stopped
     environment:
       PUID: "1000"
       PGID: "1000"
+    labels:
+      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:8384:8384/tcp
       - 22000:22000/tcp
@@ -280,6 +297,7 @@ services:
       - /tmp
     volumes:
       - syncthing:/config
+      - custominit:/custom-cont-init.d:ro
       # any volumes that might be worth syncronizing between machines
       - plex:/volumes/plex
       - nzbget:/volumes/nzbget
@@ -318,7 +336,7 @@ services:
       - NET_RAW
       - SYS_MODULE
     labels:
-      - io.balena.features.kernel-modules=1
+      io.balena.features.kernel-modules: 1
     tmpfs:
       - /tmp
       - /var/run/
@@ -330,9 +348,7 @@ services:
       TS_EXTRA_ARGS: "--reset --accept-routes"
       TS_AUTH_ONCE: "true"
       # TS_USERSPACE: "true"
-      # TS_ROUTES: 172.18.0.0/16
       TS_HOSTNAME: mediaserver
-      # TS_DEST_IP: 127.0.0.1
     entrypoint:
       - /bin/sh
       - -c
@@ -374,3 +390,16 @@ services:
         tailscale serve status
 
         wait $pid
+
+  s6-sidecar:
+    build: s6-sidecar
+    restart: no
+    volumes:
+      - custominit:/volumes/custominit
+    entrypoint:
+      - /bin/sh
+      - -c
+    command:
+      - |
+        rm -rf /volumes/custominit/*
+        cp -av /custom-cont-init.d/* /volumes/custominit/
