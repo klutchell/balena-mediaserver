@@ -7,7 +7,6 @@ volumes:
   letsencrypt: {}
   netdatalib: {}
   netdatacache: {}
-  nzbget: {}
   nzbhydra: {}
   ombi: {}
   overseerr: {}
@@ -61,24 +60,6 @@ services:
       - /tmp
     volumes:
       - jellyfin:/config
-      - downloads:/downloads
-
-  # https://docs.linuxserver.io/images/docker-nzbget
-  nzbget:
-    image: linuxserver/nzbget:21.1.20230119@sha256:ed58a6471591126adee01e704d35264979640bede1fca7ffa13a21d6643c5a18
-    restart: unless-stopped
-    environment:
-      PUID: "1000"
-      PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
-    labels:
-      io.balena.features.supervisor-api: 1
-    ports:
-      - 127.0.0.1:6789:6789/tcp
-    tmpfs:
-      - /tmp
-    volumes:
-      - nzbget:/config
       - downloads:/downloads
 
   # https://docs.linuxserver.io/images/docker-sonarr
@@ -264,7 +245,6 @@ services:
       # any volumes that might be worth backing up
       - syncthing:/volumes/syncthing
       - plex:/volumes/plex
-      - nzbget:/volumes/nzbget
       - sonarr:/volumes/sonarr
       - radarr:/volumes/radarr
       - nzbhydra:/volumes/nzbhydra
@@ -299,7 +279,6 @@ services:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
       - plex:/volumes/plex
-      - nzbget:/volumes/nzbget
       - sonarr:/volumes/sonarr
       - radarr:/volumes/radarr
       - nzbhydra:/volumes/nzbhydra
