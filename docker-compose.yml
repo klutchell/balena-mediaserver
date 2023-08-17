@@ -20,7 +20,6 @@ volumes:
   syncthing: {}
   tailscale: {}
   tautulli: {}
-  custominit: {}
 
 services:
   # https://docs.linuxserver.io/images/docker-plex
@@ -32,6 +31,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -41,7 +41,6 @@ services:
     volumes:
       - plex:/config
       - downloads:/downloads
-      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
@@ -52,6 +51,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -62,7 +62,6 @@ services:
     volumes:
       - jellyfin:/config
       - downloads:/downloads
-      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-nzbget
   nzbget:
@@ -71,6 +70,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -80,7 +80,6 @@ services:
     volumes:
       - nzbget:/config
       - downloads:/downloads
-      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
@@ -89,6 +88,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -98,7 +98,6 @@ services:
     volumes:
       - sonarr:/config
       - downloads:/downloads
-      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
@@ -107,6 +106,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -116,7 +116,6 @@ services:
     volumes:
       - radarr:/config
       - downloads:/downloads
-      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
@@ -125,6 +124,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -134,7 +134,6 @@ services:
     volumes:
       - prowlarr:/config
       - downloads:/downloads
-      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
@@ -143,6 +142,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -152,7 +152,6 @@ services:
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
-      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
@@ -161,6 +160,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -169,7 +169,6 @@ services:
       - /tmp
     volumes:
       - ombi:/config
-      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
@@ -178,6 +177,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -186,7 +186,6 @@ services:
       - /tmp
     volumes:
       - overseerr:/config
-      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
@@ -195,6 +194,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -204,7 +204,6 @@ services:
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
-      - custominit:/custom-cont-init.d:ro
 
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
@@ -213,6 +212,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -221,7 +221,6 @@ services:
       - /tmp
     volumes:
       - tautulli:/config
-      - custominit:/custom-cont-init.d:ro
 
     # https://hub.docker.com/r/netdata/netdata
   netdata:
@@ -253,6 +252,7 @@ services:
     environment:
       PUID: "0"
       PGID: "0"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -261,7 +261,6 @@ services:
       - /tmp
     volumes:
       - duplicati:/config
-      - custominit:/custom-cont-init.d:ro
       # any volumes that might be worth backing up
       - syncthing:/volumes/syncthing
       - plex:/volumes/plex
@@ -286,6 +285,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -297,7 +297,6 @@ services:
       - /tmp
     volumes:
       - syncthing:/config
-      - custominit:/custom-cont-init.d:ro
       # any volumes that might be worth syncronizing between machines
       - plex:/volumes/plex
       - nzbget:/volumes/nzbget
@@ -390,16 +389,3 @@ services:
         tailscale serve status
 
         wait $pid
-
-  s6-sidecar:
-    build: s6-sidecar
-    restart: no
-    volumes:
-      - custominit:/volumes/custominit
-    entrypoint:
-      - /bin/sh
-      - -c
-    command:
-      - |
-        rm -rf /volumes/custominit/*
-        cp -av /custom-cont-init.d/* /volumes/custominit/
