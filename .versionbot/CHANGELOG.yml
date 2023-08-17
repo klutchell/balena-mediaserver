@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v5.6.5
+      hash: 3d23e976d72c6c273767d5229370dfd153d67082
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.1
+  title: ""
+  date: 2023-08-17T23:07:52.104Z
+- commits:
     - subject: Remove deprecated nzbget service
       hash: 5450c46121bedb3ecded5977243656bdedd361e8
       body: ""
