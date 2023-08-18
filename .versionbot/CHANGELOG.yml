@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/tautulli:2.12.5 Docker digest to b544c64
+      hash: 1b5e1e3dd5750c8d8883279ed4d83f79c7f5a7fc
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.2
+  title: ""
+  date: 2023-08-18T00:13:05.588Z
+- commits:
     - subject: Update product-os/flowzone action to v5.6.5
       hash: 3d23e976d72c6c273767d5229370dfd153d67082
       body: ""
