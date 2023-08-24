@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/ombi Docker tag to v4.43.5
+      hash: 9b66faeb12047a831bebf3ef5a2cb473d6615001
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.20
+  title: ""
+  date: 2023-08-24T21:09:29.896Z
+- commits:
     - subject: Update product-os/flowzone action to v5.6.11
       hash: 9321c120053a0810ed59fe191b7c526fe04654ae
       body: ""
