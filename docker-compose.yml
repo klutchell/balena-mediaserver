@@ -170,7 +170,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
-    image: linuxserver/sabnzbd:4.0.3@sha256:8e5f1aae6da33976048a183a9595c884038b9705dc7b374e455fd8be3b894fa1
+    image: linuxserver/sabnzbd:4.0.3@sha256:4a2b7c1f3a7e7a5d4d9f1ec0edc7f26246b4b838bbdb5c2d23be925bd36751e8
     restart: unless-stopped
     environment:
       PUID: "1000"
