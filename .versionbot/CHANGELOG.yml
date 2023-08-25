@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/tautulli Docker tag to v2.13.0
+      hash: 191a644e61a08b0617ab6a941561d2aa21ea6ba1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.25
+  title: ""
+  date: 2023-08-25T17:08:29.805Z
+- commits:
     - subject: Update product-os/flowzone action to v5.6.14
       hash: 2b626c34bb11ac2db938e9ec24eb773d939e06c5
       body: ""
