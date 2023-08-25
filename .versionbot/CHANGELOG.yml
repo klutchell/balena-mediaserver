@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v5.6.14
+      hash: 2b626c34bb11ac2db938e9ec24eb773d939e06c5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.24
+  title: ""
+  date: 2023-08-25T16:41:07.613Z
+- commits:
     - subject: Update linuxserver/tautulli:2.12.5 Docker digest to c9d5bd1
       hash: cf7cb4b50d3bb03150bb4b83ac7d5c8f6a86c0d8
       body: ""
