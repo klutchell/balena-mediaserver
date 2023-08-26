@@ -136,7 +136,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
-    image: linuxserver/ombi:4.43.5@sha256:f4196c95a84674745c4a891bfede6c49540ce070e5d09d0277ee667469a06fb3
+    image: linuxserver/ombi:4.43.5@sha256:57e31d9af0443361135e61cdc320a964946dbf18b84485291b9328717a2dccf1
     restart: unless-stopped
     environment:
       PUID: "1000"
