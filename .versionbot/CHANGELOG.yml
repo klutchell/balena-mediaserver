@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/tautulli:2.13.1 Docker digest to 78ef0d6
+      hash: be970ffb1adf96c862a9b3f3a123201a93c8ee75
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.28
+  title: ""
+  date: 2023-08-26T14:37:46.234Z
+- commits:
     - subject: Update linuxserver/sonarr:3.0.10 Docker digest to 995c251
       hash: 4d0279fc19d891ac2a88946494678b874a8ac416
       body: ""
