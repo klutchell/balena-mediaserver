@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/overseerr:1.33.2 Docker digest to b5e038c
+      hash: b69897029688eb057fbe9532d67744eec3579f4d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.50
+  title: ""
+  date: 2023-09-06T19:10:10.985Z
+- commits:
     - subject: Update linuxserver/jellyfin:10.8.10 Docker digest to a1f932e
       hash: 0ed635e16c10136eefc5ab7aa4f5a2c3f5461490
       body: ""
