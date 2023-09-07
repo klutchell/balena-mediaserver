@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/sabnzbd:4.0.3 Docker digest to 7fa625c
+      hash: 7d36b62cb0282b31a931a19b128f407e46d38252
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.51
+  title: ""
+  date: 2023-09-07T01:54:24.773Z
+- commits:
     - subject: Update lscr.io/linuxserver/overseerr:1.33.2 Docker digest to b5e038c
       hash: b69897029688eb057fbe9532d67744eec3579f4d
       body: ""
