@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/prowlarr Docker tag to v1.8.6
+      hash: e3dd5ab48051bb30364a91ff336deb2bc0bc7041
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.58
+  title: ""
+  date: 2023-09-10T15:39:55.122Z
+- commits:
     - subject: Update product-os/flowzone action to v5.7.12
       hash: 5f7405257c014f91d02528385e571a0b52552def
       body: ""
