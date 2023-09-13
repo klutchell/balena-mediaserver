@@ -118,7 +118,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
-    image: linuxserver/nzbhydra2:5.1.11@sha256:7bdbbbcbcdb961da2475b45e037cc5303d86bec647d3e0682b8624e9929d8e0f
+    image: linuxserver/nzbhydra2:5.1.11@sha256:8d3fecde85c90ef434839176c7949ce3d73cdbdc946e838fd66e83d6d2e20871
     restart: unless-stopped
     environment:
       PUID: "1000"
