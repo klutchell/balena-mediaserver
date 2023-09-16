@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/ombi:4.43.5 Docker digest to 0b51252
+      hash: d44fac63646a7b87b2c35c92172e253e19161612
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.81
+  title: ""
+  date: 2023-09-16T23:08:17.842Z
+- commits:
     - subject: Update linuxserver/sonarr:3.0.10 Docker digest to 01ed3f3
       hash: 1e8764149ab25d56cd2f3d51e5663a8700bd3806
       body: ""
