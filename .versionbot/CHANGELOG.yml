@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/nzbhydra2:5.1.11 Docker digest to 7a99009
+      hash: 49794690c8b01237bee7c6bf22b1b17e977285e3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.89
+  title: ""
+  date: 2023-09-20T22:37:55.112Z
+- commits:
     - subject: Update product-os/flowzone action to v5.8.1
       hash: 15385f237efea1d6f7ac89511c1650a2a751e583
       body: ""
