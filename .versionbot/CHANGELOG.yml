@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/syncthing:1.24.0 Docker digest to baad594
+      hash: 2299d326af1d42b0ad34b493e7397b333c0fbcb0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.103
+  title: ""
+  date: 2023-09-30T01:51:31.562Z
+- commits:
     - subject: Update linuxserver/tautulli:2.13.1 Docker digest to 376b56d
       hash: cbff1e070e9f71ad36f89bd2b4af33a803f186f9
       body: ""
