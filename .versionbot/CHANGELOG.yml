@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v5.8.8
+      hash: 28b4dd2e63f416ac76bc84f61267c6872f2a0c19
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.110
+  title: ""
+  date: 2023-10-03T22:07:57.743Z
+- commits:
     - subject: Update product-os/flowzone action to v5.8.7
       hash: 4dfb80c62eb6025eda409fc70451862d75d6d80d
       body: ""
