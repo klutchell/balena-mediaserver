@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/nzbhydra2:5.1.11 Docker digest to 26026f0
+      hash: b08e82e1c2f9bf40bdc8bc72555453ce4c3dd507
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.115
+  title: ""
+  date: 2023-10-04T22:38:07.783Z
+- commits:
     - subject: Update tailscale/tailscale Docker tag to v1.50.1
       hash: d0934f7e632eaa74409da41325380fe918e4d3e7
       body: ""
