@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/prowlarr Docker tag to v1.9.2
+      hash: a1ee75526ff40004c112db9b1ec3a430424e7238
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.120
+  title: ""
+  date: 2023-10-07T19:37:39.972Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing:1.25.0 Docker digest to e39ccc8
       hash: a4143f7aaa66abf0800143894008befc3788d5ac
       body: ""
