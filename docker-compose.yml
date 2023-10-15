@@ -33,8 +33,10 @@ services:
       DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
-    ports:
-      - 32400:32400/tcp
+    network_mode: service:proxy
+    depends_on:
+      - proxy
+      - tailscale
     tmpfs:
       - /tmp
     volumes:
@@ -53,9 +55,10 @@ services:
       DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
-    ports:
-      - 8096:8096/tcp
-      - 7359:7359/udp
+    network_mode: service:proxy
+    depends_on:
+      - proxy
+      - tailscale
     tmpfs:
       - /tmp
     volumes:
@@ -72,8 +75,10 @@ services:
       DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
-    ports:
-      - 127.0.0.1:8989:8989/tcp
+    network_mode: service:proxy
+    depends_on:
+      - proxy
+      - tailscale
     tmpfs:
       - /tmp
     volumes:
@@ -90,8 +95,10 @@ services:
       DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
-    ports:
-      - 127.0.0.1:7878:7878/tcp
+    network_mode: service:proxy
+    depends_on:
+      - proxy
+      - tailscale
     tmpfs:
       - /tmp
     volumes:
@@ -108,8 +115,10 @@ services:
       DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
-    ports:
-      - 127.0.0.1:9696:9696/tcp
+    network_mode: service:proxy
+    depends_on:
+      - proxy
+      - tailscale
     tmpfs:
       - /tmp
     volumes:
@@ -126,8 +135,10 @@ services:
       DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
-    ports:
-      - 127.0.0.1:5076:5076/tcp
+    network_mode: service:proxy
+    depends_on:
+      - proxy
+      - tailscale
     tmpfs:
       - /tmp
     volumes:
@@ -144,8 +155,10 @@ services:
       DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
-    ports:
-      - 127.0.0.1:3579:3579/tcp
+    network_mode: service:proxy
+    depends_on:
+      - proxy
+      - tailscale
     tmpfs:
       - /tmp
     volumes:
@@ -161,8 +174,10 @@ services:
       DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
-    ports:
-      - 127.0.0.1:5055:5055/tcp
+    network_mode: service:proxy
+    depends_on:
+      - proxy
+      - tailscale
     tmpfs:
       - /tmp
     volumes:
@@ -178,8 +193,10 @@ services:
       DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
-    ports:
-      - 127.0.0.1:8080:8080/tcp
+    network_mode: service:proxy
+    depends_on:
+      - proxy
+      - tailscale
     tmpfs:
       - /tmp
     volumes:
@@ -196,8 +213,10 @@ services:
       DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
-    ports:
-      - 127.0.0.1:8181:8181/tcp
+    network_mode: service:proxy
+    depends_on:
+      - proxy
+      - tailscale
     tmpfs:
       - /tmp
     volumes:
@@ -216,8 +235,10 @@ services:
       io.balena.features.balena-socket: 1
       io.balena.features.procfs: 1
       io.balena.features.sysfs: 1
-    ports:
-      - 127.0.0.1:19999:19999/tcp
+    network_mode: service:proxy
+    depends_on:
+      - proxy
+      - tailscale
     security_opt:
       - apparmor:unconfined
     tmpfs:
@@ -236,8 +257,10 @@ services:
       DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
-    ports:
-      - 127.0.0.1:8200:8200/tcp
+    network_mode: service:proxy
+    depends_on:
+      - proxy
+      - tailscale
     tmpfs:
       - /tmp
     volumes:
@@ -268,11 +291,10 @@ services:
       DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
     labels:
       io.balena.features.supervisor-api: 1
-    ports:
-      - 127.0.0.1:8384:8384/tcp
-      - 22000:22000/tcp
-      - 22000:22000/udp
-      - 21027:21027/udp
+    network_mode: service:proxy
+    depends_on:
+      - proxy
+      - tailscale
     tmpfs:
       - /tmp
     volumes:
@@ -292,29 +314,23 @@ services:
       - proxy:/volumes/proxy
       - tautulli:/volumes/tautulli
 
-  # https://hub.docker.com/r/jc21/nginx-proxy-manager
-  proxy:
-    image: jc21/nginx-proxy-manager:2.10.4@sha256:e1000dd653d193ac70cb3635c27333b0183a11f987e2b1c6043589d9d948bc0f
-    ports:
-      - 80:80/tcp
-      - 127.0.0.1:81:81/tcp
-      - 443:443/tcp
-    tmpfs:
-      - /tmp
-    volumes:
-      - proxy:/data
-      - letsencrypt:/etc/letsencrypt
-
   # https://hub.docker.com/r/tailscale/tailscale
   tailscale:
     image: tailscale/tailscale:v1.50.1@sha256:9540c3289987a41db3342dabe334cbcf0f58ecdc49a083a1876e219fbf151a4d
-    network_mode: host
+    network_mode: service:proxy
+    depends_on:
+      - proxy
     cap_add:
       - NET_ADMIN
       - NET_RAW
       - SYS_MODULE
     labels:
       io.balena.features.kernel-modules: 1
+    healthcheck:
+      test: ["CMD-SHELL", "tailscale status"]
+      interval: 1s
+      timeout: 5s
+      retries: 60
     tmpfs:
       - /tmp
       - /var/run/
@@ -342,29 +358,28 @@ services:
         mkdir -p /dev/net
         [ ! -c /dev/net/tun ] && mknod /dev/net/tun c 10 200
         
-        /usr/local/bin/containerboot &
-        pid=$!
+        exec /usr/local/bin/containerboot
 
-        sleep 5
-
-        tailscale serve reset
-        
-        tailscale serve tls-terminated-tcp:8200 tcp://127.0.0.1:8200
-        # tailscale serve tls-terminated-tcp:8096 tcp://127.0.0.1:8096
-        tailscale serve tls-terminated-tcp:19999 tcp://127.0.0.1:19999
-        tailscale serve tls-terminated-tcp:6789 tcp://127.0.0.1:6789
-        tailscale serve tls-terminated-tcp:5076 tcp://127.0.0.1:5076
-        tailscale serve tls-terminated-tcp:3579 tcp://127.0.0.1:3579
-        tailscale serve tls-terminated-tcp:5055 tcp://127.0.0.1:5055
-        # tailscale serve tls-terminated-tcp:32400 tcp://127.0.0.1:32400
-        tailscale serve tls-terminated-tcp:9696 tcp://127.0.0.1:9696
-        tailscale serve tls-terminated-tcp:81 tcp://127.0.0.1:81
-        tailscale serve tls-terminated-tcp:7878 tcp://127.0.0.1:7878
-        tailscale serve tls-terminated-tcp:8989 tcp://127.0.0.1:8989
-        tailscale serve tls-terminated-tcp:8080 tcp://127.0.0.1:8080
-        tailscale serve tls-terminated-tcp:8181 tcp://127.0.0.1:8181
-        tailscale serve tls-terminated-tcp:8384 tcp://127.0.0.1:8384
-
-        tailscale serve status
-
-        wait $pid
+# https://hub.docker.com/r/jc21/nginx-proxy-manager
+  proxy:
+    image: jc21/nginx-proxy-manager:2.10.4@sha256:e1000dd653d193ac70cb3635c27333b0183a11f987e2b1c6043589d9d948bc0f
+    ports:
+      # nginx
+      - 80:80/tcp
+      - 443:443/tcp
+      - 127.0.0.0:81:81/tcp
+      # plex
+      - 32400:32400/tcp
+      # jellyfin
+      - 8096:8096/tcp
+      - 7359:7359/udp
+      # syncthing
+      - 22000:22000/tcp
+      - 22000:22000/udp
+      - 21027:21027/udp
+      # all other service ports can be accessed via tailnet or reverse proxy
+    tmpfs:
+      - /tmp
+    volumes:
+      - proxy:/data
+      - letsencrypt:/etc/letsencrypt
