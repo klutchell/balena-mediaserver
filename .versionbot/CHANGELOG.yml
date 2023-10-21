@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/ombi:4.43.5 Docker digest to 7c23878
+      hash: a6d5eb261751fae817cbebbd297d5e4b987279fb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.145
+  title: ""
+  date: 2023-10-21T23:08:59.889Z
+- commits:
     - subject: Update linuxserver/tautulli:2.13.1 Docker digest to 58a7a93
       hash: bd21afc9a7910d056eaf8f3c665bf8c89a3a94ba
       body: ""
