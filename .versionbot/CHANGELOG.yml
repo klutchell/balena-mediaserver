@@ -1,4 +1,18 @@
 - commits:
+    - subject: Use tailscale docker mod instead of docker host service
+      hash: 8c0dccb0c61f900430dedae9002d7103efd8a193
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.1.0
+  title: ""
+  date: 2023-10-24T19:02:08.807Z
+- commits:
     - subject: Update linuxserver/sonarr:3.0.10 Docker digest to 296e553
       hash: 96e242008028e4a1857e250fd7667106968d3ffa
       body: ""
