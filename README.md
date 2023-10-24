@@ -7,8 +7,9 @@ Manage your media server on balena.io
 - [Manual Deployment](#manual-deployment)
 - [Usage](#usage)
   - [Environment Variables](#environment-variables)
-  - [Remote Access via Nginx](#remote-access-via-nginx)
+  - [Remote Access via SSH Tunnel](#remote-access-via-ssh-tunnel)
   - [Remote Access via Tailscale](#remote-access-via-tailscale)
+  - [Remote Access via Nginx](#remote-access-via-nginx)
 - [Services](#services)
   - [Duplicati](#duplicati)
   - [Jellyfin](#jellyfin)
@@ -31,8 +32,8 @@ Manage your media server on balena.io
 - A reasonably powerful device running [balenaOS](https://balena.io/os)
 - Enough space in the data partition for your media (external storage not supported)
 - A [balenaCloud account](https://dashboard.balena-cloud.com) (optional)
-- A [Tailscale account](https://tailscale.com/) for VPN access (optional)
-- A public domain name for HTTPS access (optional)
+- A [Tailscale account](https://tailscale.com/) for [Tailnet access](#remote-access-via-tailscale) (optional)
+- A custom domain name for [HTTPS access](#remote-access-via-nginx) (optional)
 
 ## Getting Started
 
@@ -42,74 +43,105 @@ You can one-click-deploy this project to balena using the button below:
 
 ## Manual Deployment
 
-Alternatively, deployment can be carried out by manually creating a [balenaCloud account](https://dashboard.balena-cloud.com) and application, flashing a device,
-downloading the project and pushing it via the [balena CLI](https://github.com/balena-io/balena-cli).
+Alternatively, deployment can be carried out by manually creating a [balenaCloud account](https://dashboard.balena-cloud.com) and application, flashing a device, downloading the project and pushing it via the [balena CLI](https://github.com/balena-io/balena-cli).
 
 ## Usage
 
 ### Environment Variables
 
-Environment Variables apply to all services within the application, and can be applied fleet-wide to apply to multiple devices.
+Environment Variables can be applied to all services in an application, or only one service, and can be applied fleet-wide to apply to multiple devices.
 
-- `TZ`: Inform services of the [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in your location
+- `TZ`: Inform services of the [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in your location.
+- `TAILSCALE_AUTHKEY`: The authkey for your tailnet. You can create one in the [admin panel](https://login.tailscale.com/admin/settings/keys).
 
-### Remote Access via Nginx
+### Remote Access via SSH Tunnel
 
-Most services and their ports are intended to be accessed via a reverse proxy, and as such are binding
-to localhost instead of public interfaces.
+Create an SSH tunnel to securely access services without exposing ports or public domains.
+This is addition to the other access methods, and is entirely optional.
 
-On first setup there are no reverse proxies configured, so an SSH tunnel can be used for initial access
-to the proxy manager dashboard.
+```bash
+# create an VPN tunnel over the balena proxy
+balena tunnel ${UUID} -p 22222:4321
 
-```text
-ssh -p 22222 -L 8080:localhost:81 <balena_username>@<server-public-ip>
+# in another window, forward the web service ports over SSH to your localhost
+ssh -N -p 4321 -L 8080:localhost:${PORT} ${USERNAME}@localhost
 ```
 
-Now the proxy manager dashboard should be available at <http://localhost:8080> and you can start [setting up remote proxy
-hosts](#nginx-proxy-manager).
+Where `UUID` is the UUID of your balena device,
+`USERNAME` is your balenaCloud username,
+and `PORT` is the service port found under [Services](#services).
 
-> If the SSH port is unavailable behind a firewall or NAT, see [Remote Access via Tailscale](#remote-access-via-tailscale).
+Then direct your browser to `http://localhost:8080` to access the web interface.
+
+Optionally, for convenience you can clone this repo and run `make ${SERVICE}-web` after creating
+an `.env` file containing `UUID=****` and `USERNAME=****`.
 
 ### Remote Access via Tailscale
 
 A secure method of accessing your services remotely is via Tailscale.
+This is addition to the other access methods, and is entirely optional.
 
-Authenticate by navigating to the auth URL shown in the Tailscale service logs or by providing the `TAILSCALE_AUTHKEY`
-environment variable.
+Authenticate by providing the `TAILSCALE_AUTHKEY` environment variable.
 
-The ports for each service will be automatically shared on your Tailnet via the [tailscale serve command](https://tailscale.com/kb/1242/tailscale-serve/).
+You can create an authkey in the [admin panel](https://login.tailscale.com/admin/settings/keys).
+See [here](https://tailscale.com/kb/1085/auth-keys/) for more information about authkeys and what you can do with them.
 
-You can see all the current proxies by running `tailscale serve status` in the Tailscale service web terminal.
+Once authenticated, each service will be added to your Tailnet with the name shown under [Services](#services).
 
-Read more at <https://hub.docker.com/r/tailscale/tailscale>.
+Read more at <https://tailscale.dev/blog/docker-mod-tailscale>.
+
+### Remote Access via Nginx
+
+Custom domains can be used with TLS certificates to expose any services via HTTPS reverse proxy.
+This is addition to the other access methods, and is entirely optional.
+
+For each service you would like to access publicly via your personal domain and HTTPS:
+
+1. Select **Hosts** -> **Proxy Hosts** -> **Add Proxy Host**
+2. Add your personal domain/subdomain to **Domain Names** (DNS must already be configured with your provider)
+3. **Scheme** should always be `http` for the backend.
+4. **Forward Hostname** will be the name of the service to proxy, e.g. `plex`
+5. **Forward Port** can be found in the service description under [Services](#services), e.g. `32400`
+6. Optionally create/select an Access List for security
+7. Under the **SSL** tab select `Request a new SSL Certificate` unless you already created one and agree to the TOS
+
+To create a public URL for the Nginx Proxy Manager dashboard itself you would use `http` -> `localhost` -> `81`.
+
+Read more at <https://nginxproxymanager.com/>.
 
 ## Services
 
 ### Duplicati
 
-Available via `http://duplicati:8200` internally or port `8200` on your Tailnet.
+The web interface is available via port `8200` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via `mediaserver-duplicati` on your [Tailnet](#remote-access-via-tailscale),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 Configure a new backup by adding sources from `/volumes/`.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-duplicati>.
 
 ### Jellyfin
 
-Available via `http://jellyfin:8096` internally and port `8096` on all interfaces.
+The web interface is available via port `8096` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via `mediaserver-jellyfin` on your [Tailnet](#remote-access-via-tailscale),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx),
+or via all local interfaces on port `8096`.
 
 Set `JELLYFIN_PublishedServerUrl` to the public URL of your server.
 
 Create new libraries by pointing to the respective folders in `/downloads/`.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-jellyfin>.
 
 ### Netdata
 
-Available via `http://netdata:19999` internally or port `19999` on your Tailnet.
+The web interface is available via port `19999` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 Run `ls -nd /var/run/balena.sock | awk '{print $4}'` in a Host OS terminal and set the `PGID` environment variable.
 
@@ -117,7 +149,8 @@ Read more at <https://hub.docker.com/r/netdata/netdata>.
 
 ### Nginx Proxy Manager
 
-Available via `http://proxy:81` internally or port `81` on your Tailnet.
+The web interface is available via port `81` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The default credentials are below and you will be prompted to update them after logging in.
 
@@ -126,121 +159,120 @@ Email: admin@example.com
 Password: changeme
 ```
 
-For each service you would like to access publicly via your personal domain and HTTPS:
-
-1. Hosts -> Proxy Hosts -> Add Proxy Host
-2. Add your personal domain/subdomain to Domain Names (DNS must already be configured with your provider)
-3. Scheme, Forward Hostname, and Forward Port can be found in the service descriptions below, e.g. `http` -> `plex` -> `32400`
-4. Optionally create/select an Access List to restrict access
-5. Under the SSL tab select `Request a new SSL Certificate` unless you already created one and agree to the TOS
-
-To create a public URL for the Nginx Proxy Manager dashboard itself you would use `http` -> `localhost` -> `81`.
-
-This is not required for all services, only ones you wish to access via HTTPS on a personal domain.
-
-Tailscale can be used in addition to, or instead of, a public-facing URL, on a per-service basis.
-For example, you might want Plex to be public at `https://plex.mydomain.tld` but Duplicati to only be available on your Tailnet.
-
 Read more at <https://nginxproxymanager.com/>.
 
 ### Nzbhydra
 
-Available via `http://nzbhydra:5076` internally or port `5076` on your Tailnet.
+The web interface is available via port `5076` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via `mediaserver-nzbhydra` on your [Tailnet](#remote-access-via-tailscale),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-nzbhydra>.
 
 ### Ombi
 
-Available via `http://ombi:3579` internally or port `3579` on your Tailnet.
+The web interface is available via port `3579` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via `mediaserver-ombi` on your [Tailnet](#remote-access-via-tailscale),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-ombi>.
 
 ### Overseerr
 
-Available via `http://overseerr:5055` internally or port `5055` on your Tailnet.
+The web interface is available via port `5055` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via `mediaserver-overseerr` on your [Tailnet](#remote-access-via-tailscale),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-overseerr>.
 
 ### Plex
 
-Available via `http://plex:32400` internally and port `32400` on all interfaces.
+The web interface is available via port `32400` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via `mediaserver-plex` on your [Tailnet](#remote-access-via-tailscale),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx),
+or via all local interfaces on port `32400`.
 
 Obtain a claim token from <https://plex.tv/claim> and set the `PLEX_CLAIM` environment variable.
 
 Create new libraries by pointing to the respective folders in `/downloads/`.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-plex>.
 
 ### Prowlarr
 
-Available via `http://prowlarr:9696` internally or port `9696` on your Tailnet.
+The web interface is available via port `9696` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via `mediaserver-prowlarr` on your [Tailnet](#remote-access-via-tailscale),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-prowlarr>.
 
 ### Radarr
 
-Available via `http://radarr:7878` internally or port `7878` on your Tailnet.
+The web interface is available via port `7878` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via `mediaserver-radarr` on your [Tailnet](#remote-access-via-tailscale),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The base path should be set to `/downloads/movies`.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-radarr>.
 
 ### Sabnzbd
 
-Available via `http://sabnzbd:8080` internally or port `8080` on your Tailnet.
-
-You can temporarily bypass the [hostname verification](https://sabnzbd.org/wiki/extra/hostname-check.html) by
-opening an SSH tunnel to add credentials or add URLs to the `host_whitelist`.
-
-```text
-ssh -p 22222 -L 8080:localhost:8080 <balena_username>@<server-public-ip>
-```
+The web interface is available via port `8080` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via `mediaserver-sabnzbd` on your [Tailnet](#remote-access-via-tailscale),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The temporary download folder should be `/downloads/sabnzbd/incomplete` and `/downloads/sabnzbd/complete` for completed.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-sabnzbd>.
 
 ### Sonarr
 
-Available via `http://sonarr:8989` internally or port `8989` on your Tailnet.
+The web interface is available via port `8989` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via `mediaserver-sonarr` on your [Tailnet](#remote-access-via-tailscale),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The base path should be set to `/downloads/tv`.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-sonarr>.
 
 ### Syncthing
 
-Available via `http://syncthing:8384` internally or port `8384` on your Tailnet.
+The web interface is available via port `8384` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via `mediaserver-syncthing` on your [Tailnet](#remote-access-via-tailscale),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 Configure a new sync by adding sources from `/volumes/`.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-syncthing>.
 
 ### Tautulli
 
-Available via `http://tautulli:8181` internally or port `8181` on your Tailnet.
+The web interface is available via port `8181` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via `mediaserver-tautulli` on your [Tailnet](#remote-access-via-tailscale),
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The Plex IP Address or Hostname can just be `plex` and port `32400` for direct access.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-tautulli>.
 

@@ -3,22 +3,33 @@ version: "2.1"
 volumes:
   downloads: {}
   duplicati: {}
+  duplicati-tailscale: {}
   jellyfin: {}
+  jellyfin-tailscale: {}
   letsencrypt: {}
   netdatalib: {}
   netdatacache: {}
   nzbhydra: {}
+  nzbhydra-tailscale: {}
   ombi: {}
+  ombi-tailscale: {}
   overseerr: {}
+  overseerr-tailscale: {}
   plex: {}
+  plex-tailscale: {}
   prowlarr: {}
+  prowlarr-tailscale: {}
   proxy: {}
   radarr: {}
+  radarr-tailscale: {}
   sabnzbd: {}
+  sabnzbd-tailscale: {}
   sonarr: {}
+  sonarr-tailscale: {}
   syncthing: {}
-  tailscale: {}
+  syncthing-tailscale: {}
   tautulli: {}
+  tautulli-tailscale: {}
 
 services:
   # https://docs.linuxserver.io/images/docker-plex
@@ -30,7 +41,12 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_SERVE_MODE: https
+      TAILSCALE_USE_SSH: 1
+      TAILSCALE_HOSTNAME: mediaserver-plex
+      TAILSCALE_SERVE_PORT: 32400
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -40,6 +56,7 @@ services:
     volumes:
       - plex:/config
       - downloads:/downloads
+      - plex-tailscale:/var/lib/tailscale
 
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
@@ -50,7 +67,12 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_SERVE_MODE: https
+      TAILSCALE_USE_SSH: 1
+      TAILSCALE_HOSTNAME: mediaserver-jellyfin
+      TAILSCALE_SERVE_PORT: 8096
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -61,6 +83,7 @@ services:
     volumes:
       - jellyfin:/config
       - downloads:/downloads
+      - jellyfin-tailscale:/var/lib/tailscale
 
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
@@ -69,7 +92,12 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_SERVE_MODE: https
+      TAILSCALE_USE_SSH: 1
+      TAILSCALE_HOSTNAME: mediaserver-sonarr
+      TAILSCALE_SERVE_PORT: 8989
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -79,6 +107,7 @@ services:
     volumes:
       - sonarr:/config
       - downloads:/downloads
+      - sonarr-tailscale:/var/lib/tailscale
 
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
@@ -87,7 +116,12 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_SERVE_MODE: https
+      TAILSCALE_USE_SSH: 1
+      TAILSCALE_HOSTNAME: mediaserver-radarr
+      TAILSCALE_SERVE_PORT: 7878
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -97,6 +131,7 @@ services:
     volumes:
       - radarr:/config
       - downloads:/downloads
+      - radarr-tailscale:/var/lib/tailscale
 
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
@@ -105,7 +140,12 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_SERVE_MODE: https
+      TAILSCALE_USE_SSH: 1
+      TAILSCALE_HOSTNAME: mediaserver-prowlarr
+      TAILSCALE_SERVE_PORT: 9696
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -115,6 +155,7 @@ services:
     volumes:
       - prowlarr:/config
       - downloads:/downloads
+      - prowlarr-tailscale:/var/lib/tailscale
 
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
@@ -123,7 +164,12 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_SERVE_MODE: https
+      TAILSCALE_USE_SSH: 1
+      TAILSCALE_HOSTNAME: mediaserver-nzbhydra
+      TAILSCALE_SERVE_PORT: 5076
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -133,6 +179,7 @@ services:
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
+      - nzbhydra-tailscale:/var/lib/tailscale
 
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
@@ -141,7 +188,12 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_SERVE_MODE: https
+      TAILSCALE_USE_SSH: 1
+      TAILSCALE_HOSTNAME: mediaserver-ombi
+      TAILSCALE_SERVE_PORT: 3579
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -150,6 +202,7 @@ services:
       - /tmp
     volumes:
       - ombi:/config
+      - ombi-tailscale:/var/lib/tailscale
 
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
@@ -158,7 +211,12 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_SERVE_MODE: https
+      TAILSCALE_USE_SSH: 1
+      TAILSCALE_HOSTNAME: mediaserver-overseerr
+      TAILSCALE_SERVE_PORT: 5055
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -167,6 +225,7 @@ services:
       - /tmp
     volumes:
       - overseerr:/config
+      - overseerr-tailscale:/var/lib/tailscale
 
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
@@ -175,7 +234,12 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_SERVE_MODE: https
+      TAILSCALE_USE_SSH: 1
+      TAILSCALE_HOSTNAME: mediaserver-sabnzbd
+      TAILSCALE_SERVE_PORT: 8080
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -185,6 +249,7 @@ services:
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
+      - sabnzbd-tailscale:/var/lib/tailscale
 
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
@@ -193,7 +258,12 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_SERVE_MODE: https
+      TAILSCALE_USE_SSH: 1
+      TAILSCALE_HOSTNAME: mediaserver-tautulli
+      TAILSCALE_SERVE_PORT: 8181
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -202,6 +272,7 @@ services:
       - /tmp
     volumes:
       - tautulli:/config
+      - sabnzbd-tailscale:/var/lib/tailscale
 
     # https://hub.docker.com/r/netdata/netdata
   netdata:
@@ -233,7 +304,12 @@ services:
     environment:
       PUID: "0"
       PGID: "0"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_SERVE_MODE: https
+      TAILSCALE_USE_SSH: 1
+      TAILSCALE_HOSTNAME: mediaserver-duplicati
+      TAILSCALE_SERVE_PORT: 8200
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -242,6 +318,7 @@ services:
       - /tmp
     volumes:
       - duplicati:/config
+      - duplicati-tailscale:/var/lib/tailscale
       # any volumes that might be worth backing up
       - syncthing:/volumes/syncthing
       - plex:/volumes/plex
@@ -253,7 +330,6 @@ services:
       - ombi:/volumes/ombi
       - overseerr:/volumes/overseerr
       - sabnzbd:/volumes/sabnzbd
-      - tailscale:/volumes/tailscale
       - downloads:/volumes/downloads
       - proxy:/volumes/proxy
       - tautulli:/volumes/tautulli
@@ -265,7 +341,12 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_SERVE_MODE: https
+      TAILSCALE_USE_SSH: 1
+      TAILSCALE_HOSTNAME: mediaserver-syncthing
+      TAILSCALE_SERVE_PORT: 8384
     labels:
       io.balena.features.supervisor-api: 1
     ports:
@@ -277,6 +358,7 @@ services:
       - /tmp
     volumes:
       - syncthing:/config
+      - syncthing-tailscale:/var/lib/tailscale
       # any volumes that might be worth syncronizing between machines
       - plex:/volumes/plex
       - sonarr:/volumes/sonarr
@@ -287,7 +369,6 @@ services:
       - ombi:/volumes/ombi
       - overseerr:/volumes/overseerr
       - sabnzbd:/volumes/sabnzbd
-      - tailscale:/volumes/tailscale
       - downloads:/volumes/downloads
       - proxy:/volumes/proxy
       - tautulli:/volumes/tautulli
@@ -304,67 +385,3 @@ services:
     volumes:
       - proxy:/data
       - letsencrypt:/etc/letsencrypt
-
-  # https://hub.docker.com/r/tailscale/tailscale
-  tailscale:
-    image: tailscale/tailscale:v1.50.1@sha256:9540c3289987a41db3342dabe334cbcf0f58ecdc49a083a1876e219fbf151a4d
-    network_mode: host
-    cap_add:
-      - NET_ADMIN
-      - NET_RAW
-      - SYS_MODULE
-    labels:
-      io.balena.features.kernel-modules: 1
-    tmpfs:
-      - /tmp
-      - /var/run/
-    volumes:
-      - tailscale:/var/lib/tailscale
-    environment:
-      TS_STATE_DIR: "/var/lib/tailscale"
-      TS_SOCKET: "/var/run/tailscale/tailscaled.sock"
-      TS_EXTRA_ARGS: "--reset --accept-routes"
-      TS_AUTH_ONCE: "true"
-      # TS_USERSPACE: "true"
-      TS_HOSTNAME: mediaserver
-    entrypoint:
-      - /bin/sh
-      - -c
-    command:
-      - |
-        # load the kernel module if it exists
-        if modprobe wireguard 2>/dev/null
-        then
-          modinfo wireguard || true
-          export TS_USERSPACE="${TS_USERSPACE:-false}"
-        fi
-
-        mkdir -p /dev/net
-        [ ! -c /dev/net/tun ] && mknod /dev/net/tun c 10 200
-        
-        /usr/local/bin/containerboot &
-        pid=$!
-
-        sleep 5
-
-        tailscale serve reset
-        
-        tailscale serve tls-terminated-tcp:8200 tcp://127.0.0.1:8200
-        # tailscale serve tls-terminated-tcp:8096 tcp://127.0.0.1:8096
-        tailscale serve tls-terminated-tcp:19999 tcp://127.0.0.1:19999
-        tailscale serve tls-terminated-tcp:6789 tcp://127.0.0.1:6789
-        tailscale serve tls-terminated-tcp:5076 tcp://127.0.0.1:5076
-        tailscale serve tls-terminated-tcp:3579 tcp://127.0.0.1:3579
-        tailscale serve tls-terminated-tcp:5055 tcp://127.0.0.1:5055
-        # tailscale serve tls-terminated-tcp:32400 tcp://127.0.0.1:32400
-        tailscale serve tls-terminated-tcp:9696 tcp://127.0.0.1:9696
-        tailscale serve tls-terminated-tcp:81 tcp://127.0.0.1:81
-        tailscale serve tls-terminated-tcp:7878 tcp://127.0.0.1:7878
-        tailscale serve tls-terminated-tcp:8989 tcp://127.0.0.1:8989
-        tailscale serve tls-terminated-tcp:8080 tcp://127.0.0.1:8080
-        tailscale serve tls-terminated-tcp:8181 tcp://127.0.0.1:8181
-        tailscale serve tls-terminated-tcp:8384 tcp://127.0.0.1:8384
-
-        tailscale serve status
-
-        wait $pid
