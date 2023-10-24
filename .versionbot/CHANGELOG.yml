@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/sonarr:3.0.10 Docker digest to 296e553
+      hash: 96e242008028e4a1857e250fd7667106968d3ffa
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.0.150
+  title: ""
+  date: 2023-10-24T13:38:17.960Z
+- commits:
     - subject: Update linuxserver/jellyfin:10.8.11 Docker digest to 0cbf45c
       hash: a7e5ed5173488ac2c3238de895652dff29f92dae
       body: ""
