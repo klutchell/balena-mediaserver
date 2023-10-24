@@ -8,8 +8,8 @@ Manage your media server on balena.io
 - [Usage](#usage)
   - [Environment Variables](#environment-variables)
   - [Remote Access via SSH Tunnel](#remote-access-via-ssh-tunnel)
-  - [Remote Access via Nginx](#remote-access-via-nginx)
   - [Remote Access via Tailscale](#remote-access-via-tailscale)
+  - [Remote Access via Nginx](#remote-access-via-nginx)
 - [Services](#services)
   - [Duplicati](#duplicati)
   - [Jellyfin](#jellyfin)
@@ -33,7 +33,7 @@ Manage your media server on balena.io
 - Enough space in the data partition for your media (external storage not supported)
 - A [balenaCloud account](https://dashboard.balena-cloud.com) (optional)
 - A [Tailscale account](https://tailscale.com/) for [Tailnet access](#remote-access-via-tailscale) (optional)
-- A public domain name for [HTTPS access](#remote-access-via-nginx) (optional)
+- A custom domain name for [HTTPS access](#remote-access-via-nginx) (optional)
 
 ## Getting Started
 
@@ -53,24 +53,42 @@ Environment Variables can be applied to all services in an application, or only 
 
 - `TZ`: Inform services of the [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in your location.
 - `TAILSCALE_AUTHKEY`: The authkey for your tailnet. You can create one in the [admin panel](https://login.tailscale.com/admin/settings/keys).
-- `DISABLE`: Set this to a truthy value on a specific service to stop it from running.
 
 ### Remote Access via SSH Tunnel
 
 Create an SSH tunnel to securely access services without exposing ports or public domains.
 This is addition to the other access methods, and is entirely optional.
 
-```text
-ssh -p 22222 -L 8080:localhost:<service_port> <balena_username>@<server_public_ip>
+```bash
+# create an VPN tunnel over the balena proxy
+balena tunnel ${UUID} -p 22222:4321
+
+# in another window, forward the web service ports over SSH to your localhost
+ssh -N -p 4321 -L 8080:localhost:${PORT} ${USERNAME}@localhost
 ```
 
-For example, to access the [Nginx Proxy Manager](#nginx-proxy-manager) dashboard, execute the following in a terminal.
-
-```
-ssh -p 22222 -L 8080:localhost:81 myusername@12.34.56.78
-```
+Where `UUID` is the UUID of your balena device,
+`USERNAME` is your balenaCloud username,
+and `PORT` is the service port found under [Services](#services).
 
 Then direct your browser to `http://localhost:8080` to access the web interface.
+
+Optionally, for convenience you can clone this repo and run `make ${SERVICE}-web` after creating
+an `.env` file containing `UUID=****` and `USERNAME=****`.
+
+### Remote Access via Tailscale
+
+A secure method of accessing your services remotely is via Tailscale.
+This is addition to the other access methods, and is entirely optional.
+
+Authenticate by providing the `TAILSCALE_AUTHKEY` environment variable.
+
+You can create an authkey in the [admin panel](https://login.tailscale.com/admin/settings/keys).
+See [here](https://tailscale.com/kb/1085/auth-keys/) for more information about authkeys and what you can do with them.
+
+Once authenticated, each service will be added to your Tailnet with the name shown under [Services](#services).
+
+Read more at <https://tailscale.dev/blog/docker-mod-tailscale>.
 
 ### Remote Access via Nginx
 
@@ -91,20 +109,6 @@ To create a public URL for the Nginx Proxy Manager dashboard itself you would us
 
 Read more at <https://nginxproxymanager.com/>.
 
-### Remote Access via Tailscale
-
-A secure method of accessing your services remotely is via Tailscale.
-This is addition to the other access methods, and is entirely optional.
-
-Authenticate by providing the `TAILSCALE_AUTHKEY` environment variable.
-
-You can create an authkey in the [admin panel](https://login.tailscale.com/admin/settings/keys).
-See [here](https://tailscale.com/kb/1085/auth-keys/) for more information about authkeys and what you can do with them.
-
-Once authenticated, each service will be added to your Tailnet with the name shown under [Services](#services).
-
-Read more at <https://tailscale.dev/blog/docker-mod-tailscale>.
-
 ## Services
 
 ### Duplicati
@@ -115,7 +119,7 @@ or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 Configure a new backup by adding sources from `/volumes/`.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-duplicati>.
 
@@ -130,7 +134,7 @@ Set `JELLYFIN_PublishedServerUrl` to the public URL of your server.
 
 Create new libraries by pointing to the respective folders in `/downloads/`.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-jellyfin>.
 
@@ -163,7 +167,7 @@ The web interface is available via port `5076` over an [SSH tunnel](#remote-acce
 or via `mediaserver-nzbhydra` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-nzbhydra>.
 
@@ -173,7 +177,7 @@ The web interface is available via port `3579` over an [SSH tunnel](#remote-acce
 or via `mediaserver-ombi` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-ombi>.
 
@@ -183,7 +187,7 @@ The web interface is available via port `5055` over an [SSH tunnel](#remote-acce
 or via `mediaserver-overseerr` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-overseerr>.
 
@@ -198,7 +202,7 @@ Obtain a claim token from <https://plex.tv/claim> and set the `PLEX_CLAIM` envir
 
 Create new libraries by pointing to the respective folders in `/downloads/`.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-plex>.
 
@@ -208,7 +212,7 @@ The web interface is available via port `9696` over an [SSH tunnel](#remote-acce
 or via `mediaserver-prowlarr` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-prowlarr>.
 
@@ -220,7 +224,7 @@ or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The base path should be set to `/downloads/movies`.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-radarr>.
 
@@ -232,7 +236,7 @@ or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The temporary download folder should be `/downloads/sabnzbd/incomplete` and `/downloads/sabnzbd/complete` for completed.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-sabnzbd>.
 
@@ -244,7 +248,7 @@ or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The base path should be set to `/downloads/tv`.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-sonarr>.
 
@@ -256,7 +260,7 @@ or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 Configure a new sync by adding sources from `/volumes/`.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-syncthing>.
 
@@ -268,7 +272,7 @@ or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The Plex IP Address or Hostname can just be `plex` and port `32400` for direct access.
 
-This service can be disabled by setting the `DISABLE` service variable to any non-empty value.
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
 
 Read more at <https://docs.linuxserver.io/images/docker-tautulli>.
 
