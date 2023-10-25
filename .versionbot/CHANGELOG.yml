@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/nzbhydra2:5.1.11 Docker digest to 12968e9
+      hash: a0fbcabe4969bd827a8c68b716ac60dfaff45beb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.1.2
+  title: ""
+  date: 2023-10-25T22:40:58.481Z
+- commits:
     - subject: Update linuxserver/prowlarr:1.10.0-develop Docker digest to 656f375
       hash: 3968d6645fb9ed5d16816e1eac2ce9c5e2974cf8
       body: ""
