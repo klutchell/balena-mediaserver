@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/tautulli Docker tag to v2.13.2
+      hash: bbf7c4583855e309044ea1a502c391486ced5abf
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.1.5
+  title: ""
+  date: 2023-10-26T18:10:20.257Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v1.43.1
       hash: 1d941e28f4a49c2ca8ce42ce0cf0c2d0c9fe0384
       body: ""
