@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v1.43.1
+      hash: 1d941e28f4a49c2ca8ce42ce0cf0c2d0c9fe0384
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.1.4
+  title: ""
+  date: 2023-10-26T14:39:18.221Z
+- commits:
     - subject: Update linuxserver/sabnzbd:4.1.0 Docker digest to c2ef513
       hash: 3ebedcba06c12e24d0e9af407071fb19112d477e
       body: ""
