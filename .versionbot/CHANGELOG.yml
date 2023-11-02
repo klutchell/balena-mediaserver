@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v5.12.0
+      hash: b29ce556b860f6a8b08b72224e0524fa14dfd93b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.1.23
+  title: ""
+  date: 2023-11-02T14:09:41.655Z
+- commits:
     - subject: Update linuxserver/sabnzbd:4.1.0 Docker digest to b712256
       hash: 68d991315c56103b778d24f4f910cdfdf10e9349
       body: ""
