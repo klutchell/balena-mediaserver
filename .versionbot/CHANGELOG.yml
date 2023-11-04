@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/sonarr:3.0.10 Docker digest to dbd380e
+      hash: 7522c2fe1b0a75dfdfe45f5bebe312266bff4413
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.1.30
+  title: ""
+  date: 2023-11-04T00:11:18.544Z
+- commits:
     - subject: Update product-os/flowzone action to v5.12.5
       hash: e9f355cabdcd056c604c9ff4d2d577ab7e29a370
       body: ""
