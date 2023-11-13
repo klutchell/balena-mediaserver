@@ -485,3 +485,9 @@ services:
       - |
         [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
         exec /init
+
+  host-config:
+    build: host-config
+    restart: "no"
+    labels:
+      io.balena.features.supervisor-api: "1"
