@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/nzbhydra2 Docker tag to v5.3.1
+      hash: 1d68a8255e3406f9277c02bf73352f8dac6cf5fd
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.1.73
+  title: ""
+  date: 2023-11-19T09:09:07.545Z
+- commits:
     - subject: Update linuxserver/prowlarr Docker tag to v1.10.4
       hash: 39333a78b417e9941551478ee10c75d0c299e2c4
       body: ""
