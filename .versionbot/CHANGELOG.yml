@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/nzbhydra2 Docker tag to v5.3.2
+      hash: 9eb575eb646b0162b6b1d13792dc8821a3716480
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.1.76
+  title: ""
+  date: 2023-11-20T19:09:45.153Z
+- commits:
     - subject: Update linuxserver/plex:1.32.7 Docker digest to ead806c
       hash: 04959200c22352c54a593431b321b1640de343e4
       body: ""
