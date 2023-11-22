@@ -375,7 +375,7 @@ services:
 
   # https://hub.docker.com/r/jc21/nginx-proxy-manager
   proxy:
-    image: jc21/nginx-proxy-manager:2.10.4@sha256:e1000dd653d193ac70cb3635c27333b0183a11f987e2b1c6043589d9d948bc0f
+    image: jc21/nginx-proxy-manager:2.10.4@sha256:081c4c544ad5da81022b3b030c2ba50175923bc87a534bce8b52f870e695e9f1
     ports:
       - 80:80/tcp
       - 127.0.0.1:81:81/tcp
