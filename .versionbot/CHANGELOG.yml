@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/prowlarr:1.10.4-develop Docker digest to 3a789c1
+      hash: c2a37824ba46e5ebdc7ad68667b7556d6c9aacea
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.1.82
+  title: ""
+  date: 2023-11-22T04:08:19.144Z
+- commits:
     - subject: Update jc21/nginx-proxy-manager:2.10.4 Docker digest to 081c4c5
       hash: 510161bbd87f1c28704d96fc3897910ab06ffd8b
       body: ""
