@@ -47,8 +47,6 @@ services:
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-plex
       TAILSCALE_SERVE_PORT: 32400
-    ports:
-      - 32400:32400/tcp
     tmpfs:
       - /tmp
     volumes:
@@ -71,9 +69,6 @@ services:
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-jellyfin
       TAILSCALE_SERVE_PORT: 8096
-    ports:
-      - 8096:8096/tcp
-      - 7359:7359/udp
     tmpfs:
       - /tmp
     volumes:
