@@ -35,20 +35,18 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     image: linuxserver/plex:1.32.7@sha256:ead806ccf8f02c57656d9a086de1962ba6d6b17f535924489ed66278051ad858
-    restart: unless-stopped
+    restart: "on-failure"
     devices:
       - /dev/dri:/dev/dri
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-plex
       TAILSCALE_SERVE_PORT: 32400
-    labels:
-      io.balena.features.supervisor-api: 1
     ports:
       - 32400:32400/tcp
     tmpfs:
@@ -61,20 +59,18 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     image: linuxserver/jellyfin:10.8.12@sha256:e48ca4ba152037a118dd2b2079aeddd2e609e581b241b049316e771e8508a98c
-    restart: unless-stopped
+    restart: "on-failure"
     devices:
       - /dev/dri:/dev/dri
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-jellyfin
       TAILSCALE_SERVE_PORT: 8096
-    labels:
-      io.balena.features.supervisor-api: 1
     ports:
       - 8096:8096/tcp
       - 7359:7359/udp
@@ -88,18 +84,16 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     image: linuxserver/sonarr:3.0.10@sha256:667e27cce1933e13ee6472d64e0452d9ce8dbdfc7b74fd51eb1513048656c732
-    restart: unless-stopped
+    restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-sonarr
       TAILSCALE_SERVE_PORT: 8989
-    labels:
-      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:8989:8989/tcp
     tmpfs:
@@ -112,18 +106,16 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     image: linuxserver/radarr:5.1.3@sha256:216f0a151aa8a3a27c4c1600e4b2fc80af19845cc1cdd7011e1f07a4eab10665
-    restart: unless-stopped
+    restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-radarr
       TAILSCALE_SERVE_PORT: 7878
-    labels:
-      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:7878:7878/tcp
     tmpfs:
@@ -136,18 +128,16 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     image: linuxserver/prowlarr:1.10.4-develop@sha256:3a789c16fb39a7ed589dfda894a9eefc008bf91ad680bcf2a86a8e562872a715
-    restart: unless-stopped
+    restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-prowlarr
       TAILSCALE_SERVE_PORT: 9696
-    labels:
-      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:9696:9696/tcp
     tmpfs:
@@ -160,18 +150,16 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     image: linuxserver/nzbhydra2:5.3.3@sha256:df11fb5f521f592fe86650ca4106b2c15b4d681d3b1ecb50a4279b548a124f69
-    restart: unless-stopped
+    restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-nzbhydra
       TAILSCALE_SERVE_PORT: 5076
-    labels:
-      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:5076:5076/tcp
     tmpfs:
@@ -184,18 +172,16 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     image: linuxserver/ombi:4.43.5@sha256:42d57742e25b50ee4bb89bc3be57de8d3f66e98f2324f40152ab03787e93a1f1
-    restart: unless-stopped
+    restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-ombi
       TAILSCALE_SERVE_PORT: 3579
-    labels:
-      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:3579:3579/tcp
     tmpfs:
@@ -207,18 +193,16 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     image: lscr.io/linuxserver/overseerr:1.33.2@sha256:5f61a3b58b79bea860bdb78c13971464338487cb8b8312dc35af853a3084c91a
-    restart: unless-stopped
+    restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-overseerr
       TAILSCALE_SERVE_PORT: 5055
-    labels:
-      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:5055:5055/tcp
     tmpfs:
@@ -230,18 +214,16 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     image: linuxserver/sabnzbd:4.1.0@sha256:e21cc055cecc3884ce891b7e31d5fe3c3f62679e2c64861e549176e286c119a4
-    restart: unless-stopped
+    restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-sabnzbd
       TAILSCALE_SERVE_PORT: 8080
-    labels:
-      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:8080:8080/tcp
     tmpfs:
@@ -254,18 +236,16 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     image: linuxserver/tautulli:2.13.2@sha256:01d3cee11f0a45922101a599f4368bb7775d580dda199a10baeeec83717075bd
-    restart: unless-stopped
+    restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-tautulli
       TAILSCALE_SERVE_PORT: 8181
-    labels:
-      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:8181:8181/tcp
     tmpfs:
@@ -300,18 +280,16 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     image: lscr.io/linuxserver/duplicati:v2.0.6.3-2.0.6.3_beta_2021-06-17-ls160@sha256:9cf7c7a14bf1474d44aa29d329552bf32af58090f4cfa5e61e35a88b2cd4677e
-    restart: unless-stopped
+    restart: "on-failure"
     environment:
       PUID: "0"
       PGID: "0"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-duplicati
       TAILSCALE_SERVE_PORT: 8200
-    labels:
-      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:8200:8200/tcp
     tmpfs:
@@ -337,18 +315,16 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     image: lscr.io/linuxserver/syncthing:1.26.1@sha256:c0f140e840115ccda573e05d83604b0aaa89e25cadff4edfd45c43f0843a8241
-    restart: unless-stopped
+    restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:latest|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-syncthing
       TAILSCALE_SERVE_PORT: 8384
-    labels:
-      io.balena.features.supervisor-api: 1
     ports:
       - 127.0.0.1:8384:8384/tcp
       - 22000:22000/tcp
