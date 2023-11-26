@@ -1,4 +1,20 @@
 - commits:
+    - subject: Halt services via s6-init instead of balena supervisor
+      hash: 1954f4f063fe3e0b2ddc34e4faf1fc305552fd91
+      body: |
+        The result should be more immediate halting of services
+        during startup.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.2.0
+  title: ""
+  date: 2023-11-26T15:14:27.954Z
+- commits:
     - subject: Update linuxserver/ombi:4.43.5 Docker digest to 42d5774
       hash: 2fcc6bfb031f94f821a0499c27b6cbe4e049985e
       body: ""
