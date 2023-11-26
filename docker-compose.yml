@@ -30,6 +30,7 @@ volumes:
   syncthing-tailscale: {}
   tautulli: {}
   tautulli-tailscale: {}
+  tailscale: {}
 
 services:
   # https://docs.linuxserver.io/images/docker-plex
@@ -474,3 +475,72 @@ services:
       - |
         [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
         exec /init
+
+  # https://hub.docker.com/r/tailscale/tailscale
+  # https://github.com/tailscale/tailscale/blob/main/cmd/containerboot/main.go
+  # https://tailscale.com/kb/1241/tailscale-up/
+  tailscale:
+    image: tailscale/tailscale:v1.54.0
+    restart: "on-failure"
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
+      io.balena.features.balena-socket: 1
+    tmpfs:
+      - /tmp
+      - /var/run/
+    volumes:
+      - tailscale:/var/lib/tailscale
+    environment:
+      TS_STATE_DIR: /var/lib/tailscale
+      TS_SOCKET: /var/run/tailscale/tailscaled.sock
+      TS_EXTRA_ARGS: "--reset --accept-routes"
+      TS_AUTH_ONCE: "false"
+      # TS_USERSPACE: "false"
+      TS_HOSTNAME: mediaserver
+      PROXY_SERVICES: plex
+    entrypoint:
+      - /bin/sh
+      - -c
+    command:
+      - |
+        case "${DISABLE}" in
+          [Tt][Rr][Uu][Ee]|[Yy][Ee][Ss]|[Oo][Nn]|[1])
+            exit 0
+            ;;
+        esac
+
+        if modprobe wireguard 2>/dev/null
+        then
+          modinfo wireguard || true
+        fi
+
+        mkdir -p /dev/net
+        [ ! -c /dev/net/tun ] && mknod /dev/net/tun c 10 200
+        /usr/local/bin/containerboot &
+        pid=$!
+
+        set -ex
+        apk add --no-cache docker-cli iproute2 iptables
+
+        for service in ${PROXY_SERVICES}; do
+          id="$(docker ps -f "name=${service}_" --format "{{.ID}}")"
+          ip="$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "${id}")"
+          mark="0x$(echo -n "${id}" | sha256sum | cut -c1-8)"
+          comment="${ip} -> tailscale0"
+
+          # delete any existing rules matching this comment
+          iptables-legacy-save | grep -v "comment ${comment}" | iptables-legacy-restore || true
+
+          # create a mangle fule for this container ip
+          iptables-legacy -t mangle -A PREROUTING -s "${ip}" -j MARK --set-mark "${mark}" -m comment --comment "${comment}" || true
+
+          ip rule add fwmark "${mark}" table 100 || true
+          ip route add default dev tailscale0 table 100 || true
+        done
+
+        wait $pid
