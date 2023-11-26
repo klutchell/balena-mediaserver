@@ -1,0 +1,27 @@
+#!/usr/bin/with-contenv bash
+# shellcheck shell=bash
+
+set -euo pipefail
+
+if [ -z "${OPENVPN_CONFIG:-}" ]; then
+    echo "OpenVPN config not provided, exiting..."
+    exit 0
+fi
+
+echo "Decoding base64 config to vpnconfig.ovpn..."
+pwd
+echo "${OPENVPN_CONFIG}" | base64 -d >vpnconfig.ovpn
+
+if [ -n "${OPENVPN_USERNAME:-}" ] && [ -n "${OPENVPN_PASSWORD:-}" ]; then
+    echo "Writing auth to vpnconfig.auth..."
+    echo "${OPENVPN_USERNAME}" >vpnconfig.auth
+    echo "${OPENVPN_PASSWORD}" >>vpnconfig.auth
+fi
+
+echo "Starting OpenVPN..."
+exec openvpn \
+    --config "$(pwd)/vpnconfig.ovpn" \
+    --verb 5 \
+    --auth-user-pass "$(pwd)/vpnconfig.auth" \
+    --up '/usr/bin/echo up' \
+    --down '/usr/bin/echo down'

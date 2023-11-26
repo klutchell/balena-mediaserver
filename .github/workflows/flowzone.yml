@@ -27,3 +27,4 @@ jobs:
     with:
       protect_branch: false
       balena_slugs: "gh_klutchell/mediaserver"
+      docker_images: "ghcr.io/klutchell/balena-mediaserver"

@@ -37,13 +37,15 @@ services:
   plex:
     image: linuxserver/plex:1.32.7@sha256:ead806ccf8f02c57656d9a086de1962ba6d6b17f535924489ed66278051ad858
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
     devices:
       - /dev/dri:/dev/dri
     environment:
       PUID: "1000"
       PGID: "1000"
       # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-universal-openvpn|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -64,6 +66,8 @@ services:
     command:
       - |
         [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        mkdir -p /dev/net
+        [ ! -c /dev/net/tun ] && mknod /dev/net/tun c 10 200
         exec /init
 
   # https://docs.linuxserver.io/images/docker-jellyfin
@@ -76,7 +80,7 @@ services:
       PUID: "1000"
       PGID: "1000"
       # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-universal-openvpn|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -107,7 +111,7 @@ services:
       PUID: "1000"
       PGID: "1000"
       # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-universal-openvpn|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -137,7 +141,7 @@ services:
       PUID: "1000"
       PGID: "1000"
       # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-universal-openvpn|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -167,7 +171,7 @@ services:
       PUID: "1000"
       PGID: "1000"
       # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-universal-openvpn|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -197,7 +201,7 @@ services:
       PUID: "1000"
       PGID: "1000"
       # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-universal-openvpn|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -227,7 +231,7 @@ services:
       PUID: "1000"
       PGID: "1000"
       # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-universal-openvpn|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -256,7 +260,7 @@ services:
       PUID: "1000"
       PGID: "1000"
       # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-universal-openvpn|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -285,7 +289,7 @@ services:
       PUID: "1000"
       PGID: "1000"
       # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-universal-openvpn|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -315,7 +319,7 @@ services:
       PUID: "1000"
       PGID: "1000"
       # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-universal-openvpn|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -375,7 +379,7 @@ services:
       PUID: "0"
       PGID: "0"
       # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-universal-openvpn|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -418,7 +422,7 @@ services:
       PUID: "1000"
       PGID: "1000"
       # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-universal-openvpn|ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
