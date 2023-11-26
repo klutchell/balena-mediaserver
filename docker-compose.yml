@@ -122,7 +122,7 @@ services:
 
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
-    image: linuxserver/prowlarr:1.10.4-develop@sha256:3a789c16fb39a7ed589dfda894a9eefc008bf91ad680bcf2a86a8e562872a715
+    image: linuxserver/prowlarr:1.10.5-develop@sha256:b3cb1039315cf3d0e5d9250ac3e35aacbe2b916c88b6d8635243e830780dbc83
     restart: "on-failure"
     environment:
       PUID: "1000"
