@@ -41,7 +41,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -53,6 +53,13 @@ services:
       - plex:/config
       - downloads:/downloads
       - plex-tailscale:/var/lib/tailscale
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /init
 
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
@@ -63,7 +70,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -75,6 +82,13 @@ services:
       - jellyfin:/config
       - downloads:/downloads
       - jellyfin-tailscale:/var/lib/tailscale
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /init
 
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
@@ -83,7 +97,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -97,6 +111,13 @@ services:
       - sonarr:/config
       - downloads:/downloads
       - sonarr-tailscale:/var/lib/tailscale
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /init
 
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
@@ -105,7 +126,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -119,6 +140,13 @@ services:
       - radarr:/config
       - downloads:/downloads
       - radarr-tailscale:/var/lib/tailscale
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /init
 
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
@@ -127,7 +155,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -141,6 +169,13 @@ services:
       - prowlarr:/config
       - downloads:/downloads
       - prowlarr-tailscale:/var/lib/tailscale
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /init
 
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
@@ -149,7 +184,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -163,6 +198,13 @@ services:
       - nzbhydra:/config
       - downloads:/downloads
       - nzbhydra-tailscale:/var/lib/tailscale
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /init
 
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
@@ -171,7 +213,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -184,6 +226,13 @@ services:
     volumes:
       - ombi:/config
       - ombi-tailscale:/var/lib/tailscale
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /init
 
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
@@ -192,7 +241,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -205,6 +254,13 @@ services:
     volumes:
       - overseerr:/config
       - overseerr-tailscale:/var/lib/tailscale
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /init
 
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
@@ -213,7 +269,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -227,6 +283,13 @@ services:
       - sabnzbd:/config
       - downloads:/downloads
       - sabnzbd-tailscale:/var/lib/tailscale
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /init
 
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
@@ -235,7 +298,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -248,10 +311,18 @@ services:
     volumes:
       - tautulli:/config
       - sabnzbd-tailscale:/var/lib/tailscale
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /init
 
-    # https://hub.docker.com/r/netdata/netdata
+  # https://hub.docker.com/r/netdata/netdata
   netdata:
     image: netdata/netdata:v1.43.2@sha256:0116a5a4dbfedd84d80eba320f5d99d547da5d9bc0841adde0d7f13bed25f73a
+    restart: "on-failure"
     privileged: true
     cap_add:
       - SYS_PTRACE
@@ -271,6 +342,13 @@ services:
     volumes:
       - netdatalib:/var/lib/netdata
       - netdatacache:/var/cache/netdata
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /usr/sbin/run.sh
 
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
@@ -279,7 +357,7 @@ services:
     environment:
       PUID: "0"
       PGID: "0"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -306,6 +384,13 @@ services:
       - downloads:/volumes/downloads
       - proxy:/volumes/proxy
       - tautulli:/volumes/tautulli
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /init
 
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
@@ -314,7 +399,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      DOCKER_MODS: "ghcr.io/klutchell/balena-mediaserver:build-halt-service|ghcr.io/tailscale-dev/docker-mod:main"
+      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -343,10 +428,18 @@ services:
       - downloads:/volumes/downloads
       - proxy:/volumes/proxy
       - tautulli:/volumes/tautulli
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /init
 
   # https://hub.docker.com/r/jc21/nginx-proxy-manager
   proxy:
     image: jc21/nginx-proxy-manager:2.10.4@sha256:081c4c544ad5da81022b3b030c2ba50175923bc87a534bce8b52f870e695e9f1
+    restart: "on-failure"
     ports:
       - 80:80/tcp
       - 127.0.0.1:81:81/tcp
@@ -356,3 +449,10 @@ services:
     volumes:
       - proxy:/data
       - letsencrypt:/etc/letsencrypt
+    entrypoint:
+      - /bin/bash
+      - -c
+    command:
+      - |
+        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+        exec /init
