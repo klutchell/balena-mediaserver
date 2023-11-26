@@ -1,4 +1,23 @@
 - commits:
+    - subject: Disable plex and jellyfin local listen ports
+      hash: fd4437e8f58d6ad2490b79abe9e004896578f5b8
+      body: |
+        These were the only services with exceptions to the
+        rule that all inbound traffic must use the proxy or tailnet.
+
+        To enable local streaming and discovery we would want
+        a different type of deployment services.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.3.0
+  title: ""
+  date: 2023-11-26T15:42:05.886Z
+- commits:
     - subject: Halt services via s6-init instead of balena supervisor
       hash: 1954f4f063fe3e0b2ddc34e4faf1fc305552fd91
       body: |
