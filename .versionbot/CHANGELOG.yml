@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/nzbhydra2 Docker tag to v5.3.5
+      hash: aa983e2b142d976e82551e079f52276ad129f489
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.4.1
+  title: ""
+  date: 2023-11-27T21:04:31.776Z
+- commits:
     - subject: Override entrypoint to disable services
       hash: 8f1eb59a50364d54e8d3f59ce6553d5a7e38cf42
       body: |
