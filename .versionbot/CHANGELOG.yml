@@ -1,4 +1,21 @@
 - commits:
+    - subject: Override entrypoint to disable services
+      hash: 8f1eb59a50364d54e8d3f59ce6553d5a7e38cf42
+      body: |
+        This applies much earlier in the container boot process
+        without waiting for s6 services to start. It also can be
+        applied to non-linuxserver containers.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.4.0
+  title: ""
+  date: 2023-11-27T00:09:26.966Z
+- commits:
     - subject: Update linuxserver/prowlarr Docker tag to v1.10.5
       hash: c6f545dec9f04287d8a236651157266875c9c828
       body: ""
