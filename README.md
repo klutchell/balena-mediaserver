@@ -127,8 +127,7 @@ Read more at <https://docs.linuxserver.io/images/docker-duplicati>.
 
 The web interface is available via port `8096` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
 or via `mediaserver-jellyfin` on your [Tailnet](#remote-access-via-tailscale),
-or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx),
-or via all local interfaces on port `8096`.
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 Set `JELLYFIN_PublishedServerUrl` to the public URL of your server.
 
@@ -195,8 +194,7 @@ Read more at <https://docs.linuxserver.io/images/docker-overseerr>.
 
 The web interface is available via port `32400` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
 or via `mediaserver-plex` on your [Tailnet](#remote-access-via-tailscale),
-or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx),
-or via all local interfaces on port `32400`.
+or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 Obtain a claim token from <https://plex.tv/claim> and set the `PLEX_CLAIM` environment variable.
 

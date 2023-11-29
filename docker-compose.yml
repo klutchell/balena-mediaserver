@@ -41,12 +41,14 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      # https://github.com/tailscale-dev/docker-mod
       DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-plex
       TAILSCALE_SERVE_PORT: 32400
+      TAILSCALE_FUNNEL: 1
     tmpfs:
       - /tmp
     volumes:
@@ -70,12 +72,14 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      # https://github.com/tailscale-dev/docker-mod
       DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: mediaserver-jellyfin
       TAILSCALE_SERVE_PORT: 8096
+      TAILSCALE_FUNNEL: 1
     tmpfs:
       - /tmp
     volumes:
@@ -97,6 +101,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      # https://github.com/tailscale-dev/docker-mod
       DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
@@ -126,6 +131,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      # https://github.com/tailscale-dev/docker-mod
       DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
@@ -155,6 +161,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      # https://github.com/tailscale-dev/docker-mod
       DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
@@ -184,6 +191,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      # https://github.com/tailscale-dev/docker-mod
       DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
@@ -213,6 +221,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      # https://github.com/tailscale-dev/docker-mod
       DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
@@ -241,6 +250,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      # https://github.com/tailscale-dev/docker-mod
       DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
@@ -269,6 +279,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      # https://github.com/tailscale-dev/docker-mod
       DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
@@ -298,6 +309,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      # https://github.com/tailscale-dev/docker-mod
       DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
@@ -357,6 +369,7 @@ services:
     environment:
       PUID: "0"
       PGID: "0"
+      # https://github.com/tailscale-dev/docker-mod
       DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
@@ -399,6 +412,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
+      # https://github.com/tailscale-dev/docker-mod
       DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
