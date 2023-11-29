@@ -1,9 +1,0 @@
-#!/usr/bin/with-contenv bash
-# shellcheck shell=bash
-
-if [[ ${DISABLE,,} =~ true|yes|on|1 ]]; then
-    echo "Service is disabled, calling halt..."
-    # halt the container with exit code 0
-    echo "0" >/run/s6-linux-init-container-results/exitcode
-    /run/s6/basedir/bin/halt
-fi

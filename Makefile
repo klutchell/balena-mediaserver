@@ -2,82 +2,97 @@
 include .env
 export
 
-LOCAL_SSH_PORT ?= 4321
+LOCAL_SSH_PORT ?= 22222
 LOCAL_HTTP_PORT ?= 8080
 
 .PHONY: tunnel
 tunnel:
-ifeq ($(USE_TAILNET),)
 	@$(MAKE) stop
+ifeq ($(UUID),)
+	@echo "UUID is not set. Please set it in .env or pass it as an argument."
+	@exit 1
+endif
+ifeq ($(USERNAME),)
+	@echo "USERNAME is not set. Please set it in .env or pass it as an argument."
+	@exit 1
+endif
+ifeq ($(PORT),)
+	@echo "PORT is not set. Please set it in .env or pass it as an argument."
+	@exit 1
+endif
 	balena tunnel $(UUID) -p 22222:$(LOCAL_SSH_PORT) & echo $$! > .pidfile1
 	@sleep 3
-	ssh -N -p $(LOCAL_SSH_PORT) -L $(LOCAL_HTTP_PORT):localhost:$(PORT) $(USERNAME)@localhost & echo $$! > .pidfile2
+	ssh -N -o StrictHostKeyChecking=no -p $(LOCAL_SSH_PORT) -L $(LOCAL_HTTP_PORT):localhost:$(PORT) $(USERNAME)@localhost & echo $$! > .pidfile2
 	@sleep 3
 	@echo "Launching web interface via http://localhost:$(LOCAL_HTTP_PORT)..."
 	@open http://localhost:$(LOCAL_HTTP_PORT)
-else
+
+.PHONY: tailnet
+tailnet:
+ifeq ($(TAILNET),)
+	@echo "TAILNET is not set. Please set it in .env or pass it as an argument."
+	@exit 1
+endif
 ifeq ($(HOSTNAME),)
-	@echo "Apologies, Tailnet access is not supported for this service!"
-	@echo "Apply USE_TAILNET= to use SSH tunnels instead."
-else
+	@echo "HOSTNAME is not set. Please set it in .env or pass it as an argument."
+	@exit 1
+endif
 	@echo "Launching web interface via https://$(HOSTNAME).$(TAILNET)..."
 	@open https://$(HOSTNAME).$(TAILNET)
-endif
-endif
 
 .PHONY: stop
 stop:
-	-@kill `cat .pidfile1` 2>/dev/null ; rm -f .pidfile1
-	-@kill `cat .pidfile2` 2>/dev/null ; rm -f .pidfile2
+	-@kill `cat .pidfile1 2>/dev/null` 2>/dev/null ; rm -f .pidfile1
+	-@kill `cat .pidfile2 2>/dev/null` 2>/dev/null ; rm -f .pidfile2
 
-.PHONY: duplicati-web
-duplicati-web:
-	@$(MAKE) tunnel PORT=8200 HOSTNAME=mediaserver-duplicati
+.PHONY: duplicati-tunnel
+duplicati-tunnel:
+	@$(MAKE) tunnel PORT=8200
 
-.PHONY: jellyfin-web
-jellyfin-web:
-	@$(MAKE) tunnel PORT=8096 HOSTNAME=mediaserver-jellyfin
+.PHONY: jellyfin-tunnel
+jellyfin-tunnel:
+	@$(MAKE) tunnel PORT=8096
 
-.PHONY: netdata-web
-netdata-web:
-	@$(MAKE) tunnel PORT=19999 HOSTNAME=
+.PHONY: netdata-tunnel
+netdata-tunnel:
+	@$(MAKE) tunnel PORT=19999
 
-.PHONY: nginx-web
-nginx-web:
-	@$(MAKE) tunnel PORT=81 HOSTNAME=
+.PHONY: nginx-tunnel
+nginx-tunnel:
+	@$(MAKE) tunnel PORT=81
 
-.PHONY: nzbhydra-web
-nzbhydra-web:
-	@$(MAKE) tunnel PORT=5076 HOSTNAME=mediaserver-nzbhydra
+.PHONY: nzbhydra-tunnel
+nzbhydra-tunnel:
+	@$(MAKE) tunnel PORT=5076
 
-.PHONY: ombi-web
-ombi-web:
-	@$(MAKE) tunnel PORT=3579 HOSTNAME=mediaserver-ombi
+.PHONY: ombi-tunnel
+ombi-tunnel:
+	@$(MAKE) tunnel PORT=3579
 
-.PHONY: overseerr-web
-overseerr-web:
-	@$(MAKE) tunnel PORT=5055 HOSTNAME=mediaserver-overseerr
+.PHONY: overseerr-tunnel
+overseerr-tunnel:
+	@$(MAKE) tunnel PORT=5055
 
-.PHONY: plex-web
-plex-web:
-	@$(MAKE) tunnel PORT=32400 HOSTNAME=mediaserver-plex
+.PHONY: plex-tunnel
+plex-tunnel:
+	@$(MAKE) tunnel PORT=32400
 
-.PHONY: radarr-web
-radarr-web:
-	@$(MAKE) tunnel PORT=7878 HOSTNAME=mediaserver-radarr
+.PHONY: radarr-tunnel
+radarr-tunnel:
+	@$(MAKE) tunnel PORT=7878
 
-.PHONY: sabnzbd-web
-sabnzbd-web:
-	@$(MAKE) tunnel PORT=8080 HOSTNAME=mediaserver-sabnzbd
+.PHONY: sabnzbd-tunnel
+sabnzbd-tunnel:
+	@$(MAKE) tunnel PORT=8080
 
-.PHONY: sonarr-web
-sonarr-web:
-	@$(MAKE) tunnel PORT=8989 HOSTNAME=mediaserver-sonarr
+.PHONY: sonarr-tunnel
+sonarr-tunnel:
+	@$(MAKE) tunnel PORT=8989
 
-.PHONY: syncthing-web
-syncthing-web:
-	@$(MAKE) tunnel PORT=8384 HOSTNAME=mediaserver-syncthing
+.PHONY: syncthing-tunnel
+syncthing-tunnel:
+	@$(MAKE) tunnel PORT=8384
 
-.PHONY: tautulli-web
-tautulli-web:
-	@$(MAKE) tunnel PORT=8181 HOSTNAME=mediaserver-tautulli
+.PHONY: tautulli-tunnel
+tautulli-tunnel:
+	@$(MAKE) tunnel PORT=8181
