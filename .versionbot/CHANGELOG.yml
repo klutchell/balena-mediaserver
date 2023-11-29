@@ -1,4 +1,19 @@
 - commits:
+    - subject: Restore Plex and Jellyfin http listen ports
+      hash: 14c0662ee851e1b5bec3e64d0260e18bee8e4a3a
+      body: |
+        This reverts commit fd4437e8f58d6ad2490b79abe9e004896578f5b8.
+
+        These ports should still be available to localhost for tunnelling.
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested: []
+  version: 2.4.6
+  title: ""
+  date: 2023-11-29T19:15:48.993Z
+- commits:
     - subject: Remove the deprecated docker-mod files
       hash: 0814d32f0bd0e62c1f3eb7d338df4e0278202dc3
       body: ""
