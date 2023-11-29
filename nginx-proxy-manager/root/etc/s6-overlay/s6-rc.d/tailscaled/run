@@ -1,0 +1,22 @@
+#!/command/with-contenv bash
+# shellcheck shell=bash
+
+# https://github.com/tailscale-dev/docker-mod/blob/main/root/etc/s6-overlay/s6-rc.d/svc-tailscale/run
+
+set -euo pipefail
+
+FLAGS=""
+
+if ! [ -e /dev/net/tun ]; then
+    FLAGS="$FLAGS --tun=userspace-networking"
+fi
+
+if [ -v TAILSCALE_STATE_DIR ]; then
+    FLAGS="$FLAGS --statedir=${TAILSCALE_STATE_DIR}"
+else
+    echo '[!] TAILSCALE_STATE_DIR is not set, this node will be ephemeral.'
+    FLAGS="$FLAGS --state=mem:"
+fi
+
+# shellcheck disable=SC2086
+exec tailscaled $FLAGS 2>&1

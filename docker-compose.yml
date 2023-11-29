@@ -20,6 +20,7 @@ volumes:
   prowlarr: {}
   prowlarr-tailscale: {}
   proxy: {}
+  nginx-tailscale: {}
   radarr: {}
   radarr-tailscale: {}
   sabnzbd: {}
@@ -455,9 +456,18 @@ services:
         exec /init
 
   # https://hub.docker.com/r/jc21/nginx-proxy-manager
-  proxy:
-    image: jc21/nginx-proxy-manager:2.10.4@sha256:081c4c544ad5da81022b3b030c2ba50175923bc87a534bce8b52f870e695e9f1
+  # https://github.com/NginxProxyManager/nginx-proxy-manager
+  # https://nginxproxymanager.com/
+  nginx-proxy-manager:
+    build: nginx-proxy-manager
     restart: "on-failure"
+    environment:
+      # https://github.com/tailscale-dev/docker-mod
+      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_SERVE_MODE: https
+      TAILSCALE_USE_SSH: 1
+      TAILSCALE_HOSTNAME: mediaserver-nginx
+      TAILSCALE_SERVE_PORT: 81
     ports:
       - 80:80/tcp
       - 127.0.0.1:81:81/tcp
@@ -467,6 +477,7 @@ services:
     volumes:
       - proxy:/data
       - letsencrypt:/etc/letsencrypt
+      - nginx-tailscale:/var/lib/tailscale
     entrypoint:
       - /bin/bash
       - -c
