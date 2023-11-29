@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/nzbhydra2:5.3.5 Docker digest to bac8f4f
+      hash: 5150d401bed41f79633cea44d541b6a7154f19b8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.4.7
+  title: ""
+  date: 2023-11-29T22:38:22.902Z
+- commits:
     - subject: Restore Plex and Jellyfin http listen ports
       hash: 14c0662ee851e1b5bec3e64d0260e18bee8e4a3a
       body: |
