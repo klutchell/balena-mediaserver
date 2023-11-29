@@ -1,4 +1,18 @@
 - commits:
+    - subject: Remove the deprecated docker-mod files
+      hash: 0814d32f0bd0e62c1f3eb7d338df4e0278202dc3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.4.5
+  title: ""
+  date: 2023-11-29T16:07:53.555Z
+- commits:
     - subject: Update product-os/flowzone action to v5.15.4
       hash: b8f6eb511c18c5d100870d7ba5eee56a750dd6b1
       body: ""
