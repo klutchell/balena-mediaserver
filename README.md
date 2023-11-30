@@ -149,6 +149,7 @@ Read more at <https://hub.docker.com/r/netdata/netdata>.
 ### Nginx Proxy Manager
 
 The web interface is available via port `81` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
+or via `mediaserver-nginx` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The default credentials are below and you will be prompted to update them after logging in.
