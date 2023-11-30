@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/sabnzbd:4.1.0 Docker digest to 2648edb
+      hash: e86e6ffa3cf4661e4f1b9db42bd7ab1ce6d5c66e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.4.8
+  title: ""
+  date: 2023-11-30T02:20:03.608Z
+- commits:
     - subject: Update linuxserver/nzbhydra2:5.3.5 Docker digest to bac8f4f
       hash: 5150d401bed41f79633cea44d541b6a7154f19b8
       body: ""
