@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add tailscale s6-overlay to nginx-proxy-manager
+      hash: 793a39e9c60ee77581f0944dab0217fc9d85dcb8
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.5.0
+  title: ""
+  date: 2023-11-30T21:16:32.883Z
+- commits:
     - subject: Update product-os/flowzone action to v5.15.7
       hash: 9094452a791ee3ed0328b5d02a5ec0da89816bf1
       body: ""
