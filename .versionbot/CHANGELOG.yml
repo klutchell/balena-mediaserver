@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/tautulli:2.13.2 Docker digest to 33af6a9
+      hash: c177d8d5a4c06ac4805fc0e85edd65af0e018a6f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.5.1
+  title: ""
+  date: 2023-12-01T00:12:27.206Z
+- commits:
     - subject: Add tailscale s6-overlay to nginx-proxy-manager
       hash: 793a39e9c60ee77581f0944dab0217fc9d85dcb8
       body: ""
