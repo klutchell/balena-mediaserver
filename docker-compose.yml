@@ -35,15 +35,15 @@ volumes:
 services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
-    image: linuxserver/plex:1.32.7@sha256:16fdcc224d159edc59ef9a41a190ba1dbec292b5d9073fa8581e81ca3eadd35c
+    build:
+      context: docker-mod
+      dockerfile: Dockerfile.plex
     restart: "on-failure"
     devices:
       - /dev/dri:/dev/dri
     environment:
       PUID: "1000"
       PGID: "1000"
-      # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -459,7 +459,9 @@ services:
   # https://github.com/NginxProxyManager/nginx-proxy-manager
   # https://nginxproxymanager.com/
   nginx-proxy-manager:
-    build: nginx-proxy-manager
+    build:
+      context: docker-mod
+      dockerfile: Dockerfile.nginx-proxy-manager
     restart: "on-failure"
     environment:
       # https://github.com/tailscale-dev/docker-mod
