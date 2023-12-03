@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/jellyfin:10.8.13 Docker digest to f082e08
+      hash: bc889daf95cd7a51e57b8d6c8c066efc5674bdec
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.5.4
+  title: ""
+  date: 2023-12-03T02:18:57.672Z
+- commits:
     - subject: Update linuxserver/ombi:4.43.5 Docker digest to 701698f
       hash: 1e607c8774f93f009feb8234aac146584b9d8e5b
       body: ""
