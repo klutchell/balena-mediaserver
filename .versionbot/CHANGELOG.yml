@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/tautulli Docker tag to v2.13.3
+      hash: 128c668d0b7eae31d881c458b5689cfea64146b7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.5.6
+  title: ""
+  date: 2023-12-03T23:08:35.885Z
+- commits:
     - subject: Update linuxserver/radarr:5.1.3 Docker digest to 170ddd0
       hash: 4e1f4cfa098e33103dead5b2481fcc434fbd7360
       body: ""
