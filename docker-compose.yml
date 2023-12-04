@@ -3,34 +3,21 @@ version: "2.1"
 volumes:
   downloads: {}
   duplicati: {}
-  duplicati-tailscale: {}
   jellyfin: {}
-  jellyfin-tailscale: {}
   letsencrypt: {}
   netdatalib: {}
   netdatacache: {}
   nzbhydra: {}
-  nzbhydra-tailscale: {}
   ombi: {}
-  ombi-tailscale: {}
   overseerr: {}
-  overseerr-tailscale: {}
   plex: {}
-  plex-tailscale: {}
   prowlarr: {}
-  prowlarr-tailscale: {}
   proxy: {}
-  nginx-tailscale: {}
   radarr: {}
-  radarr-tailscale: {}
   sabnzbd: {}
-  sabnzbd-tailscale: {}
   sonarr: {}
-  sonarr-tailscale: {}
   syncthing: {}
-  syncthing-tailscale: {}
   tautulli: {}
-  tautulli-tailscale: {}
 
 services:
   # https://docs.linuxserver.io/images/docker-plex
@@ -44,7 +31,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: plex
@@ -56,7 +43,6 @@ services:
     volumes:
       - plex:/config
       - downloads:/downloads
-      - plex-tailscale:/var/lib/tailscale
     entrypoint:
       - /bin/bash
       - -c
@@ -76,7 +62,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: jellyfin
@@ -88,7 +74,6 @@ services:
     volumes:
       - jellyfin:/config
       - downloads:/downloads
-      - jellyfin-tailscale:/var/lib/tailscale
     entrypoint:
       - /bin/bash
       - -c
@@ -106,7 +91,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: sonarr
@@ -118,7 +103,6 @@ services:
     volumes:
       - sonarr:/config
       - downloads:/downloads
-      - sonarr-tailscale:/var/lib/tailscale
     entrypoint:
       - /bin/bash
       - -c
@@ -136,7 +120,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: radarr
@@ -148,7 +132,6 @@ services:
     volumes:
       - radarr:/config
       - downloads:/downloads
-      - radarr-tailscale:/var/lib/tailscale
     entrypoint:
       - /bin/bash
       - -c
@@ -166,7 +149,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: prowlarr
@@ -178,7 +161,6 @@ services:
     volumes:
       - prowlarr:/config
       - downloads:/downloads
-      - prowlarr-tailscale:/var/lib/tailscale
     entrypoint:
       - /bin/bash
       - -c
@@ -196,7 +178,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: nzbhydra
@@ -208,7 +190,6 @@ services:
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
-      - nzbhydra-tailscale:/var/lib/tailscale
     entrypoint:
       - /bin/bash
       - -c
@@ -226,7 +207,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: ombi
@@ -237,7 +218,6 @@ services:
       - /tmp
     volumes:
       - ombi:/config
-      - ombi-tailscale:/var/lib/tailscale
     entrypoint:
       - /bin/bash
       - -c
@@ -255,7 +235,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: overseerr
@@ -266,7 +246,6 @@ services:
       - /tmp
     volumes:
       - overseerr:/config
-      - overseerr-tailscale:/var/lib/tailscale
     entrypoint:
       - /bin/bash
       - -c
@@ -284,7 +263,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: sabnzbd
@@ -296,7 +275,6 @@ services:
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
-      - sabnzbd-tailscale:/var/lib/tailscale
     entrypoint:
       - /bin/bash
       - -c
@@ -314,7 +292,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: tautulli
@@ -325,7 +303,6 @@ services:
       - /tmp
     volumes:
       - tautulli:/config
-      - sabnzbd-tailscale:/var/lib/tailscale
     entrypoint:
       - /bin/bash
       - -c
@@ -374,7 +351,7 @@ services:
     environment:
       PUID: "0"
       PGID: "0"
-      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: duplicati
@@ -385,7 +362,6 @@ services:
       - /tmp
     volumes:
       - duplicati:/config
-      - duplicati-tailscale:/var/lib/tailscale
       # any volumes that might be worth backing up
       - syncthing:/volumes/syncthing
       - plex:/volumes/plex
@@ -417,7 +393,7 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: syncthing
@@ -431,7 +407,6 @@ services:
       - /tmp
     volumes:
       - syncthing:/config
-      - syncthing-tailscale:/var/lib/tailscale
       # any volumes that might be worth syncronizing between machines
       - plex:/volumes/plex
       - sonarr:/volumes/sonarr
@@ -462,7 +437,7 @@ services:
       dockerfile: Dockerfile.nginx-proxy-manager
     restart: "on-failure"
     environment:
-      TAILSCALE_STATE_DIR: /var/lib/tailscale
+      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: nginx
@@ -476,7 +451,6 @@ services:
     volumes:
       - proxy:/data
       - letsencrypt:/etc/letsencrypt
-      - nginx-tailscale:/var/lib/tailscale
     entrypoint:
       - /bin/bash
       - -c
