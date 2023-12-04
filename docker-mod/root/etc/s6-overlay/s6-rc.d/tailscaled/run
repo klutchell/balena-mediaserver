@@ -5,13 +5,16 @@
 
 set -euo pipefail
 
-FLAGS=""
+FLAGS="--tun=userspace-networking"
 
-if ! [ -e /dev/net/tun ]; then
-    FLAGS="$FLAGS --tun=userspace-networking"
+# https://github.com/tailscale-dev/docker-mod/pull/8#issuecomment-1792262196
+# https://tailscale.com/kb/1112/userspace-networking/
+if [ -v TAILSCALE_USE_EXIT_NODE ]; then
+    FLAGS="$FLAGS --socks5-server=localhost:3215 --outbound-http-proxy-listen=localhost:3214"
 fi
 
 if [ -v TAILSCALE_STATE_DIR ]; then
+    mkdir -p "${TAILSCALE_STATE_DIR}"
     FLAGS="$FLAGS --statedir=${TAILSCALE_STATE_DIR}"
 else
     echo '[!] TAILSCALE_STATE_DIR is not set, this node will be ephemeral.'
