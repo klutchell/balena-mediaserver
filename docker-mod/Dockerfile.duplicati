@@ -1,5 +1,5 @@
-# https://docs.linuxserver.io/images/docker-plex
-FROM linuxserver/plex:1.32.8@sha256:8e038b79487919c2aefe976b690067df88113aec21a3d490837584f958c72412
+# https://docs.linuxserver.io/images/docker-duplicati
+FROM lscr.io/linuxserver/duplicati:v2.0.6.3-2.0.6.3_beta_2021-06-17-ls160@sha256:9cf7c7a14bf1474d44aa29d329552bf32af58090f4cfa5e61e35a88b2cd4677e
 
 # hadolint ignore=DL3008
 RUN apt-get update && \
