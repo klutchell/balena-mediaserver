@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add tailscale mod with proxy support to plex
+      hash: fab795fa874f4a667a98eec780140a7f015e0d92
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.6.0
+  title: ""
+  date: 2023-12-04T17:42:39.395Z
+- commits:
     - subject: Update linuxserver/jellyfin:10.8.13 Docker digest to deb61ff
       hash: 2769834b7bb0683a6ee861d53717804809c66a4e
       body: ""
