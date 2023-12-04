@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/plex Docker tag to v1.32.8
+      hash: d1fb6014ee06e0ae83036f78144754a4b8e84166
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.6.1
+  title: ""
+  date: 2023-12-04T21:09:02.790Z
+- commits:
     - subject: Add tailscale mod with proxy support to plex
       hash: fab795fa874f4a667a98eec780140a7f015e0d92
       body: ""
