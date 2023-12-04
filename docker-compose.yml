@@ -67,15 +67,15 @@ services:
 
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
-    image: linuxserver/jellyfin:10.8.13@sha256:deb61ff251882fb21e5187b7d1988e84ea438626300041f7d9474a5dc0618e24
+    build:
+      context: docker-mod
+      dockerfile: Dockerfile.jellyfin
     restart: "on-failure"
     devices:
       - /dev/dri:/dev/dri
     environment:
       PUID: "1000"
       PGID: "1000"
-      # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -99,13 +99,13 @@ services:
 
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
-    image: linuxserver/sonarr:3.0.10@sha256:3f25015afacc1823e59095c8c516a526cf29a92e94ebd0a01b9783259caac6a3
+    build:
+      context: docker-mod
+      dockerfile: Dockerfile.sonarr
     restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -129,13 +129,13 @@ services:
 
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
-    image: linuxserver/radarr:5.1.3@sha256:170ddd0db09962ef5cb34ed277aea81d93380f46b76be4c2cf3ddc7dfb30aeaa
+    build:
+      context: docker-mod
+      dockerfile: Dockerfile.radarr
     restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -159,13 +159,13 @@ services:
 
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
-    image: linuxserver/prowlarr:1.10.5-develop@sha256:b3cb1039315cf3d0e5d9250ac3e35aacbe2b916c88b6d8635243e830780dbc83
+    build:
+      context: docker-mod
+      dockerfile: Dockerfile.prowlarr
     restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -189,13 +189,13 @@ services:
 
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
-    image: linuxserver/nzbhydra2:5.3.5@sha256:bac8f4f312e98eb0c02d1a7d428d331d194220b6d58041c4b3f186abd72c988f
+    build:
+      context: docker-mod
+      dockerfile: Dockerfile.nzbhydra
     restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -219,13 +219,13 @@ services:
 
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
-    image: linuxserver/ombi:4.43.5@sha256:701698f4374ec5892cfb4bf9bb372d0aa6198a2a44a096260a7c2e1701738dc3
+    build:
+      context: docker-mod
+      dockerfile: Dockerfile.ombi
     restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -248,13 +248,13 @@ services:
 
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
-    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:5f61a3b58b79bea860bdb78c13971464338487cb8b8312dc35af853a3084c91a
+    build:
+      context: docker-mod
+      dockerfile: Dockerfile.overseerr
     restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -277,13 +277,13 @@ services:
 
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
-    image: linuxserver/sabnzbd:4.1.0@sha256:2648edb6b5bbdede1380abc3c63def6d28f3141cc2efdc45dd475b1840255543
+    build:
+      context: docker-mod
+      dockerfile: Dockerfile.sabnzbd
     restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -307,13 +307,13 @@ services:
 
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
-    image: linuxserver/tautulli:2.13.3@sha256:edaa802c62f30527e97648bd4faf645f748f1906369b42a6d3341e9dc7c98b40
+    build:
+      context: docker-mod
+      dockerfile: Dockerfile.tautulli
     restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -367,13 +367,13 @@ services:
 
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
-    image: lscr.io/linuxserver/duplicati:v2.0.6.3-2.0.6.3_beta_2021-06-17-ls160@sha256:9cf7c7a14bf1474d44aa29d329552bf32af58090f4cfa5e61e35a88b2cd4677e
+    build:
+      context: docker-mod
+      dockerfile: Dockerfile.duplicati
     restart: "on-failure"
     environment:
       PUID: "0"
       PGID: "0"
-      # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
@@ -410,13 +410,13 @@ services:
 
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
-    image: lscr.io/linuxserver/syncthing:1.26.1@sha256:c0f140e840115ccda573e05d83604b0aaa89e25cadff4edfd45c43f0843a8241
+    build:
+      context: docker-mod
+      dockerfile: Dockerfile.duplicati
     restart: "on-failure"
     environment:
       PUID: "1000"
       PGID: "1000"
-      # https://github.com/tailscale-dev/docker-mod
-      DOCKER_MODS: "ghcr.io/tailscale-dev/docker-mod:main"
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1

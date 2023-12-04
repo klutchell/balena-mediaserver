@@ -1,5 +1,6 @@
-# https://docs.linuxserver.io/images/docker-plex
-FROM linuxserver/plex:1.32.8@sha256:8e038b79487919c2aefe976b690067df88113aec21a3d490837584f958c72412
+# https://docs.linuxserver.io/images/docker-syncthing
+FROM lscr.io/linuxserver/syncthing:1.26.1@sha256:c0f140e840115ccda573e05d83604b0aaa89e25cadff4edfd45c43f0843a8241
+
 
 # hadolint ignore=DL3008
 RUN apt-get update && \

@@ -1,5 +1,5 @@
-# https://docs.linuxserver.io/images/docker-plex
-FROM linuxserver/plex:1.32.8@sha256:8e038b79487919c2aefe976b690067df88113aec21a3d490837584f958c72412
+# https://docs.linuxserver.io/images/docker-nzbhydra
+FROM linuxserver/nzbhydra2:5.3.5@sha256:bac8f4f312e98eb0c02d1a7d428d331d194220b6d58041c4b3f186abd72c988f
 
 # hadolint ignore=DL3008
 RUN apt-get update && \
