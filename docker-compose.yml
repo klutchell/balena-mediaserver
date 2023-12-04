@@ -47,6 +47,7 @@ volumes:
   sonarr: {}
   syncthing: {}
   tautulli: {}
+  tailscale: {}
 
 services:
   # https://docs.linuxserver.io/images/docker-duplicati
@@ -319,3 +320,65 @@ services:
     volumes:
       - netdatalib:/var/lib/netdata
       - netdatacache:/var/cache/netdata
+
+  # https://tailscale.com/kb/1282/docker
+  # https://hub.docker.com/r/tailscale/tailscale
+  # https://tailscale.com/kb/1278/tailscaled
+  # https://tailscale.com/kb/1241/tailscale-up
+  # https://github.com/tailscale/tailscale/blob/main/cmd/containerboot/main.go
+  tailscale:
+    image: tailscale/tailscale:v1.54.1
+    restart: "on-failure"
+    environment:
+      TS_STATE_DIR: /var/lib/tailscale
+      TS_SOCKET: /var/run/tailscale/tailscaled.sock
+      TS_USERSPACE: false
+      TS_AUTH_ONCE: false
+      TS_HOSTNAME: mediaserver
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
+    tmpfs:
+      - /tmp
+      - /run
+    volumes:
+      - tailscale:/var/lib/tailscale
+    entrypoint:
+      - /bin/sh
+      - -c
+    command:
+      - |
+        modprobe tun || true
+        modprobe wireguard || true
+        mkdir -p /dev/net
+        [ ! -c /dev/net/tun ] && mknod /dev/net/tun c 10 200
+
+        /usr/local/bin/containerboot &
+        pid=$!
+
+        sleep 5
+
+        tailscale serve reset
+
+        tailscale serve --bg --https=8200 http://localhost:8200
+        tailscale serve --bg --https=8096 http://localhost:8096
+        tailscale serve --bg --https=19999 http://localhost:19999
+        tailscale serve --bg --https=6789 http://localhost:6789
+        tailscale serve --bg --https=5076 http://localhost:5076
+        tailscale serve --bg --https=3579 http://localhost:3579
+        tailscale serve --bg --https=5055 http://localhost:5055
+        tailscale serve --bg --https=32400 http://localhost:32400
+        tailscale serve --bg --https=9696 http://localhost:9696
+        tailscale serve --bg --https=81 http://localhost:81
+        tailscale serve --bg --https=7878 http://localhost:7878
+        tailscale serve --bg --https=8989 http://localhost:8989
+        tailscale serve --bg --https=8080 http://localhost:8080
+        tailscale serve --bg --https=8181 http://localhost:8181
+        tailscale serve --bg --https=8384 http://localhost:8384
+
+        tailscale serve status
+        wait $pid
