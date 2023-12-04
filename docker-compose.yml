@@ -47,9 +47,8 @@ services:
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
-      TAILSCALE_HOSTNAME: mediaserver-plex
+      TAILSCALE_HOSTNAME: plex
       TAILSCALE_SERVE_PORT: 32400
-      TAILSCALE_FUNNEL: 1
     ports:
       - 127.0.0.1:32400:32400/tcp
     tmpfs:
@@ -80,9 +79,8 @@ services:
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
-      TAILSCALE_HOSTNAME: mediaserver-jellyfin
+      TAILSCALE_HOSTNAME: jellyfin
       TAILSCALE_SERVE_PORT: 8096
-      TAILSCALE_FUNNEL: 1
     ports:
       - 127.0.0.1:8096:8096/tcp
     tmpfs:
@@ -111,7 +109,7 @@ services:
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
-      TAILSCALE_HOSTNAME: mediaserver-sonarr
+      TAILSCALE_HOSTNAME: sonarr
       TAILSCALE_SERVE_PORT: 8989
     ports:
       - 127.0.0.1:8989:8989/tcp
@@ -141,7 +139,7 @@ services:
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
-      TAILSCALE_HOSTNAME: mediaserver-radarr
+      TAILSCALE_HOSTNAME: radarr
       TAILSCALE_SERVE_PORT: 7878
     ports:
       - 127.0.0.1:7878:7878/tcp
@@ -171,7 +169,7 @@ services:
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
-      TAILSCALE_HOSTNAME: mediaserver-prowlarr
+      TAILSCALE_HOSTNAME: prowlarr
       TAILSCALE_SERVE_PORT: 9696
     ports:
       - 127.0.0.1:9696:9696/tcp
@@ -201,7 +199,7 @@ services:
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
-      TAILSCALE_HOSTNAME: mediaserver-nzbhydra
+      TAILSCALE_HOSTNAME: nzbhydra
       TAILSCALE_SERVE_PORT: 5076
     ports:
       - 127.0.0.1:5076:5076/tcp
@@ -231,7 +229,7 @@ services:
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
-      TAILSCALE_HOSTNAME: mediaserver-ombi
+      TAILSCALE_HOSTNAME: ombi
       TAILSCALE_SERVE_PORT: 3579
     ports:
       - 127.0.0.1:3579:3579/tcp
@@ -260,7 +258,7 @@ services:
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
-      TAILSCALE_HOSTNAME: mediaserver-overseerr
+      TAILSCALE_HOSTNAME: overseerr
       TAILSCALE_SERVE_PORT: 5055
     ports:
       - 127.0.0.1:5055:5055/tcp
@@ -289,7 +287,7 @@ services:
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
-      TAILSCALE_HOSTNAME: mediaserver-sabnzbd
+      TAILSCALE_HOSTNAME: sabnzbd
       TAILSCALE_SERVE_PORT: 8080
     ports:
       - 127.0.0.1:8080:8080/tcp
@@ -319,7 +317,7 @@ services:
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
-      TAILSCALE_HOSTNAME: mediaserver-tautulli
+      TAILSCALE_HOSTNAME: tautulli
       TAILSCALE_SERVE_PORT: 8181
     ports:
       - 127.0.0.1:8181:8181/tcp
@@ -379,7 +377,7 @@ services:
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
-      TAILSCALE_HOSTNAME: mediaserver-duplicati
+      TAILSCALE_HOSTNAME: duplicati
       TAILSCALE_SERVE_PORT: 8200
     ports:
       - 127.0.0.1:8200:8200/tcp
@@ -422,7 +420,7 @@ services:
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
-      TAILSCALE_HOSTNAME: mediaserver-syncthing
+      TAILSCALE_HOSTNAME: syncthing
       TAILSCALE_SERVE_PORT: 8384
     ports:
       - 127.0.0.1:8384:8384/tcp
@@ -464,11 +462,10 @@ services:
       dockerfile: Dockerfile.nginx-proxy-manager
     restart: "on-failure"
     environment:
-      # https://github.com/tailscale-dev/docker-mod
       TAILSCALE_STATE_DIR: /var/lib/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
-      TAILSCALE_HOSTNAME: mediaserver-nginx
+      TAILSCALE_HOSTNAME: nginx
       TAILSCALE_SERVE_PORT: 81
     ports:
       - 80:80/tcp
