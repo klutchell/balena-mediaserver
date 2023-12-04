@@ -1,4 +1,34 @@
 - commits:
+    - subject: Switch from official tailscale mod to local overlay
+      hash: dbb876b59c3cf81eea5109dd78dcbec3f8c6de96
+      body: |
+        This allows more control over packages and service scripts,
+        as well as faster container startup.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+    - subject: Shorten tailscale hostnames and remove default plex funnel
+      hash: 8844c5290bec0ae37953404c8b236e967f9700c2
+      body: |
+        Since these resolve to URLs shorter is better and they can
+        be easily changed with env vars.
+
+        Similarly with funnel, users can enable via env vars if desired.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.7.0
+  title: ""
+  date: 2023-12-04T21:16:19.717Z
+- commits:
     - subject: Update linuxserver/plex Docker tag to v1.32.8
       hash: d1fb6014ee06e0ae83036f78144754a4b8e84166
       body: ""
