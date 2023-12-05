@@ -1,4 +1,28 @@
 - commits:
+    - subject: Move disabled service check to custom entrypoint script
+      hash: cecd8a70e95e86ccff70cb1f1d723e31ff7c5da8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+    - subject: Flatten docker-compose with yaml anchors
+      hash: 691afb616aada7a0c77c8cc419cb2358b868d0fb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.8.3
+  title: ""
+  date: 2023-12-05T20:06:21.893Z
+- commits:
     - subject: Add missing dependencies for tailscale kernel networking
       hash: 1537ec34a0d8e6dc7d183157f1317f705565859c
       body: ""
