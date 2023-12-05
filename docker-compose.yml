@@ -26,6 +26,12 @@ services:
       context: docker-mod
       dockerfile: Dockerfile.plex
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
     devices:
       - /dev/dri:/dev/dri
     environment:

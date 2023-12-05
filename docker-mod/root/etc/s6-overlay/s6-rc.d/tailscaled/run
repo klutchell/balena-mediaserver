@@ -5,11 +5,26 @@
 
 set -euo pipefail
 
-FLAGS="--tun=userspace-networking"
+# handle unassigned variables
+TAILSCALE_USERSPACE="${TAILSCALE_USERSPACE:-true}"
+
+FLAGS=""
+
+if [[ ${TAILSCALE_USERSPACE,,} =~ true|yes|on|1 ]]; then
+    echo '[!] using userspace networking'
+    FLAGS="$FLAGS --tun=userspace-networking"
+else
+    echo '[!] using kernel networking'
+    modprobe tun || true
+    modprobe wireguard || true
+    mkdir -p /dev/net
+    [ ! -c /dev/net/tun ] && mknod /dev/net/tun c 10 200
+fi
 
 # https://github.com/tailscale-dev/docker-mod/pull/8#issuecomment-1792262196
 # https://tailscale.com/kb/1112/userspace-networking/
-if [ -v TAILSCALE_USE_EXIT_NODE ]; then
+if [[ ${TAILSCALE_USERSPACE,,} =~ true|yes|on|1 ]] && [ -v TAILSCALE_USE_EXIT_NODE ]; then
+    echo '[!] starting socks5 and http proxy servers on ports 3215 and 3214'
     FLAGS="$FLAGS --socks5-server=localhost:3215 --outbound-http-proxy-listen=localhost:3214"
 fi
 
