@@ -5,6 +5,10 @@
 
 set -euo pipefail
 
+# handle unassigned variables
+TAILSCALE_USERSPACE="${TAILSCALE_USERSPACE:-true}"
+TAILSCALE_FUNNEL="${TAILSCALE_FUNNEL:-false}"
+
 FLAGS=""
 
 # configure `tailscale up`
@@ -15,16 +19,18 @@ else
 fi
 
 if [ -v TAILSCALE_HOSTNAME ]; then
+    echo "[!] using ${TAILSCALE_HOSTNAME} as hostname"
     FLAGS="${FLAGS} --hostname=${TAILSCALE_HOSTNAME}"
 fi
 
 if [ -v TAILSCALE_USE_SSH ]; then
+    echo '[!] enabling ssh'
     FLAGS="${FLAGS} --ssh=${TAILSCALE_USE_SSH}"
 fi
 
 if [ -v TAILSCALE_BE_EXIT_NODE ] && [ ! -v TAILSCALE_USE_EXIT_NODE ]; then
     echo '[!] acting as an exit node, you may need to approve this in the admin console'
-    FLAGS="${FLAGS} --advertise-exit-node=${TS_BE_EXIT_NODE}"
+    FLAGS="${FLAGS} --advertise-exit-node=${TAILSCALE_BE_EXIT_NODE}"
 fi
 
 # https://tailscale.com/kb/1241/tailscale-up/
@@ -39,7 +45,7 @@ tailscale up $FLAGS
 
 # configure serve or funnel
 if [ -v TAILSCALE_SERVE_PORT ] && [ -v TAILSCALE_SERVE_MODE ]; then
-    if [ -v TAILSCALE_FUNNEL ]; then
+    if [[ ${TAILSCALE_FUNNEL,,} =~ true|yes|on|1 ]]; then
         tailscale funnel --bg --"${TAILSCALE_SERVE_MODE}"=443 http://localhost:"${TAILSCALE_SERVE_PORT}"
     else
         tailscale serve --bg --"${TAILSCALE_SERVE_MODE}"=443 http://localhost:"${TAILSCALE_SERVE_PORT}"
@@ -48,7 +54,7 @@ fi
 
 # https://github.com/tailscale-dev/docker-mod/pull/8#issuecomment-1792262196
 # https://tailscale.com/kb/1112/userspace-networking/
-if [ -v TAILSCALE_USE_EXIT_NODE ]; then
+if [[ ${TAILSCALE_USERSPACE,,} =~ true|yes|on|1 ]] && [ -v TAILSCALE_USE_EXIT_NODE ]; then
     if [ -d /var/run/s6/container_environment ]; then
         printf "socks5://localhost:3215/" >/var/run/s6/container_environment/ALL_PROXY
         printf "socks5://localhost:3215/" >/var/run/s6/container_environment/all_proxy
