@@ -114,7 +114,7 @@ Read more at <https://nginxproxymanager.com/>.
 ### Duplicati
 
 The web interface is available via port `8200` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
-or via `mediaserver-duplicati` on your [Tailnet](#remote-access-via-tailscale),
+or via `duplicati` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 Configure a new backup by adding sources from `/volumes/`.
@@ -126,7 +126,7 @@ Read more at <https://docs.linuxserver.io/images/docker-duplicati>.
 ### Jellyfin
 
 The web interface is available via port `8096` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
-or via `mediaserver-jellyfin` on your [Tailnet](#remote-access-via-tailscale),
+or via `jellyfin` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 Set `JELLYFIN_PublishedServerUrl` to the public URL of your server.
@@ -149,7 +149,7 @@ Read more at <https://hub.docker.com/r/netdata/netdata>.
 ### Nginx Proxy Manager
 
 The web interface is available via port `81` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
-or via `mediaserver-nginx` on your [Tailnet](#remote-access-via-tailscale),
+or via `nginx` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The default credentials are below and you will be prompted to update them after logging in.
@@ -164,7 +164,7 @@ Read more at <https://nginxproxymanager.com/>.
 ### Nzbhydra
 
 The web interface is available via port `5076` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
-or via `mediaserver-nzbhydra` on your [Tailnet](#remote-access-via-tailscale),
+or via `nzbhydra` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 This service can be disabled by setting the `DISABLE` service variable to a truthy value.
@@ -174,7 +174,7 @@ Read more at <https://docs.linuxserver.io/images/docker-nzbhydra>.
 ### Ombi
 
 The web interface is available via port `3579` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
-or via `mediaserver-ombi` on your [Tailnet](#remote-access-via-tailscale),
+or via `ombi` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 This service can be disabled by setting the `DISABLE` service variable to a truthy value.
@@ -184,7 +184,7 @@ Read more at <https://docs.linuxserver.io/images/docker-ombi>.
 ### Overseerr
 
 The web interface is available via port `5055` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
-or via `mediaserver-overseerr` on your [Tailnet](#remote-access-via-tailscale),
+or via `overseerr` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 This service can be disabled by setting the `DISABLE` service variable to a truthy value.
@@ -194,7 +194,7 @@ Read more at <https://docs.linuxserver.io/images/docker-overseerr>.
 ### Plex
 
 The web interface is available via port `32400` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
-or via `mediaserver-plex` on your [Tailnet](#remote-access-via-tailscale),
+or via `plex` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 Obtain a claim token from <https://plex.tv/claim> and set the `PLEX_CLAIM` environment variable.
@@ -208,7 +208,7 @@ Read more at <https://docs.linuxserver.io/images/docker-plex>.
 ### Prowlarr
 
 The web interface is available via port `9696` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
-or via `mediaserver-prowlarr` on your [Tailnet](#remote-access-via-tailscale),
+or via `prowlarr` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 This service can be disabled by setting the `DISABLE` service variable to a truthy value.
@@ -218,7 +218,7 @@ Read more at <https://docs.linuxserver.io/images/docker-prowlarr>.
 ### Radarr
 
 The web interface is available via port `7878` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
-or via `mediaserver-radarr` on your [Tailnet](#remote-access-via-tailscale),
+or via `radarr` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The base path should be set to `/downloads/movies`.
@@ -230,7 +230,7 @@ Read more at <https://docs.linuxserver.io/images/docker-radarr>.
 ### Sabnzbd
 
 The web interface is available via port `8080` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
-or via `mediaserver-sabnzbd` on your [Tailnet](#remote-access-via-tailscale),
+or via `sabnzbd` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The temporary download folder should be `/downloads/sabnzbd/incomplete` and `/downloads/sabnzbd/complete` for completed.
@@ -242,7 +242,7 @@ Read more at <https://docs.linuxserver.io/images/docker-sabnzbd>.
 ### Sonarr
 
 The web interface is available via port `8989` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
-or via `mediaserver-sonarr` on your [Tailnet](#remote-access-via-tailscale),
+or via `sonarr` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The base path should be set to `/downloads/tv`.
@@ -254,7 +254,7 @@ Read more at <https://docs.linuxserver.io/images/docker-sonarr>.
 ### Syncthing
 
 The web interface is available via port `8384` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
-or via `mediaserver-syncthing` on your [Tailnet](#remote-access-via-tailscale),
+or via `syncthing` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 Configure a new sync by adding sources from `/volumes/`.
@@ -266,7 +266,7 @@ Read more at <https://docs.linuxserver.io/images/docker-syncthing>.
 ### Tautulli
 
 The web interface is available via port `8181` over an [SSH tunnel](#remote-access-via-ssh-tunnel),
-or via `mediaserver-tautulli` on your [Tailnet](#remote-access-via-tailscale),
+or via `tautulli` on your [Tailnet](#remote-access-via-tailscale),
 or via a personal HTTPS domain with [Nginx](#remote-access-via-nginx).
 
 The Plex IP Address or Hostname can just be `plex` and port `32400` for direct access.
