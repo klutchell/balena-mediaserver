@@ -17,9 +17,20 @@ if [ -v TAILSCALE_STATE_DIR ]; then
     mkdir -p "${TAILSCALE_STATE_DIR}"
     FLAGS="$FLAGS --statedir=${TAILSCALE_STATE_DIR}"
 else
-    echo '[!] TAILSCALE_STATE_DIR is not set, this node will be ephemeral.'
     FLAGS="$FLAGS --state=mem:"
 fi
 
 # shellcheck disable=SC2086
-exec tailscaled $FLAGS 2>&1
+tailscaled $FLAGS 2>&1 &
+pid=$!
+
+# https://github.com/just-containers/s6-overlay/issues/545
+graceful_stop() {
+    # https://tailscale.com/kb/1080/cli/#down
+    tailscale down --accept-risk=all
+    kill -QUIT $pid
+}
+
+trap "graceful_stop; exit" SIGTERM SIGQUIT
+
+wait $pid
