@@ -4,13 +4,6 @@ x-s6-service: &s6-service
   restart: "on-failure"
   tmpfs:
     - /tmp
-  entrypoint:
-    - /bin/bash
-    - -c
-  command:
-    - |
-      [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
-      exec /init
   environment: &s6-environment
     S6_VERBOSITY: 2
 
@@ -326,10 +319,3 @@ services:
     volumes:
       - netdatalib:/var/lib/netdata
       - netdatacache:/var/cache/netdata
-    entrypoint:
-      - /bin/bash
-      - -c
-    command:
-      - |
-        [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
-        exec /usr/sbin/run.sh
