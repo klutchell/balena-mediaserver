@@ -159,6 +159,8 @@ Email: admin@example.com
 Password: changeme
 ```
 
+This service can be disabled by setting the `DISABLE` service variable to a truthy value.
+
 Read more at <https://nginxproxymanager.com/>.
 
 ### Nzbhydra

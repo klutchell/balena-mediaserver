@@ -24,6 +24,8 @@ RUN case $(apk --print-arch) in \
 
 COPY root/ /
 
-RUN chmod +x /etc/s6-overlay/s6-rc.d/*/run
+RUN chmod +x /etc/s6-overlay/s6-rc.d/*/run /entrypoint.sh
 
 WORKDIR /app
+
+ENTRYPOINT [ "/entrypoint.sh" ]
