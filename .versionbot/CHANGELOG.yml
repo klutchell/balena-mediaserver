@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/syncthing Docker tag to v1.27.0
+      hash: eb9dc1c18b207f0ddfd14cf16a1b9d30acf942ef
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.7.1
+  title: ""
+  date: 2023-12-05T07:37:50.678Z
+- commits:
     - subject: Switch from official tailscale mod to local overlay
       hash: dbb876b59c3cf81eea5109dd78dcbec3f8c6de96
       body: |
