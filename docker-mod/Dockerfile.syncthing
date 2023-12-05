@@ -1,18 +1,22 @@
 # https://docs.linuxserver.io/images/docker-syncthing
 FROM lscr.io/linuxserver/syncthing:1.27.0@sha256:48a7bff43b1b76169e6d7989b630d300c65e14d4a7d6ff4c08d5573a9c88a414
 
-
-# hadolint ignore=DL3008
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends jq iptables kmod iproute2 && \
-    rm -rf /var/lib/apt/lists/*
+# hadolint ignore=DL3018
+RUN apk add --no-cache jq iptables iproute2 kmod
 
 WORKDIR /tmp
 
 # renovate: datasource=github-releases depName=tailscale/tailscale
 ARG TAILSCALE_VERSION=1.54.1
 
-RUN curl -fsSL "https://pkgs.tailscale.com/stable/tailscale_${TAILSCALE_VERSION}_$(dpkg --print-architecture).tgz" -o tailscale.tgz && \
+RUN case $(apk --print-arch) in \
+        x86_64) export ARCH=amd64 ;; \
+        armhf) export ARCH=armv6 ;; \
+        armv7) export ARCH=armv7 ;; \
+        aarch64) export ARCH=arm64 ;; \
+        *) echo "Unsupported architecture"; exit 1 ;; \
+    esac && \
+    curl -fsSL "https://pkgs.tailscale.com/stable/tailscale_${TAILSCALE_VERSION}_${ARCH}.tgz" -o tailscale.tgz && \
     tar xzf tailscale.tgz && \
     install ./*/tailscale /usr/bin/ && \
     install ./*/tailscaled /usr/sbin/ && \
