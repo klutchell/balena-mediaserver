@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add missing packages for tailscale kernel networking
+      hash: d41e320243b3e599f4b6f3fa0af574727e0e38ab
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.8.1
+  title: ""
+  date: 2023-12-05T15:50:43.062Z
+- commits:
     - subject: Move tailscale state to container tmpfs
       hash: 2d336eaf2bbff89c3456e3aaf08f6eebe0d56d98
       body: |
