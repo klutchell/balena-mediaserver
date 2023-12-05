@@ -12,6 +12,7 @@ FLAGS=""
 
 if [[ ${TAILSCALE_USERSPACE,,} =~ true|yes|on|1 ]]; then
     echo '[!] using userspace networking'
+    # https://tailscale.com/kb/1278/tailscaled/
     FLAGS="$FLAGS --tun=userspace-networking"
 else
     echo '[!] using kernel networking'
@@ -32,7 +33,7 @@ if [ -v TAILSCALE_STATE_DIR ]; then
     mkdir -p "${TAILSCALE_STATE_DIR}"
     FLAGS="$FLAGS --statedir=${TAILSCALE_STATE_DIR}"
 else
-    FLAGS="$FLAGS --state=mem:"
+    FLAGS="$FLAGS --state=mem: --statedir=/tmp"
 fi
 
 # shellcheck disable=SC2086
