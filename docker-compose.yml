@@ -60,9 +60,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.duplicati
+    image: lscr.io/linuxserver/duplicati:v2.0.6.3-2.0.6.3_beta_2021-06-17-ls160@sha256:9cf7c7a14bf1474d44aa29d329552bf32af58090f4cfa5e61e35a88b2cd4677e
     environment:
       <<: *linuxserver-environment
       PUID: "0"
@@ -91,9 +89,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.jellyfin
+    image: linuxserver/jellyfin:10.8.13@sha256:deb61ff251882fb21e5187b7d1988e84ea438626300041f7d9474a5dc0618e24
     devices:
       - /dev/dri:/dev/dri
     environment:
@@ -109,9 +105,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.nzbhydra
+    image: linuxserver/nzbhydra2:5.3.5@sha256:bac8f4f312e98eb0c02d1a7d428d331d194220b6d58041c4b3f186abd72c988f
     environment:
       <<: *linuxserver-environment
       TAILSCALE_HOSTNAME: nzbhydra
@@ -125,9 +119,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.ombi
+    image: linuxserver/ombi:4.43.5@sha256:701698f4374ec5892cfb4bf9bb372d0aa6198a2a44a096260a7c2e1701738dc3
     environment:
       <<: *linuxserver-environment
       TAILSCALE_HOSTNAME: ombi
@@ -140,9 +132,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.overseerr
+    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:5f61a3b58b79bea860bdb78c13971464338487cb8b8312dc35af853a3084c91a
     environment:
       <<: *linuxserver-environment
       TAILSCALE_HOSTNAME: overseerr
@@ -155,9 +145,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.plex
+    image: linuxserver/plex:1.32.8@sha256:8e038b79487919c2aefe976b690067df88113aec21a3d490837584f958c72412
     devices:
       - /dev/dri:/dev/dri
     environment:
@@ -173,9 +161,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.prowlarr
+    image: linuxserver/prowlarr:1.10.5-develop@sha256:b3cb1039315cf3d0e5d9250ac3e35aacbe2b916c88b6d8635243e830780dbc83
     environment:
       <<: *linuxserver-environment
       TAILSCALE_HOSTNAME: prowlarr
@@ -189,9 +175,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.radarr
+    image: linuxserver/radarr:5.1.3@sha256:170ddd0db09962ef5cb34ed277aea81d93380f46b76be4c2cf3ddc7dfb30aeaa
     environment:
       <<: *linuxserver-environment
       TAILSCALE_HOSTNAME: radarr
@@ -205,9 +189,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.sabnzbd
+    image: linuxserver/sabnzbd:4.1.0@sha256:2648edb6b5bbdede1380abc3c63def6d28f3141cc2efdc45dd475b1840255543
     environment:
       <<: *linuxserver-environment
       TAILSCALE_HOSTNAME: sabnzbd
@@ -221,9 +203,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.sonarr
+    image: linuxserver/sonarr:3.0.10@sha256:3f25015afacc1823e59095c8c516a526cf29a92e94ebd0a01b9783259caac6a3
     environment:
       <<: *linuxserver-environment
       TAILSCALE_HOSTNAME: sonarr
@@ -237,9 +217,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.syncthing
+    image: lscr.io/linuxserver/syncthing:1.27.0@sha256:48a7bff43b1b76169e6d7989b630d300c65e14d4a7d6ff4c08d5573a9c88a414
     environment:
       <<: *linuxserver-environment
       TAILSCALE_HOSTNAME: syncthing
@@ -268,9 +246,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.tautulli
+    image: linuxserver/tautulli:2.13.3@sha256:edaa802c62f30527e97648bd4faf645f748f1906369b42a6d3341e9dc7c98b40
     environment:
       <<: *linuxserver-environment
       TAILSCALE_HOSTNAME: tautulli
@@ -287,9 +263,7 @@ services:
     <<:
       - *s6-service
       - *tailscale-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.nginx-proxy-manager
+    image: jc21/nginx-proxy-manager:2.10.4@sha256:081c4c544ad5da81022b3b030c2ba50175923bc87a534bce8b52f870e695e9f1
     environment:
       <<:
         - *s6-environment
