@@ -62,6 +62,12 @@ services:
       context: docker-mod
       dockerfile: Dockerfile.jellyfin
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
     devices:
       - /dev/dri:/dev/dri
     environment:
@@ -92,6 +98,12 @@ services:
       context: docker-mod
       dockerfile: Dockerfile.sonarr
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -120,6 +132,12 @@ services:
       context: docker-mod
       dockerfile: Dockerfile.radarr
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -148,6 +166,12 @@ services:
       context: docker-mod
       dockerfile: Dockerfile.prowlarr
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -176,6 +200,12 @@ services:
       context: docker-mod
       dockerfile: Dockerfile.nzbhydra
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -204,6 +234,12 @@ services:
       context: docker-mod
       dockerfile: Dockerfile.ombi
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -231,6 +267,12 @@ services:
       context: docker-mod
       dockerfile: Dockerfile.overseerr
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -258,6 +300,12 @@ services:
       context: docker-mod
       dockerfile: Dockerfile.sabnzbd
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -286,6 +334,12 @@ services:
       context: docker-mod
       dockerfile: Dockerfile.tautulli
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -344,6 +398,12 @@ services:
       context: docker-mod
       dockerfile: Dockerfile.duplicati
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
     environment:
       PUID: "0"
       PGID: "0"
@@ -385,6 +445,12 @@ services:
       context: docker-mod
       dockerfile: Dockerfile.duplicati
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
     environment:
       PUID: "1000"
       PGID: "1000"
@@ -430,6 +496,12 @@ services:
       context: docker-mod
       dockerfile: Dockerfile.nginx-proxy-manager
     restart: "on-failure"
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
     environment:
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
