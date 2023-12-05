@@ -37,7 +37,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: plex
@@ -68,7 +67,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: jellyfin
@@ -97,7 +95,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: sonarr
@@ -126,7 +123,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: radarr
@@ -155,7 +151,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: prowlarr
@@ -184,7 +179,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: nzbhydra
@@ -213,7 +207,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: ombi
@@ -241,7 +234,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: overseerr
@@ -269,7 +261,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: sabnzbd
@@ -298,7 +289,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: tautulli
@@ -357,7 +347,6 @@ services:
     environment:
       PUID: "0"
       PGID: "0"
-      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: duplicati
@@ -399,7 +388,6 @@ services:
     environment:
       PUID: "1000"
       PGID: "1000"
-      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: syncthing
@@ -443,7 +431,6 @@ services:
       dockerfile: Dockerfile.nginx-proxy-manager
     restart: "on-failure"
     environment:
-      TAILSCALE_STATE_DIR: /tmp/tailscale
       TAILSCALE_SERVE_MODE: https
       TAILSCALE_USE_SSH: 1
       TAILSCALE_HOSTNAME: nginx

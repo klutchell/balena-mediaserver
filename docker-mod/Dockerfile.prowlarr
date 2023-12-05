@@ -2,7 +2,7 @@
 FROM linuxserver/prowlarr:1.10.5-develop@sha256:b3cb1039315cf3d0e5d9250ac3e35aacbe2b916c88b6d8635243e830780dbc83
 
 # hadolint ignore=DL3018
-RUN apk add --no-cache jq iptables
+RUN apk add --no-cache jq iptables iproute2 kmod
 
 WORKDIR /tmp
 

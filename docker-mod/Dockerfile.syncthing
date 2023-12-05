@@ -4,7 +4,7 @@ FROM lscr.io/linuxserver/syncthing:1.27.0@sha256:48a7bff43b1b76169e6d7989b630d30
 
 # hadolint ignore=DL3008
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends jq iptables && \
+    apt-get install -y --no-install-recommends jq iptables kmod iproute2 && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /tmp

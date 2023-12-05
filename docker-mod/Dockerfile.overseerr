@@ -2,7 +2,7 @@
 FROM lscr.io/linuxserver/overseerr:1.33.2@sha256:5f61a3b58b79bea860bdb78c13971464338487cb8b8312dc35af853a3084c91a
 
 # hadolint ignore=DL3018
-RUN apk add --no-cache jq iptables
+RUN apk add --no-cache jq iptables iproute2 kmod
 
 WORKDIR /tmp
 
