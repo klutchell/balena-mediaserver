@@ -3,7 +3,7 @@ FROM linuxserver/ombi:4.43.5@sha256:701698f4374ec5892cfb4bf9bb372d0aa6198a2a44a0
 
 # hadolint ignore=DL3008
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends jq iptables && \
+    apt-get install -y --no-install-recommends jq iptables kmod iproute2 && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /tmp

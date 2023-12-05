@@ -3,7 +3,7 @@ FROM linuxserver/nzbhydra2:5.3.5@sha256:bac8f4f312e98eb0c02d1a7d428d331d194220b6
 
 # hadolint ignore=DL3008
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends jq iptables && \
+    apt-get install -y --no-install-recommends jq iptables kmod iproute2 && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /tmp

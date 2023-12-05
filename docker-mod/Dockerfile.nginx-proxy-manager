@@ -5,7 +5,7 @@ FROM jc21/nginx-proxy-manager:2.10.4@sha256:081c4c544ad5da81022b3b030c2ba5017592
 
 # hadolint ignore=DL3008
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends jq iptables && \
+    apt-get install -y --no-install-recommends jq iptables kmod iproute2 && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /tmp

@@ -2,7 +2,7 @@
 FROM linuxserver/radarr:5.1.3@sha256:170ddd0db09962ef5cb34ed277aea81d93380f46b76be4c2cf3ddc7dfb30aeaa
 
 # hadolint ignore=DL3018
-RUN apk add --no-cache jq iptables
+RUN apk add --no-cache jq iptables iproute2 kmod
 
 WORKDIR /tmp
 

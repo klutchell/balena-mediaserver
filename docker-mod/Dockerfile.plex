@@ -3,7 +3,7 @@ FROM linuxserver/plex:1.32.8@sha256:8e038b79487919c2aefe976b690067df88113aec21a3
 
 # hadolint ignore=DL3008
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends jq iptables && \
+    apt-get install -y --no-install-recommends jq iptables kmod iproute2 && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /tmp

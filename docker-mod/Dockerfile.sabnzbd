@@ -2,7 +2,7 @@
 FROM linuxserver/sabnzbd:4.1.0@sha256:2648edb6b5bbdede1380abc3c63def6d28f3141cc2efdc45dd475b1840255543
 
 # hadolint ignore=DL3018
-RUN apk add --no-cache jq iptables
+RUN apk add --no-cache jq iptables iproute2 kmod
 
 WORKDIR /tmp
 

@@ -3,7 +3,7 @@ FROM linuxserver/jellyfin:10.8.13@sha256:deb61ff251882fb21e5187b7d1988e84ea43862
 
 # hadolint ignore=DL3008
 RUN apt-get update && \
-    apt-get install -y --no-install-recommends jq iptables && \
+    apt-get install -y --no-install-recommends jq iptables kmod iproute2 && \
     rm -rf /var/lib/apt/lists/*
 
 WORKDIR /tmp

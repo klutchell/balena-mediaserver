@@ -2,7 +2,7 @@
 FROM linuxserver/tautulli:2.13.3@sha256:edaa802c62f30527e97648bd4faf645f748f1906369b42a6d3341e9dc7c98b40
 
 # hadolint ignore=DL3018
-RUN apk add --no-cache jq iptables
+RUN apk add --no-cache jq iptables iproute2 kmod
 
 WORKDIR /tmp
 
