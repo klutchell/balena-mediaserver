@@ -443,7 +443,7 @@ services:
   syncthing:
     build:
       context: docker-mod
-      dockerfile: Dockerfile.duplicati
+      dockerfile: Dockerfile.syncthing
     restart: "on-failure"
     cap_add:
       - NET_ADMIN
