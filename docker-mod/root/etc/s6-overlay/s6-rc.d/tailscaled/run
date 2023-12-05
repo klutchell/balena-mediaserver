@@ -8,7 +8,7 @@ set -euo pipefail
 # handle unassigned variables
 TAILSCALE_USERSPACE="${TAILSCALE_USERSPACE:-true}"
 
-FLAGS=""
+FLAGS="--verbose=1"
 
 if [[ ${TAILSCALE_USERSPACE,,} =~ true|yes|on|1 ]]; then
     echo '[!] using userspace networking'
@@ -43,10 +43,10 @@ pid=$!
 # https://github.com/just-containers/s6-overlay/issues/545
 graceful_stop() {
     # https://tailscale.com/kb/1080/cli/#down
+    echo '[!] disconnecting from tailscale'
     tailscale down --accept-risk=all
-    kill -QUIT $pid
 }
 
-trap "graceful_stop; exit" SIGTERM SIGQUIT
+trap "graceful_stop" EXIT
 
 wait $pid
