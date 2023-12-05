@@ -6,6 +6,13 @@ x-s6-service: &s6-service
     - /tmp
   environment: &s6-environment
     S6_VERBOSITY: 2
+  entrypoint:
+    - /bin/bash
+    - -c
+  command:
+    - |
+      [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+      exec /init
 
 x-tailscale-service: &tailscale-service
   cap_add:
