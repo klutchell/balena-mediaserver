@@ -14,25 +14,10 @@ x-s6-service: &s6-service
       [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
       exec /init
 
-x-tailscale-service: &tailscale-service
-  cap_add:
-    - NET_ADMIN
-    - NET_RAW
-    - SYS_MODULE
-  labels:
-    io.balena.features.kernel-modules: 1
-  environment: &tailscale-environment
-    TAILSCALE_SERVE_MODE: https
-    TAILSCALE_USE_SSH: 1
-
 x-linuxserver-service: &linuxserver-service
-  <<:
-    - *s6-service
-    - *tailscale-service
+  <<: *s6-service
   environment: &linuxserver-environment
-    <<:
-      - *s6-environment
-      - *tailscale-environment
+    <<: *s6-environment
     PUID: "1000"
     PGID: "1000"
 
@@ -65,8 +50,6 @@ services:
       <<: *linuxserver-environment
       PUID: "0"
       PGID: "0"
-      TAILSCALE_HOSTNAME: duplicati
-      TAILSCALE_SERVE_PORT: 8200
     ports:
       - 127.0.0.1:8200:8200/tcp
     volumes:
@@ -92,10 +75,6 @@ services:
     image: linuxserver/jellyfin:10.8.13@sha256:deb61ff251882fb21e5187b7d1988e84ea438626300041f7d9474a5dc0618e24
     devices:
       - /dev/dri:/dev/dri
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: jellyfin
-      TAILSCALE_SERVE_PORT: 8096
     ports:
       - 127.0.0.1:8096:8096/tcp
     volumes:
@@ -106,10 +85,6 @@ services:
   nzbhydra:
     <<: *linuxserver-service
     image: linuxserver/nzbhydra2:5.3.5@sha256:bac8f4f312e98eb0c02d1a7d428d331d194220b6d58041c4b3f186abd72c988f
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: nzbhydra
-      TAILSCALE_SERVE_PORT: 5076
     ports:
       - 127.0.0.1:5076:5076/tcp
     volumes:
@@ -120,10 +95,6 @@ services:
   ombi:
     <<: *linuxserver-service
     image: linuxserver/ombi:4.43.5@sha256:701698f4374ec5892cfb4bf9bb372d0aa6198a2a44a096260a7c2e1701738dc3
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: ombi
-      TAILSCALE_SERVE_PORT: 3579
     ports:
       - 127.0.0.1:3579:3579/tcp
     volumes:
@@ -133,10 +104,6 @@ services:
   overseerr:
     <<: *linuxserver-service
     image: lscr.io/linuxserver/overseerr:1.33.2@sha256:5f61a3b58b79bea860bdb78c13971464338487cb8b8312dc35af853a3084c91a
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: overseerr
-      TAILSCALE_SERVE_PORT: 5055
     ports:
       - 127.0.0.1:5055:5055/tcp
     volumes:
@@ -148,10 +115,6 @@ services:
     image: linuxserver/plex:1.32.8@sha256:8e038b79487919c2aefe976b690067df88113aec21a3d490837584f958c72412
     devices:
       - /dev/dri:/dev/dri
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: plex
-      TAILSCALE_SERVE_PORT: 32400
     ports:
       - 127.0.0.1:32400:32400/tcp
     volumes:
@@ -162,10 +125,6 @@ services:
   prowlarr:
     <<: *linuxserver-service
     image: linuxserver/prowlarr:1.10.5-develop@sha256:b3cb1039315cf3d0e5d9250ac3e35aacbe2b916c88b6d8635243e830780dbc83
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: prowlarr
-      TAILSCALE_SERVE_PORT: 9696
     ports:
       - 127.0.0.1:9696:9696/tcp
     volumes:
@@ -176,10 +135,6 @@ services:
   radarr:
     <<: *linuxserver-service
     image: linuxserver/radarr:5.1.3@sha256:170ddd0db09962ef5cb34ed277aea81d93380f46b76be4c2cf3ddc7dfb30aeaa
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: radarr
-      TAILSCALE_SERVE_PORT: 7878
     ports:
       - 127.0.0.1:7878:7878/tcp
     volumes:
@@ -190,10 +145,6 @@ services:
   sabnzbd:
     <<: *linuxserver-service
     image: linuxserver/sabnzbd:4.1.0@sha256:2648edb6b5bbdede1380abc3c63def6d28f3141cc2efdc45dd475b1840255543
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: sabnzbd
-      TAILSCALE_SERVE_PORT: 8080
     ports:
       - 127.0.0.1:8080:8080/tcp
     volumes:
@@ -204,10 +155,6 @@ services:
   sonarr:
     <<: *linuxserver-service
     image: linuxserver/sonarr:3.0.10@sha256:3f25015afacc1823e59095c8c516a526cf29a92e94ebd0a01b9783259caac6a3
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: sonarr
-      TAILSCALE_SERVE_PORT: 8989
     ports:
       - 127.0.0.1:8989:8989/tcp
     volumes:
@@ -218,10 +165,6 @@ services:
   syncthing:
     <<: *linuxserver-service
     image: lscr.io/linuxserver/syncthing:1.27.0@sha256:48a7bff43b1b76169e6d7989b630d300c65e14d4a7d6ff4c08d5573a9c88a414
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: syncthing
-      TAILSCALE_SERVE_PORT: 8384
     ports:
       - 127.0.0.1:8384:8384/tcp
       - 22000:22000/tcp
@@ -247,10 +190,6 @@ services:
   tautulli:
     <<: *linuxserver-service
     image: linuxserver/tautulli:2.13.3@sha256:edaa802c62f30527e97648bd4faf645f748f1906369b42a6d3341e9dc7c98b40
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: tautulli
-      TAILSCALE_SERVE_PORT: 8181
     ports:
       - 127.0.0.1:8181:8181/tcp
     volumes:
@@ -260,16 +199,8 @@ services:
   # https://github.com/NginxProxyManager/nginx-proxy-manager
   # https://nginxproxymanager.com/
   nginx-proxy-manager:
-    <<:
-      - *s6-service
-      - *tailscale-service
+    <<: *s6-service
     image: jc21/nginx-proxy-manager:2.10.4@sha256:081c4c544ad5da81022b3b030c2ba50175923bc87a534bce8b52f870e695e9f1
-    environment:
-      <<:
-        - *s6-environment
-        - *tailscale-environment
-      TAILSCALE_HOSTNAME: nginx
-      TAILSCALE_SERVE_PORT: 81
     ports:
       - 80:80/tcp
       - 127.0.0.1:81:81/tcp
