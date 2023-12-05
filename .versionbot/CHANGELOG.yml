@@ -1,4 +1,23 @@
 - commits:
+    - subject: Move tailscale state to container tmpfs
+      hash: 2d336eaf2bbff89c3456e3aaf08f6eebe0d56d98
+      body: |
+        The option to keep tailscale state in memory
+        via --state=mem: doesn't work when generating
+        TLS certificates.
+
+        Using a path in container tmpfs is the next best thing.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.8.0
+  title: ""
+  date: 2023-12-05T13:45:21.027Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing Docker tag to v1.27.0
       hash: eb9dc1c18b207f0ddfd14cf16a1b9d30acf942ef
       body: ""
