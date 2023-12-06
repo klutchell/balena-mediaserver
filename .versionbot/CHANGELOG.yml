@@ -1,4 +1,18 @@
 - commits:
+    - subject: Pull from lscr.io for all linuxserver.io images
+      hash: 4a45d963499889e6468fb77cae8a1b1d562f638d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.10.1
+  title: ""
+  date: 2023-12-06T18:36:27.496Z
+- commits:
     - subject: Add a custom entrypoint for the tailscale service
       hash: 3fc2d1d54f5f3d9ef20d2882532a0c97f6058269
       body: ""
