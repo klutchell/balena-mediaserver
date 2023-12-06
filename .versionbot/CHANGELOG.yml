@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update linuxserver/prowlarr:1.10.5-develop Docker digest to 03e23a5
+      hash: 2c8fe3cb9d10a2a40d350677b80b29effe7cc593
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.9.2
+  title: ""
+  date: 2023-12-06T04:08:14.933Z
+- commits:
     - subject: Pin tailscale/tailscale Docker tag to ce594e3
       hash: 93f19b44b05722cfde46fd6093e5e9ad98c9a913
       body: ""
