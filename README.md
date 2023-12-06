@@ -66,9 +66,9 @@ balena tunnel ${UUID} -p 22222:4321
 ssh -N -p 4321 -L 8080:localhost:${PORT} ${USERNAME}@localhost
 ```
 
-Where `UUID` is the UUID of your balena device,
-`USERNAME` is your balenaCloud username,
-and `PORT` is the service port found under [Services](#services).
+Where `${UUID}` is the UUID of your balena device,
+`${USERNAME}` is your balenaCloud username,
+and `${PORT}` is the service port found under [Services](#services).
 
 Then direct your browser to `http://localhost:8080` to access the web interface.
 
@@ -83,15 +83,17 @@ You can create an authkey in the [admin panel](https://login.tailscale.com/admin
 See [here](https://tailscale.com/kb/1085/auth-keys/) for more information about authkeys and what you can do with them.
 
 Once authenticated, each service will be served on `https://mediaserver.${TAILNET}.ts.net:${PORT}` where
-`TAILNET` is your [Tailnet name](https://tailscale.com/kb/1217/tailnet-name/)
-and `PORT` is the service port found under [Services](#services).
+`${TAILNET}` is your [Tailnet name](https://tailscale.com/kb/1217/tailnet-name/)
+and `${PORT}` is the service port found under [Services](#services).
 
-Services can be exposed via [Tailscale Funnel](https://tailscale.com/kb/1223/funnel/)
-by adding the port number to a space-separated env var `FUNNEL_PORTS`. Otherwise they will
-only be available on your private Tailnet via [Tailscale Serve](https://tailscale.com/kb/1312/serve/).
+By default all services are published via [Tailscale Serve](https://tailscale.com/kb/1312/serve/)
+so they are only available on your Tailnet.
 
-Run `tailscale serve status` and `tailscale funnel status` in a `tailscale` service shell
-to see the list of public and private URLs.
+You can optionally publish the service to the Internet via [Tailscale Funnel](https://tailscale.com/kb/1223/funnel/)
+by setting an environment variable `FUNNEL_${service}` to a truthy value
+where `${service}` is the service name from docker-compose.
+
+Run `tailscale serve status` in a `tailscale` service shell to see the list of served URLs.
 
 Read more at <https://tailscale.dev/blog/docker-mod-tailscale>.
 
