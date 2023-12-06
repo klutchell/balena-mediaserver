@@ -6,26 +6,18 @@ x-s6-service: &s6-service
     - /tmp
   environment: &s6-environment
     S6_VERBOSITY: 2
-
-x-tailscale-service: &tailscale-service
-  cap_add:
-    - NET_ADMIN
-    - NET_RAW
-    - SYS_MODULE
-  labels:
-    io.balena.features.kernel-modules: 1
-  environment: &tailscale-environment
-    TAILSCALE_SERVE_MODE: https
-    TAILSCALE_USE_SSH: 1
+  entrypoint:
+    - /bin/bash
+    - -c
+  command:
+    - |
+      [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
+      exec /init
 
 x-linuxserver-service: &linuxserver-service
-  <<:
-    - *s6-service
-    - *tailscale-service
+  <<: *s6-service
   environment: &linuxserver-environment
-    <<:
-      - *s6-environment
-      - *tailscale-environment
+    <<: *s6-environment
     PUID: "1000"
     PGID: "1000"
 
@@ -47,20 +39,17 @@ volumes:
   sonarr: {}
   syncthing: {}
   tautulli: {}
+  tailscale: {}
 
 services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.duplicati
+    image: lscr.io/linuxserver/duplicati:v2.0.6.3-2.0.6.3_beta_2021-06-17-ls160@sha256:9cf7c7a14bf1474d44aa29d329552bf32af58090f4cfa5e61e35a88b2cd4677e
     environment:
       <<: *linuxserver-environment
       PUID: "0"
       PGID: "0"
-      TAILSCALE_HOSTNAME: duplicati
-      TAILSCALE_SERVE_PORT: 8200
     ports:
       - 127.0.0.1:8200:8200/tcp
     volumes:
@@ -83,15 +72,9 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.jellyfin
+    image: linuxserver/jellyfin:10.8.13@sha256:deb61ff251882fb21e5187b7d1988e84ea438626300041f7d9474a5dc0618e24
     devices:
       - /dev/dri:/dev/dri
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: jellyfin
-      TAILSCALE_SERVE_PORT: 8096
     ports:
       - 127.0.0.1:8096:8096/tcp
     volumes:
@@ -101,13 +84,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.nzbhydra
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: nzbhydra
-      TAILSCALE_SERVE_PORT: 5076
+    image: linuxserver/nzbhydra2:5.3.5@sha256:bac8f4f312e98eb0c02d1a7d428d331d194220b6d58041c4b3f186abd72c988f
     ports:
       - 127.0.0.1:5076:5076/tcp
     volumes:
@@ -117,13 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.ombi
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: ombi
-      TAILSCALE_SERVE_PORT: 3579
+    image: linuxserver/ombi:4.43.5@sha256:701698f4374ec5892cfb4bf9bb372d0aa6198a2a44a096260a7c2e1701738dc3
     ports:
       - 127.0.0.1:3579:3579/tcp
     volumes:
@@ -132,13 +103,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.overseerr
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: overseerr
-      TAILSCALE_SERVE_PORT: 5055
+    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:5f61a3b58b79bea860bdb78c13971464338487cb8b8312dc35af853a3084c91a
     ports:
       - 127.0.0.1:5055:5055/tcp
     volumes:
@@ -147,15 +112,9 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.plex
+    image: linuxserver/plex:1.32.8@sha256:8e038b79487919c2aefe976b690067df88113aec21a3d490837584f958c72412
     devices:
       - /dev/dri:/dev/dri
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: plex
-      TAILSCALE_SERVE_PORT: 32400
     ports:
       - 127.0.0.1:32400:32400/tcp
     volumes:
@@ -165,13 +124,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.prowlarr
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: prowlarr
-      TAILSCALE_SERVE_PORT: 9696
+    image: linuxserver/prowlarr:1.10.5-develop@sha256:b3cb1039315cf3d0e5d9250ac3e35aacbe2b916c88b6d8635243e830780dbc83
     ports:
       - 127.0.0.1:9696:9696/tcp
     volumes:
@@ -181,13 +134,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.radarr
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: radarr
-      TAILSCALE_SERVE_PORT: 7878
+    image: linuxserver/radarr:5.1.3@sha256:170ddd0db09962ef5cb34ed277aea81d93380f46b76be4c2cf3ddc7dfb30aeaa
     ports:
       - 127.0.0.1:7878:7878/tcp
     volumes:
@@ -197,13 +144,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.sabnzbd
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: sabnzbd
-      TAILSCALE_SERVE_PORT: 8080
+    image: linuxserver/sabnzbd:4.1.0@sha256:2648edb6b5bbdede1380abc3c63def6d28f3141cc2efdc45dd475b1840255543
     ports:
       - 127.0.0.1:8080:8080/tcp
     volumes:
@@ -213,13 +154,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.sonarr
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: sonarr
-      TAILSCALE_SERVE_PORT: 8989
+    image: linuxserver/sonarr:3.0.10@sha256:3f25015afacc1823e59095c8c516a526cf29a92e94ebd0a01b9783259caac6a3
     ports:
       - 127.0.0.1:8989:8989/tcp
     volumes:
@@ -229,13 +164,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.syncthing
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: syncthing
-      TAILSCALE_SERVE_PORT: 8384
+    image: lscr.io/linuxserver/syncthing:1.27.0@sha256:48a7bff43b1b76169e6d7989b630d300c65e14d4a7d6ff4c08d5573a9c88a414
     ports:
       - 127.0.0.1:8384:8384/tcp
       - 22000:22000/tcp
@@ -260,13 +189,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *linuxserver-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.tautulli
-    environment:
-      <<: *linuxserver-environment
-      TAILSCALE_HOSTNAME: tautulli
-      TAILSCALE_SERVE_PORT: 8181
+    image: linuxserver/tautulli:2.13.3@sha256:edaa802c62f30527e97648bd4faf645f748f1906369b42a6d3341e9dc7c98b40
     ports:
       - 127.0.0.1:8181:8181/tcp
     volumes:
@@ -276,18 +199,8 @@ services:
   # https://github.com/NginxProxyManager/nginx-proxy-manager
   # https://nginxproxymanager.com/
   nginx-proxy-manager:
-    <<:
-      - *s6-service
-      - *tailscale-service
-    build:
-      context: docker-mod
-      dockerfile: Dockerfile.nginx-proxy-manager
-    environment:
-      <<:
-        - *s6-environment
-        - *tailscale-environment
-      TAILSCALE_HOSTNAME: nginx
-      TAILSCALE_SERVE_PORT: 81
+    <<: *s6-service
+    image: jc21/nginx-proxy-manager:2.10.4@sha256:081c4c544ad5da81022b3b030c2ba50175923bc87a534bce8b52f870e695e9f1
     ports:
       - 80:80/tcp
       - 127.0.0.1:81:81/tcp
@@ -319,3 +232,71 @@ services:
     volumes:
       - netdatalib:/var/lib/netdata
       - netdatacache:/var/cache/netdata
+
+  # https://tailscale.com/kb/1282/docker
+  # https://hub.docker.com/r/tailscale/tailscale
+  # https://tailscale.com/kb/1278/tailscaled
+  # https://tailscale.com/kb/1241/tailscale-up
+  # https://github.com/tailscale/tailscale/blob/main/cmd/containerboot/main.go
+  tailscale:
+    image: tailscale/tailscale:v1.54.1
+    restart: "on-failure"
+    environment:
+      TS_STATE_DIR: /var/lib/tailscale
+      TS_SOCKET: /var/run/tailscale/tailscaled.sock
+      TS_USERSPACE: false
+      TS_AUTH_ONCE: false
+      TS_HOSTNAME: mediaserver
+      SERVE_PORTS: 8200 8096 19999 6789 5076 3579 5055 32400 9696 81 7878 8989 8080 8181 8384
+    network_mode: host
+    cap_add:
+      - NET_ADMIN
+      - NET_RAW
+      - SYS_MODULE
+    labels:
+      io.balena.features.kernel-modules: 1
+    tmpfs:
+      - /tmp
+      - /run
+    volumes:
+      - tailscale:/var/lib/tailscale
+    entrypoint:
+      - /bin/sh
+      - -c
+    command:
+      - |
+        modprobe tun || true
+        modprobe wireguard || true
+        mkdir -p /dev/net
+        [ ! -c /dev/net/tun ] && mknod /dev/net/tun c 10 200
+
+        /usr/local/bin/containerboot &
+        pid=$!
+
+        sleep 5
+
+        tailscale funnel reset
+        tailscale serve reset
+
+        is_in_string() {
+          for w in $2; do
+            if [ "$w" = "$1" ]; then
+              return 0
+            fi
+          done
+          return 1
+        }
+
+        for port in $FUNNEL_PORTS; do
+          tailscale funnel --bg --https=$port http://localhost:$port
+        done
+
+        for port in $SERVE_PORTS; do
+          if ! is_in_string "$port" "$FUNNEL_PORTS"; then
+            tailscale serve --bg --https=$port http://localhost:$port
+          fi
+        done
+
+        tailscale serve status
+        tailscale funnel status
+        wait $pid
