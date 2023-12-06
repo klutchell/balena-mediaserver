@@ -1,4 +1,18 @@
 - commits:
+    - subject: Add a custom entrypoint for the tailscale service
+      hash: 3fc2d1d54f5f3d9ef20d2882532a0c97f6058269
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.10.0
+  title: ""
+  date: 2023-12-06T18:04:12.610Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v1.44.0
       hash: 64dab076fb7fc1eee3a4978b8b1f67b55d7daf5a
       body: ""
