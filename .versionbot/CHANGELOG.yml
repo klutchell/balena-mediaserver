@@ -1,4 +1,16 @@
 - commits:
+    - subject: Pin tailscale/tailscale Docker tag to ce594e3
+      hash: 93f19b44b05722cfde46fd6093e5e9ad98c9a913
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.9.1
+  title: ""
+  date: 2023-12-06T01:52:29.201Z
+- commits:
     - subject: Remove tailscale mods
       hash: 72a12640a90893a69e841d6317bfa273b5b29529
       body: ""
