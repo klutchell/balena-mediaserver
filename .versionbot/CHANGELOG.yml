@@ -1,4 +1,28 @@
 - commits:
+    - subject: Remove tailscale mods
+      hash: 72a12640a90893a69e841d6317bfa273b5b29529
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+    - subject: Add tailscale service to host network stack
+      hash: ac725dca2bba9518b4e3f54d80d7acebf4fe8cb3
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.9.0
+  title: ""
+  date: 2023-12-06T01:30:38.223Z
+- commits:
     - subject: Move disabled service check to custom entrypoint script
       hash: cecd8a70e95e86ccff70cb1f1d723e31ff7c5da8
       body: ""
