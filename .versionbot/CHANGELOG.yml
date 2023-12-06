@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/overseerr:1.33.2 Docker digest to 9360e38
+      hash: 2ba12ae0a03d8c41af29e73ce069418018ff8ed9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.3
+  title: ""
+  date: 2023-12-06T19:38:37.474Z
+- commits:
     - subject: Pin lscr.io/linuxserver/duplicati Docker tag to 34dff9e
       hash: 236298169522086135fa0ad00ff71ab791fa8e3c
       body: ""
