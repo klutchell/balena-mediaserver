@@ -1,4 +1,16 @@
 - commits:
+    - subject: Pin lscr.io/linuxserver/duplicati Docker tag to 34dff9e
+      hash: 236298169522086135fa0ad00ff71ab791fa8e3c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.2
+  title: ""
+  date: 2023-12-06T19:08:19.533Z
+- commits:
     - subject: Pull from lscr.io for all linuxserver.io images
       hash: 4a45d963499889e6468fb77cae8a1b1d562f638d
       body: ""
