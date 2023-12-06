@@ -90,6 +90,9 @@ Services can be exposed via [Tailscale Funnel](https://tailscale.com/kb/1223/fun
 by adding the port number to a space-separated env var `FUNNEL_PORTS`. Otherwise they will
 only be available on your private Tailnet via [Tailscale Serve](https://tailscale.com/kb/1312/serve/).
 
+Run `tailscale serve status` and `tailscale funnel status` in a `tailscale` service shell
+to see the list of public and private URLs.
+
 Read more at <https://tailscale.dev/blog/docker-mod-tailscale>.
 
 ### Remote Access via Nginx

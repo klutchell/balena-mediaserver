@@ -278,14 +278,25 @@ services:
         tailscale funnel reset
         tailscale serve reset
 
+        is_in_string() {
+          for w in $2; do
+            if [ "$w" = "$1" ]; then
+              return 0
+            fi
+          done
+          return 1
+        }
+
         for port in $FUNNEL_PORTS; do
           tailscale funnel --bg --https=$port http://localhost:$port
         done
 
         for port in $SERVE_PORTS; do
-          tailscale serve --bg --https=$port http://localhost:$port
+          if ! is_in_string "$port" "$FUNNEL_PORTS"; then
+            tailscale serve --bg --https=$port http://localhost:$port
+          fi
         done
 
-        tailscale funnel status
         tailscale serve status
+        tailscale funnel status
         wait $pid
