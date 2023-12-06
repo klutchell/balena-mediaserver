@@ -27,72 +27,59 @@ endif
 	@echo "Launching web interface via http://localhost:$(LOCAL_HTTP_PORT)..."
 	@open http://localhost:$(LOCAL_HTTP_PORT)
 
-.PHONY: tailnet
-tailnet:
-ifeq ($(TAILNET),)
-	@echo "TAILNET is not set. Please set it in .env or pass it as an argument."
-	@exit 1
-endif
-ifeq ($(HOSTNAME),)
-	@echo "HOSTNAME is not set. Please set it in .env or pass it as an argument."
-	@exit 1
-endif
-	@echo "Launching web interface via https://$(HOSTNAME).$(TAILNET)..."
-	@open https://$(HOSTNAME).$(TAILNET)
-
 .PHONY: stop
 stop:
 	-@kill `cat .pidfile1 2>/dev/null` 2>/dev/null ; rm -f .pidfile1
 	-@kill `cat .pidfile2 2>/dev/null` 2>/dev/null ; rm -f .pidfile2
 
-.PHONY: duplicati-tunnel
-duplicati-tunnel:
+.PHONY: tunnel-duplicati
+tunnel-duplicati:
 	@$(MAKE) tunnel PORT=8200
 
-.PHONY: jellyfin-tunnel
-jellyfin-tunnel:
+.PHONY: tunnel-jellyfin
+tunnel-jellyfin:
 	@$(MAKE) tunnel PORT=8096
 
-.PHONY: netdata-tunnel
-netdata-tunnel:
+.PHONY: tunnel-netdata
+tunnel-netdata:
 	@$(MAKE) tunnel PORT=19999
 
-.PHONY: nginx-tunnel
-nginx-tunnel:
+.PHONY: tunnel-nginx
+tunnel-nginx:
 	@$(MAKE) tunnel PORT=81
 
-.PHONY: nzbhydra-tunnel
-nzbhydra-tunnel:
+.PHONY: tunnel-nzbhydra
+tunnel-nzbhydra:
 	@$(MAKE) tunnel PORT=5076
 
-.PHONY: ombi-tunnel
-ombi-tunnel:
+.PHONY: tunnel-ombi
+tunnel-ombi:
 	@$(MAKE) tunnel PORT=3579
 
-.PHONY: overseerr-tunnel
-overseerr-tunnel:
+.PHONY: tunnel-overseerr
+tunnel-overseerr:
 	@$(MAKE) tunnel PORT=5055
 
-.PHONY: plex-tunnel
-plex-tunnel:
+.PHONY: tunnel-plex
+tunnel-plex:
 	@$(MAKE) tunnel PORT=32400
 
-.PHONY: radarr-tunnel
-radarr-tunnel:
+.PHONY: tunnel-radarr
+tunnel-radarr:
 	@$(MAKE) tunnel PORT=7878
 
-.PHONY: sabnzbd-tunnel
-sabnzbd-tunnel:
+.PHONY: tunnel-sabnzbd
+tunnel-sabnzbd:
 	@$(MAKE) tunnel PORT=8080
 
-.PHONY: sonarr-tunnel
-sonarr-tunnel:
+.PHONY: tunnel-sonarr
+tunnel-sonarr:
 	@$(MAKE) tunnel PORT=8989
 
-.PHONY: syncthing-tunnel
-syncthing-tunnel:
+.PHONY: tunnel-syncthing
+tunnel-syncthing:
 	@$(MAKE) tunnel PORT=8384
 
-.PHONY: tautulli-tunnel
-tautulli-tunnel:
+.PHONY: tunnel-tautulli
+tunnel-tautulli:
 	@$(MAKE) tunnel PORT=8181
