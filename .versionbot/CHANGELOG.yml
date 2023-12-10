@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr:5.1.3 Docker digest to b4ea6d2
+      hash: 4271836936b0df758ea5da29f3b6de588ff1ce0f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.10
+  title: ""
+  date: 2023-12-10T17:39:22.983Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.11.1
       hash: 2204549b1f5703873f95b205ae7a507cba03dc5b
       body: ""
