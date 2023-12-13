@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2:5.3.5 Docker digest to 371f873
+      hash: fc599ce99d4a40fd3e0ad05adadb6f15a07fed16
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.13
+  title: ""
+  date: 2023-12-13T22:39:31.523Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v1.44.1
       hash: a71cced05f2ec243274f9d4a8c88b94a011fa454
       body: ""
