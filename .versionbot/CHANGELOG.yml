@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sonarr:3.0.10 Docker digest to 8ddef33
+      hash: aa17cb53305e3fd505bd38b7ee9137cdad119dc2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.24
+  title: ""
+  date: 2023-12-16T00:45:24.046Z
+- commits:
     - subject: Update tailscale/tailscale Docker tag to v1.56.0
       hash: 0922fa967276975af17522c8af3a72c9e7e546ad
       body: ""
