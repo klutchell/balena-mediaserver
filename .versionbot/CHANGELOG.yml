@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/duplicati:2.0.7 Docker digest to 4b73ee0
+      hash: 153863aa9324056ca9e18232f6934bec89c4212b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.25
+  title: ""
+  date: 2023-12-16T04:17:22.129Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr:3.0.10 Docker digest to 8ddef33
       hash: aa17cb53305e3fd505bd38b7ee9137cdad119dc2
       body: ""
