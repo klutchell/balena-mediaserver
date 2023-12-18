@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex:1.32.8 Docker digest to 5ab4302
+      hash: ab903dcade594e5694c82fa8f14d130b5be1e1b8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.28
+  title: ""
+  date: 2023-12-18T09:39:19.264Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.11.2
       hash: 26cc6dce011f5d22a8523b9eac453d84a6d3791c
       body: ""
