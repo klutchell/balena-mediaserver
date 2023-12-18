@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v5.15.15
+      hash: 20f73b5cd12a777ce6e6cad9decafb4e743398ac
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.29
+  title: ""
+  date: 2023-12-18T12:10:14.675Z
+- commits:
     - subject: Update lscr.io/linuxserver/plex:1.32.8 Docker digest to 5ab4302
       hash: ab903dcade594e5694c82fa8f14d130b5be1e1b8
       body: ""
