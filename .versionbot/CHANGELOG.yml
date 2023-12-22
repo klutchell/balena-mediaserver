@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/tautulli:2.13.4 Docker digest to 3480921
+      hash: e1b9e90971225ea49f98c0b81fe5449cf6eb9648
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.40
+  title: ""
+  date: 2023-12-22T00:11:38.343Z
+- commits:
     - subject: Update product-os/flowzone action to v5.16.3
       hash: a934e1f23e737bfeca339e14e4b0aabbb87fde0e
       body: ""
