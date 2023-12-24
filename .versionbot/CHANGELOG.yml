@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr Docker tag to v5.2.6
+      hash: e089d69a8ffa72506060a869e5a6d5fe73541e15
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.45
+  title: ""
+  date: 2023-12-24T17:37:33.177Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.11.3
       hash: b0337887ce7d2bf6fc51bdc05c5bbb7c1e753b4f
       body: ""
