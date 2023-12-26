@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2:5.3.5 Docker digest to c195a45
+      hash: 564d9d686b30f09b066d257189915997ce8f0781
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.47
+  title: ""
+  date: 2023-12-26T00:14:17.209Z
+- commits:
     - subject: Update lscr.io/linuxserver/plex:1.32.8 Docker digest to aaf5fb9
       hash: 50fc57ad4718979efb84fbcf402f00afffe3e479
       body: ""
