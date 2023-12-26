@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/jellyfin:10.8.13 Docker digest to f5d3328
+      hash: 26d2ccaa3438df905873ad5c8eb1ecdc3bb45d21
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.48
+  title: ""
+  date: 2023-12-26T13:09:52.007Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2:5.3.5 Docker digest to c195a45
       hash: 564d9d686b30f09b066d257189915997ce8f0781
       body: ""
