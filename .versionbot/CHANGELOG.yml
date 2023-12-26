@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v5.16.4
+      hash: e68628517db1f18d2c63e96849914a54cba7d635
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.49
+  title: ""
+  date: 2023-12-26T18:10:32.488Z
+- commits:
     - subject: Update lscr.io/linuxserver/jellyfin:10.8.13 Docker digest to f5d3328
       hash: 26d2ccaa3438df905873ad5c8eb1ecdc3bb45d21
       body: ""
