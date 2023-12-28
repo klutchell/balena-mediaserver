@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sabnzbd:4.1.0 Docker digest to fa1337c
+      hash: 536e0a5704a5ebe0eb0d573d95d31d2839cac1ec
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.50
+  title: ""
+  date: 2023-12-28T01:54:50.053Z
+- commits:
     - subject: Update product-os/flowzone action to v5.16.4
       hash: e68628517db1f18d2c63e96849914a54cba7d635
       body: ""
