@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.11.4
+      hash: cf4b83d67b957edc07901cd3a45281cc91fe2868
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.55
+  title: ""
+  date: 2023-12-31T05:37:31.517Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4
       hash: dfcb76886493def92590df8d7eb68106585a55cf
       body: ""
