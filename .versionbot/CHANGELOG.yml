@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update jc21/nginx-proxy-manager:2.10.4 Docker digest to e630003
+      hash: 20b22d67e9bc4caf3b85f069114d712a8bd178cc
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.71
+  title: ""
+  date: 2024-01-08T00:53:56.214Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.12.0
       hash: 8f9510ee5d6b1807cad70ff8c51ffd3936f2fbe9
       body: ""
