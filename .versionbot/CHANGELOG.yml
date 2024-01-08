@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v6.0.7
+      hash: 7b47bb08197b6b8ace7c6016ce1e111295f97c14
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.72
+  title: ""
+  date: 2024-01-08T02:43:38.086Z
+- commits:
     - subject: Update jc21/nginx-proxy-manager:2.10.4 Docker digest to e630003
       hash: 20b22d67e9bc4caf3b85f069114d712a8bd178cc
       body: ""
