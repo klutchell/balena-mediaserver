@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v7
+      hash: e2ad1eb1a858998c7b32a503f357d734f5ca6f84
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.85
+  title: ""
+  date: 2024-01-11T21:37:50.279Z
+- commits:
     - subject: Remove deprecated Flowzone setting
       hash: 221e612c0fae555d036f02a38e1ad72b1cc85278
       body: ""
