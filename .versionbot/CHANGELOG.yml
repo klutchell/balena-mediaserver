@@ -1,4 +1,16 @@
 - commits:
+    - subject: Remove deprecated Flowzone setting
+      hash: 221e612c0fae555d036f02a38e1ad72b1cc85278
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested: []
+  version: 2.10.84
+  title: ""
+  date: 2024-01-11T21:17:36.246Z
+- commits:
     - subject: Update lscr.io/linuxserver/sabnzbd:4.2.1 Docker digest to 0505778
       hash: b67ffe38cad9a9e05794ea51d9bc192a31e1e142
       body: ""
