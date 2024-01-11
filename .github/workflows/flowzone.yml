@@ -25,5 +25,4 @@ jobs:
       FLOWZONE_TOKEN: ${{ secrets.FLOWZONE_TOKEN }}
       BALENA_API_KEY: ${{ secrets.BALENA_API_KEY }}
     with:
-      protect_branch: false
       balena_slugs: "gh_klutchell/mediaserver"
