@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/duplicati:2.0.7 Docker digest to 8368640
+      hash: be54028d6212165180739bdcfea48bb8176a4054
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.92
+  title: ""
+  date: 2024-01-13T04:40:20.837Z
+- commits:
     - subject: Update lscr.io/linuxserver/plex:1.32.8 Docker digest to a239476
       hash: 2b52ddbd4d05e838d2c837114d069c803e442609
       body: ""
