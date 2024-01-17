@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/overseerr:1.33.2 Docker digest to 0d704a1
+      hash: 1d5749ffcd6b54754b35a2b85d96ceeb6492afd7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.103
+  title: ""
+  date: 2024-01-17T19:40:55.576Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr:1.12.1-develop Docker digest to
         564e501
       hash: 74bf7256c0fd6095a08f3595f04dc927ef542bf1
