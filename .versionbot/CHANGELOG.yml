@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update jc21/nginx-proxy-manager Docker tag to v2.11.0
+      hash: 834b36917f6a025615adb1e4317489787dfcf63a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.111
+  title: ""
+  date: 2024-01-19T01:34:24.618Z
+- commits:
     - subject: Update lscr.io/linuxserver/tautulli:2.13.4 Docker digest to b265e48
       hash: 22a47d7878e8fad16d3bb407641b15d7931d1f41
       body: ""
