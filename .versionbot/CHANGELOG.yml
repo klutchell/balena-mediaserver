@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/syncthing:1.27.2 Docker digest to 4416a1d
+      hash: 1fea29664939f09f79e5cdd544d969ad41f46067
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.112
+  title: ""
+  date: 2024-01-20T02:18:32.989Z
+- commits:
     - subject: Update jc21/nginx-proxy-manager Docker tag to v2.11.0
       hash: 834b36917f6a025615adb1e4317489787dfcf63a
       body: ""
