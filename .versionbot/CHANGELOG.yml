@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update jc21/nginx-proxy-manager Docker tag to v2.11.1
+      hash: 6bc9c814d75a34146bfe8f2a56f01c5427e48be3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.116
+  title: ""
+  date: 2024-01-21T12:10:05.867Z
+- commits:
     - subject: Update lscr.io/linuxserver/ombi:4.43.5 Docker digest to a4f9fba
       hash: 0d9a6515636cb16b5017d07f46234fc3b07de890
       body: ""
