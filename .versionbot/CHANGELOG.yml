@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr:5.2.6 Docker digest to 5065337
+      hash: b7c7ef89779261d3f403040ff3ac5128bf255e91
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.117
+  title: ""
+  date: 2024-01-21T17:38:25.095Z
+- commits:
     - subject: Update jc21/nginx-proxy-manager Docker tag to v2.11.1
       hash: 6bc9c814d75a34146bfe8f2a56f01c5427e48be3
       body: ""
