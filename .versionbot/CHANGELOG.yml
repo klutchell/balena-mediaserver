@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/duplicati:2.0.7 Docker digest to 91c7630
+      hash: e27bed6623b4160b6b7dc073e8f62572d94adc58
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.136
+  title: ""
+  date: 2024-01-27T04:39:47.259Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing:1.27.2 Docker digest to 8085df5
       hash: 2ab874a5ee5f94de53586e72c6d1a227b4d91b1d
       body: ""
