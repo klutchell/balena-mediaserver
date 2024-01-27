@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/ombi:4.43.5 Docker digest to 7c0ae4a
+      hash: ff862097918a8d9365e3d400e3b74609487a073b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.137
+  title: ""
+  date: 2024-01-27T23:09:58.897Z
+- commits:
     - subject: Update lscr.io/linuxserver/duplicati:2.0.7 Docker digest to 91c7630
       hash: e27bed6623b4160b6b7dc073e8f62572d94adc58
       body: ""
