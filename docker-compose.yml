@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/ombi:4.43.5@sha256:a4f9fba25f2cbf4137bb6b811a91656cec483011ac80554cd540152d042cee39
+    image: lscr.io/linuxserver/ombi:4.43.5@sha256:7c0ae4a2bf0e3f03081bb26481f75e1b52255426bee12aeaa8f6970f8ee1dc82
     ports:
       - 127.0.0.1:3579:3579/tcp
     volumes:
