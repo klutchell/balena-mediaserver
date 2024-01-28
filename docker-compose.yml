@@ -134,7 +134,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/radarr:5.2.6@sha256:5065337112be3d83df0130a401f5789c46f575e7439b2d4151c97b8921de0456
+    image: lscr.io/linuxserver/radarr:5.2.6@sha256:b4cccc6beaa9f18082dfcf5d39c7e4929868bfdb390e4e707eb870b3c38e3c9f
     ports:
       - 127.0.0.1:7878:7878/tcp
     volumes:
