@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex:1.32.8 Docker digest to 476c057
+      hash: 288f97195f0c5f487ce1dab7ac656f9fb5b03430
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.140
+  title: ""
+  date: 2024-01-29T09:38:35.266Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr:5.2.6 Docker digest to b4cccc6
       hash: 0893e192262d2db7544815c8b6401bd3ac4db5aa
       body: ""
