@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sabnzbd Docker tag to v4.2.2
+      hash: 04e3dcc7782cee6bcb00c078527690ea695cfafe
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.144
+  title: ""
+  date: 2024-01-31T09:38:45.057Z
+- commits:
     - subject: Update lscr.io/linuxserver/jellyfin:10.8.13 Docker digest to e667929
       hash: 7114b21cc65636e027b4336ecc69ecf36be762e9
       body: ""
