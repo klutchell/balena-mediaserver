@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update tailscale/tailscale Docker tag to v1.58.2
+      hash: b660ca1d767fceff5ed112c872b4b13e41b17473
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.148
+  title: ""
+  date: 2024-02-02T21:09:44.133Z
+- commits:
     - subject: Update lscr.io/linuxserver/tautulli:2.13.4 Docker digest to a6fab47
       hash: 78e87bec81f0bc5dbb68a4dc4f82f70a85bb78dc
       body: ""
