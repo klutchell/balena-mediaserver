@@ -112,7 +112,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/plex:1.32.8@sha256:e7b710327e56f42bd06fb61e9034864d933c460c066d1c3bf484dc1cdb7e85ca
+    image: lscr.io/linuxserver/plex:1.32.8@sha256:a7df60838f8ae7f0dfb5e760467bcd0a27f7bcde6a9bce995f05213d66d87b8c
     devices:
       - /dev/dri:/dev/dri
     ports:
