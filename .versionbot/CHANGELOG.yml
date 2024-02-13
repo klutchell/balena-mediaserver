@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v1.44.3
+      hash: c6b73cd416f36b9ceddb7aecdec20e24aa9e8121
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.180
+  title: ""
+  date: 2024-02-13T13:39:00.892Z
+- commits:
     - subject: Update lscr.io/linuxserver/jellyfin:10.8.13 Docker digest to 9a2f8b1
       hash: c209921a9ba24455b95a99320f53ddb988e8bcb7
       body: ""
