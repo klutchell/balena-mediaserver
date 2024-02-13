@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex:1.32.8 Docker digest to e495036
+      hash: c8a5c26583f21c6f99945b64dd2b1dd833ef0849
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.181
+  title: ""
+  date: 2024-02-13T16:41:12.564Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v1.44.3
       hash: c6b73cd416f36b9ceddb7aecdec20e24aa9e8121
       body: ""
