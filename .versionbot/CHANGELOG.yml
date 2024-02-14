@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr:1.13.3-develop Docker digest to
+        4029116
+      hash: b8d2725ace936ceabb6ee31fe24ff32dc63e6e34
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.188
+  title: ""
+  date: 2024-02-14T04:08:41.490Z
+- commits:
     - subject: Update product-os/flowzone action to v9.0.11
       hash: 43c5af67e7db26462ddd3292b20725fe448f70b4
       body: ""
