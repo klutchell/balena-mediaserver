@@ -124,7 +124,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/prowlarr:1.13.3-develop@sha256:4b40b731157cffa9cdc386b420dd2ec62850a0f25d998012d19b7e24cf36ebb8
+    image: lscr.io/linuxserver/prowlarr:1.13.3-develop@sha256:40291166f1ecb80e729e857d6f37905c47cf3780cc09b54557a54087cf6acfa5
     ports:
       - 127.0.0.1:9696:9696/tcp
     volumes:
