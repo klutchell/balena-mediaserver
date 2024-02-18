@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v5.3.8
+      hash: 131c97b05cbf53d35003da99074cd7878e22ad10
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.198
+  title: ""
+  date: 2024-02-18T09:38:51.911Z
+- commits:
     - subject: Update lscr.io/linuxserver/duplicati:2.0.7 Docker digest to 54f2e7e
       hash: 69897e148a07c2b0dcd56ad5eaaf733ff5535ade
       body: ""
