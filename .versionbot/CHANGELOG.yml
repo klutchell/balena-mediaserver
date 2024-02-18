@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr Docker tag to v5.3.6
+      hash: 869871dff8a5d9be6c53fa16593e93b4eaf8c6b2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.199
+  title: ""
+  date: 2024-02-18T18:10:09.034Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v5.3.8
       hash: 131c97b05cbf53d35003da99074cd7878e22ad10
       body: ""
