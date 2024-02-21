@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2:5.3.8 Docker digest to c8002e5
+      hash: 854eca3b89c985d73554c1b05c29ab3b8f3b60ef
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.206
+  title: ""
+  date: 2024-02-21T22:38:39.216Z
+- commits:
     - subject: Update tailscale/tailscale Docker tag to v1.61.11
       hash: c8bf9ce3a6efea257bfb3cc82dee6f87be6ad1ad
       body: ""
