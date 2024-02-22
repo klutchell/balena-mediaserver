@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sabnzbd:4.2.2 Docker digest to 308ab2e
+      hash: 16323e8aacca5a82afa2f824625b9afd2dac83d8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.207
+  title: ""
+  date: 2024-02-22T01:52:41.028Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2:5.3.8 Docker digest to c8002e5
       hash: 854eca3b89c985d73554c1b05c29ab3b8f3b60ef
       body: ""
