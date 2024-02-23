@@ -189,7 +189,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/tautulli:2.13.4@sha256:951b421c48e535c458bd5a343b4ee69f3f63e1953ccf018c436223e8f4eae35c
+    image: lscr.io/linuxserver/tautulli:2.13.4@sha256:85e41bfde7b0c13b4c68a20002429a4a5c57b4901dd42309b974edba86bbfad6
     ports:
       - 127.0.0.1:8181:8181/tcp
     volumes:
