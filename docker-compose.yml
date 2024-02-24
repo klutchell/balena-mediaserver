@@ -45,7 +45,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/duplicati:2.0.7@sha256:54f2e7eb04317f0fed8eb23cc7af124f69d5c868f72dce8fd758c0d5c5cc3fbf
+    image: lscr.io/linuxserver/duplicati:2.0.7@sha256:fd35692beff8df19f89679e30f0d92411ac367f5d47c9c249d004c2f456b710b
     environment:
       <<: *linuxserver-environment
       PUID: "0"
