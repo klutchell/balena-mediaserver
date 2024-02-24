@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sonarr:4.0.1 Docker digest to e097383
+      hash: 9a62ef46aec8793bad4fd580b6e528a63b1da6b9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.211
+  title: ""
+  date: 2024-02-24T01:07:26.867Z
+- commits:
     - subject: Update lscr.io/linuxserver/tautulli:2.13.4 Docker digest to 85e41bf
       hash: 02a72aee77ab96ba95fab6bda00e02614c5e86a1
       body: ""
