@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update jc21/nginx-proxy-manager:2.11.1 Docker digest to a30e066
+      hash: 095b4ab08966064006d5f2d74daa9d0316763a0c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.226
+  title: ""
+  date: 2024-02-28T02:16:11.284Z
+- commits:
     - subject: Update lscr.io/linuxserver/plex:1.40.0 Docker digest to b3ae4c0
       hash: e4feb14900a5becf3032ce738874813e806f2165
       body: ""
