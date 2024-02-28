@@ -200,7 +200,7 @@ services:
   # https://nginxproxymanager.com/
   nginx-proxy-manager:
     <<: *s6-service
-    image: jc21/nginx-proxy-manager:2.11.1@sha256:a30e066ac7385edb68fa4328f80a5794dc2e4d43cfd9038e5bc9d339824c1e8a
+    image: jc21/nginx-proxy-manager:2.11.1@sha256:7f67eed835ed95108623183b35471f953630a7be480d6a2009bd79c68667ac77
     ports:
       - 80:80/tcp
       - 127.0.0.1:81:81/tcp
