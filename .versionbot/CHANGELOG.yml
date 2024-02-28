@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update jc21/nginx-proxy-manager:2.11.1 Docker digest to 7f67eed
+      hash: e9e12b230bb74fe14b67a836ea8d7d1679cbd3ed
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.228
+  title: ""
+  date: 2024-02-28T23:10:37.440Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2:5.3.8 Docker digest to 4ccdddc
       hash: 7e14001c3b33496fa1a9a035041bd6878043c41c
       body: ""
