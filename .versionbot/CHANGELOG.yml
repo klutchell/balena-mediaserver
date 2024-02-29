@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sabnzbd:4.2.2 Docker digest to c3a1f22
+      hash: 954f462d638c34fa4a2c8e3d42132316ea56ff79
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.229
+  title: ""
+  date: 2024-02-29T01:53:07.876Z
+- commits:
     - subject: Update jc21/nginx-proxy-manager:2.11.1 Docker digest to 7f67eed
       hash: e9e12b230bb74fe14b67a836ea8d7d1679cbd3ed
       body: ""
