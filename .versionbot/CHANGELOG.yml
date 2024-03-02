@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sonarr:4.0.2 Docker digest to 86122cf
+      hash: 6874b4437fea611e0b20795f14e551234fe5f2f3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.232
+  title: ""
+  date: 2024-03-02T00:11:47.450Z
+- commits:
     - subject: Update product-os/flowzone action to v10.0.16
       hash: 8aee8d4df8f81a4d4ce89c09fba27dccb9cbc1db
       body: ""
