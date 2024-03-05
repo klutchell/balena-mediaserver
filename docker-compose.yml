@@ -72,7 +72,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/jellyfin:10.8.13@sha256:fccadc13549166605a724646506e7ca3d6d1e2118f0818527f0e7e46465fcc75
+    image: lscr.io/linuxserver/jellyfin:10.8.13@sha256:6533a00ddfa39d80111b89e23fad33525f0bfb4ecd4c31798cc0e6bbc69a79ab
     devices:
       - /dev/dri:/dev/dri
     ports:
