@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex:1.40.0 Docker digest to 1242180
+      hash: d0af39f4492b1c7f4543b0bff5c9677aa5edf16f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.241
+  title: ""
+  date: 2024-03-05T01:52:25.596Z
+- commits:
     - subject: Update lscr.io/linuxserver/sabnzbd:4.2.2 Docker digest to 0048320
       hash: 718fc2d17d9bc12a613bb4728a57ad9ff6e3edb1
       body: ""
