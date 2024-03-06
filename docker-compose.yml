@@ -84,7 +84,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/nzbhydra2:5.3.8@sha256:4ccdddca7897b7c9230a100d3796ad7b51d9c4d60dc29714502b7dcdac02e598
+    image: lscr.io/linuxserver/nzbhydra2:5.3.8@sha256:0eeae6de5ae562cd870edd34525d61b6bef319ab559f234a9d2ebd2dc7dcb3a2
     ports:
       - 127.0.0.1:5076:5076/tcp
     volumes:
