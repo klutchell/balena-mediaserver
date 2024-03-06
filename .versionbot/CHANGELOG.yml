@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/overseerr:1.33.2 Docker digest to 254ed3a
+      hash: 8c937741870637482ee7085afab29f2372025ec2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.246
+  title: ""
+  date: 2024-03-06T19:10:09.999Z
+- commits:
     - subject: Update product-os/flowzone action to v10.0.19
       hash: c125b7f79888a1207ce4bf1a4449f71b7b5b8d39
       body: ""
