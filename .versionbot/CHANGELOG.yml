@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v10.0.44
+      hash: 31e1c051334dff8b0494971da5cefbcbccbd38e2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.287
+  title: ""
+  date: 2024-03-17T00:52:58.398Z
+- commits:
     - subject: Update lscr.io/linuxserver/duplicati:2.0.7 Docker digest to fd16cfb
       hash: 606af93f3570e9e7c547fb95e66f060e0ab18a28
       body: ""
