@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v5.3.10
+      hash: 71cee0a5e7302e9315a1ea31c0efc7493ae4343b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.292
+  title: ""
+  date: 2024-03-18T16:41:16.929Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.14.3
       hash: 0f647008e65531decf918ea15d069d5ffd8e018c
       body: ""
