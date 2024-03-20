@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr:1.14.3-develop Docker digest to
+        52be840
+      hash: ba857e702595bb9d3b1648de4259b6c27a51160e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.295
+  title: ""
+  date: 2024-03-20T08:38:42.783Z
+- commits:
     - subject: Update lscr.io/linuxserver/jellyfin:10.8.13 Docker digest to 7ce3ba5
       hash: 93a1160ffbd98b66785146e4f0842d29a7cd7a8c
       body: ""
