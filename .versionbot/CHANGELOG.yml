@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr:5.3.6 Docker digest to 7023a5b
+      hash: 2e112dc7c6d2739ebd6ea311af2b7261d187d690
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.297
+  title: ""
+  date: 2024-03-21T00:53:09.987Z
+- commits:
     - subject: Update product-os/flowzone action to v10.0.48
       hash: 13954233d8e52f8a76843bf7685d594471f8b0dd
       body: ""
