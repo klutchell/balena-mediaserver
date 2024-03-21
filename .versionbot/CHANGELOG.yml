@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v1.45.0
+      hash: 18c2174db04988d53612793f06958f24088ead94
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.299
+  title: ""
+  date: 2024-03-21T16:41:36.149Z
+- commits:
     - subject: Update lscr.io/linuxserver/sabnzbd:4.2.3 Docker digest to 0252a6a
       hash: f96fb19045c5794981f83f1922756421527b6a46
       body: ""
