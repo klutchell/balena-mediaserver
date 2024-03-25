@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr:5.3.6 Docker digest to 6c10e11
+      hash: c6dd243fe283b297753a236e30694a80a1258b1d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.308
+  title: ""
+  date: 2024-03-25T00:51:28.647Z
+- commits:
     - subject: Update lscr.io/linuxserver/ombi:4.43.5 Docker digest to 4de6601
       hash: 7e1ee875e17f5801492b07fad0d600d3b9532fd0
       body: ""
