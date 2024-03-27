@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr:1.14.3-develop Docker digest to
+        4310669
+      hash: a37485cf9f7898086bc33052644074e7ba02e410
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.315
+  title: ""
+  date: 2024-03-27T08:38:54.025Z
+- commits:
     - subject: Update tailscale/tailscale Docker tag to v1.62.1
       hash: dd25d1b79fc049afffc0da2d4a38713271a983e5
       body: ""
