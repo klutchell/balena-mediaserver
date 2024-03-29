@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/tautulli:2.13.4 Docker digest to 8867c35
+      hash: 5f6a7c31684e55077750060c558b8148d7c53b8a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.322
+  title: ""
+  date: 2024-03-29T16:40:40.408Z
+- commits:
     - subject: Update lscr.io/linuxserver/overseerr:1.33.2 Docker digest to b15fc36
       hash: 7d7237663c66235f989d225725a17bc783413c56
       body: ""
