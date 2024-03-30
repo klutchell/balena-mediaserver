@@ -154,7 +154,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/sonarr:4.0.2@sha256:29fc87e914b8e288651271e2ba304bbdf2b2e7d2b3cbe700345c997d0e90a821
+    image: lscr.io/linuxserver/sonarr:4.0.2@sha256:24b7f3f1c9ed065adc3ca7c5440944560b010a38e9bfcb7c1d8e9c965cbc8ea8
     ports:
       - 127.0.0.1:8989:8989/tcp
     volumes:
