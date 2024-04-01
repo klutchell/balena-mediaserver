@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr:5.3.6 Docker digest to 122cb0e
+      hash: b0df211ba30538bc08a3eb43a0f0e008b02b7c05
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.326
+  title: ""
+  date: 2024-04-01T00:52:30.489Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing:1.27.4 Docker digest to 0329d47
       hash: 58bf3c3b74fc817c781c24abdd901ed31478effe
       body: ""
