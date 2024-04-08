@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sabnzbd:4.2.3 Docker digest to 5b8d059
+      hash: 24929b6063ff399219b2a6d1bf2cde60752b3dc3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.338
+  title: ""
+  date: 2024-04-08T13:28:00.932Z
+- commits:
     - subject: Update lscr.io/linuxserver/tautulli:2.13.4 Docker digest to 9cd5982
       hash: dcda100ea888c224e3ec961f68d2b930fbd9085a
       body: ""
