@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sabnzbd:4.2.3 Docker digest to a051c4b
+      hash: b4d01a3d8f0ae7772d0686cb746da0dc7e073899
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.351
+  title: ""
+  date: 2024-04-16T14:29:54.094Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.4
       hash: 28692d804c9156d88f9a0eb70e4082337be4fd68
       body: ""
