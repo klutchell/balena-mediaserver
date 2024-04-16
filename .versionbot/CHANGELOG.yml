@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.4
+      hash: 28692d804c9156d88f9a0eb70e4082337be4fd68
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.350
+  title: ""
+  date: 2024-04-16T14:25:20.117Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr Docker tag to v5.4.6
       hash: 2a4b6a0c9fe38bfbbdb4abdbf3d924e2e3f6b88c
       body: ""
