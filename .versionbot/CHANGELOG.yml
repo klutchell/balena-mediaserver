@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update tailscale/tailscale Docker tag to v1.64.1
+      hash: 4800291fe985a950e2cc32e78d2399402c2ce2a0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.353
+  title: ""
+  date: 2024-04-17T14:25:16.755Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing Docker tag to v1.27.6
       hash: 0c03262baf06ef1a41fa6062f6f7340b7e9c346e
       body: ""
