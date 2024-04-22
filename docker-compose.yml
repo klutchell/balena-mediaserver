@@ -45,7 +45,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/duplicati:2.0.7@sha256:a9f5a7488b4ee3098513d6004181b9abc553b1d26b72198f0af7ef95f90d5d9e
+    image: lscr.io/linuxserver/duplicati:2.0.7@sha256:b102c711023e11a0daf7dc43cbe6cfe4207d722d9666a786f0078edc1719fb1b
     environment:
       <<: *linuxserver-environment
       PUID: "0"
@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/ombi:4.43.5@sha256:b508a922907b38578de303c8035344630cdc9e948961a564f74c56dba6131a49
+    image: lscr.io/linuxserver/ombi:4.43.5@sha256:014ed9815d494fb95aa47fe4698a9a2a9c5371506bd04a1d5dbd8372b4ebf2c4
     ports:
       - 127.0.0.1:3579:3579/tcp
     volumes:
@@ -134,7 +134,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/radarr:5.4.6@sha256:de7e51182113b430d9b6cb93ebc3389e1c73f11e7eabf47d0af5de106cdc296a
+    image: lscr.io/linuxserver/radarr:5.4.6@sha256:e6bccb9bd69f3dba111716c6789152d5577217adc27f8f96642e511defaefbb6
     ports:
       - 127.0.0.1:7878:7878/tcp
     volumes:
@@ -154,7 +154,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/sonarr:4.0.4@sha256:878f8538c5becb75bae4e2f010aaee85b4ec3792acedbeaf639e800995b6e6fe
+    image: lscr.io/linuxserver/sonarr:4.0.4@sha256:58fca88cafda8915f45b780124c767d5b63b7a1194d4781edc8c4b7fb0d6e9c3
     ports:
       - 127.0.0.1:8989:8989/tcp
     volumes:
@@ -164,7 +164,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/syncthing:1.27.6@sha256:5dff1bcae36d3daf5959915607033f77ad8400a09e2c7592e30fb9feb18a8709
+    image: lscr.io/linuxserver/syncthing:1.27.6@sha256:0f69786427f711e506fefd6eb66645817dbf99c91b7d37860158bb504e63f756
     ports:
       - 127.0.0.1:8384:8384/tcp
       - 22000:22000/tcp
