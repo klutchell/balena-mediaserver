@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update tailscale/tailscale Docker tag to v1.64.2
+      hash: 9571887b815ec607488fb0221eb318f42d5559e4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.364
+  title: ""
+  date: 2024-04-23T14:24:55.136Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.16.2
       hash: 524b6f3cd981ddc5bd8d4ae7370f8c6fc93a763e
       body: ""
