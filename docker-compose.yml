@@ -45,7 +45,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/duplicati:2.0.7@sha256:b102c711023e11a0daf7dc43cbe6cfe4207d722d9666a786f0078edc1719fb1b
+    image: lscr.io/linuxserver/duplicati:2.0.7@sha256:0c173fcc90478af94b5efef9d862c4eb8ac76984aecfdcbb654b5fabc5c6c6a4
     environment:
       <<: *linuxserver-environment
       PUID: "0"
@@ -72,7 +72,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/jellyfin:10.8.13@sha256:118835d948e13fccba8c715d996e71cdfb74dc6a1ef9ec7634f55d2070b9688c
+    image: lscr.io/linuxserver/jellyfin:10.8.13@sha256:90a59dcb6c260cc7dc5d8f0f08a192d5d6303bf3336f21635383bf107b77b82a
     devices:
       - /dev/dri:/dev/dri
     ports:
@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/ombi:4.43.5@sha256:014ed9815d494fb95aa47fe4698a9a2a9c5371506bd04a1d5dbd8372b4ebf2c4
+    image: lscr.io/linuxserver/ombi:4.43.5@sha256:40c0c4bfaefdb67e93656392d13cdc19fa5021705337bbd6d36fcdd1e3cd2f70
     ports:
       - 127.0.0.1:3579:3579/tcp
     volumes:
@@ -112,7 +112,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/plex:1.40.2@sha256:15eaab9b1447e413b3f28df1cad8e5c87e4a06ac2b0eaf09aca8c6ae11feed3c
+    image: lscr.io/linuxserver/plex:1.40.2@sha256:e934dade4d3dd253836e0232e10eb1fce91047de3f988cbefe138fe23ac729df
     devices:
       - /dev/dri:/dev/dri
     ports:
