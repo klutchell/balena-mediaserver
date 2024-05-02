@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update jc21/nginx-proxy-manager Docker tag to v2.11.2
+      hash: 035555d7016da4e4e4a5852c9aee061141434140
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.377
+  title: ""
+  date: 2024-05-02T14:25:03.941Z
+- commits:
     - subject: Update lscr.io/linuxserver/sabnzbd Docker tag to v4.3.0
       hash: eb82e35a77ab556c35d8fed1c7bde386a9d6742c
       body: ""
