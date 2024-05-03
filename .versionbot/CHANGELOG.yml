@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: f5f25f843fa660c7e42b66f098ff676d42524f69
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.378
+  title: ""
+  date: 2024-05-03T13:26:32.205Z
+- commits:
     - subject: Update jc21/nginx-proxy-manager Docker tag to v2.11.2
       hash: 035555d7016da4e4e4a5852c9aee061141434140
       body: ""
