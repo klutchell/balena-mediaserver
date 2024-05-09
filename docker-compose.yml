@@ -84,7 +84,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/nzbhydra2:6.0.0@sha256:d3c440c13bb8a907e1583235e168d97b19997bf674ec95b75a1fb884c1bb724a
+    image: lscr.io/linuxserver/nzbhydra2:6.0.0@sha256:6c52db7c1d0b8f4bcc7e1cc9fca72347d94c11f69a00872ad4e78fc7c9d050cd
     ports:
       - 127.0.0.1:5076:5076/tcp
     volumes:
@@ -103,7 +103,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:711c465b65d36a01580f995043a240eedaac0aa31321a8d95fa8f29f0ff8299d
+    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:ebbd85f5ada1de79fcd18410639c08b7bf1fdac1977e2b8718dad466747e145f
     ports:
       - 127.0.0.1:5055:5055/tcp
     volumes:
@@ -144,7 +144,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/sabnzbd:4.3.1@sha256:8ee3019ca921f6c46294f2e363453fa41875d309c7e68028a73f8169eb35a691
+    image: lscr.io/linuxserver/sabnzbd:4.3.1@sha256:808e8dc05c97d7a9aa5c7662973ce3f064a1d3f53351f220037d4d313a00e423
     ports:
       - 127.0.0.1:8080:8080/tcp
     volumes:
