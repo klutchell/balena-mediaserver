@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update jc21/nginx-proxy-manager:2.11.2 Docker digest to a77c589
+      hash: e7f2be82078b0f62b4de0a05ebff9f05fa63dd98
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.394
+  title: ""
+  date: 2024-05-10T15:09:35.046Z
+- commits:
     - subject: Update product-os/flowzone action to v11.4.7
       hash: 7ea9da15a5126ed530255decf2d28c4aaa69c6aa
       body: ""
