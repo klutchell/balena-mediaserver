@@ -103,7 +103,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:ebbd85f5ada1de79fcd18410639c08b7bf1fdac1977e2b8718dad466747e145f
+    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:176a757cfee7307d40bf99ab2bcbe1642d943892f75639ad02b6d24485c2b021
     ports:
       - 127.0.0.1:5055:5055/tcp
     volumes:
@@ -144,7 +144,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/sabnzbd:4.3.1@sha256:808e8dc05c97d7a9aa5c7662973ce3f064a1d3f53351f220037d4d313a00e423
+    image: lscr.io/linuxserver/sabnzbd:4.3.1@sha256:361ccf9363a43864cd30fbf598874b35294c585df778d28ae8858da7df32f564
     ports:
       - 127.0.0.1:8080:8080/tcp
     volumes:
@@ -164,7 +164,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/syncthing:1.27.7@sha256:3d4796e288061222b2a73e51b760a30bbf9182f8b2c98769e4156c8a0c4ac470
+    image: lscr.io/linuxserver/syncthing:1.27.7@sha256:5606a1fe483c7f98c9a5e110fc52000d22337218cd458ff07791f80febe687dc
     ports:
       - 127.0.0.1:8384:8384/tcp
       - 22000:22000/tcp
@@ -189,7 +189,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/tautulli:2.13.4@sha256:714de62058b31fab4c225338b79fe008e2c92b1328704b53167ad3a8b81791a9
+    image: lscr.io/linuxserver/tautulli:2.13.4@sha256:f9582696fb6af30e78988a655e4f105dc73c1878e02f12afd3e4de037a1b3ca0
     ports:
       - 127.0.0.1:8181:8181/tcp
     volumes:
