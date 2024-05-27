@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v1.45.5
+      hash: 32639c99ce2a9c1fe6b24eae9d6c26d6530214a5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.407
+  title: ""
+  date: 2024-05-27T13:16:12.411Z
+- commits:
     - subject: Update tailscale/tailscale Docker tag to v1.66.3
       hash: 6b21005a82fe9eaa1fff1d7fc785191a30ce02ce
       body: ""
