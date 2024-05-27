@@ -45,7 +45,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/duplicati:2.0.8@sha256:d2c15b1f1c0f2b4d5d3fec79c392c7ba0ea47871e94eddabfcb7d7e4a54a6e21
+    image: lscr.io/linuxserver/duplicati:2.0.8@sha256:ce193b94e746940f43a8c0516a084e384cad112fd5822bd5aa1e57f61fb06734
     environment:
       <<: *linuxserver-environment
       PUID: "0"
@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/ombi:4.43.5@sha256:3539e80e12d09c70637e9e1b99606ca1d8fc98afc9ac43e9512117905a76f8a8
+    image: lscr.io/linuxserver/ombi:4.43.5@sha256:48ced71cfaefd31508bfd44a88abce633057415d3df20281460dd0dbe160d498
     ports:
       - 127.0.0.1:3579:3579/tcp
     volumes:
@@ -103,7 +103,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:176a757cfee7307d40bf99ab2bcbe1642d943892f75639ad02b6d24485c2b021
+    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:a8917b8e1d9ebf100c2b1a75cb037396ddc04adaf5f50217f59e382dfc1e3900
     ports:
       - 127.0.0.1:5055:5055/tcp
     volumes:
@@ -112,7 +112,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/plex:1.40.2@sha256:55c6c1bbc40936f527dc684946c2c32fdc2f0669467c1f359a70ea911593ea6e
+    image: lscr.io/linuxserver/plex:1.40.2@sha256:addec5e26fb63af661992e0c50e0bd6f7a271433cd2a058f130e0ec1bae415e4
     devices:
       - /dev/dri:/dev/dri
     ports:
@@ -124,7 +124,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/prowlarr:1.17.2-develop@sha256:62baea88c02e2101b80160864dfb1c1475193039d5a71d8e03a8b96bced2a81f
+    image: lscr.io/linuxserver/prowlarr:1.17.2-develop@sha256:757ef530969a80effb1ae4d8e25fce45b7a9ad22453826eedc998d0c2af9e9af
     ports:
       - 127.0.0.1:9696:9696/tcp
     volumes:
@@ -134,7 +134,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/radarr:5.6.0@sha256:b84ed4a003c459df9675198e64053a2e9c0a3d5dd76587415b16c6902b8543f2
+    image: lscr.io/linuxserver/radarr:5.6.0@sha256:7c409b0b64358ac1b0df27b1ce27e0c5ea3aa22f1cbf2362914b846bffa8efdf
     ports:
       - 127.0.0.1:7878:7878/tcp
     volumes:
@@ -144,7 +144,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/sabnzbd:4.3.1@sha256:361ccf9363a43864cd30fbf598874b35294c585df778d28ae8858da7df32f564
+    image: lscr.io/linuxserver/sabnzbd:4.3.1@sha256:0215b55fb7ebb552fc4a42c5110deedc0d3968ef60a40942fd323d7744f8076a
     ports:
       - 127.0.0.1:8080:8080/tcp
     volumes:
@@ -154,7 +154,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/sonarr:4.0.4@sha256:25e0f3b3741cf8df6c322d6c9016b5be91ca6e154653b4d01c8c125bf1ce75c0
+    image: lscr.io/linuxserver/sonarr:4.0.4@sha256:be3ef05cda03e27a32f23ec073ce65b53a115338559abe3639f796436a652f9c
     ports:
       - 127.0.0.1:8989:8989/tcp
     volumes:
@@ -164,7 +164,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/syncthing:1.27.7@sha256:5606a1fe483c7f98c9a5e110fc52000d22337218cd458ff07791f80febe687dc
+    image: lscr.io/linuxserver/syncthing:1.27.7@sha256:3a1a983bd5c0cfc685f5421b374bcf175ccb2df86710bfc454bc76a047a8884f
     ports:
       - 127.0.0.1:8384:8384/tcp
       - 22000:22000/tcp
@@ -189,7 +189,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/tautulli:2.14.2@sha256:99ff955b1b4ffbb2738aa3b0b612c9f59ab9d05730d38f95684189036429b509
+    image: lscr.io/linuxserver/tautulli:2.14.2@sha256:a63bed3fff29eefededc437b38ac57e657e0d196d90a45196d7a4b97f894cfe9
     ports:
       - 127.0.0.1:8181:8181/tcp
     volumes:
@@ -200,7 +200,7 @@ services:
   # https://nginxproxymanager.com/
   nginx-proxy-manager:
     <<: *s6-service
-    image: jc21/nginx-proxy-manager:2.11.2@sha256:a77c5893d92f899dd09555bcee1e79268d2bef977779b5221a449d75a9fdcf91
+    image: jc21/nginx-proxy-manager:2.11.2@sha256:67655389770f5f16aef10cf3dc822f95e34bb0bc1b7717c617f8adaffcce2f68
     ports:
       - 80:80/tcp
       - 127.0.0.1:81:81/tcp
