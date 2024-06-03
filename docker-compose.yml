@@ -144,7 +144,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/sabnzbd:4.3.1@sha256:0215b55fb7ebb552fc4a42c5110deedc0d3968ef60a40942fd323d7744f8076a
+    image: lscr.io/linuxserver/sabnzbd:4.3.2@sha256:6c25ce4614035d6e25736a2fc30a7087b95f4dbae64933eb113a8e2f081bea4a
     ports:
       - 127.0.0.1:8080:8080/tcp
     volumes:
