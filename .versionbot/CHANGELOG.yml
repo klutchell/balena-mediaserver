@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: 078a816eb1f7ed88e6f8a0bf8f6452234e79df76
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.415
+  title: ""
+  date: 2024-06-03T14:39:44.413Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.5
       hash: abe57828c24868b081352e8b7e50901130bc75f4
       body: ""
