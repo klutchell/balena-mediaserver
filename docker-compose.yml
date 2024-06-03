@@ -103,7 +103,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:a8917b8e1d9ebf100c2b1a75cb037396ddc04adaf5f50217f59e382dfc1e3900
+    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:9e13ecb96ed4507385f97b0cbe85f3204f1d87bd35792034021308ff7463217b
     ports:
       - 127.0.0.1:5055:5055/tcp
     volumes:
@@ -134,7 +134,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/radarr:5.6.0@sha256:7c409b0b64358ac1b0df27b1ce27e0c5ea3aa22f1cbf2362914b846bffa8efdf
+    image: lscr.io/linuxserver/radarr:5.6.0@sha256:4b8d6111bd6708e27741ce427b1a200a2203977187e6a76e9a5b494f43bfeb74
     ports:
       - 127.0.0.1:7878:7878/tcp
     volumes:
@@ -189,7 +189,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/tautulli:2.14.2@sha256:a63bed3fff29eefededc437b38ac57e657e0d196d90a45196d7a4b97f894cfe9
+    image: lscr.io/linuxserver/tautulli:2.14.2@sha256:b1cf616b4cf17e5229e860ae8111ece3dfda018b9c5b769c8e84ca2e86b28279
     ports:
       - 127.0.0.1:8181:8181/tcp
     volumes:
