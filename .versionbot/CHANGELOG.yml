@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update tailscale/tailscale Docker tag to v1.66.4
+      hash: 2864e84170f997073f529cea8a3c1955ff9868a5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.417
+  title: ""
+  date: 2024-06-03T15:38:09.427Z
+- commits:
     - subject: Update lscr.io/linuxserver/sabnzbd Docker tag to v4.3.2
       hash: 3d47af246afc6ec8c83cd7951a26a8538e482824
       body: ""
