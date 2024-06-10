@@ -45,7 +45,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/duplicati:2.0.8@sha256:ce193b94e746940f43a8c0516a084e384cad112fd5822bd5aa1e57f61fb06734
+    image: lscr.io/linuxserver/duplicati:2.0.8@sha256:6d7eb2a21f0a7808066b55f617fa2f0078a0392ad72ec912adc3d8d138902565
     environment:
       <<: *linuxserver-environment
       PUID: "0"
@@ -84,7 +84,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/nzbhydra2:7.1.0@sha256:fb36d1513f12b5b48009c1c8160a585b748df6ed85026479d1628301df773d7f
+    image: lscr.io/linuxserver/nzbhydra2:7.1.0@sha256:be7d4c4b8e41e12ba607263c46ea4f13f2b2d1625e7a313848fcc7ea1644fa1a
     ports:
       - 127.0.0.1:5076:5076/tcp
     volumes:
@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/ombi:4.43.5@sha256:48ced71cfaefd31508bfd44a88abce633057415d3df20281460dd0dbe160d498
+    image: lscr.io/linuxserver/ombi:4.43.5@sha256:5c0fab7eba38c0561b74a1ef3d817074609175181f507a8fa1739902295e5a75
     ports:
       - 127.0.0.1:3579:3579/tcp
     volumes:
@@ -112,7 +112,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/plex:1.40.2@sha256:addec5e26fb63af661992e0c50e0bd6f7a271433cd2a058f130e0ec1bae415e4
+    image: lscr.io/linuxserver/plex:1.40.2@sha256:dce27d66d8212cedf73376eb2865650dd9a0265651dbc11acfc4b2c85e47fee1
     devices:
       - /dev/dri:/dev/dri
     ports:
@@ -134,7 +134,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/radarr:5.6.0@sha256:4b8d6111bd6708e27741ce427b1a200a2203977187e6a76e9a5b494f43bfeb74
+    image: lscr.io/linuxserver/radarr:5.6.0@sha256:594fab7afdb1de2f61a82835f3f2377a6220d4940d4b49bfa95e82d8a6b13a95
     ports:
       - 127.0.0.1:7878:7878/tcp
     volumes:
@@ -189,7 +189,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/tautulli:2.14.2@sha256:b1cf616b4cf17e5229e860ae8111ece3dfda018b9c5b769c8e84ca2e86b28279
+    image: lscr.io/linuxserver/tautulli:2.14.2@sha256:a8e4de4cfd3bdca9090ca3fc9ffcbefdc294a0a178ede9c42d9d287fca835afe
     ports:
       - 127.0.0.1:8181:8181/tcp
     volumes:
