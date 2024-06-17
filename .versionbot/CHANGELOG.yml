@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex Docker tag to v1.40.3
+      hash: 418b80ba7f52ce461d6b17701108d925697b3b4a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.425
+  title: ""
+  date: 2024-06-17T13:40:25.772Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v7.2.3
       hash: 42c07bcf6faab7df183eef90c5150ca7b9903b7b
       body: ""
