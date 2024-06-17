@@ -45,7 +45,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/duplicati:2.0.8@sha256:6d7eb2a21f0a7808066b55f617fa2f0078a0392ad72ec912adc3d8d138902565
+    image: lscr.io/linuxserver/duplicati:2.0.8@sha256:a99cb83de46c4cd1149ec269a4e5e09c5215c27c6441ad153bdd477bbb05506c
     environment:
       <<: *linuxserver-environment
       PUID: "0"
@@ -103,7 +103,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:9e13ecb96ed4507385f97b0cbe85f3204f1d87bd35792034021308ff7463217b
+    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:a21b9f6cce4fa7040a32a9feb77a1902e792cd3716acf695ee416862dc22c6a4
     ports:
       - 127.0.0.1:5055:5055/tcp
     volumes:
@@ -124,7 +124,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/prowlarr:1.18.0-develop@sha256:4378a50403d88a8b471a5d262a88eab0f963515643cec74c29d788a2cfa4eb42
+    image: lscr.io/linuxserver/prowlarr:1.18.0-develop@sha256:cd5690c624481167f4a69cc00dad11a7f99f3e041b1928c8fead39404327555a
     ports:
       - 127.0.0.1:9696:9696/tcp
     volumes:
@@ -134,7 +134,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/radarr:5.6.0@sha256:594fab7afdb1de2f61a82835f3f2377a6220d4940d4b49bfa95e82d8a6b13a95
+    image: lscr.io/linuxserver/radarr:5.6.0@sha256:79053c07400eec909d04ac97db760c30bf61471ec37465a50f126a3c825a92bc
     ports:
       - 127.0.0.1:7878:7878/tcp
     volumes:
@@ -144,7 +144,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/sabnzbd:4.3.2@sha256:6c25ce4614035d6e25736a2fc30a7087b95f4dbae64933eb113a8e2f081bea4a
+    image: lscr.io/linuxserver/sabnzbd:4.3.2@sha256:ab89014bb120a092a67c3702b38a9c614e8d06fd6f62225edb8ce770f26fd08a
     ports:
       - 127.0.0.1:8080:8080/tcp
     volumes:
@@ -154,7 +154,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/sonarr:4.0.5@sha256:30432d9faf9e8fbb7c6336806ee061ed426204e1f9718d9659a2642a6e3a7c59
+    image: lscr.io/linuxserver/sonarr:4.0.5@sha256:275467ba17d990bbc6301dec3cc76b042969836749de39067818759d0f3b407f
     ports:
       - 127.0.0.1:8989:8989/tcp
     volumes:
@@ -164,7 +164,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/syncthing:1.27.8@sha256:71db49de13f2d0a963fa43c10427972ace94135525d7072c94c63d846f57a7e6
+    image: lscr.io/linuxserver/syncthing:1.27.8@sha256:6e70dd0cc0ddb038a8f58cf0945d6659b13c984f11d708407469bf16d520574c
     ports:
       - 127.0.0.1:8384:8384/tcp
       - 22000:22000/tcp
@@ -189,7 +189,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/tautulli:2.14.2@sha256:a8e4de4cfd3bdca9090ca3fc9ffcbefdc294a0a178ede9c42d9d287fca835afe
+    image: lscr.io/linuxserver/tautulli:2.14.2@sha256:22328b7ec50d9e005a96805ad67cd9ace138960eae9dcda6265ef7baad5263e9
     ports:
       - 127.0.0.1:8181:8181/tcp
     volumes:
