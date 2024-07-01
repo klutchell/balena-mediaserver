@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update jc21/nginx-proxy-manager Docker tag to v2.11.3
+      hash: f766b821c0ab360486eb4410bfe1e05dff0ccac5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.438
+  title: ""
+  date: 2024-07-01T15:08:18.250Z
+- commits:
     - subject: Update lscr.io/linuxserver/jellyfin Docker tag to v10.9.7
       hash: 31df283ec6c11f02a8b585d918bb9984cf04b3f6
       body: ""
