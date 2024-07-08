@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v16
+      hash: b5a228b939556df11a1d2566cdb21c08b6e321ab
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.442
+  title: ""
+  date: 2024-07-08T14:08:10.735Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.6
       hash: dbae5b9e1bd34611366562d1b52fecf0b7163e72
       body: ""
