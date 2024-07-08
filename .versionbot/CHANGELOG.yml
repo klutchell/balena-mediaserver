@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: 8d2ad6645975eb3df3057e6e48e9f391ecb86782
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.444
+  title: ""
+  date: 2024-07-08T15:08:42.244Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing Docker tag to v1.27.9
       hash: 1e8ea130f04c70f9182535108d42770d7d08d87a
       body: ""
