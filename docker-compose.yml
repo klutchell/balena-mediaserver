@@ -45,7 +45,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/duplicati:2.0.8@sha256:a99cb83de46c4cd1149ec269a4e5e09c5215c27c6441ad153bdd477bbb05506c
+    image: lscr.io/linuxserver/duplicati:2.0.8@sha256:b33313912cd5f0089414a207a2430fa946a40509396ad5aa09888be9348fbf35
     environment:
       <<: *linuxserver-environment
       PUID: "0"
@@ -84,7 +84,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/nzbhydra2:7.2.3@sha256:c92afa7d9e30893dbb6a5b57c23b318baf9358759e48083b14aa29380cde9447
+    image: lscr.io/linuxserver/nzbhydra2:7.2.3@sha256:43bc051804f1fa35363d240509f06d56d0466c2e5f7c2742fd2a30970a81ed77
     ports:
       - 127.0.0.1:5076:5076/tcp
     volumes:
@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/ombi:4.43.5@sha256:5c0fab7eba38c0561b74a1ef3d817074609175181f507a8fa1739902295e5a75
+    image: lscr.io/linuxserver/ombi:4.43.5@sha256:6ce75698f6a96fc4a527852a3147e24f28d662fa9ba015ce639f312516d76873
     ports:
       - 127.0.0.1:3579:3579/tcp
     volumes:
@@ -103,7 +103,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:5d192198a316e3cebe8fbbc0e59cd3d4102b6a0b303cb55b44854b888d9b8a0e
+    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:ed32f910825e2432922e1add36da8da2d1c3e9462fad6f3586a2af5a4a23f832
     ports:
       - 127.0.0.1:5055:5055/tcp
     volumes:
@@ -112,7 +112,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/plex:1.40.3@sha256:c0d40a44980f33169fb341a6aa7cb45dc294e2817537b81d0677a15288b05c99
+    image: lscr.io/linuxserver/plex:1.40.3@sha256:3a449d946fdaabc2e05591cfcafc03dbc42ecd5fa4538da6956860f1e6368cad
     devices:
       - /dev/dri:/dev/dri
     ports:
@@ -134,7 +134,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/radarr:5.7.0@sha256:c5b78b1f1e8556d781788194c4ee2b87ca7e3620b701bfce31499e60ee50eca3
+    image: lscr.io/linuxserver/radarr:5.7.0@sha256:bf5aaf1577edbc3ba33db069676e7f8324eda33761ca59721942bc8ef56c015c
     ports:
       - 127.0.0.1:7878:7878/tcp
     volumes:
@@ -144,7 +144,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/sabnzbd:4.3.2@sha256:36bdeef099e87a0da24e5b87d88abde93cd188a24511a4bfb214372824201f00
+    image: lscr.io/linuxserver/sabnzbd:4.3.2@sha256:db76abdcd65ba2c06a630d17d7e71e75245f8c7ace734d4cadd6402e2776ad5c
     ports:
       - 127.0.0.1:8080:8080/tcp
     volumes:
@@ -189,7 +189,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *linuxserver-service
-    image: lscr.io/linuxserver/tautulli:2.14.3@sha256:f25b902c4fa015657f08392c3169ab06d55bb0467789f427e599917264decebc
+    image: lscr.io/linuxserver/tautulli:2.14.3@sha256:bdd171230838f39019de4cadfc1c76c55058c0b6fb305eb390ea77c3779e554a
     ports:
       - 127.0.0.1:8181:8181/tcp
     volumes:
