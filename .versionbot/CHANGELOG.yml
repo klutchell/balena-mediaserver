@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/overseerr:1.33.2 Docker digest to dafb573
+      hash: 940d038a2b493ce2270001534a01f908f5db379b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.445
+  title: ""
+  date: 2024-07-08T15:38:21.621Z
+- commits:
     - subject: Update all digest updates
       hash: 8d2ad6645975eb3df3057e6e48e9f391ecb86782
       body: ""
