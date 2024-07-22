@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/ombi Docker tag to v4.44.1
+      hash: 7962968ec726cf92eed7e20b8739f6aa8e746cf0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.10.455
+  title: ""
+  date: 2024-07-22T14:40:33.608Z
+- commits:
     - subject: Update all digest updates
       hash: b7b3dcafa19d7f83c95aa502256542590a977e11
       body: ""
