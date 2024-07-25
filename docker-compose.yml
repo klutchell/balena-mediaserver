@@ -6,6 +6,8 @@ x-s6-service: &s6-service
     - /tmp
   environment: &s6-environment
     S6_VERBOSITY: 2
+    PUID: "1000"
+    PGID: "1000"
   entrypoint:
     - /bin/bash
     - -c
@@ -14,12 +16,22 @@ x-s6-service: &s6-service
       [[ ${DISABLE,,} =~ true|yes|on|1 ]] && exit 0
       exec /init
 
-x-linuxserver-service: &linuxserver-service
-  <<: *s6-service
-  environment: &linuxserver-environment
-    <<: *s6-environment
-    PUID: "1000"
-    PGID: "1000"
+# https://hub.docker.com/r/tailscale/tailscale
+# https://github.com/tailscale/tailscale/blob/main/cmd/containerboot/main.go
+# https://tailscale.com/kb/1282/docker
+# https://tailscale.com/kb/1278/tailscaled
+# https://tailscale.com/kb/1241/tailscale-up
+# https://tailscale.com/kb/1242/tailscale-serve
+# https://tailscale.com/kb/1311/tailscale-funnel
+# https://tailscale.com/blog/docker-tailscale-guide
+x-tailscale-service: &tailscale
+  build: tailscale
+  restart: "on-failure"
+  cap_add:
+    - NET_ADMIN
+    - SYS_MODULE
+  labels:
+    io.balena.features.kernel-modules: 1
 
 volumes:
   downloads: {}
@@ -40,18 +52,163 @@ volumes:
   syncthing: {}
   tautulli: {}
   tailscale: {}
+  ts-nginx: {}
+  ts-duplicati: {}
+  ts-jellyfin: {}
+  ts-netdata: {}
+  ts-nzbhydra: {}
+  ts-ombi: {}
+  ts-overseerr: {}
+  ts-plex: {}
+  ts-prowlarr: {}
+  ts-radarr: {}
+  ts-sabnzbd: {}
+  ts-sonarr: {}
+  ts-syncthing: {}
+  ts-tautulli: {}
 
 services:
+
+  ts-nginx:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: nginx
+      TS_SERVE_CONFIG: /config/nginx.json
+    volumes:
+      - ts-nginx:/var/lib/tailscale
+    ports:
+      - 80:80/tcp
+      - 443:443/tcp
+
+  ts-duplicati:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: duplicati
+      TS_SERVE_CONFIG: /config/duplicati.json
+    volumes:
+      - ts-duplicati:/var/lib/tailscale
+
+  ts-jellyfin:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: jellyfin
+      TS_SERVE_CONFIG: /config/jellyfin.json
+    volumes:
+      - ts-jellyfin:/var/lib/tailscale
+
+  ts-nzbhydra:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: nzbhydra
+      TS_SERVE_CONFIG: /config/nzbhydra.json
+    volumes:
+      - ts-nzbhydra:/var/lib/tailscale
+
+  ts-netdata:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: netdata
+      TS_SERVE_CONFIG: /config/netdata.json
+    volumes:
+      - ts-netdata:/var/lib/tailscale
+
+  ts-ombi:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: ombi
+      TS_SERVE_CONFIG: /config/ombi.json
+    volumes:
+      - ts-ombi:/var/lib/tailscale
+
+  ts-overseerr:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: overseerr
+      TS_SERVE_CONFIG: /config/overseerr.json
+    volumes:
+      - ts-overseerr:/var/lib/tailscale
+
+  ts-plex:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: plex
+      TS_SERVE_CONFIG: /config/plex.json
+    volumes:
+      - ts-plex:/var/lib/tailscale
+
+  ts-prowlarr:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: prowlarr
+      TS_SERVE_CONFIG: /config/prowlarr.json
+    volumes:
+      - ts-prowlarr:/var/lib/tailscale
+
+  ts-radarr:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: radarr
+      TS_SERVE_CONFIG: /config/radarr.json
+    volumes:
+      - ts-radarr:/var/lib/tailscale
+
+  ts-sabnzbd:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: sabnzbd
+      TS_SERVE_CONFIG: /config/sabnzbd.json
+    volumes:
+      - ts-sabnzbd:/var/lib/tailscale
+
+  ts-sonarr:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: sonarr
+      TS_SERVE_CONFIG: /config/sonarr.json
+    volumes:
+      - ts-sonarr:/var/lib/tailscale
+
+  ts-syncthing:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: syncthing
+      TS_SERVE_CONFIG: /config/syncthing.json
+    volumes:
+      - ts-syncthing:/var/lib/tailscale
+    ports:
+      - 22000:22000/tcp
+      - 22000:22000/udp
+      - 21027:21027/udp
+
+  ts-tautulli:
+    <<: *tailscale
+    environment:
+      TS_HOSTNAME: tautulli
+      TS_SERVE_CONFIG: /config/tautulli.json
+    volumes:
+      - ts-tautulli:/var/lib/tailscale
+
+  # https://hub.docker.com/r/jc21/nginx-proxy-manager
+  # https://github.com/NginxProxyManager/nginx-proxy-manager
+  # https://nginxproxymanager.com/
+  nginx:
+    <<: *s6-service
+    image: jc21/nginx-proxy-manager:2.11.3@sha256:5bd2aae54ac0b6f4ef6777143ab736baf5366807894a4c7fca7bfa2fbaf1489c
+    volumes:
+      - proxy:/data
+      - letsencrypt:/etc/letsencrypt
+    network_mode: service:ts-nginx
+    depends_on:
+      - ts-nginx
+
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
-    <<: *linuxserver-service
+    <<: *s6-service
     image: lscr.io/linuxserver/duplicati:2.0.8@sha256:2cd598c5faa34476fb1fdbd9c652ddc67c8729f5f7cc9b11426d58c5e69d0c18
     environment:
-      <<: *linuxserver-environment
+      <<: *s6-environment
       PUID: "0"
       PGID: "0"
-    ports:
-      - 127.0.0.1:8200:8200/tcp
     volumes:
       - duplicati:/config
       # any volumes that might be worth backing up
@@ -68,108 +225,115 @@ services:
       - downloads:/volumes/downloads
       - proxy:/volumes/proxy
       - tautulli:/volumes/tautulli
+    network_mode: service:ts-duplicati
+    depends_on:
+      - ts-duplicati
 
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
-    <<: *linuxserver-service
+    <<: *s6-service
     image: lscr.io/linuxserver/jellyfin:10.9.8@sha256:843878f35dc700e502798b39edb24b84b7b7ff0788f1b7b9b1e71d4f8d34f951
     devices:
       - /dev/dri:/dev/dri
-    ports:
-      - 127.0.0.1:8096:8096/tcp
     volumes:
       - jellyfin:/config
       - downloads:/downloads
+    network_mode: service:ts-jellyfin
+    depends_on:
+      - ts-jellyfin
 
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
-    <<: *linuxserver-service
+    <<: *s6-service
     image: lscr.io/linuxserver/nzbhydra2:7.3.0@sha256:ed9c42e7425676809581c0a5057f538b88e7436a5cc3fff7163c90395b24d569
-    ports:
-      - 127.0.0.1:5076:5076/tcp
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
+    network_mode: service:ts-nzbhydra
+    depends_on:
+      - ts-nzbhydra
 
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
-    <<: *linuxserver-service
+    <<: *s6-service
     image: lscr.io/linuxserver/ombi:4.44.1@sha256:f7eabee4800cd7a4716391aca11770563f5045f55cb10f2a397d94ac33d5f0b1
-    ports:
-      - 127.0.0.1:3579:3579/tcp
     volumes:
       - ombi:/config
+    network_mode: service:ts-ombi
+    depends_on:
+      - ts-ombi
 
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
-    <<: *linuxserver-service
+    <<: *s6-service
     image: lscr.io/linuxserver/overseerr:1.33.2@sha256:aaba9e51b62a17e914de79e8eda4616f12e9bf4bce115cda6d0ad8178daea102
-    ports:
-      - 127.0.0.1:5055:5055/tcp
     volumes:
       - overseerr:/config
+    network_mode: service:ts-overseerr
+    depends_on:
+      - ts-overseerr
 
   # https://docs.linuxserver.io/images/docker-plex
   plex:
-    <<: *linuxserver-service
+    <<: *s6-service
     image: lscr.io/linuxserver/plex:1.40.4@sha256:97d5d64e10850c67a2a694374b536a02f0e62bfae3b292ccfb8c07d6b1f0a79f
     devices:
       - /dev/dri:/dev/dri
-    ports:
-      - 127.0.0.1:32400:32400/tcp
     volumes:
       - plex:/config
       - downloads:/downloads
+    network_mode: service:ts-plex
+    depends_on:
+      - ts-plex
 
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
-    <<: *linuxserver-service
+    <<: *s6-service
     image: lscr.io/linuxserver/prowlarr:1.21.1-develop@sha256:ea33c39fc13aaeccb2f7e6afd079d674a7aa5447bef921d0f4d3fa4caf209a35
-    ports:
-      - 127.0.0.1:9696:9696/tcp
     volumes:
       - prowlarr:/config
       - downloads:/downloads
+    network_mode: service:ts-prowlarr
+    depends_on:
+      - ts-prowlarr
 
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
-    <<: *linuxserver-service
+    <<: *s6-service
     image: lscr.io/linuxserver/radarr:5.7.0@sha256:1eaf9e83fca2b9170d4f49f6c0e55ba38693718e7815743a9ec297d199ab1e73
-    ports:
-      - 127.0.0.1:7878:7878/tcp
     volumes:
       - radarr:/config
       - downloads:/downloads
+    network_mode: service:ts-radarr
+    depends_on:
+      - ts-radarr
 
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
-    <<: *linuxserver-service
+    <<: *s6-service
     image: lscr.io/linuxserver/sabnzbd:4.3.2@sha256:31ea64a7ce1e9a5ff8187f9b7c905eaa1d0a79d49b04724e47059c67407157eb
-    ports:
-      - 127.0.0.1:8080:8080/tcp
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
+    network_mode: service:ts-sabnzbd
+    depends_on:
+      - ts-sabnzbd
 
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
-    <<: *linuxserver-service
+    <<: *s6-service
     image: lscr.io/linuxserver/sonarr:4.0.8@sha256:fbee5770f688e4f89dd073534feda11251bfde0e0a4e6ac74dd8c33bb856b505
-    ports:
-      - 127.0.0.1:8989:8989/tcp
     volumes:
       - sonarr:/config
       - downloads:/downloads
+    network_mode: service:ts-sonarr
+    depends_on:
+      - ts-sonarr
 
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
-    <<: *linuxserver-service
+    <<: *s6-service
     image: lscr.io/linuxserver/syncthing:1.27.9@sha256:84e9cd99d247d6ef31fc8c1a6967f068a8352a530095bb402bf3bb298aa10696
-    ports:
-      - 127.0.0.1:8384:8384/tcp
-      - 22000:22000/tcp
-      - 22000:22000/udp
-      - 21027:21027/udp
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
@@ -185,29 +349,19 @@ services:
       - downloads:/volumes/downloads
       - proxy:/volumes/proxy
       - tautulli:/volumes/tautulli
+    network_mode: service:ts-syncthing
+    depends_on:
+      - ts-syncthing
 
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
-    <<: *linuxserver-service
+    <<: *s6-service
     image: lscr.io/linuxserver/tautulli:2.14.3@sha256:2928b639a673e739ff2f3f3613103b91e1a0e8bd53d19c37baff16474e4ed5f3
-    ports:
-      - 127.0.0.1:8181:8181/tcp
     volumes:
       - tautulli:/config
-
-  # https://hub.docker.com/r/jc21/nginx-proxy-manager
-  # https://github.com/NginxProxyManager/nginx-proxy-manager
-  # https://nginxproxymanager.com/
-  nginx-proxy-manager:
-    <<: *s6-service
-    image: jc21/nginx-proxy-manager:2.11.3@sha256:5bd2aae54ac0b6f4ef6777143ab736baf5366807894a4c7fca7bfa2fbaf1489c
-    ports:
-      - 80:80/tcp
-      - 127.0.0.1:81:81/tcp
-      - 443:443/tcp
-    volumes:
-      - proxy:/data
-      - letsencrypt:/etc/letsencrypt
+    network_mode: service:ts-tautulli
+    depends_on:
+      - ts-tautulli
 
   # https://hub.docker.com/r/netdata/netdata
   netdata:
@@ -223,8 +377,6 @@ services:
       io.balena.features.balena-socket: 1
       io.balena.features.procfs: 1
       io.balena.features.sysfs: 1
-    ports:
-      - 127.0.0.1:19999:19999/tcp
     security_opt:
       - apparmor:unconfined
     tmpfs:
@@ -232,31 +384,6 @@ services:
     volumes:
       - netdatalib:/var/lib/netdata
       - netdatacache:/var/cache/netdata
-
-  # https://hub.docker.com/r/tailscale/tailscale
-  # https://github.com/tailscale/tailscale/blob/main/cmd/containerboot/main.go
-  # https://tailscale.com/kb/1282/docker
-  # https://tailscale.com/kb/1278/tailscaled
-  # https://tailscale.com/kb/1241/tailscale-up
-  # https://tailscale.com/kb/1242/tailscale-serve
-  # https://tailscale.com/kb/1311/tailscale-funnel
-  # https://tailscale.com/blog/docker-tailscale-guide
-  tailscale:
-    build: tailscale
-    restart: "on-failure"
-    environment:
-      TS_USERSPACE: false
-      TS_AUTH_ONCE: false
-      TS_HOSTNAME: mediaserver
-    network_mode: host
-    cap_add:
-      - NET_ADMIN
-      - NET_RAW
-      - SYS_MODULE
-    labels:
-      io.balena.features.kernel-modules: 1
-    tmpfs:
-      - /tmp
-      - /run
-    volumes:
-      - tailscale:/var/lib/tailscale
+    network_mode: service:ts-netdata
+    depends_on:
+      - ts-netdata
