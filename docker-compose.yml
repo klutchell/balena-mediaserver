@@ -240,11 +240,11 @@ services:
   # https://tailscale.com/kb/1241/tailscale-up
   # https://tailscale.com/kb/1242/tailscale-serve
   # https://tailscale.com/kb/1311/tailscale-funnel
+  # https://tailscale.com/blog/docker-tailscale-guide
   tailscale:
     build: tailscale
     restart: "on-failure"
     environment:
-      TS_STATE_DIR: /var/lib/tailscale
       TS_USERSPACE: false
       TS_AUTH_ONCE: false
       TS_HOSTNAME: mediaserver

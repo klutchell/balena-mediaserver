@@ -82,20 +82,21 @@ Authenticate the `tailscale` service by providing the `TS_AUTH_KEY` environment 
 You can create an authkey in the [admin panel](https://login.tailscale.com/admin/settings/keys).
 See [here](https://tailscale.com/kb/1085/auth-keys/) for more information about authkeys and what you can do with them.
 
-Once authenticated, each service will be served on `https://mediaserver.${TAILNET}.ts.net:${PORT}` where
-`${TAILNET}` is your [Tailnet name](https://tailscale.com/kb/1217/tailnet-name/)
+Once authenticated, each service will be served on `https://mediaserver.${TS_CERT_DOMAIN}.ts.net:${PORT}` where
+`${TS_CERT_DOMAIN}` is your [Tailnet name](https://tailscale.com/kb/1217/tailnet-name/)
 and `${PORT}` is the service port found under [Services](#services).
 
-By default all services are published via [Tailscale Serve](https://tailscale.com/kb/1312/serve/)
+By default most services are published via [Tailscale Serve](https://tailscale.com/kb/1312/serve/)
 so they are only available on your Tailnet.
 
-You can optionally publish the service to the Internet via [Tailscale Funnel](https://tailscale.com/kb/1223/funnel/)
-by setting an environment variable `FUNNEL_${service}` to a truthy value
-where `${service}` is the service name from docker-compose.
+The exception is Plex on port `32400` which is public on the Internet via [Tailscale Funnel](https://tailscale.com/kb/1223/funnel/)
+but still requires authentication.
+
+These defaults can be changed manually via the [serve.json](./tailscale/serve.json) file.
 
 Run `tailscale serve status` in a `tailscale` service shell to see the list of served URLs.
 
-Read more at <https://tailscale.dev/blog/docker-mod-tailscale>.
+Read more at <https://tailscale.com/blog/docker-tailscale-guide>.
 
 ### Remote Access via Nginx
 
