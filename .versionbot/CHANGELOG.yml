@@ -1,4 +1,28 @@
 - commits:
+    - subject: Create one tailscale instance per service
+      hash: e271818b10c50be528e74a947aaa73d238d1bf7f
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+    - subject: Use a static tailscale serve config
+      hash: 11f3172e6a8eef639835647f0be618b7c96c397c
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.11.0
+  title: ""
+  date: 2024-07-26T20:10:39.467Z
+- commits:
     - subject: Update product-os/flowzone action to v17
       hash: c5a243db5a509be4d36e6d9b62eac6848b1258f8
       body: ""
