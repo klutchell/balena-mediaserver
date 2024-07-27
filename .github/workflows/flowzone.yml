@@ -26,3 +26,4 @@ jobs:
       BALENA_API_KEY: ${{ secrets.BALENA_API_KEY }}
     with:
       balena_slugs: "gh_klutchell/mediaserver"
+      toggle_auto_merge: false
