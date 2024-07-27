@@ -60,13 +60,15 @@ Environment Variables can be applied to all services in an application, or only 
 ### Remote Access
 
 #### Via Tailscale
+
 1. Provide the `TS_AUTHKEY` environment variable
-2. Access services via `https://${service}.${TAILNET}:443`
+2. Access services via `https://${TS_CERT_DOMAIN}:${service_port}`
 
 Read more at <https://tailscale.com/blog/docker-tailscale-guide> and <https://tailscale.com/kb/1282/docker>
 
 #### Via Nginx
-1. Configure Nginx Proxy Manager for each service you want to expose
+
+1. Add proxy hosts via `http:${service-name}:${service-port}`
 2. Set up custom domains and SSL certificates as needed
 
 Read more at <https://nginxproxymanager.com/>
@@ -78,14 +80,14 @@ Services can be disabled by setting the `DISABLE` environment variable to a trut
 
 ### Duplicati
 
-- Forward host and port: `http://ts-duplicati:8200`
+- Forward host and port: `http://duplicati:8200`
 - Configure backups using sources from `/volumes/`
 
 Read more at <https://docs.linuxserver.io/images/docker-duplicati>
 
 ### Jellyfin
 
-- Forward host and port: `http://ts-jellyfin:8096`
+- Forward host and port: `http://jellyfin:8096`
 - Set `JELLYFIN_PublishedServerUrl` to your public server URL
 - Create libraries using folders in `/downloads/`
 
@@ -93,14 +95,14 @@ Read more at <https://docs.linuxserver.io/images/docker-jellyfin>
 
 ### Netdata
 
-- Forward host and port: `http://ts-netdata:19999`
+- Forward host and port: `http://netdata:19999`
 - Set `PGID` environment variable (see README for details)
 
 Read more at <https://hub.docker.com/r/netdata/netdata>
 
 ### Nginx
 
-- Forward host and port: `http://ts-nginx:81`
+- Forward host and port: `http://nginx:81`
 - Default credentials:
   - Email: admin@example.com
   - Password: changeme
@@ -109,25 +111,25 @@ Read more at <https://nginxproxymanager.com/>
 
 ### Nzbhydra
 
-- Forward host and port: `http://ts-nzbhydra:5076`
+- Forward host and port: `http://nzbhydra:5076`
 
 Read more at <https://docs.linuxserver.io/images/docker-nzbhydra>
 
 ### Ombi
 
-- Forward host and port: `http://ts-ombi:3579`
+- Forward host and port: `http://ombi:3579`
 
 Read more at <https://docs.linuxserver.io/images/docker-ombi>
 
 ### Overseerr
 
-- Forward host and port: `http://ts-overseerr:5055`
+- Forward host and port: `http://overseerr:5055`
 
 Read more at <https://docs.linuxserver.io/images/docker-overseerr>
 
 ### Plex
 
-- Forward host and port: `http://ts-plex:32400`
+- Forward host and port: `http://plex:32400`
 - Set `PLEX_CLAIM` environment variable (obtain from https://plex.tv/claim)
 - Create libraries using folders in `/downloads/`
 
@@ -135,20 +137,20 @@ Read more at <https://docs.linuxserver.io/images/docker-plex>
 
 ### Prowlarr
 
-- Forward host and port: `http://ts-prowlarr:9696`
+- Forward host and port: `http://prowlarr:9696`
 
 Read more at <https://docs.linuxserver.io/images/docker-prowlarr>
 
 ### Radarr
 
-- Forward host and port: `http://ts-radarr:7878`
+- Forward host and port: `http://radarr:7878`
 - Set base path to `/downloads/movies`
 
 Read more at <https://docs.linuxserver.io/images/docker-radarr>
 
 ### Sabnzbd
 
-- Forward host and port: `http://ts-sabnzbd:8080`
+- Forward host and port: `http://sabnzbd:8080`
 - Set download folders:
   - Temporary: `/downloads/sabnzbd/incomplete`
   - Completed: `/downloads/sabnzbd/complete`
@@ -157,22 +159,22 @@ Read more at <https://docs.linuxserver.io/images/docker-sabnzbd>
 
 ### Sonarr
 
-- Forward host and port: `http://ts-sonarr:8989`
+- Forward host and port: `http://sonarr:8989`
 - Set base path to `/downloads/tv`
 
 Read more at <https://docs.linuxserver.io/images/docker-sonarr>
 
 ### Syncthing
 
-- Forward host and port: `http://ts-syncthing:8384`
+- Forward host and port: `http://syncthing:8384`
 - Configure syncs using sources from `/volumes/`
 
 Read more at <https://docs.linuxserver.io/images/docker-syncthing>
 
 ### Tautulli
 
-- Forward host and port: `http://ts-tautulli:8181`
-- Set Plex IP Address/Hostname to `ts-plex` and port to `32400`
+- Forward host and port: `http://tautulli:8181`
+- Set Plex IP Address/Hostname to `plex` and port to `32400`
 
 Read more at <https://docs.linuxserver.io/images/docker-tautulli>
 
