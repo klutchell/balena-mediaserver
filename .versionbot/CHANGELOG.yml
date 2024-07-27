@@ -1,4 +1,18 @@
 - commits:
+    - subject: Disable automerge of PRs
+      hash: bee77224b5ca78c129483fa7f63e223df7da5217
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.12.1
+  title: ""
+  date: 2024-07-27T23:49:01.963Z
+- commits:
     - subject: Revert to a single tailscale service
       hash: 25163a2a4bcf3a128cc37a5dca19faa2801db3d2
       body: ""
