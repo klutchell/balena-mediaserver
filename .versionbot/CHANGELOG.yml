@@ -1,4 +1,18 @@
 - commits:
+    - subject: Revert to a single tailscale service
+      hash: 25163a2a4bcf3a128cc37a5dca19faa2801db3d2
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.12.0
+  title: ""
+  date: 2024-07-27T23:41:35.648Z
+- commits:
     - subject: Create one tailscale instance per service
       hash: e271818b10c50be528e74a947aaa73d238d1bf7f
       body: ""
