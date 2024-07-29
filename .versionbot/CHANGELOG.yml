@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.21.2
+      hash: 291c5600d4125ceeb1dbe77e8f296b25c76794b9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.12.3
+  title: ""
+  date: 2024-07-29T13:38:53.001Z
+- commits:
     - subject: Update all digest updates
       hash: ed0749feb0afcd3a007ec360a3d3ef2e0cf24498
       body: ""
