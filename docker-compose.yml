@@ -180,7 +180,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.3.2@sha256:31ea64a7ce1e9a5ff8187f9b7c905eaa1d0a79d49b04724e47059c67407157eb
+    image: lscr.io/linuxserver/sabnzbd:4.3.2@sha256:d6a2a967d47b495c5342bc23de76d35eeb2f3ceb53c7be51885ad25f95dffe9b
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -225,7 +225,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.14.3@sha256:2928b639a673e739ff2f3f3613103b91e1a0e8bd53d19c37baff16474e4ed5f3
+    image: lscr.io/linuxserver/tautulli:2.14.3@sha256:05521bf5fbab6d9297fed5ae8525b4ff24dec3773bce40c0d0b831a8708a13e2
     volumes:
       - tautulli:/config
     ports:
