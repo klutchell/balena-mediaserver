@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: ed0749feb0afcd3a007ec360a3d3ef2e0cf24498
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.12.2
+  title: ""
+  date: 2024-07-29T13:11:25.822Z
+- commits:
     - subject: Disable automerge of PRs
       hash: bee77224b5ca78c129483fa7f63e223df7da5217
       body: ""
