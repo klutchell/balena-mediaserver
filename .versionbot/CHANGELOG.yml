@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/jellyfin Docker tag to v10.9.9
+      hash: fdf2cf576dfe347887db6a506f25273eaf10e471
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.12.8
+  title: ""
+  date: 2024-08-05T13:13:55.891Z
+- commits:
     - subject: Update tailscale/tailscale Docker tag to v1.70.0
       hash: f22ab54efdd4f42bab33aa0dd4ca5b036a60d4cc
       body: ""
