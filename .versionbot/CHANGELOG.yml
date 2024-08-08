@@ -1,4 +1,14 @@
 - commits:
+    - subject: "patch: Group all minor and patch updates together"
+      hash: 1ae05b0caa6f7b8b33e5c1ebc055862d65d4b68a
+      body: ""
+      footer: {}
+      author: Kyle Harding
+      nested: []
+  version: 2.12.11
+  title: ""
+  date: 2024-08-08T16:08:50.535Z
+- commits:
     - subject: Update all digest updates
       hash: 3de557bb6a870fe08a622f59260ba69ffd3fe9b0
       body: ""
