@@ -200,7 +200,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:1.27.9@sha256:bfcd4a3081bad466f914e40b4e10a6544944ae9c6f5bf4f54345c312d55a8d2a
+    image: lscr.io/linuxserver/syncthing:1.27.10@sha256:2c1ecba88add0cf239914553cc911193a78c668012bf8e55044c1bbff6b2db18
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
@@ -225,7 +225,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.14.3@sha256:8ae569b38294e558bd0c48f8148ec0a85ba0481149d33e9e1971224e4d7907d5
+    image: lscr.io/linuxserver/tautulli:2.14.4@sha256:e5944d51583e14ff59f82154c966152910c60ed85f1acd8cae2566046b149af8
     volumes:
       - tautulli:/config
     ports:
