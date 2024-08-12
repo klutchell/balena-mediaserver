@@ -5,7 +5,7 @@
     ":automergeStableNonMajor",
     ":automergePatch",
     ":automergeDigest",
-    ":group:allNonMajor"
+    "group:allNonMajor"
   ],
   "commitBody": "Change-type: patch",
   "minor": {
