@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all non-major dependencies
+      hash: 84c625097133e3b884ba1bafed0eafd6976eeeb9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.12.17
+  title: ""
+  date: 2024-08-19T14:08:04.539Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v7.5.0
       hash: 398339c819a8011deabd8d8abfed4f488c814c18
       body: ""
