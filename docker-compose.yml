@@ -148,7 +148,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.40.4@sha256:06ac00026f114f575d246d717adfc2a732e6eeeb89d1550d1a88cba20464275e
+    image: lscr.io/linuxserver/plex:1.40.5@sha256:af1235e13285c92d954ba65917835f4256b7676429f53b08eaa5ce3e5dfa2e07
     devices:
       - /dev/dri:/dev/dri
     volumes:
