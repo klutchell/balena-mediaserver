@@ -80,7 +80,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.0.8@sha256:77cce67805f8c929d7a1df6d8ad2075b0ae7cac082af9f463cb505f5495ac9d1
+    image: lscr.io/linuxserver/duplicati:2.0.8@sha256:cde9ec551ca8063e27e506c2b95bf7d1ab6be513cff2f5a4a314ec1f8e2df645
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -108,7 +108,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.9.9@sha256:59ff91bf3ec2cb7ee69fcc1426ef4d387eb17dc03c80e8232b5bb4fb0d6efc36
+    image: lscr.io/linuxserver/jellyfin:10.9.9@sha256:a90c9b22a2634c3c24049b35d9bc0295eddfa46615697c92f67794f523a27a3a
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -120,7 +120,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:7.5.0@sha256:dce2e3c80cada3105629885eaf9e253a8e36d78d53d5fccf2a04008f9da2f3ae
+    image: lscr.io/linuxserver/nzbhydra2:7.5.0@sha256:8494e09aa4a85f9667ee8ba191ebfda9cb4d7740348268579292456e28704ec7
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -130,7 +130,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *s6-service
-    image: lscr.io/linuxserver/ombi:4.44.1@sha256:ba50bcb43a80253e418b0afb3e85acc7b483ed2a973177fd085c2efeb55fcf06
+    image: lscr.io/linuxserver/ombi:4.44.1@sha256:122cf483c736128a3eaf7c01e1512141d2b2e41a97381bcad733047d0dfcb316
     volumes:
       - ombi:/config
     ports:
@@ -139,7 +139,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *s6-service
-    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:3543bcc57aaa74842d8d88c6a0a6805b166d89e2dfc0db74b703ee59f8d7266e
+    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:24c902e4091f442aae63931663e4eaf95bb2c8a345a66936c2f6b81b281a4c3b
     volumes:
       - overseerr:/config
     ports:
@@ -148,7 +148,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.40.5@sha256:af1235e13285c92d954ba65917835f4256b7676429f53b08eaa5ce3e5dfa2e07
+    image: lscr.io/linuxserver/plex:1.40.5@sha256:4bc88efb49059e0d98254c4fcf680de996873b2c5d732604ebbccc4ac952fec9
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -160,7 +160,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/prowlarr:1.21.2-develop@sha256:f94e8065039ae6475a1aa3e6b5a90f03c898b662cb9d26166d57067148fb2167
+    image: lscr.io/linuxserver/prowlarr:1.21.2-develop@sha256:18bf32798d9d16e0b730fea5abfd23c813b3c63a65165861b3557bb12e5c693e
     volumes:
       - prowlarr:/config
       - downloads:/downloads
@@ -190,7 +190,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/sonarr:4.0.8@sha256:bffa87787eacff9023df4400f521c159566d14b5a280caec8b54196071e6038e
+    image: lscr.io/linuxserver/sonarr:4.0.8@sha256:0777b308a414000505651059a95af373ded6aba8ce5a40b50d7aad333dc912e2
     volumes:
       - sonarr:/config
       - downloads:/downloads
@@ -200,7 +200,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:1.27.10@sha256:d6502d919f49f16a80689ce92c211f945f1d64a34c0d3f23ecc27a2a4d1dd0ac
+    image: lscr.io/linuxserver/syncthing:1.27.10@sha256:d5481de808a1de5a13b814a922b1f6de5fcde64c1ca95b0a065218b56570fae3
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
@@ -225,7 +225,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.14.4@sha256:6999244b795fdebd8707a386932b9d5773b4a3e16d4c042e9e92170d2934603c
+    image: lscr.io/linuxserver/tautulli:2.14.4@sha256:8bf29f0d065460daf2a8e7f0208f73af33b8736446abb99ea2f3ad84245f1a4d
     volumes:
       - tautulli:/config
     ports:
