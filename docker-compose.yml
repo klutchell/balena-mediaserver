@@ -108,7 +108,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.9.9@sha256:a90c9b22a2634c3c24049b35d9bc0295eddfa46615697c92f67794f523a27a3a
+    image: lscr.io/linuxserver/jellyfin:10.9.10@sha256:0da2fb716f6e7eaeea082d81418f80c4d2adab9407801629790ef3c2d0b743ab
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -180,7 +180,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.3.2@sha256:95179d6de1c660d7dcd4bd3991b33871c88df1120ab84bc553c4a67e8cc412d2
+    image: lscr.io/linuxserver/sabnzbd:4.3.3@sha256:6a8db539588665971f24a42e31ddf2240d7be114c08007dc409aff7638c8edf6
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -190,7 +190,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/sonarr:4.0.8@sha256:0777b308a414000505651059a95af373ded6aba8ce5a40b50d7aad333dc912e2
+    image: lscr.io/linuxserver/sonarr:4.0.9@sha256:879f5f35b05566f71296bad0f3704709103568a6b4f42f5959543f5322728723
     volumes:
       - sonarr:/config
       - downloads:/downloads
