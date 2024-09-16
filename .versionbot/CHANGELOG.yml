@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all non-major dependencies
+      hash: c4ba9d56240010e66bfa27f40248e9df7137347e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Renovate Bot
+      nested: []
+  version: 2.12.29
+  title: ""
+  date: 2024-09-16T14:07:23.219Z
+- commits:
     - subject: Update all digest updates
       hash: 9d299692cd0dbf85f112296ce783cfe3a8467d8e
       body: ""
