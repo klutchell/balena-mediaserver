@@ -160,7 +160,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/prowlarr:1.24.0-develop@sha256:a0b464915a1b6f98b749aec41c62c716b9ef0c0490ed556505f138c3355e2a16
+    image: lscr.io/linuxserver/prowlarr:1.24.1-develop@sha256:bd93bb3f14ceda26eb1decfb6daee49029dc194dd1ce9720c21179865fcd4a66
     volumes:
       - prowlarr:/config
       - downloads:/downloads
@@ -225,7 +225,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.14.4@sha256:752f03dd1b4ee742cb87b36b2f38eb16efa34401df2d292df5cfd842c2650854
+    image: lscr.io/linuxserver/tautulli:2.14.5@sha256:e05f7ee8cf9b1371d1a5541e3621eb2b2168bc04877aeca1241750f35ebef927
     volumes:
       - tautulli:/config
     ports:
