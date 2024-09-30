@@ -1,17 +1,4 @@
 {
-  "extends": [
-    "config:recommended",
-    "config:best-practices",
-    ":automergeStableNonMajor",
-    ":automergePatch",
-    ":automergeDigest",
-    "group:allNonMajor"
-  ],
-  "commitBody": "Change-type: patch",
-  "minor": {
-    "automerge": true
-  },
-  "pinDigest": {
-    "automerge": true
-  }
+  "extends": ["github>klutchell/renovate-config"],
+  "commitBody": "Change-type: patch"
 }
