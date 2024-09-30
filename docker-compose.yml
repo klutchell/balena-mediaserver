@@ -225,7 +225,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.14.5@sha256:e05f7ee8cf9b1371d1a5541e3621eb2b2168bc04877aeca1241750f35ebef927
+    image: lscr.io/linuxserver/tautulli:2021.12.16@sha256:9ba07aaddb8e2e7a6283eb8231dfd900f2d7dda38d70ec60fe7f5000a2dc0906
     volumes:
       - tautulli:/config
     ports:
