@@ -1,4 +1,18 @@
 - commits:
+    - subject: Extend renovate config from klutchell/renovate-config
+      hash: 7afafb3552a7adc1d86bb7a6f178849672d8d12d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.12.33
+  title: ""
+  date: 2024-09-30T20:34:11.313Z
+- commits:
     - subject: Update all digest updates
       hash: 9125562c58b97e10c254a663413c7967ae3daa70
       body: ""
