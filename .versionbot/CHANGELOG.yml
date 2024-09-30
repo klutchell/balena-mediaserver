@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.24.3
+      hash: 9dea530e7cdb5224425525f0c1693c16aca10fb0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.34
+  title: ""
+  date: 2024-09-30T20:39:25.899Z
+- commits:
     - subject: Extend renovate config from klutchell/renovate-config
       hash: 7afafb3552a7adc1d86bb7a6f178849672d8d12d
       body: ""
