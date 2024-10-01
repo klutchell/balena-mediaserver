@@ -170,7 +170,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/radarr:5.10.4@sha256:df843d96b812d858b94377ffed1918424ece6735038a19e8ff93730277757b65
+    image: lscr.io/linuxserver/radarr:5.11.0@sha256:d758c5a5edc4cda1263260948b3f460f511430bccea505dca3cb70af01332ff8
     volumes:
       - radarr:/config
       - downloads:/downloads
