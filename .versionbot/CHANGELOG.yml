@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2:7.6.0 Docker digest to 7946091
+      hash: 8c778f13abdb2aa460c238a9017e42c9dece32b8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.42
+  title: ""
+  date: 2024-10-02T22:53:39.590Z
+- commits:
     - subject: Update lscr.io/linuxserver/overseerr:1.33.2 Docker digest to 6426b3f
       hash: a595e7482318936186d0b0aa1bf5f4ed65c9f8f8
       body: ""
