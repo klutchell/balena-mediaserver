@@ -1,4 +1,17 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr:1.24.3-develop Docker digest to
+        4f15184
+      hash: d1cbcfbfd4a249160324cf373c6b48f2aa9ece61
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.39
+  title: ""
+  date: 2024-10-02T06:40:26.508Z
+- commits:
     - subject: Update all digest updates
       hash: 4eeaddd8f89e9b221f9d28a71fb7b4c5f1b8b697
       body: ""
