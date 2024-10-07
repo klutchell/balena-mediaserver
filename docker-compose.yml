@@ -80,7 +80,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.0.8@sha256:51ca905dffe2ba89ccf3f220c00241a543ba67f326405efe349af95e2d8b1ef8
+    image: lscr.io/linuxserver/duplicati:2.0.8@sha256:a7a5dec720bba8ea870ec8d4911d567db6be7d8d5186263578880d70be9567f5
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -190,7 +190,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/sonarr:4.0.9@sha256:12570fbaddc8733664e1e5d9bb12a719cb07f9455c518097b0e6426f4960f884
+    image: lscr.io/linuxserver/sonarr:4.0.9@sha256:db80ed8022dd15143644752a57db0553e48e23e3da54bdb9833d28ff89206a3c
     volumes:
       - sonarr:/config
       - downloads:/downloads
@@ -200,7 +200,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:1.27.12@sha256:0141ef2c1ad754d6c93b92c0aa71648bf8c08b97ed80bf943091ad24332fcbb5
+    image: lscr.io/linuxserver/syncthing:1.27.12@sha256:057914bc48ed5626caf45c29aaff0b20c309a5000123a0c64d547eaf70d60680
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
@@ -225,7 +225,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.14.5@sha256:ff87ded2487774cb71fee4fb96c62e815bff321b9a52e2e1404bf67f72b209ae
+    image: lscr.io/linuxserver/tautulli:2.14.5@sha256:3a8b561be72877a5be125f9c5711c8584dae02055c943c0418fcc67d3728ec77
     volumes:
       - tautulli:/config
     ports:
