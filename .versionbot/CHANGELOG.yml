@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/tautulli Docker tag to v2.14.6
+      hash: 730ba219a8aabf43ebe22954e67143daceb1b37d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.50
+  title: ""
+  date: 2024-10-14T06:43:36.727Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.25.1
       hash: 2911b81dd801d4524843bf73e5b97d235b2b8e77
       body: ""
