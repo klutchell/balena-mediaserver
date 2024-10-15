@@ -68,7 +68,7 @@ services:
   # https://nginxproxymanager.com/
   nginx:
     <<: *s6-service
-    image: jc21/nginx-proxy-manager:2.11.3@sha256:5bd2aae54ac0b6f4ef6777143ab736baf5366807894a4c7fca7bfa2fbaf1489c
+    image: jc21/nginx-proxy-manager:2.11.3@sha256:e81d01ad119208334ba7adb4986b36ebeb7c727a78732f411e5df84f7c6c50ec
     volumes:
       - proxy:/data
       - letsencrypt:/etc/letsencrypt
@@ -108,7 +108,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.9.11@sha256:140fcea8a5d9b9b6534790e8f9289b94030ba603707a5fcb5e47f5df7b625e38
+    image: lscr.io/linuxserver/jellyfin:10.9.11@sha256:a074e43e90e97cb6a59ca0345bc6908fa3262b459618ae608b9da7e8ac4ae1f2
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -120,7 +120,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:7.7.0@sha256:38de4bde8634ef55fdf28d9a026b5b6865ad739d8086652c3c9e52a669b7c3cb
+    image: lscr.io/linuxserver/nzbhydra2:7.7.0@sha256:985682091195d0a4db985b985a0ed3b6c8c6aeed1d85ac0af34db6d18163f8ab
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -139,7 +139,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *s6-service
-    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:6426b3ff63e7fe70e8e82f572c6637859b53ffae96140c540c40b7add172583e
+    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:a6eb6e6471a1c5440712ae8c7efeb5febc57678cfd16594eda98858fc29c80bf
     volumes:
       - overseerr:/config
     ports:
@@ -148,7 +148,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.41.0@sha256:519cb67f04c8b114d19a3ebe4e31711eed5debae95b996c9c87d69202c44e6d9
+    image: lscr.io/linuxserver/plex:1.41.0@sha256:c8e5ab6336b20f89b4106945fa2ee035c0d0e8e9ad13a24b7e14b924b5c68090
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -180,7 +180,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.3.3@sha256:a33738b946bee3bd2a754b2e576643d069ac2913d88290ef13d8e00f0c0e1224
+    image: lscr.io/linuxserver/sabnzbd:4.3.3@sha256:f87f9d4fa0e19f8e7b292638b3fa89cafc4a96d858fbda8106e3cea6343432c1
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -200,7 +200,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:1.27.12@sha256:057914bc48ed5626caf45c29aaff0b20c309a5000123a0c64d547eaf70d60680
+    image: lscr.io/linuxserver/syncthing:1.27.12@sha256:605814503be631f59ad34db4d4f79119ffe6f01fd0a8d5736c668e0939f81c47
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
