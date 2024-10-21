@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update jc21/nginx-proxy-manager Docker tag to v2.12.1
+      hash: b3f316da9892bea53dac9da84322ebfb414e431e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.59
+  title: ""
+  date: 2024-10-21T13:36:23.750Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v7.8.0
       hash: 68010c84556ae5d7e9b037e4c535fbc43d029759
       body: ""
