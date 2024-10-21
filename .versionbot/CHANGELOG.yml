@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update tailscale/tailscale Docker tag to v1.76.1
+      hash: d27f6086e985db4420c19229c0e501aa4554dd25
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.57
+  title: ""
+  date: 2024-10-21T07:29:00.871Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr Docker tag to v5.12.2
       hash: 754e3d84df62c3e045edb1b4f8e4aa0c7196f1d8
       body: ""
