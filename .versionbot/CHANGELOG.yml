@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v18.1.2
+      hash: 76c55a9542751837f4d64963643244ec382315f7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.60
+  title: ""
+  date: 2024-10-21T16:13:37.491Z
+- commits:
     - subject: Update jc21/nginx-proxy-manager Docker tag to v2.12.1
       hash: b3f316da9892bea53dac9da84322ebfb414e431e
       body: ""
