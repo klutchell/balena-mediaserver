@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v7.8.0
+      hash: 68010c84556ae5d7e9b037e4c535fbc43d029759
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.58
+  title: ""
+  date: 2024-10-21T10:32:23.237Z
+- commits:
     - subject: Update tailscale/tailscale Docker tag to v1.76.1
       hash: d27f6086e985db4420c19229c0e501aa4554dd25
       body: ""
