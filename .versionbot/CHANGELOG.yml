@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/syncthing Docker tag to v1.28.0
+      hash: d205877c8a4dd2b6169707ade76e1c8995b33dfb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.62
+  title: ""
+  date: 2024-10-21T22:41:37.743Z
+- commits:
     - subject: Update all digest updates
       hash: 407b655510801b3a62adf6d06c3710f57243191b
       body: ""
