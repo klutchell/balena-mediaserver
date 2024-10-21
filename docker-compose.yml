@@ -120,7 +120,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:7.7.0@sha256:985682091195d0a4db985b985a0ed3b6c8c6aeed1d85ac0af34db6d18163f8ab
+    image: lscr.io/linuxserver/nzbhydra2:7.8.0@sha256:9ae0a3c17029fb8b90bdd8b0d06be9825987ee2b2c34de140d6d43791fa38178
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
