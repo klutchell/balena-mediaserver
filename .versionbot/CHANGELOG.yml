@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.25.3
+      hash: fb1efd47db4cf6628555b8889df62595680dae97
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.63
+  title: ""
+  date: 2024-10-22T01:24:20.848Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing Docker tag to v1.28.0
       hash: d205877c8a4dd2b6169707ade76e1c8995b33dfb
       body: ""
