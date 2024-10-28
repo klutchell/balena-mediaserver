@@ -120,7 +120,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:7.8.0@sha256:9ae0a3c17029fb8b90bdd8b0d06be9825987ee2b2c34de140d6d43791fa38178
+    image: lscr.io/linuxserver/nzbhydra2:7.8.0@sha256:a2c74169134f3e582af49e89d93151349888e7820da6d68c82eb133504ff4f75
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -130,7 +130,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *s6-service
-    image: lscr.io/linuxserver/ombi:4.44.1@sha256:c0542bf1f71cecee33398877b1b23062eabaf0be79a3ff27ebf7e136659ea924
+    image: lscr.io/linuxserver/ombi:4.44.1@sha256:051516d70134a203b36dd4d125ff5ad4451e90cf524cdb302a92a41d74debdd0
     volumes:
       - ombi:/config
     ports:
@@ -180,7 +180,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.3.3@sha256:ab4fc46cb5e2702f640b28bdc9b460c98b73a9898dd61f7068229f140c26409a
+    image: lscr.io/linuxserver/sabnzbd:4.3.3@sha256:293517b90ef929178387f07c074c1f88d96d94eac3c1d95944ba2891527c1396
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -225,7 +225,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.14.6@sha256:a969f1b172448c7a021a0ee51f8eab0b94a2ccfc0435264fe02e2f4dfa515dd4
+    image: lscr.io/linuxserver/tautulli:2.14.6@sha256:56754aaa5f9a82c4d23827dc6ba09fc94efaef52d7a7d501ff00bcb325ce16d8
     volumes:
       - tautulli:/config
     ports:
