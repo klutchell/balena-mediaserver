@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/jellyfin Docker tag to v10.10.0
+      hash: 6a389894075ecbd6c5c7db3d7215147fc62f6af4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.70
+  title: ""
+  date: 2024-10-28T23:37:38.264Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.10
       hash: 7f34e3e598144a12021e20ff93db4ee93bde8e17
       body: ""
