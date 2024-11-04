@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v18.1.21
+      hash: 05f9cdb835ad77cfaf11fb76c1ceeb2aacde83b4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.74
+  title: ""
+  date: 2024-11-04T13:11:25.830Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.26.0
       hash: 5b83c84423a13cb3ed8d0e8119fa4614668ea7f3
       body: ""
