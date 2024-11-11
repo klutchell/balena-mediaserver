@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v2
+      hash: bb5a9bd0fbfecb8fe01fc4b100d668bf4f353c0b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.80
+  title: ""
+  date: 2024-11-11T20:17:24.594Z
+- commits:
     - subject: Update all digest updates
       hash: e37925266a877da8100f53ade6a33e4915e144b6
       body: ""
