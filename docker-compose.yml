@@ -130,7 +130,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *s6-service
-    image: lscr.io/linuxserver/ombi:4.44.1@sha256:051516d70134a203b36dd4d125ff5ad4451e90cf524cdb302a92a41d74debdd0
+    image: lscr.io/linuxserver/ombi:4.44.1@sha256:d76c9dd437b295f5b1e2937392e18067eb481c9a8d59890c76c7ca04ca2c831a
     volumes:
       - ombi:/config
     ports:
@@ -148,7 +148,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.41.1@sha256:88f1b42fa90799ba491fa0b96046467174f28f18c236c7b39e135c029a30cfcf
+    image: lscr.io/linuxserver/plex:1.41.1@sha256:25fea67a8ed67ed0e1d89d3cbe0538a7d12dfd984f987f33abc5a66ac3cb641b
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -170,7 +170,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/radarr:5.14.0@sha256:a5a1fdf02aa14abc33a507eafa125ff57cb83f251a519536bce331ce9e008ef7
+    image: lscr.io/linuxserver/radarr:5.14.0@sha256:3329fbf778701cf53703b342b3a84da31caafec970ef9310be5723dd057666dc
     volumes:
       - radarr:/config
       - downloads:/downloads
