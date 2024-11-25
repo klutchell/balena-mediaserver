@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/tautulli Docker tag to v2.15.0
+      hash: f229a4e88295e3366140159c650eac0e1f50917e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.92
+  title: ""
+  date: 2024-11-25T22:18:27.559Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v2.0.3
       hash: a783a1d9e8d83383663da50b8ff5f77857ac5ec0
       body: ""
