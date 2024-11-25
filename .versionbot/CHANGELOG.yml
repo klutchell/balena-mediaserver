@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr Docker tag to v5.15.1
+      hash: b040e67244e06afb9fbae3522e93a66dce11e568
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.90
+  title: ""
+  date: 2024-11-25T17:39:03.747Z
+- commits:
     - subject: Update all digest updates
       hash: a0b33907703266ba1552e174f3c46a8c9ac57498
       body: ""
