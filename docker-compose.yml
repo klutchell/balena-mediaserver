@@ -38,30 +38,37 @@ volumes:
   syncthing: {}
   tautulli: {}
   tailscale: {}
-
+  tsdproxy: {}
 services:
 
-  # https://hub.docker.com/r/tailscale/tailscale
-  # https://github.com/tailscale/tailscale/blob/main/cmd/containerboot/main.go
-  # https://tailscale.com/kb/1282/docker
-  # https://tailscale.com/kb/1278/tailscaled
-  # https://tailscale.com/kb/1241/tailscale-up
-  # https://tailscale.com/kb/1242/tailscale-serve
-  # https://tailscale.com/kb/1311/tailscale-funnel
-  # https://tailscale.com/blog/docker-tailscale-guide
-  tailscale:
-    build: tailscale
-    restart: "on-failure"
-    cap_add:
-      - NET_ADMIN
-      - SYS_MODULE
+  # # https://hub.docker.com/r/tailscale/tailscale
+  # # https://github.com/tailscale/tailscale/blob/main/cmd/containerboot/main.go
+  # # https://tailscale.com/kb/1282/docker
+  # # https://tailscale.com/kb/1278/tailscaled
+  # # https://tailscale.com/kb/1241/tailscale-up
+  # # https://tailscale.com/kb/1242/tailscale-serve
+  # # https://tailscale.com/kb/1311/tailscale-funnel
+  # # https://tailscale.com/blog/docker-tailscale-guide
+  # tailscale:
+  #   build: tailscale
+  #   restart: "on-failure"
+  #   cap_add:
+  #     - NET_ADMIN
+  #     - SYS_MODULE
+  #   labels:
+  #     io.balena.features.kernel-modules: 1
+  #   environment:
+  #     TS_HOSTNAME: mediaserver
+  #   volumes:
+  #     - tailscale:/var/lib/tailscale
+  #   network_mode: host
+
+  tsdproxy:
+    build: tsdproxy
     labels:
-      io.balena.features.kernel-modules: 1
-    environment:
-      TS_HOSTNAME: mediaserver
+      io.balena.features.balena-socket: 1
     volumes:
-      - tailscale:/var/lib/tailscale
-    network_mode: host
+      - tsdproxy:/data
 
   # https://hub.docker.com/r/jc21/nginx-proxy-manager
   # https://github.com/NginxProxyManager/nginx-proxy-manager
@@ -76,6 +83,10 @@ services:
       - 80:80/tcp
       - 443:443/tcp
       - 127.0.0.1:81:81/tcp
+    labels:
+      tsdproxy.enable: "true"
+      tsdproxy.name: "nginx"
+      tsdproxy.container_port: 81
 
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
@@ -104,6 +115,10 @@ services:
       - tautulli:/volumes/tautulli
     ports:
       - 127.0.0.1:8200:8200/tcp
+    labels:
+      tsdproxy.enable: "true"
+      tsdproxy.name: "duplicati"
+      tsdproxy.container_port: 8200
 
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:

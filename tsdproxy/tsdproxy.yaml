@@ -1,0 +1,21 @@
+defaultproxyprovider: default
+docker:
+  local: # name of the docker provider
+    host: unix:///var/run/balena.sock # host of the docker socket or daemon
+    # targethostname: 172.31.0.1 # hostname or IP of docker server
+    defaultproxyprovider: default # name of which proxy provider to use
+file: {}
+tailscale:
+  providers:
+    default: # name of the provider
+      authkey: ${TS_AUTHKEY} # define authkey here
+      # authkeyfile: "" # use this to load authkey from file. If this is defined, Authkey is ignored
+      # controlurl: https://controlplane.tailscale.com # use this to override the default control URL
+  datadir: /data/
+# http:
+#   hostname: 0.0.0.0
+#   port: 8080
+log:
+  level: info # set logging level info, error or trace
+  json: false # set to true to enable json logging
+proxyaccesslog: true # set to true to enable container access log
