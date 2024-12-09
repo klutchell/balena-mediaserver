@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/syncthing Docker tag to v1.28.1
+      hash: c288b244b3d285af49ad0efe1dc51e4ad65de389
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.99
+  title: ""
+  date: 2024-12-09T08:29:48.080Z
+- commits:
     - subject: Update lscr.io/linuxserver/duplicati Docker tag to v2.1.0
       hash: 5f5fcb5c0ec98f81eb9146d1dcb0c90bcdf50f59
       body: ""
