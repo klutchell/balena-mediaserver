@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.28.0
+      hash: f9b09b99c4ff39e5831dc58d54473fc919a87fe6
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.101
+  title: ""
+  date: 2024-12-09T13:16:53.901Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v7.10.2
       hash: da18b14ecc8ab6384ce1140f4badedda24f65d88
       body: ""
