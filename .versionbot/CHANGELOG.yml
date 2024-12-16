@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update tailscale/tailscale Docker tag to v1.78.3
+      hash: dcaa6c21303961d3a3ee9908c297d3a2cf3831cf
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.104
+  title: ""
+  date: 2024-12-16T07:13:39.371Z
+- commits:
     - subject: Update all digest updates
       hash: 2206949bb9d017dd5f7da4de26fe49e6c9077e3a
       body: ""
