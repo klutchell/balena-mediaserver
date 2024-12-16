@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sabnzbd Docker tag to v4.4.0
+      hash: fd8f35d0bfe38ed38fe2cde1258d0d81cf6a0f28
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.106
+  title: ""
+  date: 2024-12-16T12:22:11.373Z
+- commits:
     - subject: Update lscr.io/linuxserver/plex Docker tag to v1.41.3
       hash: 881d5e4ca7c95dfc9a67ccfc3c27218f8b713b69
       body: ""
