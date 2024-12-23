@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr Docker tag to v5.16.3
+      hash: df0e6294625d7b4bc01d083dca408a388ae60e0d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.115
+  title: ""
+  date: 2024-12-23T22:41:10.666Z
+- commits:
     - subject: Update product-os/flowzone action to v19.2.14
       hash: bb878c8af65e3ac57e2d475ea60b2164aaee0779
       body: ""
