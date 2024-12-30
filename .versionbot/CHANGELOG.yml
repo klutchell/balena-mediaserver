@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v7.11.2
+      hash: 46a7bb4ff991bd2334d656faf78d5fc6ad61f5ad
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.121
+  title: ""
+  date: 2024-12-30T19:31:01.693Z
+- commits:
     - subject: Update all digest updates
       hash: ffae8846620285193f2572764ff1884fd55d1b90
       body: ""
