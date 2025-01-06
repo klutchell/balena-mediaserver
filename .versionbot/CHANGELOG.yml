@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/ombi Docker tag to v4.47.1
+      hash: 1d1f49ca4bcdc5ca26420429669b77cfe1f35698
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.123
+  title: ""
+  date: 2025-01-06T10:37:11.779Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.12
       hash: 80cf7e70b5008b4a8a0a508eca5e398900a9d0f1
       body: ""
