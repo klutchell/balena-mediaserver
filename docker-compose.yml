@@ -108,7 +108,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.10.3@sha256:d2cb750aa51a2f19c33e43699fe8230fb2a69ccdcf36d70c9f283bf4ac17043e
+    image: lscr.io/linuxserver/jellyfin:10.10.3@sha256:d53c3a6808d009b0bb695623245fd806f8a582923817a5bf18a161f53458a72c
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -139,7 +139,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *s6-service
-    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:ba4e6e0376ac5d41d036f9d426ed6e6de3aae2d8c3714e83a2ff0fc0cabb19dc
+    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:9a4ccc23bf0a5902425759f41e36a8765cf3c589743db24cc682a892cd25bd4b
     volumes:
       - overseerr:/config
     ports:
@@ -148,7 +148,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.41.3@sha256:3d2ed27abb4f72038705c3e0c3d40ff89821a0c66d43e55125873de127197d25
+    image: lscr.io/linuxserver/plex:1.41.3@sha256:dda062ebde8c619a656f7ed6e6da7885ca7e114536c1e76b1de3e32a57d3597b
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -180,7 +180,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.4.1@sha256:76a15e85e391eb2702ac1c6ccd90fc7b7546913065c1504f708ce9bf863aedbf
+    image: lscr.io/linuxserver/sabnzbd:4.4.1@sha256:80242140e786c1c73d867e8c84bba16c0ebd20cd27a5c6cf69196168b3fe5e35
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -225,7 +225,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.15.0@sha256:4223278eec3d02ca59890f063317c7b66d4734a24e3e78e2e9a2667264079d96
+    image: lscr.io/linuxserver/tautulli:2.15.0@sha256:459d9b86d9abcaf70ae24c33592776a381293a4ef0525c06d41b3ab8f6cec278
     volumes:
       - tautulli:/config
     ports:
