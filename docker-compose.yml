@@ -139,7 +139,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *s6-service
-    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:9a4ccc23bf0a5902425759f41e36a8765cf3c589743db24cc682a892cd25bd4b
+    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:6baa11c3461fcc3edea229b6934c0621cc8f7976b94676ccea4c18599a30b57b
     volumes:
       - overseerr:/config
     ports:
@@ -170,7 +170,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/radarr:5.17.2@sha256:e633fc93b9e2cea959853d27c6acc1d0b2d1ed7db4a800f6f46fe5b217f13102
+    image: lscr.io/linuxserver/radarr:5.17.2@sha256:dce7e81d08da67cf44437c7213d19faeef1323aa839712fbb53d1253ef94f93f
     volumes:
       - radarr:/config
       - downloads:/downloads
@@ -180,7 +180,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.4.1@sha256:80242140e786c1c73d867e8c84bba16c0ebd20cd27a5c6cf69196168b3fe5e35
+    image: lscr.io/linuxserver/sabnzbd:4.4.1@sha256:a7fb5bd7208bfd5915c2527cef57dd8b00bdf684b68e5c9ec4326f10b6cf94b3
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -190,7 +190,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/sonarr:4.0.12@sha256:23f6911b2b81cb69aa03166b53c15081d5c3a5ed58f5b183c5900c2d8fc9759a
+    image: lscr.io/linuxserver/sonarr:4.0.12@sha256:ca71add37a9cdbb914c7bd5b06f98bf5d2062848c8de6ac3ee09e69a4c170b27
     volumes:
       - sonarr:/config
       - downloads:/downloads
