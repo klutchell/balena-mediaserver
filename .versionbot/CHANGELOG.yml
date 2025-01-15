@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v7.12.1
+      hash: 8d91adc10e556f70e428519526708b404acc7e88
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.135
+  title: ""
+  date: 2025-01-15T02:39:06.343Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v2.1.1
       hash: 8653741f68ad38ef0702a4e42ef2501c52026246
       body: ""
