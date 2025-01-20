@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v19.5.8
+      hash: 38a427c20cb35ef2ccdfb3327ca3a277659b6e26
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.138
+  title: ""
+  date: 2025-01-20T13:21:47.818Z
+- commits:
     - subject: Update all digest updates
       hash: 9d91316f82fe87630d1fbbefc1e5f4b106b2fd85
       body: ""
