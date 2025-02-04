@@ -80,7 +80,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:bc6264d201eefcd2ee9b2dfdac2d4c6937fdbb885e7036b5a01878ff9da159e3
+    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:ffd8889a6e59aead940ee102805a399143b495955ee9eeace69404bc76e91352
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -130,7 +130,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *s6-service
-    image: lscr.io/linuxserver/ombi:4.47.1@sha256:7fb984cba51cfc80c355bc4dc7866a0dfe6b0832b74891bcdbbf5e2064bda9ee
+    image: lscr.io/linuxserver/ombi:4.47.1@sha256:074af33be42157afa33de4f93a4663d82a8c5fdc6a40cee78eb97500cca17640
     volumes:
       - ombi:/config
     ports:
@@ -139,7 +139,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *s6-service
-    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:63761c288fd5517ae305afebb221b4a8557a1a6e07cbeb220625249aa4cdea5a
+    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:637ba966bc1f4c349c3f3ab3d269639f679b3f69f409ee7ac776c468cf508b07
     volumes:
       - overseerr:/config
     ports:
@@ -148,7 +148,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.41.3@sha256:dda062ebde8c619a656f7ed6e6da7885ca7e114536c1e76b1de3e32a57d3597b
+    image: lscr.io/linuxserver/plex:1.41.3@sha256:a0a83cc0f305e92d3885fb2b414c7299606427358bb2f0b38d20e0c3e3eeb094
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -170,7 +170,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/radarr:5.17.2@sha256:7a25facfb3e08c9f57cee1ffd995141de80587be1b038bba5fa8611c2355225a
+    image: lscr.io/linuxserver/radarr:5.17.2@sha256:e547a742352a692f94ed42cbb12728b84132e0b91e0e2bd759c33e76b5ea291d
     volumes:
       - radarr:/config
       - downloads:/downloads
@@ -180,7 +180,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.4.1@sha256:5f323d7c2c67f700f8c0e40f25bf3d67c03c35b65c82a1c1680fcb0d055f6528
+    image: lscr.io/linuxserver/sabnzbd:4.4.1@sha256:7afe3af1cff19c2a7a5d4bacb2202fcb21a0ee15b7e23e4114ab3f7070213662
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -190,7 +190,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/sonarr:4.0.12@sha256:ca71add37a9cdbb914c7bd5b06f98bf5d2062848c8de6ac3ee09e69a4c170b27
+    image: lscr.io/linuxserver/sonarr:4.0.12@sha256:47ce6f3b2afb17c12b393da2fefb11718f15cd1308baeba1cb61cbbbb9c5aedc
     volumes:
       - sonarr:/config
       - downloads:/downloads
@@ -200,7 +200,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:1.29.2@sha256:31da8ef3b45a2962f8bebab22d6ef23d7387a26def87482be810602352b276be
+    image: lscr.io/linuxserver/syncthing:1.29.2@sha256:c04574ea8538099697d9668a1e3667b9dd91a17f6e4fc3fb6fbe8e52d8ce91ec
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
@@ -225,7 +225,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.15.1@sha256:73f9712dc52409e5e493bd7ee2ec207395cbacf8a63605c99026ec5e421a5c0e
+    image: lscr.io/linuxserver/tautulli:2.15.1@sha256:5e35401624728561c38c4ccc346feee793482116a29db2594f9820bb280ca327
     volumes:
       - tautulli:/config
     ports:
