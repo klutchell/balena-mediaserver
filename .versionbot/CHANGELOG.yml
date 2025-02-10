@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v2.2.4
+      hash: e537619be56b6f969a090c8691b7a0c16caf6e6e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.148
+  title: ""
+  date: 2025-02-10T16:33:41.047Z
+- commits:
     - subject: Update jc21/nginx-proxy-manager Docker tag to v2.12.3
       hash: 4d8e3d3f4946433246eca29f6e2ae8493595f60b
       body: ""
