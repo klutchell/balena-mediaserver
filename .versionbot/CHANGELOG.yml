@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update jc21/nginx-proxy-manager Docker tag to v2.12.3
+      hash: 4d8e3d3f4946433246eca29f6e2ae8493595f60b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.147
+  title: ""
+  date: 2025-02-10T13:41:31.199Z
+- commits:
     - subject: Update all digest updates
       hash: bb49377dbd0cfa9fa29944eae577c76f63436f37
       body: ""
