@@ -1,5 +1,17 @@
 - commits:
     - subject: Update all digest updates
+      hash: bb49377dbd0cfa9fa29944eae577c76f63436f37
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: renovate[bot]
+      nested: []
+  version: 2.12.146
+  title: ""
+  date: 2025-02-10T08:31:55.754Z
+- commits:
+    - subject: Update all digest updates
       hash: a40166fd85275391bfb63c33335007f77eb78d8c
       body: ""
       footer:
