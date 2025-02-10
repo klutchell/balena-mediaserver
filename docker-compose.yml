@@ -139,7 +139,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *s6-service
-    image: lscr.io/linuxserver/overseerr:1.33.2@sha256:637ba966bc1f4c349c3f3ab3d269639f679b3f69f409ee7ac776c468cf508b07
+    image: lscr.io/linuxserver/overseerr:2021.12.12@sha256:6c3f4115d2ec1fe661de971ac6bc8405a606ac56c5f834d9de290e6df52fe79d
     volumes:
       - overseerr:/config
     ports:
