@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: b71b70a3d29e61aec228dcaad03e77115b0e0f14
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.163
+  title: ""
+  date: 2025-02-24T06:45:13.662Z
+- commits:
     - subject: Update product-os/flowzone action to v19.9.32
       hash: 4d028f1eedc1800bc22e554fd1d978b320b2d123
       body: ""
