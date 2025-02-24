@@ -160,7 +160,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/prowlarr:1.31.1-develop@sha256:8a6c8eb112fdb5469984d45dfa811ea7ba615598e04409912db0dbf2c365b5b4
+    image: lscr.io/linuxserver/prowlarr:1.31.2-develop@sha256:c67eddc19fc6b2b5755575196aa3f78579fe3651bc614c6eed4b513fe1db8e8a
     volumes:
       - prowlarr:/config
       - downloads:/downloads
