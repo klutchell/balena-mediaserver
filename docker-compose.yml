@@ -80,7 +80,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:87f7d5661977192524282956581ed4b4a6cb8f9832a9c369ae2e00103a2e8813
+    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:e7536603523bd2de9b2c442fa6724fef46a999999f9ec5b4ef47dc2086956a1d
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -120,7 +120,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:7.12.3@sha256:64abde56cdcbb0629a3b27909ea574b265f7fb3286bb6a23d59c3a188eae3b0d
+    image: lscr.io/linuxserver/nzbhydra2:7.12.3@sha256:912c076584e446611dfcfad54a111f1531dd0fffad8d32c9eaa072e6cc615c08
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -130,7 +130,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *s6-service
-    image: lscr.io/linuxserver/ombi:4.47.1@sha256:7eec3a34bcc93930144acde80d0009cabf4bb9e15045feac8d74626dc87dae8e
+    image: lscr.io/linuxserver/ombi:4.47.1@sha256:086e7347260fc6f1847a202727782a371d110a80e03b4436f68b06fb4d7e3bf1
     volumes:
       - ombi:/config
     ports:
@@ -148,7 +148,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.41.4@sha256:76d2cf7acc05bba64356dc47fa8d061135519f380c86d0a9a46a48c6bb37102e
+    image: lscr.io/linuxserver/plex:1.41.4@sha256:d4ea24c1f42d36f3c5ee485418a746be0440fe3c2b735c162c15d028f3495a6f
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -180,7 +180,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.4.1@sha256:854dcbcc7802e863092b25e9caf155015d01b6afe2b4cee070a5127bd623c638
+    image: lscr.io/linuxserver/sabnzbd:4.4.1@sha256:d5f659a45ba38b109b92bec00c080c192813b74a3bf66ed55dec51d8d95997cc
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -225,7 +225,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.15.1@sha256:1252256128b5a50dc1bdd11698a2aaa2403c1b681e5b0b591c4ddb00880f9ec8
+    image: lscr.io/linuxserver/tautulli:2.15.1@sha256:f0b8701bece5c420800bcaf76a1b824076737b9c5ccef905b8f2c89192ce7919
     volumes:
       - tautulli:/config
     ports:
