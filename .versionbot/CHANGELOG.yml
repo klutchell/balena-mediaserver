@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: 1341d678da447862662c42ca23224bb88f1f3e3e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.166
+  title: ""
+  date: 2025-03-03T16:43:49.296Z
+- commits:
     - subject: Switch to GitHub App Installation token authentication
       hash: 531a85a717854ac06bddc0a515fa0ad5230b841e
       body: ""
