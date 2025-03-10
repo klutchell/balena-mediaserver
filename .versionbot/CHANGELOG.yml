@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.32.1
+      hash: 56130696f39bd3ac66e75333b89a82adecfa4a33
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.168
+  title: ""
+  date: 2025-03-10T04:10:54.746Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr Docker tag to v5.19.3
       hash: a8398acaf6c9d1dc7d3f5d75075b56bccb4cbcce
       body: ""
