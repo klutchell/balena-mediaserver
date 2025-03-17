@@ -68,7 +68,7 @@ services:
   # https://nginxproxymanager.com/
   nginx:
     <<: *s6-service
-    image: jc21/nginx-proxy-manager:2.12.3@sha256:02c15b64d464491d09e6d04959f26689d31aec1e02236a1675c1b85d6942c103
+    image: jc21/nginx-proxy-manager:2.12.3@sha256:e5eecad9bf040f1e7ddc9db6bbc812d690503aa119005e3aa0c24803746b49ea
     volumes:
       - proxy:/data
       - letsencrypt:/etc/letsencrypt
@@ -108,7 +108,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.10.6@sha256:c7d4dec91cfd474c65d515e6ef926933b673c310c494f565c01022b16c533e31
+    image: lscr.io/linuxserver/jellyfin:10.10.6@sha256:0b793d24dc3ec861e205ec3aceebe4021180d38a2f461522f1d83d992d4f053a
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -170,7 +170,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/radarr:5.19.3@sha256:620189d67078ddcfeb7a4efa424eb62f827ef734ef1e56980768bf8efd73782a
+    image: lscr.io/linuxserver/radarr:5.19.3@sha256:06f209efdfb25df8eaa6c275f6106d0a9e6b2c8502bd6dde3f95683c2a66aac1
     volumes:
       - radarr:/config
       - downloads:/downloads
@@ -180,7 +180,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.4.1@sha256:c74f6a81b2730f9a16742ce8cb18553324473f6bb31d2a5258a25f0e00c2f217
+    image: lscr.io/linuxserver/sabnzbd:4.4.1@sha256:c59623123310dd1086669f7d223c3de7bf6d3015624aba9fab8c77e4d198dc68
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -190,7 +190,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/sonarr:4.0.13@sha256:49a8e636fd4514b23d37c84660101fecbb632174ba0569e0f09bbd2659a2a925
+    image: lscr.io/linuxserver/sonarr:4.0.13@sha256:b666479159c0ffc17d5c2281737c9a88d78afcaa0aa52cb441b46336f6feba31
     volumes:
       - sonarr:/config
       - downloads:/downloads
@@ -225,7 +225,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.15.1@sha256:0fca01ac82c0a05f23da1077312edbddabbbab79419c508e4edfaaed73e02461
+    image: lscr.io/linuxserver/tautulli:2.15.1@sha256:fa8f5736091fafa6d96e576c714caa634c0636463e81bd287fba28da2536a40e
     volumes:
       - tautulli:/config
     ports:
