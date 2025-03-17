@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.32.2
+      hash: e7b8de4f34db4f323d0caa2592e87337726fbf9a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.174
+  title: ""
+  date: 2025-03-17T05:08:40.025Z
+- commits:
     - subject: Update lscr.io/linuxserver/plex Docker tag to v1.41.5
       hash: 2f1ea791e391afb957a23a13951e1b1e0046eeae
       body: ""
