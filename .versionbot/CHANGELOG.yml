@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: 34085cf0adea23f2658fbff193b9b83259c3ca99
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.178
+  title: ""
+  date: 2025-03-24T04:41:59.936Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.33.0
       hash: 1cf2489abc7474ffd32ff781959a98a8ee527624
       body: ""
