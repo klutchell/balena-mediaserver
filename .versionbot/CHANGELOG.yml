@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v2.3.0
+      hash: 6bec3c29745ef3d2cf37e9467db783d01149a134
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.181
+  title: ""
+  date: 2025-03-24T06:11:37.973Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.14
       hash: 91ec66991150651c5238cd896515f8d489f3180f
       body: ""
