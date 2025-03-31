@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v19.12.10
+      hash: 40659ee13a1e4b86f47a38c1e95ed74f80df9184
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.185
+  title: ""
+  date: 2025-03-31T04:42:01.034Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v2.3.1
       hash: e3ea402285ea0c2f1079d83ab9158edb71669d19
       body: ""
