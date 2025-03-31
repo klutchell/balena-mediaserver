@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/overseerr Docker tag to v1.34.0
+      hash: d8d221f0cbdb39929980e4ce4431dcf7bf2f316e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.191
+  title: ""
+  date: 2025-03-31T07:38:25.360Z
+- commits:
     - subject: Update product-os/flowzone action to v19.13.4
       hash: 19dd176fcc60b33b4292f7ca8e490761ca5ea6f6
       body: ""
