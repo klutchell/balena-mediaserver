@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update tailscale/tailscale Docker tag to v1.82.0
+      hash: ac86532da91afa7e60bbd6c6808b93f7dc298ee5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.198
+  title: ""
+  date: 2025-04-07T07:10:34.294Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v2.3.2
       hash: 5497e6f5dfe5e50dde09a938aaf9ce537ba2be92
       body: ""
