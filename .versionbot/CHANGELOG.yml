@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.33.2
+      hash: f0a7731a8c01d6109faa7f5a00da39c033a72d61
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.194
+  title: ""
+  date: 2025-04-07T05:09:43.680Z
+- commits:
     - subject: Update lscr.io/linuxserver/jellyfin Docker tag to v10.10.7
       hash: 10e81761cbce3f1f2030e7e0b0ef9cad88c62f71
       body: ""
