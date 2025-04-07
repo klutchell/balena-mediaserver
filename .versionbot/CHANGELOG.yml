@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: 61452eccc869b184220191029229ef08fe0731b7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.192
+  title: ""
+  date: 2025-04-07T04:12:08.015Z
+- commits:
     - subject: Update lscr.io/linuxserver/overseerr Docker tag to v1.34.0
       hash: d8d221f0cbdb39929980e4ce4431dcf7bf2f316e
       body: ""
