@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sabnzbd Docker tag to v4.5.1
+      hash: 6ad104ddcfc1b47ba6770051cb9cd4a17448806c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.201
+  title: ""
+  date: 2025-04-14T05:10:09.319Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.33.3
       hash: 909db223058986d6444ee5ce70dd01b0b8ce587a
       body: ""
