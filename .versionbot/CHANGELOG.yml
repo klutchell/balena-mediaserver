@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex Docker tag to v1.41.6
+      hash: ef0ed0bdb13d45153ecbabff1377f4c279dfa7b4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.199
+  title: ""
+  date: 2025-04-14T04:11:41.285Z
+- commits:
     - subject: Update tailscale/tailscale Docker tag to v1.82.0
       hash: ac86532da91afa7e60bbd6c6808b93f7dc298ee5
       body: ""
