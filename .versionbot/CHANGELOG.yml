@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/tautulli Docker tag to v2.15.2
+      hash: 2bd30878414f3698af93a40325ca30b3d154660f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.12.204
+  title: ""
+  date: 2025-04-14T06:45:47.515Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing Docker tag to v1.29.5
       hash: dfbe2f99b61755d4be631a63f5a5d36199e6a92d
       body: ""
