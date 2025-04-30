@@ -1,4 +1,18 @@
 - commits:
+    - subject: Use balena-tailscale block for tailscale service
+      hash: 3f463fa7f6d23fa89733abc8d524898269ba7c97
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.13.0
+  title: ""
+  date: 2025-04-30T16:16:30.557Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr Docker tag to v5.22.4
       hash: f86c67e63f2abf7c8c5fd20a82558c6d7d3fe147
       body: ""
