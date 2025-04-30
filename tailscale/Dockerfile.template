@@ -1,0 +1,14 @@
+
+# renovate: datasource=github-tags depName=klutchell/balena-tailscale versioning=semver-coerced
+ARG BALENA_TAILSCALE_VERSION=1.82.0
+ARG BALENA_ARCH=%%BALENA_ARCH%%
+
+# https://github.com/klutchell/balena-tailscale
+# hadolint ignore=DL3007
+FROM bh.cr/gh_klutchell/tailscale-${BALENA_ARCH}/${BALENA_TAILSCALE_VERSION}:latest
+
+COPY serve.json /config/serve.json
+# Accepts a JSON file to programmatically configure Serve and Funnel functionality.
+# Use tailscale serve status --json to export your current configuration in the correct format.
+# https://tailscale.com/kb/1282/docker#ts_serve_config
+ENV TS_SERVE_CONFIG "/config/serve.json"
