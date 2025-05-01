@@ -1,6 +1,6 @@
 
 # renovate: datasource=github-tags depName=klutchell/balena-tailscale versioning=semver-coerced
-ARG BALENA_TAILSCALE_VERSION=1.82.0
+ARG BALENA_TAILSCALE_VERSION=1.82.5+rev1
 ARG BALENA_ARCH=%%BALENA_ARCH%%
 
 # https://github.com/klutchell/balena-tailscale
