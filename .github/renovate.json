@@ -1,4 +1,30 @@
 {
   "extends": ["github>klutchell/renovate-config"],
-  "commitBody": "Change-type: patch"
+  "commitBody": "Change-type: patch",
+  "customDatasources": {
+    "balena-cloud": {
+      "defaultRegistryUrlTemplate": "https://api.balena-cloud.com/v7/release?\\$filter=(belongs_to__application/any(a:a/slug%20eq%20'{{packageName}}'))%20and%20status%20eq%20%27success%27%20and%20is_final%20eq%20true&\\$select=commit,is_finalized_at__date,raw_version",
+      "transformTemplates": [
+        "{ \"releases\": $map(d, function($v) { $merge([ {}, $v.commit ? {\"digest\": $v.commit} : {}, $v.raw_version ? {\"version\": 'v' & $v.raw_version} : {}, $v.is_finalized_at__date ? {\"releaseTimestamp\": $v.is_finalized_at__date} : {} ]) }) }"
+      ]
+    }
+  },
+  "packageRules": [
+    {
+      "matchDatasources": ["balena-cloud"],
+      "automerge": false
+    }
+  ],
+  "regexManagers": [
+    {
+      "fileMatch": [
+        "(^|/|\\.)([Dd]ocker|[Cc]ontainer)file$",
+        "(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$"
+      ],
+      "matchStrings": [
+        "^FROM bh\\.cr\\/(?<depName>[\\w-]+\\/[\\w-]+)\\/(?<currentDigest>[^:]+):(?<currentValue>[^\\s]+)"
+      ],
+      "datasourceTemplate": "balena-cloud"
+    }
+  ]
 }
