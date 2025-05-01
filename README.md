@@ -81,6 +81,7 @@ Services can be disabled by setting the `DISABLE` environment variable to a trut
 ### Duplicati
 
 - Forward host and port: `http://duplicati:8200`
+- Set a password with the `DUPLICATI__WEBSERVICE_PASSWORD` environment variable
 - Configure backups using sources from `/volumes/`
 
 Read more at <https://docs.linuxserver.io/images/docker-duplicati>
@@ -104,8 +105,8 @@ Read more at <https://hub.docker.com/r/netdata/netdata>
 
 - Forward host and port: `http://nginx:81`
 - Default credentials:
-  - Email: admin@example.com
-  - Password: changeme
+  - Email: `admin@example.com`
+  - Password: `changeme`
 
 Read more at <https://nginxproxymanager.com/>
 
@@ -130,7 +131,7 @@ Read more at <https://docs.linuxserver.io/images/docker-overseerr>
 ### Plex
 
 - Forward host and port: `http://plex:32400`
-- Set `PLEX_CLAIM` environment variable (obtain from https://plex.tv/claim)
+- Set `PLEX_CLAIM` environment variable (obtain from <https://plex.tv/claim>)
 - Create libraries using folders in `/downloads/`
 
 Read more at <https://docs.linuxserver.io/images/docker-plex>
