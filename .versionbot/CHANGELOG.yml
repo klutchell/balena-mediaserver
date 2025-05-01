@@ -1,4 +1,18 @@
 - commits:
+    - subject: Update duplicati readme with setting a webservice password
+      hash: e435948f3ca732d022a66e6c5ffb6cd969780771
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.13.1
+  title: ""
+  date: 2025-05-01T17:47:11.049Z
+- commits:
     - subject: Use balena-tailscale block for tailscale service
       hash: 3f463fa7f6d23fa89733abc8d524898269ba7c97
       body: ""
