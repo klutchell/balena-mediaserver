@@ -9,7 +9,7 @@ ARG BALENA_ARCH=%%BALENA_ARCH%%
 # FROM bh.cr/gh_klutchell/tailscale-${BALENA_ARCH}/${BALENA_TAILSCALE_VERSION}:latest
 
 FROM bh.cr/gh_klutchell/tailscale-amd64/default:1.82.0 AS balena-tailscale-amd64
-FROM bh.cr/gh_klutchell/tailscale-aarch64/default:1.82.0 AS balena-tailscale-aarch64
+FROM bh.cr/gh_klutchell/tailscale-aarch64/9a73b7e855555743d74156c03eaa80ec:1.82.5 AS balena-tailscale-aarch64
 FROM bh.cr/gh_klutchell/tailscale-armv7hf/default:1.82.0 AS balena-tailscale-armv7hf
 
 # hadolint ignore=DL3006
