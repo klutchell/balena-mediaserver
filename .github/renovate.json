@@ -1,5 +1,7 @@
 {
-  "extends": ["github>klutchell/renovate-config"],
+  "extends": [
+    "github>klutchell/renovate-config"
+  ],
   "commitBody": "Change-type: patch",
   "customDatasources": {
     "balena-cloud": {
@@ -11,12 +13,15 @@
   },
   "packageRules": [
     {
-      "matchDatasources": ["balena-cloud"],
+      "matchDatasources": [
+        "balena-cloud"
+      ],
       "automerge": false
     }
   ],
-  "regexManagers": [
+  "customManagers": [
     {
+      "customType": "regex",
       "fileMatch": [
         "(^|/|\\.)([Dd]ocker|[Cc]ontainer)file$",
         "(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$"
