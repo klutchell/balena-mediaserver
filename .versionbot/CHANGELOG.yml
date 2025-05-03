@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: db40a99e4f3d41656776ae3f011d03de3154fa3f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.2
+  title: ""
+  date: 2025-05-03T13:14:15.291Z
+- commits:
     - subject: Update duplicati readme with setting a webservice password
       hash: e435948f3ca732d022a66e6c5ffb6cd969780771
       body: ""
