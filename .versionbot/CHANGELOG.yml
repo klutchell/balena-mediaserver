@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v7.13.0
+      hash: d6a48c8304a0f4473a3372e805c73c56704e7b21
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.5
+  title: ""
+  date: 2025-05-05T04:43:03.975Z
+- commits:
     - subject: Update product-os/flowzone action to v19.13.39
       hash: 2daa9abf3d44dcef9e0ee453690cd60ea33992ca
       body: ""
