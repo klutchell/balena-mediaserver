@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v2.5.1
+      hash: 2d56e6ac880ebc434370bddca5bec61caacc24b7
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.16
+  title: ""
+  date: 2025-05-12T06:11:38.759Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.36.1
       hash: 38de4ff9ae60f4cb62cf0326740b66be30f12d02
       body: ""
