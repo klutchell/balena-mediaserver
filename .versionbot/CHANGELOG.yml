@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: 52283a8383e339b6ccbfa8c81d60daab5ec2b1d0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.20
+  title: ""
+  date: 2025-05-19T05:10:45.523Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr Docker tag to v5.23.3
       hash: f1f314b4d08550e2c7414555de5d1d66f9e6f2d4
       body: ""
