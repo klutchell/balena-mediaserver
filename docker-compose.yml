@@ -73,7 +73,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:b0d958c702ee8eb5e3aba6670dd9d807a19d832e17e2a1c45ab6e198b833ce98
+    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:209b6760d0b804149b9a7e65383614b9903af2d3067ec554b63b5332271c4c1e
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -173,7 +173,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.5.1@sha256:580cc1e4af14500d07d9a0c7abab86ef333e28a2c8124725072075116e8227d1
+    image: lscr.io/linuxserver/sabnzbd:4.5.1@sha256:913d57a64e9c9039c758b8f80e13226c3e226f7ffec34fbc56702421ace4c48c
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -183,7 +183,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/sonarr:4.0.14@sha256:bae1b72ad55cee030a416aaaef1f20eee076e4c1c6d490689904d4609a2cabac
+    image: lscr.io/linuxserver/sonarr:4.0.14@sha256:cdf5eb3cfa207d46b066bfbb41b03576c67a1f6ecc8aba19146d0f7349ec79dc
     volumes:
       - sonarr:/config
       - downloads:/downloads
@@ -193,7 +193,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:1.29.6@sha256:01f106675760889477bfb9e2f3127df468802723f3f847416442e0939e01d0bf
+    image: lscr.io/linuxserver/syncthing:1.29.6@sha256:644887112036dc36905ad651a5c7fddee209456261c11558792057035058b0ad
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
@@ -218,7 +218,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.15.2@sha256:a9b699b5cdbc3a79c1d05a250daf1f9f9cba76dc8628d6caeffdbc99b42d8625
+    image: lscr.io/linuxserver/tautulli:2.15.2@sha256:8b550f3f2615318546efedd6e850f1549551be9d4cb540e4c3ac664200c03bf7
     volumes:
       - tautulli:/config
     ports:
