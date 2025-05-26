@@ -101,7 +101,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.10.7@sha256:71e77db4470b44729b9ad0693bd610c43817fd5a637470529e5903735f55bd5c
+    image: lscr.io/linuxserver/jellyfin:10.10.7@sha256:a5fb220ce06edb8ef056a8e2a88bc04a6608d1cb7d49b7002ff4c858945566ad
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -113,7 +113,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:7.13.0@sha256:1c701cedf2d54c4839e0b79caa7816106d40cdc0a21620b982ab4bbbb7e2180b
+    image: lscr.io/linuxserver/nzbhydra2:7.13.0@sha256:0155f900e8d7b9f3f6b05528a67e0b639925a161b564052fa23ea55419f876a8
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -123,7 +123,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *s6-service
-    image: lscr.io/linuxserver/ombi:4.47.1@sha256:dfa3a4870393147dc6b079d646dd66e49b13ac75f721606c72643f41700852d3
+    image: lscr.io/linuxserver/ombi:4.47.1@sha256:6819d910faa2c1f85cc6d61b6dbb8a8a9f963eaba8cb78151ee415e61c06c0b4
     volumes:
       - ombi:/config
     ports:
@@ -132,7 +132,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *s6-service
-    image: lscr.io/linuxserver/overseerr:1.34.0@sha256:b3f7885d699434e6409ff79298c8a65fdab5ea0fbf58fbb595c18d8a40950ef7
+    image: lscr.io/linuxserver/overseerr:1.34.0@sha256:01d48e366fe6ae89a2d09e89b7bf171bb391b8bf279c15cd0fb2efd1523692b7
     volumes:
       - overseerr:/config
     ports:
@@ -173,7 +173,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.5.1@sha256:913d57a64e9c9039c758b8f80e13226c3e226f7ffec34fbc56702421ace4c48c
+    image: lscr.io/linuxserver/sabnzbd:4.5.1@sha256:15d7fb05cb46efdb0572ffb2b3b1f6962d8b5f1cf3bb8304f39493ea81fcf066
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -218,7 +218,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.15.2@sha256:8b550f3f2615318546efedd6e850f1549551be9d4cb540e4c3ac664200c03bf7
+    image: lscr.io/linuxserver/tautulli:2.15.2@sha256:1bb2b36757c4ee8057e585a2adbb730f0bc6cc04b05ce6cc035ca39135efb88a
     volumes:
       - tautulli:/config
     ports:
