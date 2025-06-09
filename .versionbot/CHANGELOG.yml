@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-tailscale to v1.84.1-rev1
+      hash: b6d8c7f009bbf75fbf62db56d3f95d40d8aa2982
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.43
+  title: ""
+  date: 2025-06-09T13:45:31.296Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v1.37.0
       hash: afb2acee071409afe2ce998ff728cf4cbf5854bd
       body: ""
