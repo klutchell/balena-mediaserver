@@ -1,4 +1,16 @@
 - commits:
+    - subject: Drop develop prowlar tag and use latest
+      hash: 34a2615b6784ef14055c60dd26014a358cc6e5b6
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: Kyle Harding
+      nested: []
+  version: 2.13.55
+  title: ""
+  date: 2025-06-23T15:04:53.676Z
+- commits:
     - subject: Update product-os/flowzone action to v20.4.7
       hash: c3c393c07f982d859970e31f6f50f9f0aab64a4b
       body: ""
