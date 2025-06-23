@@ -1,4 +1,16 @@
 - commits:
+    - subject: Pin lscr.io/linuxserver/prowlarr Docker tag to b058be8
+      hash: a7bca66f16918282fcfdc05a1c1993c7b0c75b1c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.56
+  title: ""
+  date: 2025-06-23T15:43:02.759Z
+- commits:
     - subject: Drop develop prowlar tag and use latest
       hash: 34a2615b6784ef14055c60dd26014a358cc6e5b6
       body: ""
