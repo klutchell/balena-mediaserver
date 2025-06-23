@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.15
+      hash: 886885eabfa5fd5cd65f95a6ae71bf7cf080073b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.53
+  title: ""
+  date: 2025-06-23T05:11:53.847Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v7.15.1
       hash: 121a50bfcd16a74dcb1938e034dd7d2448481508
       body: ""
