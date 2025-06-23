@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v20.4.7
+      hash: c3c393c07f982d859970e31f6f50f9f0aab64a4b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.54
+  title: ""
+  date: 2025-06-23T05:43:34.762Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.15
       hash: 886885eabfa5fd5cd65f95a6ae71bf7cf080073b
       body: ""
