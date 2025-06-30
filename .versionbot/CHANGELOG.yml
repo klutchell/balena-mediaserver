@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v2.5.4
+      hash: 9b4a6590056e40069d0a4d8d3f36d1f2d603fa96
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.57
+  title: ""
+  date: 2025-06-30T04:20:11.581Z
+- commits:
     - subject: Pin lscr.io/linuxserver/prowlarr Docker tag to b058be8
       hash: a7bca66f16918282fcfdc05a1c1993c7b0c75b1c
       body: ""
