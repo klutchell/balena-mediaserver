@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-tailscale to v1.84.2-rev1
+      hash: 1c63bee94e758ff3c774da1ec61e1fade1613b1c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.66
+  title: ""
+  date: 2025-07-14T04:50:49.501Z
+- commits:
     - subject: Update all digest updates
       hash: 04f29acaea8ac6ec045724654f44084c70fa0b9f
       body: ""
