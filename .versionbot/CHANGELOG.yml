@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/tautulli Docker tag to v2.15.3
+      hash: f681ed8b40cef3dcda517094648caafa12840e9b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.80
+  title: ""
+  date: 2025-08-04T04:35:07.295Z
+- commits:
     - subject: Update all digest updates
       hash: fc2cc56dc27ceabbf8efe6b5640133a05d010e3c
       body: ""
