@@ -73,7 +73,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:211c9be33240405d5584457764764dfd27c00063c006e0035977115116139f1b
+    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:c4b14e52b6e011242b1fc306bddd264b290760ea9e095a66538b51af7747fc7a
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -101,7 +101,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.10.7@sha256:5ce195300807de0bdd437369031dc381a7503f8dd2a0fd8c1dc3ea4dfce932a5
+    image: lscr.io/linuxserver/jellyfin:10.10.7@sha256:2122a660a4552e7a9627d485f0048160b5c9e68028fa2b5afedbeb240f19d944
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -113,7 +113,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:7.16.0@sha256:bc6b28b497e1eedf8411aea8b3f346ce7b86b192d2400ca95d06a03c4bd2344e
+    image: lscr.io/linuxserver/nzbhydra2:7.16.0@sha256:af7846187a79159d546f3cb9f96a22ddb46e4114a8904756c512fd203cbeeb73
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -123,7 +123,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *s6-service
-    image: lscr.io/linuxserver/ombi:4.47.1@sha256:507b2f3fef18177ecc888765dbcd3352f5159ac29d11104e4bdc183826f41fbb
+    image: lscr.io/linuxserver/ombi:4.47.1@sha256:5a59dbc3884436182117a7e98c7caf951ccb9a30b79f4d48bc48c9a2372460c7
     volumes:
       - ombi:/config
     ports:
@@ -153,7 +153,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/prowlarr:1.37.0@sha256:d2462d470891c70073e31d158657a9b247b317c90238c40534d8be8f98671057
+    image: lscr.io/linuxserver/prowlarr:1.37.0@sha256:25d21c04c7cc39a706217abb77bb60b283d9eaaf16acf539c930e3c797e21f25
     volumes:
       - prowlarr:/config
       - downloads:/downloads
@@ -163,7 +163,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/radarr:5.26.2@sha256:ae89f05ad7023258730ed62f5fcca63aab1e27ee5adcca1edb55d716f7cef356
+    image: lscr.io/linuxserver/radarr:5.26.2@sha256:c2adf66bafefa781401d07d358e399c476bdffb9a179a2780bb465bda8a55a51
     volumes:
       - radarr:/config
       - downloads:/downloads
