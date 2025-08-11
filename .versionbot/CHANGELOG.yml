@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v20.5.20
+      hash: b3b282109871b698bd55b12083219d25b580041c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.85
+  title: ""
+  date: 2025-08-11T04:51:23.466Z
+- commits:
     - subject: Update lscr.io/linuxserver/plex Docker tag to v1.42.1
       hash: 994c759f8b93dd0f7ca7a231178a62636645eb12
       body: ""
