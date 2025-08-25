@@ -73,7 +73,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:c4b14e52b6e011242b1fc306bddd264b290760ea9e095a66538b51af7747fc7a
+    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:8eca8de7ed9bb4f8f1e4aabc42cfe9763ec0b96a3b8b587a19a076ac8da0169a
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -163,7 +163,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/radarr:5.26.2@sha256:c2adf66bafefa781401d07d358e399c476bdffb9a179a2780bb465bda8a55a51
+    image: lscr.io/linuxserver/radarr:5.26.2@sha256:7eb64f5af8bbe48e79bc55c0c37ca8db89b2f073a9ff0094f603916ae1df9de8
     volumes:
       - radarr:/config
       - downloads:/downloads
@@ -173,7 +173,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.5.2@sha256:52c1742ce29fbd0d83468ec1a59e80fce507adaa8b8a9cb6176f3aa97be303f4
+    image: lscr.io/linuxserver/sabnzbd:4.5.2@sha256:371fd7665789ee0c1961c4d15bbd43d85ef2af0145c0e740c505ccd4fff72d16
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
