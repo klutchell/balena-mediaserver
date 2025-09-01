@@ -101,7 +101,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.10.7@sha256:615b294ebdc3508e1529ff20f6ff2ba882c9a1abfee6dcedd2ed9e6f2243521c
+    image: lscr.io/linuxserver/jellyfin:10.10.7@sha256:104ca69d833f1b9bc0efe55f56e8202b7b374f1b38431da91757e551e26ca96e
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -113,7 +113,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:7.16.0@sha256:af7846187a79159d546f3cb9f96a22ddb46e4114a8904756c512fd203cbeeb73
+    image: lscr.io/linuxserver/nzbhydra2:7.16.0@sha256:c4c4751d5d81474d149fb483462f283ac7002c0740004acb0e6b5c23d6617049
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -183,7 +183,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/sonarr:4.0.15@sha256:1a90192952c30f9420994b2e2171083ea8cae100357de5e9eb25890efa90a6ce
+    image: lscr.io/linuxserver/sonarr:4.0.15@sha256:e00e87e0e7c24fdc992093756f120a6ab292790b6a637ff3641bf813091cd726
     volumes:
       - sonarr:/config
       - downloads:/downloads
@@ -193,7 +193,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:2.0.3@sha256:70a0c3e654e5867c2e5775b9b3ec22b8f8e2b45069289dffc63f8f3cbeb550da
+    image: lscr.io/linuxserver/syncthing:2.0.3@sha256:f9494b8b82fa7ccb3e21cfce360faf22b44394c07ad677bcce70667b7079b9ed
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
@@ -218,7 +218,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.15.3@sha256:a87d3d0a9cac97a6c1a623804e2e90929ae4d32f6a122bcf4996dcd2eaaaf2b6
+    image: lscr.io/linuxserver/tautulli:2.15.3@sha256:63a8298420139c27aede66e61a1b2f3c4ac56486f2a06ab4776ec47dfdcf312a
     volumes:
       - tautulli:/config
     ports:
