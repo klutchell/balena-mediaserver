@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sabnzbd Docker tag to v4.5.3
+      hash: 104671f57f3e393471c3b84deb4f2f21b10055b2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.99
+  title: ""
+  date: 2025-09-01T04:45:29.809Z
+- commits:
     - subject: Update all digest updates
       hash: 057c6de13c61afd7f4299034f2cd7797b4707f47
       body: ""
