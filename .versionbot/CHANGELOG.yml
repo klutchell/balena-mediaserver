@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/syncthing Docker tag to v2.0.9
+      hash: 4d9c61e5420f4796d7082cbf594d6318603e3533
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.106
+  title: ""
+  date: 2025-09-15T04:12:59.039Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr Docker tag to v5.27.5
       hash: e2e6a226ef7fdb928cf0ae82e31c8204cfeecf1d
       body: ""
