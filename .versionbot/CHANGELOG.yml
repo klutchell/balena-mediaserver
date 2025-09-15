@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/tautulli Docker tag to v2.16.0
+      hash: 80e29c8d74488ec1e1f100199b263415e069f181
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.108
+  title: ""
+  date: 2025-09-15T05:10:31.576Z
+- commits:
     - subject: Update balena-tailscale to v1.88.1
       hash: 95bdf478eeb638826210918de279f848160d993f
       body: ""
