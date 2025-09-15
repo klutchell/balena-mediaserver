@@ -73,7 +73,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:8eca8de7ed9bb4f8f1e4aabc42cfe9763ec0b96a3b8b587a19a076ac8da0169a
+    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:2c77f2bec9d9dc4cdb7d43e9a4df2188923ef3eef9bb7a09acad6bc0ee2af913
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -101,7 +101,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.10.7@sha256:104ca69d833f1b9bc0efe55f56e8202b7b374f1b38431da91757e551e26ca96e
+    image: lscr.io/linuxserver/jellyfin:10.10.7@sha256:0844d7504c018b0b0b898914a3c48d9dfa76d8f51ac49d8c66a1108944743fe4
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -113,7 +113,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:7.16.3@sha256:d8586d9ef84d243016f1590e7b8d32105e966ac43425a1ed54ba42dfb21f6f7b
+    image: lscr.io/linuxserver/nzbhydra2:7.16.3@sha256:f4d64f24914a934c8c8c1ec37cef5817adf5e4b809ba7ca6f3c45bab292371d4
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -123,7 +123,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *s6-service
-    image: lscr.io/linuxserver/ombi:4.47.1@sha256:5a59dbc3884436182117a7e98c7caf951ccb9a30b79f4d48bc48c9a2372460c7
+    image: lscr.io/linuxserver/ombi:4.47.1@sha256:4f4f26b48e99a248281ce0c154103c062501c5fe9e4c03de63fc82aa256f253a
     volumes:
       - ombi:/config
     ports:
@@ -163,7 +163,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/radarr:5.27.5@sha256:3ebb31bce86870dbcc15a5db3fba8864e302310cb2adb70476b0b64c1b3dc6dc
+    image: lscr.io/linuxserver/radarr:5.27.5@sha256:19474a623b278f558c9696a19b84640ad4aff3b2959f08904a77ffbad73ed7bd
     volumes:
       - radarr:/config
       - downloads:/downloads
