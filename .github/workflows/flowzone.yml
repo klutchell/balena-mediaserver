@@ -27,4 +27,3 @@ jobs:
     with:
       balena_slugs: "gh_klutchell/mediaserver"
       toggle_auto_merge: false
-      token_retrieval_mode: user
