@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v7.19.2
+      hash: 621fa3bc3d5be11b058f8dc5525cc889c0e1215b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.116
+  title: ""
+  date: 2025-09-29T05:11:11.861Z
+- commits:
     - subject: Update balena-tailscale to v1.88.3
       hash: aca1e4abea81b7cc48aa8e30d960fbee09bab72c
       body: ""
