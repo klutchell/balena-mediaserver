@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: 9278e04dfc1e9cef6a48d6624580fc2dfb660d0e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.118
+  title: ""
+  date: 2025-09-29T06:12:34.611Z
+- commits:
     - subject: Update lscr.io/linuxserver/plex Docker tag to v1.42.2
       hash: b7aeae6ff1dd569d0bcd87c7a01ffdab79ba9e3f
       body: ""
