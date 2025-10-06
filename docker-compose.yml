@@ -73,7 +73,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:187467acf99e5de56f4ca1ad1e047a9a3ae4a9cc0e6deee31007242fb1749c00
+    image: lscr.io/linuxserver/duplicati:2.1.0@sha256:6f9d58c8183dcfee25f0a36077b14ef278f06e51c47aa4d44c51f1d5360f44a9
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -101,7 +101,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.10.7@sha256:2e4a4c271afa1488b8c2a7ee7aaf301e82cd0ce0855be023095ad143ed52be75
+    image: lscr.io/linuxserver/jellyfin:10.10.7@sha256:648f92792d822526a99a477361f2f127b31fa1da0aea301a9174e8b95f9ad8dc
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -113,7 +113,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:7.19.2@sha256:19f0fc7471ffe4ab3bde3ee6e3e4f691c165c41611e801c2a59c81461062cb2b
+    image: lscr.io/linuxserver/nzbhydra2:7.19.2@sha256:8c0debf2a876289631931f80352ff86106e1de20ea7317f510c8383988d76a0b
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -123,7 +123,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *s6-service
-    image: lscr.io/linuxserver/ombi:4.47.1@sha256:218d7f17ad284f35e2a7887c95f106da4d192df1d846ee22abcdbbdd30a7dfd9
+    image: lscr.io/linuxserver/ombi:4.47.1@sha256:c4ed349ce5fe893c522ee8c5760ca1522c90e628c85c2c1752070cb0f6f2067f
     volumes:
       - ombi:/config
     ports:
@@ -132,7 +132,7 @@ services:
   # https://docs.linuxserver.io/images/docker-overseerr
   overseerr:
     <<: *s6-service
-    image: lscr.io/linuxserver/overseerr:1.34.0@sha256:bad11167104f7b0ff0beb924c9568bb7ea991c225949a209d0b8b00a5434479d
+    image: lscr.io/linuxserver/overseerr:1.34.0@sha256:e0761ee4071dcf8f0515d492711f8671c025814dc4976764422185b53ee3778c
     volumes:
       - overseerr:/config
     ports:
@@ -141,7 +141,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.42.2@sha256:fb775e66e1dfcac73d1a909636b9884d753849c4846c262d9471cb574f75d2d7
+    image: lscr.io/linuxserver/plex:1.42.2@sha256:57c690bb1a54685e626b730b01d8b40e25ddd468df1cf63374d85b0b16490f5c
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -153,7 +153,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/prowlarr:2.0.5@sha256:856c93bab72a6a41a23ff60bab48554135c044a456f40909307011dea8ddeafb
+    image: lscr.io/linuxserver/prowlarr:2.0.5@sha256:fa81e471a7e46a24b121838563a10d468cf82eecd1587a464c6df4927ecc3248
     volumes:
       - prowlarr:/config
       - downloads:/downloads
@@ -163,7 +163,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/radarr:5.27.5@sha256:19474a623b278f558c9696a19b84640ad4aff3b2959f08904a77ffbad73ed7bd
+    image: lscr.io/linuxserver/radarr:5.27.5@sha256:f174546a0ad7eb9a9170e4142bef6f74ef3ebfe6209528fded40630369406dc0
     volumes:
       - radarr:/config
       - downloads:/downloads
@@ -173,7 +173,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.5.3@sha256:26b99fbc22f3e8ba3e1b3a8803a6b807974126e0855e786ae3275b534de51b7f
+    image: lscr.io/linuxserver/sabnzbd:4.5.3@sha256:65aa549ef6ef694ad15f19af1f290847ea6898707a330142c9763bcc5981511b
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
