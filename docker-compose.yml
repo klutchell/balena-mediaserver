@@ -183,7 +183,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/sonarr:4.0.15@sha256:f3a7fda30a0133b24b04857a21e7a81b97ed2722e147503a47ad0b4fbc7c7694
+    image: lscr.io/linuxserver/sonarr:4.0.15@sha256:69d72f525bc181728c8f4788992a28ae1cd797ddd978f48bc2e271c7acd02e9b
     volumes:
       - sonarr:/config
       - downloads:/downloads
@@ -193,7 +193,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:2.0.10@sha256:e5a6e179dab7452cd93768965b5c71a840448e1291b1f781426429bbb0a128c2
+    image: lscr.io/linuxserver/syncthing:2.0.10@sha256:a3f2eb7c61cae5d19605b726a9cd5f8a7b602f529df504edce99b46f42c91647
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
@@ -218,7 +218,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.16.0@sha256:fb4002b7e69c4a20d11e3504c4eebf3cf66956aa1cff740e07fede7a1ea52757
+    image: lscr.io/linuxserver/tautulli:2.16.0@sha256:173e2a76d7e83d31d0dc002e569a1a476cf6d474a65a6b1acc7dbceb41183eb2
     volumes:
       - tautulli:/config
     ports:
