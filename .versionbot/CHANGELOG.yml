@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr Docker tag to v5.28.0
+      hash: 72d65722ea17d3cc6797a8dcbeeda7b947657690
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.133
+  title: ""
+  date: 2025-10-20T06:13:24.634Z
+- commits:
     - subject: Update balena-tailscale to v1.88.3-rev3
       hash: dfc3546ca9ae9584e775e39367d6fc23548327af
       body: ""
