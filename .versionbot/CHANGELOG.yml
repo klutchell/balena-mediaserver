@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/duplicati Docker tag to v2.2.0
+      hash: 70c3e7d1b878e3a258c658fbefbcb8bb2107cdd9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.141
+  title: ""
+  date: 2025-10-27T07:11:58.097Z
+- commits:
     - subject: Update lscr.io/linuxserver/jellyfin Docker tag to v10.11.1
       hash: dfc51f7d03fd1a7b90856cfac1f29c53d668bb87
       body: ""
