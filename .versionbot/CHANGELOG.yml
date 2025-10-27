@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/jellyfin Docker tag to v10.11.1
+      hash: dfc51f7d03fd1a7b90856cfac1f29c53d668bb87
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.140
+  title: ""
+  date: 2025-10-27T06:50:29.608Z
+- commits:
     - subject: Update all digest updates
       hash: 0b4c0a9397a484457868646ef0cf67de118e8a5e
       body: ""
