@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: 17bc8b9f4976050fb38723f0a99b5e8609133b63
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.143
+  title: ""
+  date: 2025-11-03T05:42:04.588Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v2.7.3
       hash: a07921bce26218268032ef78e3c695ef89d2fe1e
       body: ""
