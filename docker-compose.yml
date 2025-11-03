@@ -73,7 +73,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:edefb29cc6e7e505e70ad2190a0854b9a2d1ea585f365996cbf90e8ee6829fe1
+    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:8c9bf31dac0b40a30c0c9fae5496654e43a42ac34b9fe751432a5267f38e301f
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -141,7 +141,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.42.2@sha256:b13c1a01150225d88085214dc3deabb41985fa5427766c0126c84780d156b9a9
+    image: lscr.io/linuxserver/plex:1.42.2@sha256:a59133e5b94b3ca19158e4ab272657c77c62dc9abdbebe1172b7657da138badb
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -173,7 +173,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.5.5@sha256:37fc318dc632106eac00f096661f43ca513793bf51913bcbd989ba921b3409c8
+    image: lscr.io/linuxserver/sabnzbd:4.5.5@sha256:6e6e7abf7a87436ffccd7df41e64a28df9c530e2be5467339a3f5f0518922b49
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -218,7 +218,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.16.0@sha256:661569466728b2818150adef5fe0bba4db4fbfdcece8cf4b868f686f83d8cff2
+    image: lscr.io/linuxserver/tautulli:2.16.0@sha256:f8b84be159b6e413db2b60426154522ceaf33d7190489c160de415501d5e722e
     volumes:
       - tautulli:/config
     ports:
