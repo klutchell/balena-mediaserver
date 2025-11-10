@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: 6d51e8192461ce49e231009e1952f32a7d259c3b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.150
+  title: ""
+  date: 2025-11-10T06:49:35.450Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.16
       hash: 56b7f35bfe6de6a81cfd99617f134573604334fa
       body: ""
