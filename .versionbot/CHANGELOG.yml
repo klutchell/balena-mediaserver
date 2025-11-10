@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.16
+      hash: 56b7f35bfe6de6a81cfd99617f134573604334fa
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.149
+  title: ""
+  date: 2025-11-10T06:12:34.661Z
+- commits:
     - subject: Update balena-tailscale to v1.90.6-rev1
       hash: 5491b7678902d6f15f0bd9150c44605f726bf1c2
       body: ""
