@@ -73,7 +73,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:8c9bf31dac0b40a30c0c9fae5496654e43a42ac34b9fe751432a5267f38e301f
+    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:ed6cee6ea5d9ebe28f7eae68adb8a8760869d316d42c2a56eec489dbf2f95232
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -113,7 +113,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:7.19.2@sha256:550040a679d791163bfb9cf7ae94a84239ecfd8101015d3695fd765bb976ac7c
+    image: lscr.io/linuxserver/nzbhydra2:7.19.2@sha256:326fb29b9ae59fba3a09044bea71f08e032b442c76df1df88b397b340225a74f
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -123,7 +123,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *s6-service
-    image: lscr.io/linuxserver/ombi:4.47.1@sha256:701c9801649b2245335b9a99f1dd05d34d1718f1f52bfc021483d1712c83d915
+    image: lscr.io/linuxserver/ombi:4.47.1@sha256:edd574de14131cfc1e641904684ff7aa7a98defedd42b8cfdff6159cb2917db1
     volumes:
       - ombi:/config
     ports:
