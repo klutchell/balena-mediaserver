@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/syncthing Docker tag to v2.0.11
+      hash: 3fef2956cf6ef8f06f0c2f04ba6e06c800da6f23
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.153
+  title: ""
+  date: 2025-11-10T08:13:00.309Z
+- commits:
     - subject: Update jc21/nginx-proxy-manager Docker tag to v2.13.2
       hash: 239c1ac494ed069390bcec9f1bfb95e16c1dd9e4
       body: ""
