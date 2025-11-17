@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr Docker tag to v6
+      hash: ecdcdc08e36c55e6d8bf73752a2a93dc6b81008a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.159
+  title: ""
+  date: 2025-11-17T20:26:10.676Z
+- commits:
     - subject: Update lscr.io/linuxserver/jellyfin Docker tag to v10.11.3
       hash: 287ebfc9f7dee8e54cb1be157fab165e992d87f1
       body: ""
