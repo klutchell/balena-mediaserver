@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update jc21/nginx-proxy-manager Docker tag to v2.13.4
+      hash: bbc2f3b492296ee6e2eb93baf13e0cf739036bb0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.157
+  title: ""
+  date: 2025-11-17T06:49:41.330Z
+- commits:
     - subject: Update product-os/flowzone action to v22.5.6
       hash: f2ce32d0ee2f577c723ae4a9af02c312fc60d3ea
       body: ""
