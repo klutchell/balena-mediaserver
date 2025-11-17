@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v8
+      hash: d4b9902df0962a12633698282edcf71cbae61788
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.160
+  title: ""
+  date: 2025-11-17T20:41:36.234Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr Docker tag to v6
       hash: ecdcdc08e36c55e6d8bf73752a2a93dc6b81008a
       body: ""
