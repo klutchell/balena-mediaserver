@@ -61,7 +61,7 @@ services:
   # https://nginxproxymanager.com/
   nginx:
     <<: *s6-service
-    image: jc21/nginx-proxy-manager:2.13.2@sha256:342e8cfaa072e5dcdf26030279cbcd7e993b7926cb49018f4872e8cc72e87288
+    image: jc21/nginx-proxy-manager:2.13.4@sha256:11cf02e3c4f1fa2fe12d4bd754e3d47bd42ca3a643e73d3f4e4b6cd5799bcf77
     volumes:
       - proxy:/data
       - letsencrypt:/etc/letsencrypt
