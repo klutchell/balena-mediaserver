@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update jc21/nginx-proxy-manager Docker tag to v2.13.5
+      hash: ec6c56f88cdb2dd3a2ff2a00464267da36f586d2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.165
+  title: ""
+  date: 2025-11-24T07:11:19.151Z
+- commits:
     - subject: Update balena-tailscale to v1.90.8
       hash: f61ef249e0219fc50fa1f1dd7c7eadc531663854
       body: ""
