@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v22.6.4
+      hash: faa0abeebc82510afba96c72201432a4ada4f252
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.170
+  title: ""
+  date: 2025-12-01T07:11:15.507Z
+- commits:
     - subject: Update lscr.io/linuxserver/jellyfin Docker tag to v10.11.4
       hash: 9d26c04324bee8210e9f4bf1796a082ab5fd75e7
       body: ""
