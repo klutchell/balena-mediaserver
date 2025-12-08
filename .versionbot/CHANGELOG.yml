@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-tailscale to v1.90.9-rev3
+      hash: 1e68fe92b7ed3a9d640c90629c9af0d9e56245b8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.178
+  title: ""
+  date: 2025-12-08T08:49:15.237Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing Docker tag to v2.0.12
       hash: fc88cff717422b433ba8dfdb053a41463f193097
       body: ""
