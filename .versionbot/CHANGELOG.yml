@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/duplicati:2.2.0 Docker digest to e8102af
+      hash: 6d195ebd214a21b46a07823191a7fbc83ddfb35a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.13.175
+  title: ""
+  date: 2025-12-08T07:12:34.209Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v2.8.2
       hash: 210ee8c4c7491fc9b8d8c17f36443cd0b24fdbc6
       body: ""
