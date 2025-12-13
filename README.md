@@ -73,6 +73,55 @@ Read more at <https://tailscale.com/blog/docker-tailscale-guide> and <https://ta
 
 Read more at <https://nginxproxymanager.com/>
 
+#### Via Docktail
+
+Docktail automatically exposes services via Tailscale based on Docker labels.
+Before using Docktail, configure your Tailscale admin console at <https://login.tailscale.com/admin/services>.
+
+1. Create service definitions (Services → Add service):
+
+   Create a service for each application you want to expose with port `443`:
+
+   - `duplicati-mediaserver`
+   - `jellyfin`
+   - `netdata-mediaserver`
+   - `nginx-mediaserver`
+   - `nzbhydra`
+   - `ombi`
+   - `overseerr`
+   - `plex`
+   - `prowlarr`
+   - `radarr`
+   - `sabnzbd`
+   - `sonarr`
+   - `syncthing-mediaserver`
+   - `tautulli`
+
+2. (Optional) Configure service tags:
+
+   - Navigate to Access Controls
+   - Add tags for service identification (e.g., `tag:mediaserver-service`)
+   - Tag your Docker host (e.g., `tag:mediaserver`)
+
+3. (Recommended) Enable auto-approval:
+
+   - Navigate to Access Controls and edit your ACL policy
+   - Add auto-approvers to skip manual approval for service advertisements:
+
+   ```json
+   {
+     "autoApprovers": {
+       "services": {
+         "tag:mediaserver-service": ["tag:mediaserver"]
+       }
+     }
+   }
+   ```
+
+   - This allows devices tagged `tag:mediaserver` to automatically advertise services tagged `tag:mediaserver-service`
+
+Read more at <https://github.com/marvinvr/docktail> and <https://tailscale.com/kb/1552/tailscale-services>
+
 ## Services
 
 Each service below includes its forward host and port, along with basic setup instructions.\

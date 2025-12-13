@@ -7,9 +7,3 @@ FROM bh.cr/gh_klutchell/tailscale-armv7hf/7c9c4b0e1a10939a4ed39dfac2b45af2:1.90.
 
 # hadolint ignore=DL3006
 FROM balena-tailscale-${BALENA_ARCH}
-
-COPY serve.json /config/serve.json
-# Accepts a JSON file to programmatically configure Serve and Funnel functionality.
-# Use tailscale serve status --json to export your current configuration in the correct format.
-# https://tailscale.com/kb/1282/docker#ts_serve_config
-ENV TS_SERVE_CONFIG "/config/serve.json"
