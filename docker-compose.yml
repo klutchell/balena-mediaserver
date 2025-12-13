@@ -95,7 +95,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:e8102af032b42636fe85a2633f4cc9c074f4694ab850e3ac419aef12e602094d
+    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:c4585615ae6106cf5046c818f710a081d58b10aefeb79b549b6fc51650abf30b
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -131,7 +131,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.11.4@sha256:234ea8d508b2cba26054d0dac9d4c0353435dce483e8b266947d473629774559
+    image: lscr.io/linuxserver/jellyfin:10.11.4@sha256:5cdc58132f8ef832a8910f732d3fe0144b4f9d091fe6f5409fb1b75d787c1be8
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -205,7 +205,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.42.2@sha256:ab81c7313fb5dc4d1f9562e5bbd5e5877a8a3c5ca6b9f9fff3437b5096a2b123
+    image: lscr.io/linuxserver/plex:1.42.2@sha256:7cc7874ad35b105fe1fe4d99ef27be9c5eb2f4115ccf91af5a7283cae0024599
     devices:
       - /dev/dri:/dev/dri
     volumes:
