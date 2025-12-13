@@ -1,4 +1,11 @@
 {
   "extends": ["github>klutchell/renovate-config"],
-  "commitBody": "Change-type: patch"
+  "commitBody": "Change-type: patch",
+  "packageRules": [
+    {
+      "matchDatasources": ["docker"],
+      "matchPackageNames": ["lscr.io/**"],
+      "allowedVersions": "!/^2021\\./"
+    }
+  ]
 }
