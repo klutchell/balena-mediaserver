@@ -1,4 +1,16 @@
 - commits:
+    - subject: Pin ghcr.io/marvinvr/docktail Docker tag to 9a83608
+      hash: 0cdff72c1cca6ae1c9c729473eb882c22a60d00b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.14.3
+  title: ""
+  date: 2025-12-13T18:10:56.602Z
+- commits:
     - subject: Update product-os/flowzone action to v22.6.23
       hash: 7fd4b7fead147c7615e65cac4bd09d40af2f62e6
       body: ""
