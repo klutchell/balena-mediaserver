@@ -1,4 +1,18 @@
 - commits:
+    - subject: "Docktail: Define and serve tailscale services"
+      hash: ab19993971f992d10a534534d29ff63268f0c94a
+      body: ""
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 2.14.0
+  title: ""
+  date: 2025-12-13T16:22:04.117Z
+- commits:
     - subject: Update balena-tailscale to v1.90.9-rev3
       hash: 1e68fe92b7ed3a9d640c90629c9af0d9e56245b8
       body: ""
