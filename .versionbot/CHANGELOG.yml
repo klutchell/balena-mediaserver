@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/jellyfin Docker tag to v10.11.5
+      hash: be4669b0c0c5cc4a15319b2160ad954e843fe6ee
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.14.7
+  title: ""
+  date: 2025-12-15T06:14:09.691Z
+- commits:
     - subject: Update balena-tailscale to v1.92.2
       hash: 2a4cab679bd786905dbbcd1859db84681f497808
       body: ""
