@@ -348,7 +348,7 @@ services:
 
   # https://hub.docker.com/r/netdata/netdata
   netdata:
-    image: netdata/netdata:v2.8.2@sha256:2b41c488661742eac7e57d1335203b13fe08bc8f9f4806a8d1718640b2f64d28
+    image: netdata/netdata:v2.8.4@sha256:321fb7c3f854401a329798392cd681367fa528e95a7dfa7d539546d83ae1dd18
     restart: "on-failure"
     privileged: true
     cap_add:
