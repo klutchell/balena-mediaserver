@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v2.8.4
+      hash: 84e771476065816f928c286c828ec2a47eb6725e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.14.8
+  title: ""
+  date: 2025-12-22T05:14:08.748Z
+- commits:
     - subject: Update lscr.io/linuxserver/jellyfin Docker tag to v10.11.5
       hash: be4669b0c0c5cc4a15319b2160ad954e843fe6ee
       body: ""
