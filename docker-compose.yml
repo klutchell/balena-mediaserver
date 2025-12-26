@@ -248,7 +248,7 @@ services:
   # https://dictionarry.dev/profilarr-setup/installation
   profilarr:
     <<: *s6-service
-    image: santiagosayshey/profilarr:latest@sha256:a47ad66889a4c78801c5caaf06a7524173ee398e7b8907146f628dbb77c73ece
+    image: santiagosayshey/profilarr:v1.1.3@sha256:a47ad66889a4c78801c5caaf06a7524173ee398e7b8907146f628dbb77c73ece
     environment:
       <<: *s6-environment
     volumes:
