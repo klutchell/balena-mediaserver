@@ -30,6 +30,7 @@ volumes:
   ombi: {}
   overseerr: {}
   plex: {}
+  profilarr: {}
   prowlarr: {}
   proxy: {}
   radarr: {}
@@ -110,6 +111,7 @@ services:
       - nzbhydra:/volumes/nzbhydra
       - jellyfin:/volumes/jellyfin
       - prowlarr:/volumes/prowlarr
+      - profilarr:/volumes/profilarr
       - ombi:/volumes/ombi
       - overseerr:/volumes/overseerr
       - sabnzbd:/volumes/sabnzbd
@@ -242,6 +244,26 @@ services:
       docktail.service.service-port: 443
       docktail.service.service-protocol: https
 
+  # https://github.com/Dictionarry-Hub/profilarr
+  # https://dictionarry.dev/profilarr-setup/installation
+  profilarr:
+    <<: *s6-service
+    image: santiagosayshey/profilarr:latest@sha256:a47ad66889a4c78801c5caaf06a7524173ee398e7b8907146f628dbb77c73ece
+    environment:
+      <<: *s6-environment
+    volumes:
+      - profilarr:/config
+    ports:
+      - 127.0.0.1:6868:6868/tcp
+    labels:
+      # https://github.com/marvinvr/docktail
+      docktail.service.enable: true
+      docktail.service.name: profilarr
+      docktail.service.port: 6868
+      docktail.service.protocol: http
+      docktail.service.service-port: 443
+      docktail.service.service-protocol: https
+
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
@@ -309,6 +331,7 @@ services:
       - nzbhydra:/volumes/nzbhydra
       - jellyfin:/volumes/jellyfin
       - prowlarr:/volumes/prowlarr
+      - profilarr:/volumes/profilarr
       - ombi:/volumes/ombi
       - overseerr:/volumes/overseerr
       - sabnzbd:/volumes/sabnzbd
