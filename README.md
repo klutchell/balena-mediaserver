@@ -20,6 +20,7 @@ Manage your media server on balena.io
   - [Ombi](#ombi)
   - [Overseerr](#overseerr)
   - [Plex](#plex)
+  - [Profilarr](#profilarr)
   - [Prowlarr](#prowlarr)
   - [Radarr](#radarr)
   - [Sabnzbd](#sabnzbd)
@@ -90,6 +91,7 @@ Before using Docktail, configure your Tailscale admin console at <https://login.
    - `ombi`
    - `overseerr`
    - `plex`
+   - `profilarr`
    - `prowlarr`
    - `radarr`
    - `sabnzbd`
@@ -184,6 +186,14 @@ Read more at <https://docs.linuxserver.io/images/docker-overseerr>
 - Create libraries using folders in `/downloads/`
 
 Read more at <https://docs.linuxserver.io/images/docker-plex>
+
+### Profilarr
+
+- Forward host and port: `http://profilarr:6868`
+- Configuration management tool for Radarr/Sonarr
+- Automates importing and version control of custom formats and quality profiles
+
+Read more at <https://dictionarry.dev/profilarr-setup/installation>
 
 ### Prowlarr
 
