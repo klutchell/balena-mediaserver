@@ -1,4 +1,25 @@
 - commits:
+    - subject: Add profilarr service for Radarr/Sonarr configuration management
+      hash: 8bd7847033553c854b455cbe86518aa0c7a619b9
+      body: |
+        Add profilarr service which provides configuration management for
+        Radarr and Sonarr. This tool automates importing and version control
+        of custom formats and quality profiles.
+
+        - Add profilarr container using santiagosayshey/profilarr:v1.1.3
+        - Add volume for persistent configuration storage
+        - Add DISABLE environment variable support
+        - Add docktail labels for service discovery
+        - Update README with profilarr documentation
+      footer:
+        Change-type: minor
+        change-type: minor
+      author: Claude
+      nested: []
+  version: 2.15.0
+  title: ""
+  date: 2025-12-26T22:55:31.903Z
+- commits:
     - subject: Update product-os/flowzone action to v22.7.2
       hash: b2694355244baaf6b3a98e4aa5a5eac90d18a38e
       body: ""
