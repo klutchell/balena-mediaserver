@@ -96,7 +96,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:0994aa6da740efe41d4070cc618d525b5b42a13645896344ca0eeafab5f3bd65
+    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:82cf812454c74e4beda15f2565522c892fee4a501a7425a0def29d38c87b0c66
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -133,7 +133,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.11.5@sha256:6e614901a5e9d04f03b2b84363fcc69285635d4149e23e4cac30b1c9a8ccddac
+    image: lscr.io/linuxserver/jellyfin:10.11.5@sha256:ed5dc797d12089271e0e61a740cbf9626c4e513400ca2d96c54d35500eeb907c
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -155,7 +155,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:8.1.2@sha256:fd830b3b1a36175eb39c895b5188ef1d531c9b7ea395bd3e37978f12aca94302
+    image: lscr.io/linuxserver/nzbhydra2:8.1.2@sha256:ccd78c32968e1a49df24036eb35eca28ef09a0a98c6f7cd74d7335c57511653b
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -173,7 +173,7 @@ services:
   # https://docs.linuxserver.io/images/docker-ombi
   ombi:
     <<: *s6-service
-    image: lscr.io/linuxserver/ombi:4.47.1@sha256:b904acba5e70dc30572e144aa2afaaef2b65a37fa023235a784a0f0dcd30da2a
+    image: lscr.io/linuxserver/ombi:4.47.1@sha256:8bf174e9675736d1ef39ead16e3012282962f72a7272284069f4c2a343d23bed
     volumes:
       - ombi:/config
     ports:
@@ -207,7 +207,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.42.2@sha256:7cc7874ad35b105fe1fe4d99ef27be9c5eb2f4115ccf91af5a7283cae0024599
+    image: lscr.io/linuxserver/plex:1.42.2@sha256:1720efa8e919a724ff3003cce7c1c0ae91a54e097ca3c8f6713a780c6fd73432
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -248,7 +248,7 @@ services:
   # https://dictionarry.dev/profilarr-setup/installation
   profilarr:
     restart: "on-failure"
-    image: santiagosayshey/profilarr:v1.1.3@sha256:a47ad66889a4c78801c5caaf06a7524173ee398e7b8907146f628dbb77c73ece
+    image: santiagosayshey/profilarr:v1.1.3@sha256:c8ad91a8e5d60b3816321b3a1f68332b29a23f910f6bd2c2d7b4a83f881f032f
     tmpfs:
       - /tmp
     entrypoint:
