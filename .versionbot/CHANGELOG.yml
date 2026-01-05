@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/jellyfin:10.11.5 Docker digest to 747bc67
+      hash: 942c22c93d76aa61c1e9a9a28003cf6dacc0cd32
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.15.3
+  title: ""
+  date: 2026-01-05T05:21:01.142Z
+- commits:
     - subject: Update all digest updates
       hash: 56d80728b7f9cee99f8ecfda141c25e50151e377
       body: ""
