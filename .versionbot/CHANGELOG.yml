@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-tailscale to v1.92.5
+      hash: 5e8df5c401e4273eff9d1a9dcc5d7af08cc84b08
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.15.8
+  title: ""
+  date: 2026-01-12T07:15:14.028Z
+- commits:
     - subject: Update lscr.io/linuxserver/ombi Docker tag to v4.53.4
       hash: 094ae8da0ce9aa692ecca5ba74d006cfa6da9955
       body: ""
