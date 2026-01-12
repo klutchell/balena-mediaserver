@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/ombi Docker tag to v4.53.4
+      hash: 094ae8da0ce9aa692ecca5ba74d006cfa6da9955
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.15.7
+  title: ""
+  date: 2026-01-12T06:50:16.027Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v8.2.2
       hash: 07f0724ba69c448e15ee71af17700e4013e1c66a
       body: ""
