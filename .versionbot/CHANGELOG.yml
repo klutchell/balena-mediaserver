@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v8.2.3
+      hash: 71d27d74e693400da00c75d21db4b1d44c7e701e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.15.15
+  title: ""
+  date: 2026-01-19T07:45:28.571Z
+- commits:
     - subject: Update lscr.io/linuxserver/jellyfin Docker tag to v10.11.6
       hash: e7fef0397df91e9b88a57ad633f18eca032339d4
       body: ""
