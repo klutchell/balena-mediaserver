@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update ghcr.io/marvinvr/docktail Docker tag to v0.6.1
+      hash: 63702cbf5bebf7b76b325d953ac5e7d1dee737ed
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.15.11
+  title: ""
+  date: 2026-01-19T05:48:02.816Z
+- commits:
     - subject: Update jc21/nginx-proxy-manager Docker tag to v2.13.6
       hash: 155a58d72ddaf6c7e0cfcb44b1fb353ab5a9cf30
       body: ""
