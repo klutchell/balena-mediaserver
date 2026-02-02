@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex Docker tag to v1.43.0
+      hash: cc9d5d7d688f3c853471733bd3354ca8ecae0fb1
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.15.26
+  title: ""
+  date: 2026-02-02T07:51:40.142Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v8.4.1
       hash: 2ec83aa1f7a2c8629b29b08eacbd3b69e776b991
       body: ""
