@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update santiagosayshey/profilarr Docker tag to v1.1.4
+      hash: f155878fe38945122189468e401276460bf2a69a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.15.24
+  title: ""
+  date: 2026-02-02T06:53:48.116Z
+- commits:
     - subject: Update balena-tailscale to v1.94.1-rev1
       hash: f9d74477f7b936f591b7b90ece5d2ae6b820d660
       body: ""
