@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-tailscale to v1.94.1-rev2
+      hash: 0859580609e5d50d7cc719033a8089c2ad2e86d5
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.15.32
+  title: ""
+  date: 2026-02-09T07:32:01.862Z
+- commits:
     - subject: Update jc21/nginx-proxy-manager Docker tag to v2.13.7
       hash: 066fb05fddbbfa0172bfaade4b6b14ed9c0ee26c
       body: ""
