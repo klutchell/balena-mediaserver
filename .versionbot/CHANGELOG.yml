@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/syncthing Docker tag to v2.0.14
+      hash: edf8fe6d9a62b9db2e0318b9f017155f06bc7fdd
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 2.15.29
+  title: ""
+  date: 2026-02-09T06:01:39.753Z
+- commits:
     - subject: Update product-os/flowzone action to v22.7.23
       hash: 333efd7d9954b397705ae1d5babfc7345a7c8e15
       body: ""
