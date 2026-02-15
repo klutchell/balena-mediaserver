@@ -1,4 +1,34 @@
 - commits:
+    - subject: "BREAKING: Remove OMBI media request service"
+      hash: 85dbe6e0b2706bbad9a3b96d592f6a04611a6a59
+      body: |
+        This is another media request service I have never used.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+    - subject: "BREAKING: remove overseerr service"
+      hash: 5357347e4c708e705af8befda8ff0e9b98f0f775
+      body: |
+        Overseerr is merging with jellyseerr to become Seerr
+        See <https://docs.seerr.dev/blog/seerr-release>
+
+        However I don't currently use any request services so if there
+        is demand we can add it back as Seerr.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 3.0.0
+  title: ""
+  date: 2026-02-15T18:58:24.092Z
+- commits:
     - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1
       hash: 32632c14d8c6fc816b204fca4df5c4996f9c9103
       body: ""
