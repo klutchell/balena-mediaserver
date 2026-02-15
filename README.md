@@ -17,7 +17,6 @@ Manage your media server on balena.io
   - [Netdata](#netdata)
   - [Nginx](#nginx)
   - [Nzbhydra](#nzbhydra)
-  - [Ombi](#ombi)
   - [Plex](#plex)
   - [Profilarr](#profilarr)
   - [Prowlarr](#prowlarr)
@@ -87,7 +86,6 @@ Before using Docktail, configure your Tailscale admin console at <https://login.
    - `netdata-mediaserver`
    - `nginx-mediaserver`
    - `nzbhydra`
-   - `ombi`
    - `plex`
    - `profilarr`
    - `prowlarr`
@@ -164,12 +162,6 @@ Read more at <https://nginxproxymanager.com/>
 - Forward host and port: `http://nzbhydra:5076`
 
 Read more at <https://docs.linuxserver.io/images/docker-nzbhydra>
-
-### Ombi
-
-- Forward host and port: `http://ombi:3579`
-
-Read more at <https://docs.linuxserver.io/images/docker-ombi>
 
 ### Plex
 

@@ -27,7 +27,6 @@ volumes:
   netdatalib: {}
   netdatacache: {}
   nzbhydra: {}
-  ombi: {}
   plex: {}
   profilarr: {}
   prowlarr: {}
@@ -111,7 +110,6 @@ services:
       - jellyfin:/volumes/jellyfin
       - prowlarr:/volumes/prowlarr
       - profilarr:/volumes/profilarr
-      - ombi:/volumes/ombi
       - sabnzbd:/volumes/sabnzbd
       - downloads:/volumes/downloads
       - proxy:/volumes/proxy
@@ -164,23 +162,6 @@ services:
       docktail.service.enable: true
       docktail.service.name: nzbhydra
       docktail.service.port: 5076
-      docktail.service.protocol: http
-      docktail.service.service-port: 443
-      docktail.service.service-protocol: https
-
-  # https://docs.linuxserver.io/images/docker-ombi
-  ombi:
-    <<: *s6-service
-    image: lscr.io/linuxserver/ombi:4.53.4@sha256:fcad7b900ab2bc910f8271435953d99fd8dd4a1d877d09e478c9183bd4591193
-    volumes:
-      - ombi:/config
-    ports:
-      - 127.0.0.1:3579:3579/tcp
-    labels:
-      # https://github.com/marvinvr/docktail
-      docktail.service.enable: true
-      docktail.service.name: ombi
-      docktail.service.port: 3579
       docktail.service.protocol: http
       docktail.service.service-port: 443
       docktail.service.service-protocol: https
@@ -323,7 +304,6 @@ services:
       - jellyfin:/volumes/jellyfin
       - prowlarr:/volumes/prowlarr
       - profilarr:/volumes/profilarr
-      - ombi:/volumes/ombi
       - sabnzbd:/volumes/sabnzbd
       - downloads:/volumes/downloads
       - proxy:/volumes/proxy
