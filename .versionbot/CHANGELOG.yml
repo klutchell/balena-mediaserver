@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.2.0
+      hash: 99d63699a9e0d3c6722b55a938cc0d6460a73e93
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.1
+  title: ""
+  date: 2026-02-15T21:43:43.275Z
+- commits:
     - subject: "BREAKING: Remove OMBI media request service"
       hash: 85dbe6e0b2706bbad9a3b96d592f6a04611a6a59
       body: |
