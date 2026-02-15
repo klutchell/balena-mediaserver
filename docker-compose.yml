@@ -28,7 +28,6 @@ volumes:
   netdatacache: {}
   nzbhydra: {}
   ombi: {}
-  overseerr: {}
   plex: {}
   profilarr: {}
   prowlarr: {}
@@ -113,7 +112,6 @@ services:
       - prowlarr:/volumes/prowlarr
       - profilarr:/volumes/profilarr
       - ombi:/volumes/ombi
-      - overseerr:/volumes/overseerr
       - sabnzbd:/volumes/sabnzbd
       - downloads:/volumes/downloads
       - proxy:/volumes/proxy
@@ -183,23 +181,6 @@ services:
       docktail.service.enable: true
       docktail.service.name: ombi
       docktail.service.port: 3579
-      docktail.service.protocol: http
-      docktail.service.service-port: 443
-      docktail.service.service-protocol: https
-
-  # https://docs.linuxserver.io/images/docker-overseerr
-  overseerr:
-    <<: *s6-service
-    image: lscr.io/linuxserver/overseerr:1.34.0@sha256:987a6bd200a88501a5fa0cfa0c3179acd83e5b0af986da1537b70f44cfe059b8
-    volumes:
-      - overseerr:/config
-    ports:
-      - 127.0.0.1:5055:5055/tcp
-    labels:
-      # https://github.com/marvinvr/docktail
-      docktail.service.enable: true
-      docktail.service.name: overseerr
-      docktail.service.port: 5055
       docktail.service.protocol: http
       docktail.service.service-port: 443
       docktail.service.service-protocol: https
@@ -343,7 +324,6 @@ services:
       - prowlarr:/volumes/prowlarr
       - profilarr:/volumes/profilarr
       - ombi:/volumes/ombi
-      - overseerr:/volumes/overseerr
       - sabnzbd:/volumes/sabnzbd
       - downloads:/volumes/downloads
       - proxy:/volumes/proxy

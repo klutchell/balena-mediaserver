@@ -18,7 +18,6 @@ Manage your media server on balena.io
   - [Nginx](#nginx)
   - [Nzbhydra](#nzbhydra)
   - [Ombi](#ombi)
-  - [Overseerr](#overseerr)
   - [Plex](#plex)
   - [Profilarr](#profilarr)
   - [Prowlarr](#prowlarr)
@@ -89,7 +88,6 @@ Before using Docktail, configure your Tailscale admin console at <https://login.
    - `nginx-mediaserver`
    - `nzbhydra`
    - `ombi`
-   - `overseerr`
    - `plex`
    - `profilarr`
    - `prowlarr`
@@ -172,12 +170,6 @@ Read more at <https://docs.linuxserver.io/images/docker-nzbhydra>
 - Forward host and port: `http://ombi:3579`
 
 Read more at <https://docs.linuxserver.io/images/docker-ombi>
-
-### Overseerr
-
-- Forward host and port: `http://overseerr:5055`
-
-Read more at <https://docs.linuxserver.io/images/docker-overseerr>
 
 ### Plex
 
