@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:09930a771219a7dfbf35685f38fd820ac8287b1f7fef744e8ab23984a31588ea
+    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:d709e953da12e37c3cc9c54b0ddcf1e11037ffad640f60f82dc5481dbabb6c6f
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -129,7 +129,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.11.6@sha256:7b29a93a6020f8d5f6c60df381a5ab7d57aa83cda4beb3631bd2bfbbcb1497af
+    image: lscr.io/linuxserver/jellyfin:10.11.6@sha256:45814a5515fdb81cd41f5db946cfd53a3c5e91f0665b40b55bae30cab4b3cd2e
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -169,7 +169,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.43.0@sha256:66c6a46ec3dc244aea20508b49dce4b46291c2fd2dba8851117e675d1c5dd52d
+    image: lscr.io/linuxserver/plex:1.43.0@sha256:bbe0118e39e2c071fc5fe39af3f32072207bf4146d56b6a8901bcb23082df207
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -191,7 +191,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/prowlarr:2.3.0@sha256:5339e9050cfcc0cb5331e9c98610ed9d4ce70ef481a5461ea664a13dda3f1eb0
+    image: lscr.io/linuxserver/prowlarr:2.3.0@sha256:e74a1e093dcc223d671d4b7061e2b4946f1989a4d3059654ff4e623b731c9134
     volumes:
       - prowlarr:/config
       - downloads:/downloads
@@ -239,7 +239,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/radarr:6.0.4@sha256:f08dda38e7d12e5a722d9a5cb6e54acaf63c8598fefeefec88effe0c0d0038dd
+    image: lscr.io/linuxserver/radarr:6.0.4@sha256:6d3e68474ea146f995af98d3fb2cb1a14e2e4457ddaf035aa5426889e2f9249c
     volumes:
       - radarr:/config
       - downloads:/downloads
@@ -257,7 +257,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.5.5@sha256:d4583bb3e7cc2d65ffe7fab2de9627878b7ea259889b3e99ceacd4fede7eb266
+    image: lscr.io/linuxserver/sabnzbd:4.5.5@sha256:1a26f56dfc047b62d5ddc20bc92bdebfbe7c3cb58d2d3523958838a09182d77a
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -275,7 +275,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/sonarr:4.0.16@sha256:6f73bbba33391a338e20d836a60c86beaf2a865a89b706b339fc8cb0b8ce1559
+    image: lscr.io/linuxserver/sonarr:4.0.16@sha256:37be832b78548e3f55f69c45b50e3b14d18df1b6def2a4994258217e67efb1a1
     volumes:
       - sonarr:/config
       - downloads:/downloads
@@ -293,7 +293,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:2.0.14@sha256:b99c94153e006bca7dcbcb1142879f27cceaf5ca149f593259731871aaaf6be3
+    image: lscr.io/linuxserver/syncthing:2.0.14@sha256:3596eec7b5ee71257aaff2658c805858de0a80244e3d69c1ef8ff260aa09c518
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
