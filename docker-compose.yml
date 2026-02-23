@@ -59,7 +59,7 @@ services:
 
   # https://github.com/marvinvr/docktail
   docktail:
-    image: ghcr.io/marvinvr/docktail:1.2.0@sha256:d0dc43746a897afecb564aec8d3a60ded1743ad1d32a8554defa2d1f4e14c7ba
+    image: ghcr.io/marvinvr/docktail:1.2.0@sha256:ec343f1184b3ac5870a373d685d69166c196086025cf87de59d8615318168a78
     labels:
       io.balena.features.balena-socket: 1
     environment:
@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:d709e953da12e37c3cc9c54b0ddcf1e11037ffad640f60f82dc5481dbabb6c6f
+    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:479af9d456718d8366ff4fc53936589978d20c4c7c67e0be5c250947836d93d3
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -129,7 +129,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.11.6@sha256:45814a5515fdb81cd41f5db946cfd53a3c5e91f0665b40b55bae30cab4b3cd2e
+    image: lscr.io/linuxserver/jellyfin:10.11.6@sha256:4ee07757abcaa0b74fbc74179392311dc2874c03b0bef04bc2d79e9e1a875793
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -151,7 +151,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:8.5.1@sha256:fd0a682dc3f3448c3e6d1504d29985b846cc7bdcd8fa527cfed0b0a24ef3630c
+    image: lscr.io/linuxserver/nzbhydra2:8.5.1@sha256:1898fcea22d8637f0bc79045f741effcd6d661bbeb45cdf89dd77bd43d72dc63
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
