@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v2.9.0
+      hash: a3a642ecf010af27215f96f0f3374271fc8ebe19
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.10
+  title: ""
+  date: 2026-02-23T07:31:04.922Z
+- commits:
     - subject: Update all digest updates
       hash: 5f1bc6e0d2c4bc6b869ca28e543e833c3d1f77de
       body: ""
