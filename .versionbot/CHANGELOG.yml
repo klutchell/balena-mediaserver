@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: 5f1bc6e0d2c4bc6b869ca28e543e833c3d1f77de
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.9
+  title: ""
+  date: 2026-02-23T06:56:46.329Z
+- commits:
     - subject: Update jc21/nginx-proxy-manager Docker tag to v2.14.0
       hash: 4043dc0381a09fb27171fe26874f7923cd0c382f
       body: ""
