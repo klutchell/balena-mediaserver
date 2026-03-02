@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:479af9d456718d8366ff4fc53936589978d20c4c7c67e0be5c250947836d93d3
+    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:3f41c1ce0356b4c55b7447ff29f1878f85b7cb3b92fbd8628a5e7f61a434a5e2
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -129,7 +129,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.11.6@sha256:4ee07757abcaa0b74fbc74179392311dc2874c03b0bef04bc2d79e9e1a875793
+    image: lscr.io/linuxserver/jellyfin:10.11.6@sha256:ba3773e77f0bf571e44cb2aad028f240cfac6b1bb261634c5762992995b50b89
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -151,7 +151,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:8.5.1@sha256:1898fcea22d8637f0bc79045f741effcd6d661bbeb45cdf89dd77bd43d72dc63
+    image: lscr.io/linuxserver/nzbhydra2:8.5.1@sha256:a37e83718b9b5fbcec6c8894b2d94a12e230620967a815597e727760f8143577
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -169,7 +169,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.43.0@sha256:bbe0118e39e2c071fc5fe39af3f32072207bf4146d56b6a8901bcb23082df207
+    image: lscr.io/linuxserver/plex:1.43.0@sha256:55c2def2eb662c2ce1a13e569278aeb87b2509ac7c57711d0da0a5d6d1607ad8
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -239,7 +239,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/radarr:6.0.4@sha256:6d3e68474ea146f995af98d3fb2cb1a14e2e4457ddaf035aa5426889e2f9249c
+    image: lscr.io/linuxserver/radarr:6.0.4@sha256:a360633a3682d41e96f71a07ff36ecbdf2394a9628465b84b0a8437087715b41
     volumes:
       - radarr:/config
       - downloads:/downloads
@@ -293,7 +293,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:2.0.14@sha256:3596eec7b5ee71257aaff2658c805858de0a80244e3d69c1ef8ff260aa09c518
+    image: lscr.io/linuxserver/syncthing:2.0.14@sha256:d3ead85461c0faee785443dcd69ca8584259e365bd192e8121c75e84bdb25425
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
