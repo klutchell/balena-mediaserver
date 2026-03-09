@@ -293,7 +293,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:2.0.14@sha256:d3ead85461c0faee785443dcd69ca8584259e365bd192e8121c75e84bdb25425
+    image: lscr.io/linuxserver/syncthing:2.0.15@sha256:c96968aeee90168a7bac16a05deb9265de745a4cfa127afb3c8f31079c5eba17
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
