@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.2.2
+      hash: 289019688a0533585dcd280a65b12c11bbad74ff
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.15
+  title: ""
+  date: 2026-03-09T05:10:09.229Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing Docker tag to v2.0.15
       hash: 71607e5f9592811de9b0aa42e56afe689db53174
       body: ""
