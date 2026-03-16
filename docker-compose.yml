@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:dec55b0f26624ae3d27b18368cc0b26b02020e15b878e92a1412fff2b67fbc1c
+    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:b156cdfa9f5dd3dc93f279018faf2df9af595528d941059eece32e058a760c43
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -169,7 +169,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.43.0@sha256:79dfc89947410ec120a3e34cf68f746f6f154de20772e6f27b9998ca9bd65a5e
+    image: lscr.io/linuxserver/plex:1.43.0@sha256:84f8646e799f6636876ab4f283d9fc8f6c51d56098ea74cba82bfb85074b68df
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -191,7 +191,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/prowlarr:2.3.0@sha256:a8fe7b9c502f979146b6d0f22438b825c38e068241bb8a708c473062dffdbb03
+    image: lscr.io/linuxserver/prowlarr:2.3.0@sha256:9ef5d8bf832edcacb6082f9262cb36087854e78eb7b1c3e1d4375056055b2d82
     volumes:
       - prowlarr:/config
       - downloads:/downloads
@@ -293,7 +293,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:2.0.15@sha256:c96968aeee90168a7bac16a05deb9265de745a4cfa127afb3c8f31079c5eba17
+    image: lscr.io/linuxserver/syncthing:2.0.15@sha256:befb3dc3efac8987270fa6fa99d9594a0dc2a11662b720a296453e162a274149
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
@@ -325,7 +325,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.16.1@sha256:c75d3410b958399f86b6d1786f7640e91b867b24d154b3f09f9bb3207f2e8b35
+    image: lscr.io/linuxserver/tautulli:2.16.1@sha256:24594d6aed5f862f941349a6fa0d09d22d7a8386789aef954d3737c6b4dbb8c7
     volumes:
       - tautulli:/config
     ports:
