@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:b156cdfa9f5dd3dc93f279018faf2df9af595528d941059eece32e058a760c43
+    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:b166f07cf80a107a41909d0dfa281fd88a267dd30f6372f8ad9c8f6cc4a298ac
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -129,7 +129,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.11.6@sha256:aae645d1ff11c42b1d2d3b80694e34e0e1ea4a51879900843c8ab6e8b127a32a
+    image: lscr.io/linuxserver/jellyfin:10.11.6@sha256:0a2f7e2c1c34e1a0e553b8521208ac1cc9ffa6a0efc2cf4acb4a45229b390e65
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -151,7 +151,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:8.5.2@sha256:e1b6a2b0caf879405bba91b77c7c34138108c15cd6be26a18ee1287a448dd054
+    image: lscr.io/linuxserver/nzbhydra2:8.5.2@sha256:ec2c2d60f6da4fe91b8cc9bfae3c779679318d14fb17694012ff05765f39b4ac
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -169,7 +169,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.43.0@sha256:84f8646e799f6636876ab4f283d9fc8f6c51d56098ea74cba82bfb85074b68df
+    image: lscr.io/linuxserver/plex:1.43.0@sha256:a27f1ce1e1d14cd3627ed217f042bf8de0f796ed274fb27b2dc971ae22a64b95
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -257,7 +257,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.5.5@sha256:9b6662d5871518346655bfd3acb4c94e11f31c79c103ef04154558dab927c852
+    image: lscr.io/linuxserver/sabnzbd:4.5.5@sha256:15b1220aaa1f8ff428790a3d56f5ca2822427ea0b33e978eee43554e42579d0f
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -325,7 +325,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.16.1@sha256:24594d6aed5f862f941349a6fa0d09d22d7a8386789aef954d3737c6b4dbb8c7
+    image: lscr.io/linuxserver/tautulli:2.16.1@sha256:f7e8a00e81a216835d19d5f6219c31998ec844046d09326a682594c197911a75
     volumes:
       - tautulli:/config
     ports:
