@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:b166f07cf80a107a41909d0dfa281fd88a267dd30f6372f8ad9c8f6cc4a298ac
+    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:9272af8564040fca2959dba7df3f9e1d6f7b08f3a802840e904f309b0b246b16
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -239,7 +239,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/radarr:6.0.4@sha256:ca43905eaf2dd11425efdcfe184892e43806b1ae0a830440c825cecbc2629cfb
+    image: lscr.io/linuxserver/radarr:6.0.4@sha256:c8a55bd83672d3b63dc20edf325277ce7dc3b69d4400568cc5bbc9e6a227ebf4
     volumes:
       - radarr:/config
       - downloads:/downloads
@@ -325,7 +325,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.16.1@sha256:f7e8a00e81a216835d19d5f6219c31998ec844046d09326a682594c197911a75
+    image: lscr.io/linuxserver/tautulli:2.16.1@sha256:04d54116bc08923e337f49625c67f6d6d07ba7eaf484c88b0e5c7d1aef43fa52
     volumes:
       - tautulli:/config
     ports:
