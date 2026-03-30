@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v22.9.22
+      hash: ca9e208cf09b536c6b58c1cdc5a7fc5a8d139e94
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.29
+  title: ""
+  date: 2026-03-30T07:08:52.252Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v8.5.3
       hash: e8b12c1ba6435226d9b8f2c056e9d175b087e770
       body: ""
