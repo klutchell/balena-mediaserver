@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:9272af8564040fca2959dba7df3f9e1d6f7b08f3a802840e904f309b0b246b16
+    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:023e8152c31f50bf7f89f58a7610d6f1975acbb7f0826b14a008e4e2d719acda
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -169,7 +169,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.43.0@sha256:cbd631f9a972a1c453953a9192c1781dd7d2084db075a1bee78a3cc6387fb103
+    image: lscr.io/linuxserver/plex:1.43.0@sha256:a21302c5297943e204e9b262f8c2eca3e0c7ddb52490bfb3f1db47f6103721ab
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -239,7 +239,7 @@ services:
   # https://docs.linuxserver.io/images/docker-radarr
   radarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/radarr:6.1.1@sha256:cd70546fc97169788530386b42cf47ba1b16d091b4dc2264cd54099dd13c6f7f
+    image: lscr.io/linuxserver/radarr:6.1.1@sha256:6f1dda18354ea7f28cead8f6d099fc8222498c3ae165f567d504ed04d70980d7
     volumes:
       - radarr:/config
       - downloads:/downloads
@@ -257,7 +257,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:4.5.5@sha256:f0abed8e9450d5b71631a89b663fbfbfbb6909b254f94911c7e77162a3827854
+    image: lscr.io/linuxserver/sabnzbd:4.5.5@sha256:e4573bab787c2ba9a9e6bbf5535da0bd9d4de8e247ac7fad6428319fadd2331d
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -275,7 +275,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/sonarr:4.0.17@sha256:b5670a3adb0f8a8b0f277feeaa69a5fbe3869ba4bb9fa7c0f0764c3b3f0e698f
+    image: lscr.io/linuxserver/sonarr:4.0.17@sha256:6854df9de20b8c82e1982604f39473d64dbb4c4584b1013f18f9ade1ee92af13
     volumes:
       - sonarr:/config
       - downloads:/downloads
@@ -325,7 +325,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.17.0@sha256:a07c64f6203c6726cd295f09e36b67436c3f3c3b3fa36f303a3c594b4148f38f
+    image: lscr.io/linuxserver/tautulli:2.17.0@sha256:9f2f94ca63cad468f0a80d4435ff63857195a66b057065995bbeef80a92e8058
     volumes:
       - tautulli:/config
     ports:
