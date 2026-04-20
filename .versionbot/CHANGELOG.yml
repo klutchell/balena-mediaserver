@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/duplicati Docker tag to v2.3.0
+      hash: d4b701112f838b2141dc0a15a7b98d8c34f4dd77
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.50
+  title: ""
+  date: 2026-04-20T09:42:11.131Z
+- commits:
     - subject: Update balena-tailscale to v1.96.4-rev3
       hash: 41c6a022e329d51c311679ca00f87991d716f7ff
       body: ""
