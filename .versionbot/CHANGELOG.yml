@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-tailscale to v1.96.4-rev3
+      hash: 41c6a022e329d51c311679ca00f87991d716f7ff
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.49
+  title: ""
+  date: 2026-04-20T08:52:37.396Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v8.7.1
       hash: 3e062cd82ab50bd1762149531f87b74a4d4e0807
       body: ""
