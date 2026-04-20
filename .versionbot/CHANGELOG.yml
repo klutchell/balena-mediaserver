@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.4.1
+      hash: 7be8facd3a67211464a3170063c8cfba6f345542
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.46
+  title: ""
+  date: 2026-04-20T05:59:54.187Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v2.10.2
       hash: efcf6910a70ebbc2a38b0225d585b377287f43b8
       body: ""
