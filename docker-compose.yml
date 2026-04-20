@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.2.0@sha256:023e8152c31f50bf7f89f58a7610d6f1975acbb7f0826b14a008e4e2d719acda
+    image: lscr.io/linuxserver/duplicati:2.3.0@sha256:f4690606bd04ce38490a3ccfd52fc84f0b0c74c9b2aaea9eb24026f5a1859403
     environment:
       <<: *s6-environment
       PUID: "0"
