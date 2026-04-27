@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v8.8.0
+      hash: 4cbdc1b3cf4eb2cadfcf11b7c90d88ca0dcb6584
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.51
+  title: ""
+  date: 2026-04-27T04:45:12.002Z
+- commits:
     - subject: Update lscr.io/linuxserver/duplicati Docker tag to v2.3.0
       hash: d4b701112f838b2141dc0a15a7b98d8c34f4dd77
       body: ""
