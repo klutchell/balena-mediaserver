@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update pre-commit hook pre-commit/pre-commit-hooks to v3.4.0
+      hash: dee4f350d54e02c28a4ff76b53a6568fc885528d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.57
+  title: ""
+  date: 2026-05-04T08:58:06.969Z
+- commits:
     - subject: Update product-os/flowzone action to v22.11.21
       hash: 367c523b29d3b9935b2efa21eeab67d7a92a8378
       body: ""
