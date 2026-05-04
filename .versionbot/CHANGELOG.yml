@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v2.10.3
+      hash: a14f460471e8c718d793caa9d8eccc3f0edf10f9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.62
+  title: ""
+  date: 2026-05-04T18:41:44.150Z
+- commits:
     - subject: Update pre-commit hook pre-commit/pre-commit-hooks to v6
       hash: aaea5aa31720990bdd879c3c50ecb5c25e66e6ac
       body: ""
