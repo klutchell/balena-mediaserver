@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update pre-commit hook rhysd/actionlint to v1.7.12
+      hash: 02380738a2358fa3fb4738a4cca2409e6705edd3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.55
+  title: ""
+  date: 2026-05-04T06:08:45.126Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v8.8.1
       hash: 0e3e07d0d2b00c76a37579e7870b4ef83f87d1f0
       body: ""
