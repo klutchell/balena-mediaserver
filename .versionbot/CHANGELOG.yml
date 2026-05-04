@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v22.11.21
+      hash: 367c523b29d3b9935b2efa21eeab67d7a92a8378
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.56
+  title: ""
+  date: 2026-05-04T07:38:10.780Z
+- commits:
     - subject: Update pre-commit hook rhysd/actionlint to v1.7.12
       hash: 02380738a2358fa3fb4738a4cca2409e6705edd3
       body: ""
