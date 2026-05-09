@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/tautulli Docker tag to v2.17.1
+      hash: 84e9cee4617dcab7bbaf7fa9e78a6005767d0e52
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.66
+  title: ""
+  date: 2026-05-09T15:52:53.799Z
+- commits:
     - subject: Update product-os/flowzone action to v22.12.0
       hash: 3963e6b8b53778ec8cd9cac0f7010fb4312bc1a0
       body: ""
