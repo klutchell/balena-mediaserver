@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr:6.1.1 Docker digest to 079e488
+      hash: 8a8998a649caa6a96760d5b5c83df6075c72cc80
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.76
+  title: ""
+  date: 2026-05-17T18:29:45.154Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing Docker tag to v2.1.0
       hash: f44e014155a4cb957aaf1621ae3c5be3e000df0b
       body: ""
