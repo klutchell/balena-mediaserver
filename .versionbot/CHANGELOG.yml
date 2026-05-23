@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex Docker tag to v1.43.2
+      hash: 6aabb07b1ea023b72e400dcb63beec2f98e0c560
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.81
+  title: ""
+  date: 2026-05-23T12:28:15.304Z
+- commits:
     - subject: Update lscr.io/linuxserver/jellyfin Docker tag to v10.11.9
       hash: 2f044951a2e534cad0714dc3df0472b687350f62
       body: ""
