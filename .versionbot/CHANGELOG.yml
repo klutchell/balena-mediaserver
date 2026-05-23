@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: 6a4efb213c3ce78a4c714c6fe4bcdf43ed85921a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.78
+  title: ""
+  date: 2026-05-23T04:53:13.966Z
+- commits:
     - subject: Update product-os/flowzone action to v22.12.15
       hash: ac0014a8c6f00c0a2d4c25f8263c9210da9c530b
       body: ""
