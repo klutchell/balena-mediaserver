@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v43.204.0
+      hash: b79aca6c2018bc511297c6d4d9efe5a01997abeb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.88
+  title: ""
+  date: 2026-05-30T04:54:19.421Z
+- commits:
     - subject: Update lscr.io/linuxserver/jellyfin Docker tag to v10.11.10
       hash: 7cc79385498d551afec2e7490a4606ac14752fea
       body: ""
