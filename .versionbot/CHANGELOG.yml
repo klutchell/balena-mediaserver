@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update jc21/nginx-proxy-manager Docker tag to v2.15.0
+      hash: 3f2306c7f4250bcbc539b34573a55358823dbfe2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.96
+  title: ""
+  date: 2026-05-31T23:31:39.295Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr:6.1.1 Docker digest to c0a4335
       hash: f47cd3215f5fb53eff63dec67c1d4de35eea248d
       body: ""
