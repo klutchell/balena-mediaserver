@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sabnzbd:5.0.3 Docker digest to 2924efd
+      hash: d1c9971a54ad47544d46f2ddd4106ea5e4c11c25
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.94
+  title: ""
+  date: 2026-05-31T10:46:06.165Z
+- commits:
     - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v43.205.2
       hash: 0c98562d2089dd782404cd23985e138dcc7e023d
       body: ""
