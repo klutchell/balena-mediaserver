@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr:6.1.1 Docker digest to c0a4335
+      hash: f47cd3215f5fb53eff63dec67c1d4de35eea248d
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.95
+  title: ""
+  date: 2026-05-31T18:31:46.147Z
+- commits:
     - subject: Update lscr.io/linuxserver/sabnzbd:5.0.3 Docker digest to 2924efd
       hash: d1c9971a54ad47544d46f2ddd4106ea5e4c11c25
       body: ""
