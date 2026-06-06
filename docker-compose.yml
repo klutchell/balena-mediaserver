@@ -129,7 +129,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.11.10@sha256:be2bd22d5e27451ebc14b326d8a6554e1f51c79f4431d6c71522565ed17f06ea
+    image: lscr.io/linuxserver/jellyfin:10.11.11@sha256:c123ef2f82195e377d8ca3df275f13f9dfa5c6e61b195958662b42b5e54362ab
     devices:
       - /dev/dri:/dev/dri
     volumes:
