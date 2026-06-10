@@ -13,7 +13,7 @@ x-s6-service: &s6-service
     - -c
   command:
     - |
-      if [[ $${DISABLE,,} =~ true|yes|on|1 ]]; then
+      if printenv DISABLE | grep -qiE '^(true|yes|on|1)$'; then
         echo "DISABLE is truthy, exiting..."
         exit 0
       fi
@@ -218,7 +218,7 @@ services:
       - -c
     command:
       - |
-        if [[ $${DISABLE,,} =~ true|yes|on|1 ]]; then
+        if printenv DISABLE | grep -qiE '^(true|yes|on|1)$'; then
           echo "DISABLE is truthy, exiting..."
           exit 0
         fi
