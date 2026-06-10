@@ -1,4 +1,39 @@
 - commits:
+    - subject: Use printenv for DISABLE check to survive parser/builder skew
+      hash: 80e8a251d59255431e959de1bf77a3b466cd110d
+      body: >
+        The CLI's balena-compose-parser (v25) interpolates $-vars at parse time,
+
+        requiring $$ to defer expansion to the runtime shell. The builder does
+        not
+
+        yet collapse $$ to $, so $${DISABLE,,} reaches bash literally and $$ is
+        read
+
+        as the shell PID, breaking the check.
+
+
+        Switch to `printenv DISABLE | grep -qiE` which contains no $, so it is
+
+        unaffected by either parser version. grep -i preserves
+        case-insensitivity
+
+        and the anchored ERE fixes the previously unanchored substring match.
+
+
+        See:
+        https://github.com/balena-io-modules/balena-compose-parser/issues/27
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 3.0.111
+  title: ""
+  date: 2026-06-10T00:17:38.712Z
+- commits:
     - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v43.214.5
       hash: 5c0dd22fdbd63901d6dd8b2e7a32139e3a1d5d0b
       body: ""
