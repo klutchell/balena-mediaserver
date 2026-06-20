@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: 213726651f0af435116cb3a701f0f25bf6660188
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.129
+  title: ""
+  date: 2026-06-20T10:55:09.871Z
+- commits:
     - subject: Update lscr.io/linuxserver/tautulli Docker tag to v2.17.2
       hash: b04a0373661b94402c7228e0df384841b3a44933
       body: ""
