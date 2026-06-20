@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/tautulli Docker tag to v2.17.2
+      hash: b04a0373661b94402c7228e0df384841b3a44933
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.128
+  title: ""
+  date: 2026-06-20T09:44:17.400Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v8.8.4
       hash: 2dea1ea311c30c79a542019171d1e41a2a0c1a1d
       body: ""
