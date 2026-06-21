@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v43.233.4
+      hash: 966476e4300b55257ef565c69bd32bca7ae41a0c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.132
+  title: ""
+  date: 2026-06-21T05:18:44.123Z
+- commits:
     - subject: Update balena-tailscale to v1.98.5-rev7
       hash: e29eaa16f9f89d2408199d5df5c367fb5b21d378
       body: ""
