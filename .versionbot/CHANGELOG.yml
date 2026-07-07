@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: dbc99bc89b29f70adb34a15f784e7e4f75b6d512
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.138
+  title: ""
+  date: 2026-07-07T20:17:19.887Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v8.8.5
       hash: 4f1478be77a7ad981858f35caf3162a8e5c7fa2b
       body: ""
