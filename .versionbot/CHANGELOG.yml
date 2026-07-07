@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update santiagosayshey/profilarr Docker tag to v1.1.5
+      hash: 3cbff9418a514742a688fc21d6ac680d1540b247
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.141
+  title: ""
+  date: 2026-07-07T22:33:52.349Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.19
       hash: d9e569d95f420d309f5292ca4beabe8a9486a38c
       body: ""
