@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.19
+      hash: d9e569d95f420d309f5292ca4beabe8a9486a38c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.140
+  title: ""
+  date: 2026-07-07T22:03:24.749Z
+- commits:
     - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.4.4
       hash: ea823bf23819c803552ddec5f0dc5a029b708771
       body: ""
