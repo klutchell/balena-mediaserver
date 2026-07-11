@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v22.12.79
+      hash: 8222c6f832d0e5525be5f50c0b4be2692646b666
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.142
+  title: ""
+  date: 2026-07-11T04:41:14.801Z
+- commits:
     - subject: Update santiagosayshey/profilarr Docker tag to v1.1.5
       hash: 3cbff9418a514742a688fc21d6ac680d1540b247
       body: ""
