@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v43.258.1
+      hash: f82b346ea6133b0387f62bf4df10cebf106ac84a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.150
+  title: ""
+  date: 2026-07-11T11:52:53.315Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v8.9.0
       hash: bdb37329e893888d981734993e522a3a346f0912
       body: ""
