@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr Docker tag to v6.3.0
+      hash: d7a8a3decced7b0169ca516aee51eec0ce86c8d8
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.157
+  title: ""
+  date: 2026-07-12T20:23:40.400Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr:6.2.1 Docker digest to 549c4a0
       hash: 164539870a07370a490a2c9de44df2a82ea8df1f
       body: ""
