@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v43.260.2
+      hash: 4fd8d8fd82ca8bc5ff2d620910289613d4e5daab
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.158
+  title: ""
+  date: 2026-07-13T04:46:27.449Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr Docker tag to v6.3.0
       hash: d7a8a3decced7b0169ca516aee51eec0ce86c8d8
       body: ""
