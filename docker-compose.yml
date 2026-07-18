@@ -275,7 +275,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/sonarr:4.0.19@sha256:4b025354d338999e03bf6dbdadcdde94815d39d4a5aba5de3cdc86a56d7d6c51
+    image: lscr.io/linuxserver/sonarr:4.0.19@sha256:24acea2956a0ccb11f103877d9f4f8576600fb34bff34820ed749c2256dab89f
     volumes:
       - sonarr:/config
       - downloads:/downloads
@@ -293,7 +293,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:2.1.2@sha256:e8cc12a9d538d6896942bb3055be9c5bf1cf44c713dfa617b5d3e72037de00fb
+    image: lscr.io/linuxserver/syncthing:2.1.2@sha256:f53c0dd7dd352d63002bc26259d832354de7b0ab9f26003407dac7f2c4168a33
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
