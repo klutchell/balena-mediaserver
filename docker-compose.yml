@@ -94,7 +94,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.3.0@sha256:c170cef686c21c7bdebc51d82405beb70bed98549d774d5b0ac139985625fd7a
+    image: lscr.io/linuxserver/duplicati:2.3.0@sha256:93902cefee39f7c35214eb63312b7685c4b223b12adf6ede4ecddb9711210f85
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -129,7 +129,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.11.11@sha256:a569ae0bfbd67ca404ae51f54cead7a2522d270179f57b3d12cf80ebff5d683b
+    image: lscr.io/linuxserver/jellyfin:10.11.11@sha256:32aa0d4565c633db95af29a58e8a5dc9becdfa58564a3aea68436623fd45f5a1
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -151,7 +151,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:8.9.0@sha256:9e0d9afe3e87842d2b091a4d4ab796ea4fa9517cc40a69ae83dd3fe731bb059d
+    image: lscr.io/linuxserver/nzbhydra2:8.9.0@sha256:9ba095a9aae0d709df87c90b371c9212e23d68ac4605add3371d3f7a343eae60
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -191,7 +191,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/prowlarr:2.4.0@sha256:536036aeb2c740d1a660ccf143b58a8bd6222f09010258fdfc10a538af7bec78
+    image: lscr.io/linuxserver/prowlarr:2.4.0@sha256:4fd7a166c8f46dd3370a871c250ee577d6c2ae97a0dbe0e3614b5ef736205620
     volumes:
       - prowlarr:/config
       - downloads:/downloads
@@ -325,7 +325,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.17.2@sha256:2d31250c00737c3cd471b73d8e57c9a19ca37a53faf111b79ce1ee61cc027dc6
+    image: lscr.io/linuxserver/tautulli:2.17.2@sha256:ef7f4329e5029f83bc93a6fef9a06e67b97652573ce3d62402645ba0d933a0be
     volumes:
       - tautulli:/config
     ports:
