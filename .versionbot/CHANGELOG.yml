@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr:6.3.0 Docker digest to e350565
+      hash: db949e358835ef06029a28b19f9ee62e73d02a53
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.169
+  title: ""
+  date: 2026-07-19T18:25:47.971Z
+- commits:
     - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.6.0
       hash: eb731ddfbf0283082b8f35233d4b6445e5a83c85
       body: ""
