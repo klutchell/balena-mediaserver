@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.7.3
+      hash: ad625e38bb77e62210308a8002596d38a3302620
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.175
+  title: ""
+  date: 2026-07-25T09:39:45.513Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v2.5.2
       hash: 96e30296c51bbae56d0c371742a09ef57dd7a76a
       body: ""
