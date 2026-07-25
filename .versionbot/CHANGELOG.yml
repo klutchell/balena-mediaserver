@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/jellyfin:10.11.11 Docker digest to b8dcc7b
+      hash: 4bdc9058f068ea612e00769572f96d7b80fbe2c0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.176
+  title: ""
+  date: 2026-07-25T11:34:30.761Z
+- commits:
     - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.7.3
       hash: ad625e38bb77e62210308a8002596d38a3302620
       body: ""
