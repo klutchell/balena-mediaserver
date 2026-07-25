@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/duplicati:2.3.0 Docker digest to e8fb16d
+      hash: 0778b26b82ee5a2398fd6c8182158bf8519ee6af
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.173
+  title: ""
+  date: 2026-07-25T07:45:34.341Z
+- commits:
     - subject: Update balena-tailscale to v1.98.9
       hash: 9c0b31f1eaf1c660def78e308fa049dde7261ad0
       body: ""
