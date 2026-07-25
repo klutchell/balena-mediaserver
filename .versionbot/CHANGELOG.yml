@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v2.5.2
+      hash: 96e30296c51bbae56d0c371742a09ef57dd7a76a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.174
+  title: ""
+  date: 2026-07-25T08:47:23.573Z
+- commits:
     - subject: Update lscr.io/linuxserver/duplicati:2.3.0 Docker digest to e8fb16d
       hash: 0778b26b82ee5a2398fd6c8182158bf8519ee6af
       body: ""
