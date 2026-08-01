@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: 69b37dd5f4ce90987f5c92173fec58d41b0c67ad
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.179
+  title: ""
+  date: 2026-08-01T04:44:16.019Z
+- commits:
     - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v43.280.5
       hash: e95207ff3fc24b6f0ac1339df500cf937ad38314
       body: ""
