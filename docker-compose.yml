@@ -151,7 +151,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:8.9.0@sha256:8a0aa74d18212cc422df646458f728fe7e618e2a102777cbb0ae55e74c697d09
+    image: lscr.io/linuxserver/nzbhydra2:8.9.0@sha256:75a0d411cfc4d27fa0dfcd0c723f2fa08ad97a3c4d2d71b704c9f4bcfc492cfe
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -169,7 +169,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.43.3@sha256:59c671e182563040092a2d0901e429dc15e0aba9883acd13ef97857372b79b21
+    image: lscr.io/linuxserver/plex:1.43.3@sha256:507713a14f9586f827d00c81381ecdcd438009172342b322b62a0e2b65081fdf
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -257,7 +257,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:5.0.4@sha256:f12cb77b4e16d2d60fc8226e433daf69884e83874d90447c6ff1d57ef4247d6f
+    image: lscr.io/linuxserver/sabnzbd:5.0.4@sha256:302be8972d4627222a0701634f2f9025826d760d856414aa6e67c0a66833e5be
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
@@ -325,7 +325,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.17.2@sha256:ef7f4329e5029f83bc93a6fef9a06e67b97652573ce3d62402645ba0d933a0be
+    image: lscr.io/linuxserver/tautulli:2.17.2@sha256:f0c3e7228c84ad0539f9d5aa9f56c79ef19f6c8d0ad61199d803d32a7b0e080b
     volumes:
       - tautulli:/config
     ports:
