@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v23.0.14
+      hash: d1daf08d631b871884ab1bfcaf743e74ae3eefe4
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.188
+  title: ""
+  date: 2026-08-08T05:23:13.687Z
+- commits:
     - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.7.5
       hash: 2e7383bd5e26f28f471ca55e041f9cc34f7ad7bc
       body: ""
