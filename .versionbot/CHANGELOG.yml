@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v2.11.0
+      hash: 72718c04cef53274d8663bcb535a4e21c484e315
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.196
+  title: ""
+  date: 2026-08-15T05:12:30.978Z
+- commits:
     - subject: Update lscr.io/linuxserver/sabnzbd Docker tag to v5.1.0
       hash: 5570815d1d8794438133049bdbfc86fb928db9d9
       body: ""
