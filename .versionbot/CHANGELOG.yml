@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sabnzbd Docker tag to v5.1.0
+      hash: 5570815d1d8794438133049bdbfc86fb928db9d9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.195
+  title: ""
+  date: 2026-08-15T04:47:37.110Z
+- commits:
     - subject: Update product-os/flowzone action to v23.0.19
       hash: 73bf3933332752173f172653eeb35d3704632a82
       body: ""
