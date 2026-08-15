@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v23.0.20
+      hash: 88318e2c175d3c68275a5c9ae775f012e7d3e13b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.199
+  title: ""
+  date: 2026-08-15T14:10:03.402Z
+- commits:
     - subject: Update all digest updates
       hash: eb3e95c84b27393675c711488060469823450b62
       body: ""
