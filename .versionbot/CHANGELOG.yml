@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v23.0.19
+      hash: 73bf3933332752173f172653eeb35d3704632a82
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.194
+  title: ""
+  date: 2026-08-15T04:16:50.701Z
+- commits:
     - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v44.14.12
       hash: ce907aa8dd1990b9c3b167fcbecb71901d9fcc6e
       body: ""
