@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.7.6
+      hash: a2635229270d50abcecb217b4045306b9ce77896
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.204
+  title: ""
+  date: 2026-08-16T19:41:59.176Z
+- commits:
     - subject: Update balena-tailscale to v1.102.2-rev2
       hash: 7692110119c968a659af881896db68656d5e95ef
       body: ""
