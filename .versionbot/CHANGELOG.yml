@@ -1,4 +1,18 @@
 - commits:
+    - subject: "Flowzone: Migrate config"
+      hash: ac642f17b8ef395dabf824fc18db2d0ea6071869
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 3.0.205
+  title: ""
+  date: 2026-08-20T19:34:06.191Z
+- commits:
     - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.7.6
       hash: a2635229270d50abcecb217b4045306b9ce77896
       body: ""
