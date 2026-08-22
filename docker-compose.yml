@@ -257,7 +257,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:5.1.0@sha256:e79d3fd9282b7fa51a3382cec9fdcc4cf736f46c9d43d188193e3ce1c7accbcd
+    image: lscr.io/linuxserver/sabnzbd:5.1.1@sha256:78253a5ed379d08c16deba4154a2468875aa25a729c54c59c1199f851f87c29e
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
