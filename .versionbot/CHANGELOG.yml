@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.7.8
+      hash: 474772260af62c3478dffc070cc202e1635f36bb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.206
+  title: ""
+  date: 2026-08-22T04:27:13.210Z
+- commits:
     - subject: "Flowzone: Migrate config"
       hash: ac642f17b8ef395dabf824fc18db2d0ea6071869
       body: ""
