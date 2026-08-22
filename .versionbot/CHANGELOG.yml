@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-tailscale to v1.102.3-rev2
+      hash: a02b2d3f13deda3df8e63d2b113a4651cc59a00b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.211
+  title: ""
+  date: 2026-08-22T06:55:34.741Z
+- commits:
     - subject: Update lscr.io/linuxserver/sabnzbd Docker tag to v5.1.1
       hash: afdca7aaa1a7a5476785c379c7744e9ba4b5744c
       body: ""
