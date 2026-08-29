@@ -129,7 +129,7 @@ services:
   # https://docs.linuxserver.io/images/docker-jellyfin
   jellyfin:
     <<: *s6-service
-    image: lscr.io/linuxserver/jellyfin:10.11.11@sha256:aef1046ab41bbd7b48e205e711aa31dfb1fa55a3fb8e22cbbb150a323c4a48c7
+    image: lscr.io/linuxserver/jellyfin:10.11.11@sha256:4f6d8dfc53ec5a1ddf7a90e4338972d57d7b0adff6dc88b53184f8285d0b594f
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -151,7 +151,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:8.9.0@sha256:39817398f08bd75092b3c8afb4832d34a8b0d566bbd79eae913555eef43a8a38
+    image: lscr.io/linuxserver/nzbhydra2:8.9.0@sha256:2290ccd142a680d102c44424514d2d32ab757c715454c42af88b26d0ea2a4edd
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -191,7 +191,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/prowlarr:2.5.2@sha256:1295cff29d10b486c0d8324d1559a552140a5932bf8b3d87e398654414f63f92
+    image: lscr.io/linuxserver/prowlarr:2.5.2@sha256:ab91301778251f82a31bbfc87f0497376d59e84439d9a1ceff6a61d594d1e3d7
     volumes:
       - prowlarr:/config
       - downloads:/downloads
