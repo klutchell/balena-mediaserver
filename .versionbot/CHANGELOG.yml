@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.7.9
+      hash: ff685a4ff3b132457dcc782629a72cae7734a559
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.223
+  title: ""
+  date: 2026-08-30T17:20:41.706Z
+- commits:
     - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v44.51.2
       hash: a126cff2575f388e92ad07274b1872d80f526717
       body: ""
