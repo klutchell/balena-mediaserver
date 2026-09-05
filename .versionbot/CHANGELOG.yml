@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v23.1.17
+      hash: 0feba996ff78def24a59bad70fa3dce8916a1c8b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.224
+  title: ""
+  date: 2026-09-05T04:25:57.438Z
+- commits:
     - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.7.9
       hash: ff685a4ff3b132457dcc782629a72cae7734a559
       body: ""
