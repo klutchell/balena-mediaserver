@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v44.65.5
+      hash: ac1092a4d02a888e7dc243894bb049e79c47b914
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.229
+  title: ""
+  date: 2026-09-06T04:25:26.546Z
+- commits:
     - subject: Update lscr.io/linuxserver/duplicati Docker tag to v2.4.0
       hash: c2a0d7e0d89aa852f534d97af706ac7a4b7795be
       body: ""
