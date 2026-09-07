@@ -60,8 +60,10 @@ Environment Variables can be applied to all services in an application, or only 
 
 #### Via Tailscale
 
-1. Provide the `TS_AUTHKEY` environment variable
-2. Access services via `https://${TS_CERT_DOMAIN}:${service_port}`
+1. Create a new tag called `container` at this URL https://login.tailscale.com/admin/acls/visual/tags/add
+2. Create an `AUTH_KEY` that has `tag:container` as one of its tags (https://login.tailscale.com/admin/settings/keys)
+2. Once generated, provide the `TS_AUTHKEY` environment variable on your balena fleet
+3. Access services via `https://${TS_CERT_DOMAIN}:${service_port}`
 
 Read more at <https://tailscale.com/blog/docker-tailscale-guide> and <https://tailscale.com/kb/1282/docker>
 
