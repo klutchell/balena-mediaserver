@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex Docker tag to v1.43.4
+      hash: e0e7c0bc17067f30b275f1f882c91fca72d7604b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.234
+  title: ""
+  date: 2026-09-12T05:22:25.443Z
+- commits:
     - subject: Update balena-tailscale to v1.102.4
       hash: c5c07c7ee9658fc702341a386a1872c0dd923ffa
       body: ""
