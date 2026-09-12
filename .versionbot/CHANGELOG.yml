@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/duplicati:2.4.0 Docker digest to 5c65d96
+      hash: 2a5c5f873e1a04f37298f1edeff234bbabc5eac3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.239
+  title: ""
+  date: 2026-09-12T08:47:28.012Z
+- commits:
     - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.8.0
       hash: 6c9ca0856202637db636d0828f03163b68c2f32c
       body: ""
