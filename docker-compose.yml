@@ -151,7 +151,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:8.9.0@sha256:375f3d26f3565f4cf1a6310c401c22c1516703fe3b578934150177b363293add
+    image: lscr.io/linuxserver/nzbhydra2:8.9.0@sha256:3cdcea6fc97861bb30ef2551884f1c371e08a884c2f75230c7a3a2e14c5f0516
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -169,7 +169,7 @@ services:
   # https://docs.linuxserver.io/images/docker-plex
   plex:
     <<: *s6-service
-    image: lscr.io/linuxserver/plex:1.43.3@sha256:7f9a1d574958fc2f177c14ca190d4b811a58c274477f5bae8fb44ee676fb96bf
+    image: lscr.io/linuxserver/plex:1.43.3@sha256:de95bb12db3ed4e34ad5983113b8af967cfd77786e15669c0703c22133e10107
     devices:
       - /dev/dri:/dev/dri
     volumes:
@@ -191,7 +191,7 @@ services:
   # https://docs.linuxserver.io/images/docker-prowlarr
   prowlarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/prowlarr:2.5.2@sha256:91844fa2c927ad6ede5630127183cc7868b175f6223e83e6a5da1fffea2aa782
+    image: lscr.io/linuxserver/prowlarr:2.5.2@sha256:c7502a75b021d964481c129c84590b9cbc40f83aadd4e553f173871bc0deaa3c
     volumes:
       - prowlarr:/config
       - downloads:/downloads
@@ -275,7 +275,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sonarr
   sonarr:
     <<: *s6-service
-    image: lscr.io/linuxserver/sonarr:4.0.19@sha256:4d9df314875e1249ab7d6170c2b9b3dc1d8e6383f168ceb10dc9a5ad9b324739
+    image: lscr.io/linuxserver/sonarr:4.0.19@sha256:82172b363f9eddc02aca544f880a044f2ceb9aaf190bc87e4454e2f705eb91d0
     volumes:
       - sonarr:/config
       - downloads:/downloads
@@ -325,7 +325,7 @@ services:
   # https://docs.linuxserver.io/images/docker-tautulli
   tautulli:
     <<: *s6-service
-    image: lscr.io/linuxserver/tautulli:2.18.1@sha256:5ce8c5f82f9153e72ad4a24a1605f5a90bfee4bbe8e75bd05fcf91b410330b63
+    image: lscr.io/linuxserver/tautulli:2.18.1@sha256:e35570d636471f8aabfac7044057712679f954844a763ba735baa9659ea142b5
     volumes:
       - tautulli:/config
     ports:
