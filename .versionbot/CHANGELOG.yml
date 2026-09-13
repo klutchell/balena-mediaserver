@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr:6.3.0 Docker digest to fe05141
+      hash: 0d94c2fcdd9f45f1e3617161add9f1dad3160602
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.241
+  title: ""
+  date: 2026-09-13T19:19:00.661Z
+- commits:
     - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v44.83.0
       hash: 0e8993f29d79435b1fc69a66889dafdbc86573c8
       body: ""
