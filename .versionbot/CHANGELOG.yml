@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sonarr Docker tag to v4.0.20
+      hash: 2d67179dc269c759f4212d791b53ba3599d4f371
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.243
+  title: ""
+  date: 2026-09-19T04:49:05.205Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr:2.5.2 Docker digest to aaa16ba
       hash: 3332510328e161d823e4b509c895c13dd76bbc87
       body: ""
