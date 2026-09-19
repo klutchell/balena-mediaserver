@@ -59,7 +59,7 @@ services:
 
   # https://github.com/marvinvr/docktail
   docktail:
-    image: ghcr.io/marvinvr/docktail:1.8.1@sha256:f1734acedb5fa0db12f1462595111e9ef077d3ee0190916588ac8fe8cb5616bd
+    image: ghcr.io/marvinvr/docktail:1.8.2@sha256:aabe2a4e5385d3eb3e5907d785769c19dd017d02e7d512b80168f4eeb79ac73e
     labels:
       io.balena.features.balena-socket: 1
     environment:
