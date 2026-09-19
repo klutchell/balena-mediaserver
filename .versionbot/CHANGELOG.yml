@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-tailscale to v1.102.4-rev2
+      hash: 8d3d4e65b6b7c66473d86ef3170f895f0c53a913
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.245
+  title: ""
+  date: 2026-09-19T05:43:52.094Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v2.11.1
       hash: 0964157817e7a6830b6ab8bf166d1ebddaa86d11
       body: ""
