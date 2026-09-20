@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v44.103.6
+      hash: ff9af5780d7483a563c898e66faf1265bbff0600
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.253
+  title: ""
+  date: 2026-09-20T04:50:33.184Z
+- commits:
     - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v44.83.3
       hash: 108b1932ce7c5952f4c6c4c6711464f297137335
       body: ""
