@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/duplicati:2.4.0 Docker digest to 047b962
+      hash: de49d57428b4f71e57e8dbbe04ba175f727bfde3
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.261
+  title: ""
+  date: 2026-09-26T09:23:46.819Z
+- commits:
     - subject: Update jc21/nginx-proxy-manager Docker tag to v2.16.0
       hash: 99c07bff0ad551182e897e35dab89e325ed01a92
       body: ""
