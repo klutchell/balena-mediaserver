@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.8.3
+      hash: 0a0433fb7f41176e51a3e2526ef3e6f477d8ee2f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.255
+  title: ""
+  date: 2026-09-26T04:26:54.525Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr:6.4.4 Docker digest to adb6c09
       hash: f4a6b491d59d9450527f47bbbac287b58beef34f
       body: ""
