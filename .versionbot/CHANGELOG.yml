@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex:1.43.4 Docker digest to 3f71bd6
+      hash: facab9b7b5eae43e6ae6591e1c965acd05a15a3c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.266
+  title: ""
+  date: 2026-09-28T18:45:13.326Z
+- commits:
     - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v44.115.10
       hash: 3d4259dac99beb287962ba4e67d7ae9e8a54ab24
       body: ""
