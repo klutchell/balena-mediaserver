@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v9.1.1
+      hash: c4457f739a222e49d0bc67329a0a25bb2c4021ae
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.269
+  title: ""
+  date: 2026-09-30T20:38:40.254Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v9.1.0
       hash: 6a772f19824ce4bc733e8f238c592e25d98ca39b
       body: ""
