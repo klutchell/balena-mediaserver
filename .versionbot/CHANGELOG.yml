@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/tautulli:2.18.2 Docker digest to bfcd2f3
+      hash: 7538dc14f516f3f3602055e5a4f09c78e3266687
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.272
+  title: ""
+  date: 2026-10-02T03:42:59.210Z
+- commits:
     - subject: Update product-os/flowzone action to v23.3.29
       hash: 653502e681e7f5a06c7f246d754cf13e97deeed9
       body: ""
