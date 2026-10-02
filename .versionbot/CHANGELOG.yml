@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v23.3.29
+      hash: 653502e681e7f5a06c7f246d754cf13e97deeed9
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.271
+  title: ""
+  date: 2026-10-02T02:49:32.893Z
+- commits:
     - subject: Update lscr.io/linuxserver/sabnzbd:5.1.3 Docker digest to 793828e
       hash: a1036d2db4e0a3830bfd1e01a5fe7039f83a747d
       body: ""
