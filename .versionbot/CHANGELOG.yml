@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/duplicati:2.4.0 Docker digest to 78883c4
+      hash: 572b6e1b9a784c3079177ca1f6d503ef6cf6127f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.275
+  title: ""
+  date: 2026-10-03T10:35:12.805Z
+- commits:
     - subject: Update product-os/flowzone action to v23.3.31
       hash: 782c4285703ce272d062986934c41dfe145295bb
       body: ""
