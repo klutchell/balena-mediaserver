@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v44.115.13
+      hash: 58f047b8e528dde7bec20de4fbb9593e7ee33660
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.278
+  title: ""
+  date: 2026-10-04T04:50:54.422Z
+- commits:
     - subject: Update netdata/netdata Docker tag to v2.12.0
       hash: e0b9034eba8beea99ab01abfa96b662ce16c331a
       body: ""
