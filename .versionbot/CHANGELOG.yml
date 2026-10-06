@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/syncthing Docker tag to v2.1.6
+      hash: 0cabfb5a2745e7efa9b880fb2887f79d0d2f5f23
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.285
+  title: ""
+  date: 2026-10-06T10:38:40.823Z
+- commits:
     - subject: Update balena-tailscale to v1.102.5
       hash: 6143583b46c1815ff50f10536a64de683e0b3343
       body: ""
