@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr:2.6.5 Docker digest to f9151e5
+      hash: ba52ebc64a4d46d7b69402dc0805052e3bcd5b57
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.286
+  title: ""
+  date: 2026-10-07T11:35:17.378Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing Docker tag to v2.1.6
       hash: 0cabfb5a2745e7efa9b880fb2887f79d0d2f5f23
       body: ""
