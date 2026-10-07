@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v23.3.35
+      hash: d0aa048e1faadd1bfe248cc5981345cacca6662f
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.287
+  title: ""
+  date: 2026-10-07T12:51:32.279Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr:2.6.5 Docker digest to f9151e5
       hash: ba52ebc64a4d46d7b69402dc0805052e3bcd5b57
       body: ""
