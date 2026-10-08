@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2:9.1.1 Docker digest to 1237826
+      hash: 0f058fe16eea1c8637204c2619c102f5905d336c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.289
+  title: ""
+  date: 2026-10-08T01:55:58.012Z
+- commits:
     - subject: Update lscr.io/linuxserver/duplicati:2.4.0 Docker digest to 1a53819
       hash: d787e439d3b74515e383d14f69187f47c46844d3
       body: ""
