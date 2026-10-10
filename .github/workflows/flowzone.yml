@@ -10,7 +10,7 @@ on:
 jobs:
   flowzone:
     name: Flowzone
-    uses: product-os/flowzone/.github/workflows/flowzone.yml@bc32f8cdcfc4da222cf56ac76de25728f475fa0f # v23.3.38
+    uses: product-os/flowzone/.github/workflows/flowzone.yml@1c02a06d23cf591688114cb2408c3424a1cb7cdc # v23.3.39
     secrets:
       GH_APP_PRIVATE_KEY: ${{ secrets.GH_APP_PRIVATE_KEY }}
       BALENA_API_KEY: ${{ secrets.BALENA_API_KEY }}
