@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v23.3.40
+      hash: b9f7cf17659e63daef3f5805680275efd55d5c36
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.298
+  title: ""
+  date: 2026-10-10T12:44:36.963Z
+- commits:
     - subject: Update product-os/flowzone action to v23.3.39
       hash: 555b59382917d046ccc4d24afcc82accbfdc37b0
       body: ""
