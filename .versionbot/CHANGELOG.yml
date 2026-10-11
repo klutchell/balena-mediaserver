@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr:6.4.4 Docker digest to cfbc4fa
+      hash: acee1a5dc7d0f5aa1c4483fc6bb48e29f5f68934
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.307
+  title: ""
+  date: 2026-10-11T21:35:43.965Z
+- commits:
     - subject: Update balena-tailscale to v1.102.5-rev1
       hash: abb41e2c98d01e487ae0ba379cbdace109b8762b
       body: ""
