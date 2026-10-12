@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v23.3.46
+      hash: 10f303829ef53a91c0fd61a646d7591e14892ece
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.308
+  title: ""
+  date: 2026-10-12T03:01:20.080Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr:6.4.4 Docker digest to cfbc4fa
       hash: acee1a5dc7d0f5aa1c4483fc6bb48e29f5f68934
       body: ""
