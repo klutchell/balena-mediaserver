@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-tailscale to v1.102.5-rev2
+      hash: 0e8efb40cf3bec86069f5ac0ee658018daef7dd2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.311
+  title: ""
+  date: 2026-10-13T11:39:30.363Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr:4.0.20 Docker digest to 0deb8db
       hash: c8af17ea34d145b58f1e99f1bf36b170a30af31e
       body: ""
