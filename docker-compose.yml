@@ -151,7 +151,7 @@ services:
   # https://docs.linuxserver.io/images/docker-nzbhydra
   nzbhydra:
     <<: *s6-service
-    image: lscr.io/linuxserver/nzbhydra2:9.1.1@sha256:123782636d66dc299b3addb617fd720a55ac2f858fa8ca312892bf9176492d58
+    image: lscr.io/linuxserver/nzbhydra2:9.1.1@sha256:42cd8d210c005fc1e04fe561350a479d42f90d60d1557c7161673152b5c1654e
     volumes:
       - nzbhydra:/config
       - downloads:/downloads
@@ -257,7 +257,7 @@ services:
   # https://docs.linuxserver.io/images/docker-sabnzbd
   sabnzbd:
     <<: *s6-service
-    image: lscr.io/linuxserver/sabnzbd:5.1.3@sha256:382f9bd4e3f6df2abf7bcc92edada0c5bd4d4ff26eb5416f257ac54989464fa1
+    image: lscr.io/linuxserver/sabnzbd:5.1.3@sha256:7a13af91cf296399e302d2fb6fc709d6e2ea15e3094f220684611fbe1dd43625
     volumes:
       - sabnzbd:/config
       - downloads:/downloads
