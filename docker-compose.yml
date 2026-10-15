@@ -23,14 +23,12 @@ volumes:
   downloads: {}
   duplicati: {}
   jellyfin: {}
-  letsencrypt: {}
   netdatalib: {}
   netdatacache: {}
   nzbhydra: {}
   plex: {}
   profilarr: {}
   prowlarr: {}
-  proxy: {}
   radarr: {}
   sabnzbd: {}
   sonarr: {}
@@ -79,27 +77,6 @@ services:
     # The tunnel reads TUNNEL_TOKEN from the service environment.
     command: tunnel run
 
-  # https://hub.docker.com/r/jc21/nginx-proxy-manager
-  # https://github.com/NginxProxyManager/nginx-proxy-manager
-  # https://nginxproxymanager.com/
-  nginx:
-    <<: *s6-service
-    image: jc21/nginx-proxy-manager:2.16.0@sha256:4393e642e233e5efd5adeb7f10918d4aaea71c9ed875b94190273fc8e87f9594
-    volumes:
-      - proxy:/data
-      - letsencrypt:/etc/letsencrypt
-    ports:
-      - 80:80/tcp
-      - 443:443/tcp
-      - 127.0.0.1:81:81/tcp
-    labels:
-      docktail.service.enable: true
-      docktail.service.name: nginx-mediaserver
-      docktail.service.port: 81
-      docktail.service.protocol: http
-      docktail.service.service-port: 443
-      docktail.service.service-protocol: https
-
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
@@ -121,8 +98,6 @@ services:
       - profilarr:/volumes/profilarr
       - sabnzbd:/volumes/sabnzbd
       - downloads:/volumes/downloads
-      - proxy:/volumes/proxy
-      - letsencrypt:/volumes/letsencrypt
       - tautulli:/volumes/tautulli
     ports:
       - 127.0.0.1:8200:8200/tcp
@@ -315,7 +290,6 @@ services:
       - profilarr:/volumes/profilarr
       - sabnzbd:/volumes/sabnzbd
       - downloads:/volumes/downloads
-      - proxy:/volumes/proxy
       - tautulli:/volumes/tautulli
     ports:
       - 127.0.0.1:8384:8384/tcp

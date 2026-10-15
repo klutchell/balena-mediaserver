@@ -10,14 +10,12 @@ Manage your media server on balena.io
   - [Environment Variables](#environment-variables)
   - [Remote Access](#remote-access)
     - [Via Tailscale](#via-tailscale)
-    - [Via Nginx](#via-nginx)
     - [Via Docktail](#via-docktail)
     - [Via Cloudflare Tunnel](#via-cloudflare-tunnel)
 - [Services](#services)
   - [Duplicati](#duplicati)
   - [Jellyfin](#jellyfin)
   - [Netdata](#netdata)
-  - [Nginx](#nginx)
   - [Nzbhydra](#nzbhydra)
   - [Plex](#plex)
   - [Profilarr](#profilarr)
@@ -72,13 +70,6 @@ one service, and can be applied fleet-wide to apply to multiple devices.
 
 Read more at <https://tailscale.com/blog/docker-tailscale-guide> and <https://tailscale.com/kb/1282/docker>
 
-#### Via Nginx
-
-1. Add proxy hosts via `http:${service-name}:${service-port}`
-2. Set up custom domains and SSL certificates as needed
-
-Read more at <https://nginxproxymanager.com/>
-
 #### Via Docktail
 
 Docktail automatically exposes services via Tailscale based on Docker labels.
@@ -91,7 +82,6 @@ Before using Docktail, configure your Tailscale admin console at <https://login.
    - `duplicati-mediaserver`
    - `jellyfin`
    - `netdata-mediaserver`
-   - `nginx-mediaserver`
    - `nzbhydra`
    - `plex`
    - `profilarr`
@@ -182,15 +172,6 @@ Read more at <https://docs.linuxserver.io/images/docker-jellyfin>
 - Set `PGID` environment variable (see README for details)
 
 Read more at <https://hub.docker.com/r/netdata/netdata>
-
-### Nginx
-
-- Forward host and port: `http://nginx:81`
-- Default credentials:
-  - Email: `admin@example.com`
-  - Password: `changeme`
-
-Read more at <https://nginxproxymanager.com/>
 
 ### Nzbhydra
 
