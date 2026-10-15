@@ -52,9 +52,12 @@ Manage your media server on balena.io
 
 ### Environment Variables
 
-Environment Variables can be applied to all services in an application, or only one service, and can be applied fleet-wide to apply to multiple devices.
+Environment Variables can be applied to all services in an application, or only
+one service, and can be applied fleet-wide to apply to multiple devices.
 
-- `TZ`: Inform services of the [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in your location.
+- `TZ`: Inform services of the
+  [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+  in your location.
 
 ### Remote Access
 
@@ -116,14 +119,16 @@ Before using Docktail, configure your Tailscale admin console at <https://login.
    }
    ```
 
-   - This allows devices tagged `tag:mediaserver` to automatically advertise services tagged `tag:mediaserver-service`
+   - This allows devices tagged `tag:mediaserver` to automatically advertise
+     services tagged `tag:mediaserver-service`
 
 Read more at <https://github.com/marvinvr/docktail> and <https://tailscale.com/kb/1552/tailscale-services>
 
 ## Services
 
-Each service below includes its forward host and port, along with basic setup instructions.\
-Services can be disabled by setting the `DISABLE` environment variable to a truthy value.
+Each service below includes its forward host and port, along with basic setup
+instructions. Services can be disabled by setting the `DISABLE` environment
+variable to a truthy value.
 
 ### Duplicati
 
