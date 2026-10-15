@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update all digest updates
+      hash: e000b37e10141285c11694fed57abbcb8fa0f275
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.315
+  title: ""
+  date: 2026-10-15T05:36:35.279Z
+- commits:
     - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.8.5
       hash: d290d5afba077699ccec9cd397d6c2e537e58d66
       body: ""
