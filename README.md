@@ -10,12 +10,12 @@ Manage your media server on balena.io
   - [Environment Variables](#environment-variables)
   - [Remote Access](#remote-access)
     - [Via Tailscale](#via-tailscale)
-    - [Via Nginx](#via-nginx)
+    - [Via Docktail](#via-docktail)
+    - [Via Cloudflare Tunnel](#via-cloudflare-tunnel)
 - [Services](#services)
   - [Duplicati](#duplicati)
   - [Jellyfin](#jellyfin)
   - [Netdata](#netdata)
-  - [Nginx](#nginx)
   - [Nzbhydra](#nzbhydra)
   - [Plex](#plex)
   - [Profilarr](#profilarr)
@@ -34,6 +34,8 @@ Manage your media server on balena.io
 - A [balenaCloud account](https://dashboard.balena-cloud.com) (optional)
 - A [Tailscale account](https://tailscale.com/) for remote access (optional)
 - A custom domain name for HTTPS access (optional)
+- A [Cloudflare account](https://dash.cloudflare.com/) for public access without
+  open ports (optional)
 
 ## Deployment
 
@@ -52,9 +54,12 @@ Manage your media server on balena.io
 
 ### Environment Variables
 
-Environment Variables can be applied to all services in an application, or only one service, and can be applied fleet-wide to apply to multiple devices.
+Environment Variables can be applied to all services in an application, or only
+one service, and can be applied fleet-wide to apply to multiple devices.
 
-- `TZ`: Inform services of the [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones) in your location.
+- `TZ`: Inform services of the
+  [timezone](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones)
+  in your location.
 
 ### Remote Access
 
@@ -64,13 +69,6 @@ Environment Variables can be applied to all services in an application, or only 
 2. Access services via `https://${TS_CERT_DOMAIN}:${service_port}`
 
 Read more at <https://tailscale.com/blog/docker-tailscale-guide> and <https://tailscale.com/kb/1282/docker>
-
-#### Via Nginx
-
-1. Add proxy hosts via `http:${service-name}:${service-port}`
-2. Set up custom domains and SSL certificates as needed
-
-Read more at <https://nginxproxymanager.com/>
 
 #### Via Docktail
 
@@ -84,7 +82,6 @@ Before using Docktail, configure your Tailscale admin console at <https://login.
    - `duplicati-mediaserver`
    - `jellyfin`
    - `netdata-mediaserver`
-   - `nginx-mediaserver`
    - `nzbhydra`
    - `plex`
    - `profilarr`
@@ -116,14 +113,42 @@ Before using Docktail, configure your Tailscale admin console at <https://login.
    }
    ```
 
-   - This allows devices tagged `tag:mediaserver` to automatically advertise services tagged `tag:mediaserver-service`
+   - This allows devices tagged `tag:mediaserver` to automatically advertise
+     services tagged `tag:mediaserver-service`
 
 Read more at <https://github.com/marvinvr/docktail> and <https://tailscale.com/kb/1552/tailscale-services>
 
+#### Via Cloudflare Tunnel
+
+Cloudflare Tunnel publishes services at your own domains with Cloudflare
+certificates. The tunnel connects out to Cloudflare, so it opens no ports.
+
+1. Move the DNS for your domain to Cloudflare
+2. Create a tunnel in the dashboard under Networking → Tunnels
+3. Copy the tunnel token from the install command
+4. Set the `TUNNEL_TOKEN` environment variable on the `cloudflared` service
+5. Add a published application route per service,
+   e.g. `jellyfin.example.com` → `http://jellyfin:8096`
+
+Each route is public. Create a Cloudflare Access application for a hostname
+before you add its route, unless the service has its own strong login.
+
+Do not route Plex or Jellyfin through the tunnel. The Cloudflare
+[CDN terms](https://www.cloudflare.com/service-specific-terms-application-services/)
+do not allow video streaming on the Free, Pro, or Business plans.
+
+The `cloudflared` image has no shell, so `DISABLE` does not apply to it.
+Without `TUNNEL_TOKEN`, the service exits and restarts with back-off.
+The `cloudflared` image supports amd64 and aarch64 only.
+
+Read more at <https://developers.cloudflare.com/cloudflare-one/networks/connectors/cloudflare-tunnel/>
+and <https://developers.cloudflare.com/cloudflare-one/access-controls/applications/http-apps/self-hosted-public-app/>
+
 ## Services
 
-Each service below includes its forward host and port, along with basic setup instructions.\
-Services can be disabled by setting the `DISABLE` environment variable to a truthy value.
+Each service below includes its forward host and port, along with basic setup
+instructions. Services can be disabled by setting the `DISABLE` environment
+variable to a truthy value.
 
 ### Duplicati
 
@@ -147,15 +172,6 @@ Read more at <https://docs.linuxserver.io/images/docker-jellyfin>
 - Set `PGID` environment variable (see README for details)
 
 Read more at <https://hub.docker.com/r/netdata/netdata>
-
-### Nginx
-
-- Forward host and port: `http://nginx:81`
-- Default credentials:
-  - Email: `admin@example.com`
-  - Password: `changeme`
-
-Read more at <https://nginxproxymanager.com/>
 
 ### Nzbhydra
 
