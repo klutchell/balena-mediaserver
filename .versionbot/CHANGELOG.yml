@@ -1,5 +1,17 @@
 - commits:
     - subject: Update all digest updates
+      hash: fb65cfc0e1249e3f10137f373ca757757f8bc35a
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 3.0.316
+  title: ""
+  date: 2026-10-15T19:32:26.180Z
+- commits:
+    - subject: Update all digest updates
       hash: e000b37e10141285c11694fed57abbcb8fa0f275
       body: ""
       footer:
