@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update cloudflare/cloudflared Docker tag to v2026.10.1
+      hash: 02be524a858201f24d3a06063357e047c40e9995
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.1
+  title: ""
+  date: 2026-10-15T21:34:54.614Z
+- commits:
     - subject: "BREAKING: Remove Nginx Proxy Manager"
       hash: 8b0bcc52e716f8f4c7ea08beb5b3e529befb14ee
       body: |
