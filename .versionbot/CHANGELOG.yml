@@ -1,4 +1,46 @@
 - commits:
+    - subject: "BREAKING: Remove Nginx Proxy Manager"
+      hash: 8b0bcc52e716f8f4c7ea08beb5b3e529befb14ee
+      body: |
+        Cloudflare Tunnel now covers public access with fixed domains and certs,
+        and Tailscale covers private access, so NPM and its open 80/443 ports
+        are no longer needed.
+
+        This drops the proxy and letsencrypt volumes, including their duplicati
+        and syncthing mounts. Back up anything you need from them first.
+      footer:
+        Change-type: major
+        change-type: major
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+    - subject: Add cloudflared for Cloudflare Tunnel access
+      hash: aee8afce84e7ef4c06b785e3e950cde7ad0f2c06
+      body: >
+        Publish selected services at fixed domains with Cloudflare certs,
+        without
+
+        opening any ports. Routes live in the Cloudflare dashboard, so the
+        service
+
+        only needs TUNNEL_TOKEN.
+
+
+        Nginx Proxy Manager stays for now; it can go once the tunnel has proven
+
+        itself.
+      footer:
+        Change-type: minor
+        change-type: minor
+        Signed-off-by: Kyle Harding <kyle@balena.io>
+        signed-off-by: Kyle Harding <kyle@balena.io>
+      author: Kyle Harding
+      nested: []
+  version: 4.0.0
+  title: ""
+  date: 2026-10-15T20:39:47.315Z
+- commits:
     - subject: Update all digest updates
       hash: fb65cfc0e1249e3f10137f373ca757757f8bc35a
       body: ""
