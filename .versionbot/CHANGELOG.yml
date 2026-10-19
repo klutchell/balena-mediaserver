@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr:6.4.4 Docker digest to ff4430f
+      hash: e2483e6123453a65139562a84562fff9efb4d475
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.16
+  title: ""
+  date: 2026-10-19T02:46:38.532Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr:2.6.5 Docker digest to 4e992f9
       hash: d784549584448f6e8f471d767002f7c369c5d377
       body: ""
