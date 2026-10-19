@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex:1.43.4 Docker digest to fc852e4
+      hash: dc95caf471df0ba414f48c76c9120539dca9a0fe
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.17
+  title: ""
+  date: 2026-10-19T17:47:11.735Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr:6.4.4 Docker digest to ff4430f
       hash: e2483e6123453a65139562a84562fff9efb4d475
       body: ""
