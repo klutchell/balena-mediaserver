@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update cloudflare/cloudflared Docker tag to v2026.10.2
+      hash: 841291b00e2122dcea246e28cd0d93d7b93f1adf
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.18
+  title: ""
+  date: 2026-10-20T09:45:37.977Z
+- commits:
     - subject: Update lscr.io/linuxserver/plex:1.43.4 Docker digest to fc852e4
       hash: dc95caf471df0ba414f48c76c9120539dca9a0fe
       body: ""
