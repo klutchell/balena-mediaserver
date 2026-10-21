@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/syncthing Docker tag to v2.1.7
+      hash: 9c1e5f71d7b632efd00ad235380d935df11134bf
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.20
+  title: ""
+  date: 2026-10-21T07:42:38.398Z
+- commits:
     - subject: Update lscr.io/linuxserver/plex Docker tag to v1.43.5
       hash: 11eb8e12ece2480f2d058c2ed8cd9839df59e76a
       body: ""
