@@ -80,7 +80,7 @@ services:
   # https://docs.linuxserver.io/images/docker-duplicati
   duplicati:
     <<: *s6-service
-    image: lscr.io/linuxserver/duplicati:2.4.0@sha256:c3d1bce6c698b9ed7a65e2a976d867ee1bbef104858c7440d45df4e7d213b5ba
+    image: lscr.io/linuxserver/duplicati:2.4.0@sha256:244727da960228d36c8c156ec0d72a46a00f76b47c1b7d4ef32dcc1e96ff25e4
     environment:
       <<: *s6-environment
       PUID: "0"
@@ -277,7 +277,7 @@ services:
   # https://docs.linuxserver.io/images/docker-syncthing
   syncthing:
     <<: *s6-service
-    image: lscr.io/linuxserver/syncthing:2.1.7@sha256:92fd6eb29759439225c166a3fc0e6b9500208b8d617a6fd0ae67cc125d1b1b86
+    image: lscr.io/linuxserver/syncthing:2.1.7@sha256:6dadb221ef64ce50fa5121120da316486c6feeb9f93d279ef8df198520203ddb
     volumes:
       - syncthing:/config
       # any volumes that might be worth syncronizing between machines
