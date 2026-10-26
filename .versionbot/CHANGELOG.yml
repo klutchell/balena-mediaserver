@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update cloudflare/cloudflared Docker tag to v2026.10.4
+      hash: d9e3c30a7c5b6b81e405a4355e50e57f6960cda6
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.50
+  title: ""
+  date: 2026-10-26T11:41:30.144Z
+- commits:
     - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.8.6
       hash: 5996f2e41f0473746ffd9ef4a84b0a56d6579794
       body: ""
