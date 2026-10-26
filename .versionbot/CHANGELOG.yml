@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update balena-tailscale to v1.104.1-rev6
+      hash: 338e2adbe13e2c1c805c0e8fcd2aea7a5d07c29c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.48
+  title: ""
+  date: 2026-10-26T07:08:12.476Z
+- commits:
     - subject: Update lscr.io/linuxserver/radarr:6.4.4 Docker digest to 084b3b2
       hash: ef5084f3c9d8f9b37af9fa2dfc53a262109de4ea
       body: ""
