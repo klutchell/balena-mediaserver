@@ -1,4 +1,24 @@
 - commits:
+    - subject: Update product-os/flowzone action to v23.3.78
+      hash: 6738cd401f5a54503aa875f5b7509bfa53c5ee89
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+    - subject: Update netdata/netdata Docker tag to v2.12.2
+      hash: 4bec43a4b1211ce50e62855c953f8c3434087bd2
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.52
+  title: ""
+  date: 2026-10-26T16:42:29.433Z
+- commits:
     - subject: Update lscr.io/linuxserver/plex:1.43.5 Docker digest to 01a53d9
       hash: 23bd96d21b76a9e2f9e4bb55a78d1476af5f6271
       body: ""
