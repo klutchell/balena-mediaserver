@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update cloudflare/cloudflared Docker tag to v2026.10.5
+      hash: 8efc6488e6ce39144dd639b36432322f7ae8a004
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.54
+  title: ""
+  date: 2026-10-27T14:43:04.246Z
+- commits:
     - subject: Update balena-tailscale to v1.104.2
       hash: cfd8ef600968d8b58c7cca847d49b81826273f96
       body: ""
