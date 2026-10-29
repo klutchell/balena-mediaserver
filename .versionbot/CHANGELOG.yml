@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/duplicati Docker tag to v2.4.1
+      hash: 1206c8f1d3445ce45e5c0a54896edb9a4534f501
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.60
+  title: ""
+  date: 2026-10-29T18:38:08.467Z
+- commits:
     - subject: Update product-os/flowzone action to v23.3.79
       hash: ff0ebfa4cedaf622a9ce1536d13c27b1e586f555
       body: ""
