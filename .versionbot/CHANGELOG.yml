@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update product-os/flowzone action to v23.3.81
+      hash: 7a6e0414022c154768aa668e0c09e452b405e37e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.65
+  title: ""
+  date: 2026-10-30T20:29:19.401Z
+- commits:
     - subject: Update cloudflare/cloudflared Docker tag to v2026.10.7
       hash: 017ef0bde32ec6145b270017cb9c2f715c379468
       body: ""
