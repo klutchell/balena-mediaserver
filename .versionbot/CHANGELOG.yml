@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update cloudflare/cloudflared Docker tag to v2026.10.7
+      hash: 017ef0bde32ec6145b270017cb9c2f715c379468
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.64
+  title: ""
+  date: 2026-10-30T17:27:29.127Z
+- commits:
     - subject: Update product-os/flowzone action to v23.3.80
       hash: f8e1e8f9c32d92b78c07310c154c2131bc7a9249
       body: ""
