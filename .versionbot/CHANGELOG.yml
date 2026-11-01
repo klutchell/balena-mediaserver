@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update pre-commit hook igorshubovych/markdownlint-cli to v0.50.0
+      hash: 48ff6dd53929637bf796e86e1df0de71833bc30b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.74
+  title: ""
+  date: 2026-11-01T04:31:37.641Z
+- commits:
     - subject: Update product-os/flowzone action to v23.3.88
       hash: e7d71e2243a84e080f0f31f33f00f60b636f0994
       body: ""
