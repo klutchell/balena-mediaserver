@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v44.192.2
+      hash: 789f427ae9a3a17b904a82e45f267e3e7908a178
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.75
+  title: ""
+  date: 2026-11-01T05:30:31.505Z
+- commits:
     - subject: Update pre-commit hook igorshubovych/markdownlint-cli to v0.50.0
       hash: 48ff6dd53929637bf796e86e1df0de71833bc30b
       body: ""
