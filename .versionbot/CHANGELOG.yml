@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/radarr:6.4.4 Docker digest to ade5937
+      hash: bcae73289633caeb4fe58d4cc7fe602a06df977c
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.77
+  title: ""
+  date: 2026-11-01T21:27:45.947Z
+- commits:
     - subject: Update product-os/flowzone action to v23.3.90
       hash: 72fe94635ad14f0ed9e93fae46e86892476f08df
       body: ""
