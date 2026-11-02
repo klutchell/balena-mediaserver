@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex:1.43.5 Docker digest to 0c2f112
+      hash: 814c992d05db0d9212e4742b930718e27eb8e555
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.79
+  title: ""
+  date: 2026-11-02T20:31:38.666Z
+- commits:
     - subject: Update product-os/flowzone action to v23.3.91
       hash: bf076f49954f3ea572a5f31cdff7f95dc2f08d13
       body: ""
