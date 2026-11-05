@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2:9.2.0 Docker digest to 5b574b8
+      hash: 04f67c1aaf1e226bef79081c8c8a6f34f53c4e52
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.82
+  title: ""
+  date: 2026-11-05T02:34:14.406Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr:2.7.0 Docker digest to 431d7ef
       hash: acf0bb29f90d911fc1a9c2cf165057d5b1f918b8
       body: ""
