@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/tautulli:2.18.2 Docker digest to 7ca2e26
+      hash: bed3f65381657a6431703adfada3e46db45c5350
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.84
+  title: ""
+  date: 2026-11-06T04:29:48.668Z
+- commits:
     - subject: Update lscr.io/linuxserver/sabnzbd:5.1.3 Docker digest to 693c208
       hash: ad57a7c85913fc40af3b42d40f7365a5f210c5f1
       body: ""
