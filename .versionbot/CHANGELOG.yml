@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v2.12.3
+      hash: fd137b8333fc4d82d4da1c0b658ab379adc367ba
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.89
+  title: ""
+  date: 2026-11-07T16:28:19.129Z
+- commits:
     - subject: Update lscr.io/linuxserver/duplicati:2.4.1 Docker digest to 2ac3f1d
       hash: eb6249850915f0ee571f4cebd0df2d82a5937199
       body: ""
