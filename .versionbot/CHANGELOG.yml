@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update pre-commit hook renovatebot/pre-commit-hooks to v44.216.4
+      hash: 93da0c00782b92b2a8835c904fd989eee9fa1211
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.91
+  title: ""
+  date: 2026-11-08T05:30:04.223Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr:4.0.20 Docker digest to 673dc46
       hash: ab72040e583763220462faa97486192f5937a921
       body: ""
