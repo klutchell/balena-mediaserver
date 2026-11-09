@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex:1.43.5 Docker digest to d6e045d
+      hash: 915287a38c5bc494999816bdb1dd28b38f331912
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.101
+  title: ""
+  date: 2026-11-09T20:29:27.498Z
+- commits:
     - subject: Update balena-tailscale to v1.104.5
       hash: 73341b0205620f2686cd505458c7286af556445d
       body: ""
