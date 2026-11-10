@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.8.7
+      hash: d903cc477df81cfb4e6330ffd7cd5de06d3812bf
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.102
+  title: ""
+  date: 2026-11-10T22:28:39.437Z
+- commits:
     - subject: Update lscr.io/linuxserver/plex:1.43.5 Docker digest to d6e045d
       hash: 915287a38c5bc494999816bdb1dd28b38f331912
       body: ""
