@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/prowlarr:2.7.0 Docker digest to 6660787
+      hash: 01b9a1eb91e6b9545fe218f228ef78c5a5305a9b
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.104
+  title: ""
+  date: 2026-11-11T12:33:38.922Z
+- commits:
     - subject: Update lscr.io/linuxserver/tautulli Docker tag to v2.19.1
       hash: d17ca74a6e6497a092d3059675a575f50fd33127
       body: ""
