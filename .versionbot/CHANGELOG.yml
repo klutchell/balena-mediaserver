@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/tautulli Docker tag to v2.19.1
+      hash: d17ca74a6e6497a092d3059675a575f50fd33127
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.103
+  title: ""
+  date: 2026-11-11T00:46:21.048Z
+- commits:
     - subject: Update ghcr.io/marvinvr/docktail Docker tag to v1.8.7
       hash: d903cc477df81cfb4e6330ffd7cd5de06d3812bf
       body: ""
