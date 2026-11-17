@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update cloudflare/cloudflared Docker tag to v2026.11.1
+      hash: 7593cdfa44fa009edfece9898988e7439a22b979
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.138
+  title: ""
+  date: 2026-11-17T15:32:17.526Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v3
       hash: 17cbe8eaf64073b9dcf9fe90676a9522e6c82dbf
       body: ""
