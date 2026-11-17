@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2 Docker tag to v9.3.2
+      hash: b9ecc981f0f748359faab145546b6b36e2bca22e
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.139
+  title: ""
+  date: 2026-11-17T23:29:31.199Z
+- commits:
     - subject: Update cloudflare/cloudflared Docker tag to v2026.11.1
       hash: 7593cdfa44fa009edfece9898988e7439a22b979
       body: ""
