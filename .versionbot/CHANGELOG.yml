@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/nzbhydra2:9.3.2 Docker digest to e6128e0
+      hash: bf5b828f04b4166bca83aeb18990a26e53d10141
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.144
+  title: ""
+  date: 2026-11-19T03:31:13.577Z
+- commits:
     - subject: Update product-os/flowzone action to v23.4.27
       hash: f34dedb1c6476f68fdc8dd652d2711503e39f331
       body: ""
