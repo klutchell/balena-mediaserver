@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/duplicati:2.4.1 Docker digest to db8a6ca
+      hash: 5d713d57c9ecc9ff806588bafa20760ae908ffcb
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.153
+  title: ""
+  date: 2026-11-21T12:34:22.039Z
+- commits:
     - subject: Update lscr.io/linuxserver/syncthing:2.1.7 Docker digest to 91e5a75
       hash: 8d974de4fd22572ae0d04d7eb043b0a23ba6f856
       body: ""
