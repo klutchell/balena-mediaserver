@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/syncthing:2.1.7 Docker digest to 91e5a75
+      hash: 8d974de4fd22572ae0d04d7eb043b0a23ba6f856
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.152
+  title: ""
+  date: 2026-11-21T08:30:41.919Z
+- commits:
     - subject: Update lscr.io/linuxserver/sonarr:4.0.20 Docker digest to 339814b
       hash: f26436f7fe58014fd359c02d9414816c2659e0f2
       body: ""
