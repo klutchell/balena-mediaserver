@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update netdata/netdata Docker tag to v2.13.0
+      hash: 71893ba83ffef87f718ef5a26abcb60f412e4965
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.160
+  title: ""
+  date: 2026-11-22T17:28:08.088Z
+- commits:
     - subject: Update product-os/flowzone action to v23.4.34
       hash: 7f89995a295e86d6452198968071727259eff623
       body: ""
