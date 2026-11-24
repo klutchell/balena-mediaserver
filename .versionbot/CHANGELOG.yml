@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/plex:1.43.5 Docker digest to 31e4c2d
+      hash: 3f174cf7d45e3ee3190d2ac938d3fb80912b17d6
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.168
+  title: ""
+  date: 2026-11-24T01:29:34.833Z
+- commits:
     - subject: Update lscr.io/linuxserver/prowlarr Docker tag to v3.1.0
       hash: 6cfe1d845d5b0ae89212ad46b4d6c72f51d29ec4
       body: ""
