@@ -1,4 +1,16 @@
 - commits:
+    - subject: Update lscr.io/linuxserver/sabnzbd:5.1.3 Docker digest to cc7abee
+      hash: e74e2a17461a1901a7a309aa70ecfd99a01b8ea0
+      body: ""
+      footer:
+        Change-type: patch
+        change-type: patch
+      author: klutchell-renovate[bot]
+      nested: []
+  version: 4.0.174
+  title: ""
+  date: 2026-11-26T08:32:00.916Z
+- commits:
     - subject: Update lscr.io/linuxserver/nzbhydra2:9.3.4 Docker digest to 7d272e5
       hash: 5610e7487799ff28c1522591b5493e5ae19aedb5
       body: ""
